@@ -1,5 +1,7 @@
-# Fachwerte
-Hier werden Fachwerte abgebildet, die allgemein von verschiedenen Anwendungen genutzt werden können.
+# Werte
+Hier werden verschiedene Werte abgebildet, die allgemein genutzt werdne können.
+
+Diese werden entweder in Form von Fachwerten oder Listen gehalten.
 
 
 ### Konventionen
