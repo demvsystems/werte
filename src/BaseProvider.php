@@ -13,7 +13,7 @@ abstract class BaseProvider implements ProviderInterface
     /**
      * @param $id
      *
-     * @return Value
+     * @return Value|null
      */
     public function getOne($id): Value
     {
