@@ -1,4 +1,4 @@
-# Katalog
+# Fachwerte
 Hier werden Fachwerte abgebildet, die allgemein von verschiedenen Anwendungen genutzt werden können.
 
 
