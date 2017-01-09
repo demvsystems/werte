@@ -11,7 +11,7 @@ namespace Demv\Werte;
 class Value
 {
     /**
-     * @var string
+     * @var mixed
      */
     protected $id;
 
@@ -20,16 +20,22 @@ class Value
      */
     protected $name;
 
-    public function __construct(string $id, string $name)
+    /**
+     * Value constructor.
+     *
+     * @param        $id
+     * @param string $name
+     */
+    public function __construct($id, string $name)
     {
         $this->id   = $id;
         $this->name = $name;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getId(): string
+    public function getId()
     {
         return $this->id;
     }
@@ -49,7 +55,7 @@ class Value
      */
     public function equals(Value $value): bool
     {
-        return $this->getId() == $value->getId();
+        return $this->getId() === $value->getId();
     }
 
 }

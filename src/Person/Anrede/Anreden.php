@@ -8,9 +8,9 @@
  */
 namespace Demv\Werte\Person\Anrede;
 
-use Demv\Werte\BaseProvider;
+use Demv\Werte\AbstractProvider;
 
-final class Anreden extends BaseProvider
+final class Anreden extends AbstractProvider
 {
     const HERR  = 1;
     const FRAU  = 2;

@@ -42,7 +42,7 @@ class ValueTest extends PHPUnit_Framework_TestCase
 
         $value1 = new Value(1, 'test');
         $value2 = new Value('1', 'test1');
-        $this->assertTrue($value1->equals($value2));
+        $this->assertFalse($value1->equals($value2));
 
         $value1 = new Value('1', 'test');
         $value2 = new Value('1', 'test1');

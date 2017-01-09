@@ -1,29 +1,21 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: alex
  * Date: 06.01.17
- * Time: 11:20
+ * Time: 11:57
  */
+
 namespace Demv\Werte;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 
-interface ProviderInterface
+abstract class AbstractProvider implements ProviderInterface
 {
-
-    /**
-     * Gibt ein Array aller Werte zurück
-     *
-     * @return Value[]
-     */
-    public function getAll(): array;
-
     /**
      * Liefert den Eintrag zu der übergebene ID zurück
      *
-     * @param $id
+     * @param mixed $id
      *          Die ID, zu der der Eintrag zurückgegeben werden soll
      *
      * @return Value
@@ -31,7 +23,15 @@ interface ProviderInterface
      * @throws EntryNotFoundException
      *
      */
-    public function getOne($id): Value;
+    public function getOne($id): Value
+    {
+        foreach ($this->getAll() as $value) {
+            if ($value->getId() === $id) {
+                return $value;
+            }
+        }
+        throw new EntryNotFoundException(get_class($this), $id);
+    }
 
     /**
      * Gibt zurück, ob der Eintrag mit der übergebenen ID existiert
@@ -42,6 +42,16 @@ interface ProviderInterface
      * @return bool
      *          true, wenn der Eintrag existiert, sonst false
      */
-    public function exists($id): bool;
+    public function exists($id): bool
+    {
+        try {
+            $this->getOne($id);
+
+            return true;
+        } catch (EntryNotFoundException $e) {
+        }
+
+        return false;
+    }
 
 }
