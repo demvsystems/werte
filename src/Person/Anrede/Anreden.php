@@ -9,9 +9,6 @@
 namespace Demv\Werte\Person\Anrede;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Exception\EntryNotFoundException;
-use Demv\Werte\ProviderInterface;
-use Demv\Werte\Value;
 
 final class Anreden extends AbstractProvider
 {
