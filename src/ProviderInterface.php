@@ -26,12 +26,12 @@ interface ProviderInterface
      * @param $id
      *          Die ID, zu der der Eintrag zurückgegeben werden soll
      *
-     * @return Value
+     * @return mixed
      *          Das Objekt
      * @throws EntryNotFoundException
      *
      */
-    public function getOne($id): Value;
+    public function getOne($id);
 
     /**
      * Gibt zurück, ob der Eintrag mit der übergebenen ID existiert

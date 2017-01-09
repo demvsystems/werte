@@ -41,12 +41,12 @@ abstract class AbstractProvider implements ProviderInterface
      * @param mixed $id
      *          Die ID, zu der der Eintrag zurückgegeben werden soll
      *
-     * @return Value
+     * @return mixed
      *          Das Objekt
      * @throws EntryNotFoundException
      *
      */
-    public function getOne($id): Value
+    public function getOne($id)
     {
         foreach ($this->getAll() as $value) {
             if ($value->getId() === $id) {
