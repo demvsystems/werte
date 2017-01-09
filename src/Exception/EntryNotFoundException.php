@@ -15,6 +15,6 @@ class EntryNotFoundException extends Exception
 
     public function __construct($classname, $id)
     {
-        parent::__construct("Der $classname-Eintrag für die ID $id existiert nicht", 404, null);
+        parent::__construct(sprintf('Der %s-Eintrag für die ID %s existiert nich', $classname, $id), 404, null);
     }
 }
