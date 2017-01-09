@@ -48,12 +48,27 @@ abstract class AbstractProvider implements ProviderInterface
      */
     public function getOne($id)
     {
+        $member = $this->fetchMember($id);
+        if ($member !== null) {
+            return $member;
+        }
+        throw new EntryNotFoundException(static::class, $id);
+    }
+
+    /**
+     * @param $id
+     *
+     * @return mixed|null
+     */
+    protected function fetchMember($id)
+    {
         foreach ($this->getAll() as $value) {
             if ($value->getId() === $id) {
                 return $value;
             }
         }
-        throw new EntryNotFoundException(static::class, $id);
+
+        return null;
     }
 
     /**
@@ -67,14 +82,7 @@ abstract class AbstractProvider implements ProviderInterface
      */
     public function exists($id): bool
     {
-        try {
-            $this->getOne($id);
-
-            return true;
-        } catch (EntryNotFoundException $e) {
-        }
-
-        return false;
+        return $this->fetchMember($id) !== null;
     }
 
 }
