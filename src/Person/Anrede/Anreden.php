@@ -11,7 +11,7 @@ namespace Demv\Werte\Person\Anrede;
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\ProviderInterface;
 
-final class Anreden extends AbstractProvider implements ProviderInterface
+final class Anreden extends AbstractProvider
 {
     const HERR  = 1;
     const FRAU  = 2;
