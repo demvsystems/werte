@@ -1,3 +1,4 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/demvsystems/werte/badges/quality-score.png?b=master&s=c3f0fa67445ed7e05aff8291d7f7b20e609785f5)](https://scrutinizer-ci.com/g/demvsystems/werte/?branch=master)
 # Werte
 Hier werden verschiedene Werte abgebildet, die allgemein genutzt werdne können.
 
