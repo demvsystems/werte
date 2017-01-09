@@ -53,7 +53,7 @@ abstract class AbstractProvider implements ProviderInterface
                 return $value;
             }
         }
-        throw new EntryNotFoundException(get_class($this), $id);
+        throw new EntryNotFoundException(static::class, $id);
     }
 
     /**
