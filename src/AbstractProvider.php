@@ -48,7 +48,7 @@ abstract class AbstractProvider implements ProviderInterface
      */
     public function getOne($id)
     {
-        $member = $this->fetchMember($id);
+        $member = $this->fetchOne($id);
         if ($member !== null) {
             return $member;
         }
@@ -60,7 +60,7 @@ abstract class AbstractProvider implements ProviderInterface
      *
      * @return mixed|null
      */
-    protected function fetchMember($id)
+    protected function fetchOne($id)
     {
         foreach ($this->getAll() as $value) {
             if ($value->getId() === $id) {
@@ -82,7 +82,7 @@ abstract class AbstractProvider implements ProviderInterface
      */
     public function exists($id): bool
     {
-        return $this->fetchMember($id) !== null;
+        return $this->fetchOne($id) !== null;
     }
 
 }
