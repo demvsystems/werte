@@ -12,6 +12,29 @@ use Demv\Werte\Exception\EntryNotFoundException;
 
 abstract class AbstractProvider implements ProviderInterface
 {
+
+    /**
+     * @var array
+     */
+    private $members = [];
+
+    /**
+     * @param Value $member
+     */
+    final protected function appendMember(Value $member)
+    {
+        $this->members[] = $member;
+    }
+
+    /**
+     * Gibt alle Einträge zurück
+     * @return array
+     */
+    public function getAll(): array
+    {
+        return $this->members;
+    }
+
     /**
      * Liefert den Eintrag zu der übergebene ID zurück
      *
