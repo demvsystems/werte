@@ -1,4 +1,5 @@
 <?php
+namespace Demv\Werte\Tests;
 
 /**
  * Created by PhpStorm.
@@ -7,6 +8,7 @@
  * Time: 11:43
  */
 use Demv\Werte\Value;
+use PHPUnit_Framework_TestCase;
 
 class ValueTest extends PHPUnit_Framework_TestCase
 {

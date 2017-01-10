@@ -1,4 +1,5 @@
 <?php
+namespace Demv\Werte\Tests\Person\Anrede;
 
 /**
  * Created by PhpStorm.
@@ -8,9 +9,17 @@
  */
 use Demv\Werte\Person\Anrede\Anreden;
 use Demv\Werte\Exception\EntryNotFoundException;
+use Demv\Werte\Tests\ProviderTestTrait;
+use PHPUnit_Framework_TestCase;
+use Demv\Werte\Person\Anrede\Anreden\Herr;
+use Demv\Werte\Person\Anrede\Anreden\Frau;
+use Demv\Werte\Person\Anrede\Anreden\Firma;
+use Demv\Werte\Person\Anrede\Anreden\LeereAnrede;
 
 class AnredenTest extends PHPUnit_Framework_TestCase
 {
+    use ProviderTestTrait;
+
     /**
      * @return Anreden
      */
@@ -25,39 +34,30 @@ class AnredenTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(4, count($anreden->getAll()));
     }
 
-    private function checkGetOne($id)
-    {
-        $anreden = $this->getAnreden();
-        $this->assertNotEmpty($anreden->getOne($id));
-        $this->assertTrue($anreden->exists($id));
-        $anrede = $anreden->getOne($id);
-        $this->assertSame($id, $anrede->getId());
-    }
-
     public function testGetHerr()
     {
-        $this->checkGetOne(Anreden::HERR);
+        $this->checkGetOne($this->getAnreden(), Herr::ID);
     }
 
     public function testGetFrau()
     {
-        $this->checkGetOne(Anreden::FRAU);
+        $this->checkGetOne($this->getAnreden(), Frau::ID);
     }
 
     public function testGetFirma()
     {
-        $this->checkGetOne(Anreden::FIRMA);
+        $this->checkGetOne($this->getAnreden(), Firma::ID);
     }
 
     public function testGetLeer()
     {
-        $this->checkGetOne(Anreden::LEER);
+        $this->checkGetOne($this->getAnreden(), LeereAnrede::ID);
     }
 
     public function testNotFound()
     {
         $this->expectException(EntryNotFoundException::class);
-        $this->checkGetOne(5);
+        $this->checkGetOne($this->getAnreden(), 5);
     }
 
 }
