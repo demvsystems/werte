@@ -72,7 +72,7 @@ class Gegenbeziehung
      */
     public function existsFor(BeziehungsTypInterface $beziehungsTyp): bool
     {
-        return in_array($beziehungsTyp->getId(), array_keys($this->pairs)) ||
+        return array_key_exists($beziehungsTyp->getId(), $this->pairs) ||
                in_array($beziehungsTyp->getId(), array_values($this->pairs));
     }
 }
