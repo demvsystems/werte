@@ -57,7 +57,8 @@ class Gegenbeziehung
         foreach ($this->pairs as $key => $value) {
             if ($beziehungsTyp->getId() === $key) {
                 return $beziehungsTypen->getOne($value);
-            } elseif ($beziehungsTyp->getId() === $value) {
+            }
+            if ($beziehungsTyp->getId() === $value) {
                 return $beziehungsTypen->getOne($key);
             }
         }
