@@ -17,7 +17,10 @@
         "phpunit/phpunit": "5.5.*"
     },
     "autoload": {
-        "psr-4": {"Demv\\Werte\\": "src/"}
+        "psr-4": {
+            "Demv\\Werte\\": "src/",
+            "Demv\\Werte\\Tests\\": "tests/"
+        }
     },
     "autoload-dev": {
         "classmap": [
