@@ -13,12 +13,12 @@ use Demv\Werte\Value;
 
 class BeruflicheBeziehung extends Value implements BeziehungsTypInterface
 {
-    public function isFamiliaer(): bool
+    final public function isFamiliaer(): bool
     {
         return false;
     }
 
-    public function isBeruflich(): bool
+    final public function isBeruflich(): bool
     {
         return true;
     }
