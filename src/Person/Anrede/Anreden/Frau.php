@@ -10,7 +10,7 @@ namespace Demv\Werte\Person\Anrede\Anreden;
 
 use Demv\Werte\Value;
 
-class Frau extends Value
+final class Frau extends Value
 {
     const ID = 2;
 

@@ -21,7 +21,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 
-class Beziehungstypen extends AbstractProvider
+final class Beziehungstypen extends AbstractProvider
 {
 
     public function __construct()

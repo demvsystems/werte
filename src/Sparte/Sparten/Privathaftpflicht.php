@@ -8,7 +8,7 @@
 
 namespace Demv\Werte\Sparte\Sparten;
 
-class Privathaftpflicht
+final class Privathaftpflicht
 {
     const ID = 165;
 }

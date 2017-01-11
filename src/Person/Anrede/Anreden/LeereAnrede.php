@@ -10,7 +10,7 @@ namespace Demv\Werte\Person\Anrede\Anreden;
 
 use Demv\Werte\Value;
 
-class LeereAnrede extends Value
+final class LeereAnrede extends Value
 {
     const ID = 4;
 

@@ -8,7 +8,7 @@
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-class Enkel extends FamiliaereBeziehung
+final class Enkel extends FamiliaereBeziehung
 {
     const ID = 11;
 

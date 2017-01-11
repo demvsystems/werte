@@ -8,7 +8,7 @@
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-class Geschwister extends FamiliaereBeziehung
+final class Geschwister extends FamiliaereBeziehung
 {
     const ID = 8;
 

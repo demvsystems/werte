@@ -8,7 +8,7 @@
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-class Grosseltern extends FamiliaereBeziehung
+final class Grosseltern extends FamiliaereBeziehung
 {
     const ID = 10;
 

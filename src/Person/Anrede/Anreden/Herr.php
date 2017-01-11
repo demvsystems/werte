@@ -10,7 +10,7 @@ namespace Demv\Werte\Person\Anrede\Anreden;
 
 use Demv\Werte\Value;
 
-class Herr extends Value
+final class Herr extends Value
 {
     const ID = 1;
 
