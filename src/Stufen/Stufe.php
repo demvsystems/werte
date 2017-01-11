@@ -9,6 +9,10 @@
 
 namespace Demv\Werte\Stufen;
 
+/**
+ * Interface Stufe
+ * @package Demv\Werte\Stufen
+ */
 interface Stufe
 {
     const FINANZIELLE_GRUNDBEDUERFNISSE    = 1;
