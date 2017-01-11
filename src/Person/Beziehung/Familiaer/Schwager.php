@@ -8,7 +8,7 @@
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-class Schwager extends FamiliaereBeziehung
+final class Schwager extends FamiliaereBeziehung
 {
     const ID = 9;
 

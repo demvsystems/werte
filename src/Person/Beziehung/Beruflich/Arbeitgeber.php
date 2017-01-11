@@ -8,7 +8,7 @@
  */
 namespace Demv\Werte\Person\Beziehung\Beruflich;
 
-class Arbeitgeber extends BeruflicheBeziehung
+final class Arbeitgeber extends BeruflicheBeziehung
 {
     const ID = 4;
 

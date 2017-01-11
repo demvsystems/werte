@@ -21,7 +21,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Exception;
 
-class Gegenbeziehung
+final class Gegenbeziehung
 {
     private $pairs = [];
 
