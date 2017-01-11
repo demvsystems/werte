@@ -6,6 +6,9 @@
  * Date: 1/11/2017
  * Time: 3:36 PM
  */
+
+namespace Demv\Werte\Stufen;
+
 interface Stufe
 {
     const FINANZIELLE_GRUNDBEDUERFNISSE    = 1;
