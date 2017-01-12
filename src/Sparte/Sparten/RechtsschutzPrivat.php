@@ -7,6 +7,10 @@
  */
 namespace Demv\Werte\Sparte\Sparten;
 
+/**
+ * Class RechtsschutzPrivat
+ * @package Demv\Werte\Sparte\Sparten
+ */
 final class RechtsschutzPrivat
 {
     const ID = 169;

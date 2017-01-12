@@ -11,6 +11,10 @@ namespace Demv\Werte\Person\Beziehung\Beruflich;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 use Demv\Werte\Value;
 
+/**
+ * Class BeruflicheBeziehung
+ * @package Demv\Werte\Person\Beziehung\Beruflich
+ */
 class BeruflicheBeziehung extends Value implements BeziehungsTypInterface
 {
     final public function isFamiliaer(): bool

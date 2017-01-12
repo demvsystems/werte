@@ -21,6 +21,10 @@ use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 
+/**
+ * Class Beziehungstypen
+ * @package Demv\Werte\Person\Beziehung
+ */
 final class Beziehungstypen extends AbstractProvider
 {
 

@@ -8,6 +8,10 @@
  */
 namespace Demv\Werte\Person\Beziehung;
 
+/**
+ * Interface BeziehungsTypInterface
+ * @package Demv\Werte\Person\Beziehung
+ */
 interface BeziehungsTypInterface
 {
     /**

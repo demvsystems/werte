@@ -14,6 +14,10 @@ use Demv\Werte\Person\Anrede\Anreden\Frau;
 use Demv\Werte\Person\Anrede\Anreden\Herr;
 use Demv\Werte\Person\Anrede\Anreden\LeereAnrede;
 
+/**
+ * Class Anreden
+ * @package Demv\Werte\Person\Anrede
+ */
 final class Anreden extends AbstractProvider
 {
     public function __construct()
