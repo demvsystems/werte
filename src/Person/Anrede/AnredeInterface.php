@@ -8,6 +8,10 @@
 
 namespace Demv\Werte\Person\Anrede;
 
+/**
+ * Interface AnredeInterface
+ * @package Demv\Werte\Person\Anrede
+ */
 interface AnredeInterface
 {
     /**
@@ -19,5 +23,4 @@ interface AnredeInterface
      * @return string
      */
     public function getName(): string;
-
 }
