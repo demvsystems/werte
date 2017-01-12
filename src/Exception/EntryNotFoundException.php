@@ -10,6 +10,10 @@ namespace Demv\Werte\Exception;
 
 use Exception;
 
+/**
+ * Class EntryNotFoundException
+ * @package Demv\Werte\Exception
+ */
 class EntryNotFoundException extends Exception
 {
 
