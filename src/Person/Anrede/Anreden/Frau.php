@@ -8,9 +8,10 @@
  */
 namespace Demv\Werte\Person\Anrede\Anreden;
 
+use Demv\Werte\Person\Anrede\AnredeInterface;
 use Demv\Werte\Value;
 
-final class Frau extends Value
+final class Frau extends Value implements AnredeInterface
 {
     const ID = 2;
 
