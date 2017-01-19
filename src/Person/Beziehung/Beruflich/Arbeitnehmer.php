@@ -14,7 +14,7 @@ namespace Demv\Werte\Person\Beziehung\Beruflich;
  */
 final class Arbeitnehmer extends BeruflicheBeziehung
 {
-    const ID = 4;
+    const ID = 5;
 
     public function __construct()
     {

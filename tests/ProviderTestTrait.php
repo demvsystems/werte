@@ -1,5 +1,6 @@
 <?php
 namespace Demv\Werte\Tests;
+
 /**
  * Created by PhpStorm.
  * User: alex
