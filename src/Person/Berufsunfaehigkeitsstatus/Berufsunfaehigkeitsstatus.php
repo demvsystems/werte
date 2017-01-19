@@ -13,7 +13,7 @@ use Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status\Moeglich;
 use Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status\NichtMoeglich;
 use Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status\ZeitweiseNichtMoeglich;
 
-class Berufsunfaehigkeitsstatus extends AbstractProvider
+final class Berufsunfaehigkeitsstatus extends AbstractProvider
 {
     public function __construct()
     {

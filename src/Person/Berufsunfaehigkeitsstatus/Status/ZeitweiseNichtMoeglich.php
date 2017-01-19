@@ -11,7 +11,7 @@ namespace Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status;
 use Demv\Werte\Person\Berufsunfaehigkeitsstatus\BerufsunfaehigkeitsstatusInterface;
 use Demv\Werte\Value;
 
-class ZeitweiseNichtMoeglich extends Value implements BerufsunfaehigkeitsstatusInterface
+final class ZeitweiseNichtMoeglich extends Value implements BerufsunfaehigkeitsstatusInterface
 {
     const ID = 1;
 
