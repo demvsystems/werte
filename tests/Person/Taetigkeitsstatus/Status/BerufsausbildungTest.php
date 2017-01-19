@@ -1,36 +1,36 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 15:33
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class BerufsausbildungTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new Berufsausbildung();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Person in Berufsausbildung';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 14;
     }
 
     protected function hasEntgeltfortzahlung(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isArbeitnehmer(): bool
@@ -42,5 +42,4 @@ final class AngestellterTest extends StatusTest
     {
         return true;
     }
-
 }

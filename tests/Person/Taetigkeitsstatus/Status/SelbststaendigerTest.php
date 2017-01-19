@@ -1,46 +1,45 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 16:34
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class SelbststaendigerTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new Selbststaendiger();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Selbstständiger / Freiberufler';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 3;
     }
 
     protected function hasEntgeltfortzahlung(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isArbeitnehmer(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isErwerbstaetig(): bool
     {
         return true;
     }
-
 }

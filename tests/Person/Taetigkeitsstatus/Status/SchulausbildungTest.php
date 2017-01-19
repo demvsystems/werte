@@ -1,46 +1,45 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 16:32
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Schulausbildung;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class SchulausbildungTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new Schulausbildung();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Person in Schulausbildung';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 13;
     }
 
     protected function hasEntgeltfortzahlung(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isArbeitnehmer(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isErwerbstaetig(): bool
     {
-        return true;
+        return false;
     }
-
 }
