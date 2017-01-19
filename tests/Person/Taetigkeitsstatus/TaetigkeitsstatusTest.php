@@ -53,21 +53,21 @@ class TaetigkeitsstatusTest extends TestCase
     public function testEntries()
     {
         $provider = $this->getTaetigkeitsstatus();
-        $this->checkGetOne($provider, Angestellter::ID);
-        $this->checkGetOne($provider, AngestellterOeffentlDienst::ID);
-        $this->checkGetOne($provider, Arbeitssuchend::ID);
-        $this->checkGetOne($provider, BeamterAufLebenszeit::ID);
-        $this->checkGetOne($provider, BeamterAufProbe::ID);
-        $this->checkGetOne($provider, Berufsausbildung::ID);
-        $this->checkGetOne($provider, Elternzeit::ID);
-        $this->checkGetOne($provider, Erwerbsunfaehig::ID);
-        $this->checkGetOne($provider, Hausfrau::ID);
-        $this->checkGetOne($provider, Minijob::ID);
-        $this->checkGetOne($provider, Rentner::ID);
-        $this->checkGetOne($provider, Schulausbildung::ID);
-        $this->checkGetOne($provider, Selbststaendiger::ID);
-        $this->checkGetOne($provider, Sonstige::ID);
-        $this->checkGetOne($provider, Studium::ID);
-        $this->checkGetOne($provider, Vorstand::ID);
+        $this->checkGetOne($provider, Angestellter::class);
+        $this->checkGetOne($provider, AngestellterOeffentlDienst::class);
+        $this->checkGetOne($provider, Arbeitssuchend::class);
+        $this->checkGetOne($provider, BeamterAufLebenszeit::class);
+        $this->checkGetOne($provider, BeamterAufProbe::class);
+        $this->checkGetOne($provider, Berufsausbildung::class);
+        $this->checkGetOne($provider, Elternzeit::class);
+        $this->checkGetOne($provider, Erwerbsunfaehig::class);
+        $this->checkGetOne($provider, Hausfrau::class);
+        $this->checkGetOne($provider, Minijob::class);
+        $this->checkGetOne($provider, Rentner::class);
+        $this->checkGetOne($provider, Schulausbildung::class);
+        $this->checkGetOne($provider, Selbststaendiger::class);
+        $this->checkGetOne($provider, Sonstige::class);
+        $this->checkGetOne($provider, Studium::class);
+        $this->checkGetOne($provider, Vorstand::class);
     }
 }

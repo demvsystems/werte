@@ -36,28 +36,28 @@ class AnredenTest extends PHPUnit_Framework_TestCase
 
     public function testGetHerr()
     {
-        $this->checkGetOne($this->getAnreden(), Herr::ID);
+        $this->checkGetOne($this->getAnreden(), Herr::class);
     }
 
     public function testGetFrau()
     {
-        $this->checkGetOne($this->getAnreden(), Frau::ID);
+        $this->checkGetOne($this->getAnreden(), Frau::class);
     }
 
     public function testGetFirma()
     {
-        $this->checkGetOne($this->getAnreden(), Firma::ID);
+        $this->checkGetOne($this->getAnreden(), Firma::class);
     }
 
     public function testGetLeer()
     {
-        $this->checkGetOne($this->getAnreden(), LeereAnrede::ID);
+        $this->checkGetOne($this->getAnreden(), LeereAnrede::class);
     }
 
     public function testNotFound()
     {
         $this->expectException(EntryNotFoundException::class);
-        $this->checkGetOne($this->getAnreden(), 5);
+        $this->getAnreden()->getOne(5);
     }
 
 }

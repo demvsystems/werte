@@ -8,14 +8,20 @@ namespace Demv\Werte\Tests;
  * Time: 17:13
  */
 use Demv\Werte\ProviderInterface;
+use Demv\Werte\ValueInterface;
 
 trait ProviderTestTrait
 {
-    private function checkGetOne(ProviderInterface $provider, $id)
+    private function checkGetOne(ProviderInterface $provider, string $classname)
     {
-        $this->assertNotEmpty($provider->getOne($id));
-        $this->assertTrue($provider->exists($id));
-        $value = $provider->getOne($id);
-        $this->assertSame($id, $value->getId());
+        /**
+         * @var ValueInterface $instance
+         */
+        $instance = new $classname;
+        $this->assertNotEmpty($provider->getOne($instance->getId()));
+        $this->assertTrue($provider->exists($instance->getId()));
+        $value = $provider->getOne($instance->getId());
+        $this->assertSame($instance->getId(), $value->getId());
+        $this->assertInstanceOf($classname, $value);
     }
 }
