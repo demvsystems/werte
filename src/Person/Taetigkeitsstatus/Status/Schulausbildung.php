@@ -17,7 +17,7 @@ final class Schulausbildung extends Value implements TaetigkeitsstatusInterface
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Person in Schulausbildung');
+        parent::__construct(self::ID, 'Person in Schulausbildung / Praktikum / FSJ');
     }
 
     /**

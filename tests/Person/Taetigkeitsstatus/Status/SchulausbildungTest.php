@@ -20,7 +20,7 @@ final class SchulausbildungTest extends StatusTest
 
     protected function getStatusname(): string
     {
-        return 'Person in Schulausbildung';
+        return 'Person in Schulausbildung / Praktikum / FSJ';
     }
 
     protected function getStatusId(): int
