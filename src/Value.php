@@ -69,4 +69,24 @@ class Value implements ValueInterface
     {
         return $this->getId() === $value->getId();
     }
+
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function is(int $id): bool
+    {
+        return $this->id === $id;
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function isNot(int $id): bool
+    {
+        return !$this->is($id);
+    }
 }
