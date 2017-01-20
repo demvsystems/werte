@@ -1,46 +1,45 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 16:14
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class ErwerbsunfaehigTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new Erwerbsunfaehig();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Erwerbsunfähig / nicht erwerbstätig';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 24;
     }
 
     protected function hasEntgeltfortzahlung(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isArbeitnehmer(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isErwerbstaetig(): bool
     {
-        return true;
+        return false;
     }
-
 }

@@ -10,6 +10,10 @@ namespace Demv\Werte\Person\Taetigkeitsstatus;
 
 use Demv\Werte\ValueInterface;
 
+/**
+ * Interface TaetigkeitsstatusInterface
+ * @package Demv\Werte\Person\Taetigkeitsstatus
+ */
 interface TaetigkeitsstatusInterface extends ValueInterface
 {
 

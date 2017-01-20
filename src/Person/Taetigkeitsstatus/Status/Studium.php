@@ -11,7 +11,11 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
-class Studium extends Value implements TaetigkeitsstatusInterface
+/**
+ * Class Studium
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
+final class Studium extends Value implements TaetigkeitsstatusInterface
 {
     const ID = 15;
 

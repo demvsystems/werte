@@ -1,31 +1,31 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 14:41
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class AngestellterOeffentlDienstTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new AngestellterOeffentlDienst();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Angestellter öffentl. Dienst';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 10;
     }
 
     protected function hasEntgeltfortzahlung(): bool
@@ -42,5 +42,4 @@ final class AngestellterTest extends StatusTest
     {
         return true;
     }
-
 }

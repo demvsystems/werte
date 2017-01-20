@@ -1,31 +1,31 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 15:29
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class BeamterAufLebenszeitTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new BeamterAufLebenszeit();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Beamter auf Lebenszeit';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 5;
     }
 
     protected function hasEntgeltfortzahlung(): bool
@@ -35,12 +35,11 @@ final class AngestellterTest extends StatusTest
 
     protected function isArbeitnehmer(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isErwerbstaetig(): bool
     {
         return true;
     }
-
 }

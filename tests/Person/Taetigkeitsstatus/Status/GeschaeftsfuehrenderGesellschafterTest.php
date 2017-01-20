@@ -1,36 +1,36 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 11:50
+ * Time: 17:36
  */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GeschaeftsfuehrenderGesellschafter;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class AngestellterTest extends StatusTest
+final class GeschaeftsfuehrenderGesellschafterTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new Angestellter();
+        return new GeschaeftsfuehrenderGesellschafter();
     }
 
     protected function getStatusname(): string
     {
-        return 'Angestellter';
+        return 'Geschäftsführender Gesellschafter';
     }
 
     protected function getStatusId(): int
     {
-        return 2;
+        return 11;
     }
 
     protected function hasEntgeltfortzahlung(): bool
     {
-        return true;
+        return false;
     }
 
     protected function isArbeitnehmer(): bool
@@ -42,5 +42,4 @@ final class AngestellterTest extends StatusTest
     {
         return true;
     }
-
 }

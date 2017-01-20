@@ -11,13 +11,17 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
-class BeamterAufProbe extends Value implements TaetigkeitsstatusInterface
+/**
+ * Class BeamterAufProbe
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
+final class BeamterAufProbe extends Value implements TaetigkeitsstatusInterface
 {
     const ID = 8;
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Beamter auf Widerruf/Probe/Zeit');
+        parent::__construct(self::ID, 'Beamter auf Widerruf / Probe / Zeit');
     }
 
     /**

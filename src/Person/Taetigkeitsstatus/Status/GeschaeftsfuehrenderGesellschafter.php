@@ -1,31 +1,35 @@
 <?php
-
 /**
  * Created by PhpStorm.
- * User: alex
+ * User: sascha
  * Date: 19.01.17
- * Time: 10:30
+ * Time: 17:30
  */
+
 namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
 /**
- * Class AngestellterOeffentlDienst
+ * Class GeschaeftsfuehrenderGesellschafter
+ *
+ * Ist eine Mischung aus Angestellter und Selbstständiger und hier gibt es ein paar Besonderheiten
+ * TODO: klären der Endgeldforzahlung. Der Geschäftsführende Gesellschafter kann sich befreien lassen.
+ *
  * @package Demv\Werte\Person\Taetigkeitsstatus\Status
  */
-final class AngestellterOeffentlDienst extends Value implements TaetigkeitsstatusInterface
+final class GeschaeftsfuehrenderGesellschafter extends Value implements TaetigkeitsstatusInterface
 {
-    const ID = 10;
+    const ID = 11;
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Angestellter öffentl. Dienst');
+        parent::__construct(self::ID, 'Geschäftsführender Gesellschafter');
     }
 
     /**
-     * @inheritdoc
+     * @return bool
      */
     public function isErwerbstaetig(): bool
     {
@@ -33,7 +37,7 @@ final class AngestellterOeffentlDienst extends Value implements Taetigkeitsstatu
     }
 
     /**
-     * @inheritdoc
+     * @return bool
      */
     public function isArbeitnehmer(): bool
     {
@@ -41,11 +45,10 @@ final class AngestellterOeffentlDienst extends Value implements Taetigkeitsstatu
     }
 
     /**
-     * @inheritdoc
+     * @return bool
      */
     public function hasEntgeltfortzahlung(): bool
     {
-        return true;
+        return false;
     }
-
 }

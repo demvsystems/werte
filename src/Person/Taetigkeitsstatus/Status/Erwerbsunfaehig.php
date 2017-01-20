@@ -11,9 +11,13 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
-class Erwerbsunfaehig extends Value implements TaetigkeitsstatusInterface
+/**
+ * Class Erwerbsunfaehig
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
+final class Erwerbsunfaehig extends Value implements TaetigkeitsstatusInterface
 {
-    const ID = 21;
+    const ID = 24;
 
     public function __construct()
     {

@@ -11,7 +11,11 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
-class Selbststaendiger extends Value implements TaetigkeitsstatusInterface
+/**
+ * Class Selbststaendiger
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
+final class Selbststaendiger extends Value implements TaetigkeitsstatusInterface
 {
     const ID = 3;
 

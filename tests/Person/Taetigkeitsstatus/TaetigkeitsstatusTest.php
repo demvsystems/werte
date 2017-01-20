@@ -16,6 +16,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GeschaeftsfuehrenderGesellschafter;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Hausfrau;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Minijob;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Rentner;
@@ -44,7 +45,7 @@ class TaetigkeitsstatusTest extends TestCase
     public function testGetAll()
     {
         $provider = $this->getTaetigkeitsstatus();
-        $this->assertEquals(16, count($provider->getAll()));
+        $this->assertEquals(17, count($provider->getAll()));
         foreach ($provider->getAll() as $member) {
             $this->assertInstanceOf(TaetigkeitsstatusInterface::class, $member);
         }
@@ -69,5 +70,6 @@ class TaetigkeitsstatusTest extends TestCase
         $this->checkGetOne($provider, Sonstige::class);
         $this->checkGetOne($provider, Studium::class);
         $this->checkGetOne($provider, Vorstand::class);
+        $this->checkGetOne($provider, GeschaeftsfuehrenderGesellschafter::class);
     }
 }
