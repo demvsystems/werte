@@ -8,6 +8,10 @@
 
 namespace Demv\Werte;
 
+/**
+ * Interface ValueInterface
+ * @package Demv\Werte
+ */
 interface ValueInterface
 {
     /**
@@ -19,6 +23,16 @@ interface ValueInterface
      * @return string
      */
     public function getName(): string;
+
+    /**
+     * @return bool
+     */
+    public function isNone(): bool;
+
+    /**
+     * @return bool
+     */
+    public function isSome(): bool;
 
     /**
      * @param int $id

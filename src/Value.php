@@ -8,6 +8,10 @@
  */
 namespace Demv\Werte;
 
+/**
+ * Class Value
+ * @package Demv\Werte
+ */
 class Value implements ValueInterface
 {
     /**
@@ -46,6 +50,22 @@ class Value implements ValueInterface
     public function getName(): string
     {
         return $this->name;
+    }
+
+    /**
+     * @return bool
+     */
+    final public function isSome(): bool
+    {
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    final public function isNone(): bool
+    {
+        return !$this->isSome();
     }
 
     /**
