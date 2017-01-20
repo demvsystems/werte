@@ -20,4 +20,17 @@ interface ValueInterface
      */
     public function getName(): string;
 
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function is(int $id): bool;
+
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function isNot(int $id): bool;
 }

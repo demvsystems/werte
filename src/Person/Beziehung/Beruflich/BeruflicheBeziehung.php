@@ -17,14 +17,19 @@ use Demv\Werte\Value;
  */
 class BeruflicheBeziehung extends Value implements BeziehungsTypInterface
 {
+    /**
+     * @return bool
+     */
     final public function isFamiliaer(): bool
     {
         return false;
     }
 
+    /**
+     * @return bool
+     */
     final public function isBeruflich(): bool
     {
         return true;
     }
-
 }

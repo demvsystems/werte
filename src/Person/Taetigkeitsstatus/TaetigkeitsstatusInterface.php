@@ -16,7 +16,6 @@ use Demv\Werte\ValueInterface;
  */
 interface TaetigkeitsstatusInterface extends ValueInterface
 {
-
     /**
      * @return bool
      */

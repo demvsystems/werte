@@ -8,11 +8,13 @@
  */
 namespace Demv\Werte\Person\Beziehung;
 
+use Demv\Werte\ValueInterface;
+
 /**
  * Interface BeziehungsTypInterface
  * @package Demv\Werte\Person\Beziehung
  */
-interface BeziehungsTypInterface
+interface BeziehungsTypInterface extends ValueInterface
 {
     /**
      * Gibt zurück, ob es sich um eine Familiäre Beziehung handelt
@@ -25,17 +27,4 @@ interface BeziehungsTypInterface
      * @return bool
      */
     public function isBeruflich(): bool;
-
-    /**
-     * Gibt den Namen der Beziehung zurück
-     * @return string
-     */
-    public function getName(): string;
-
-    /**
-     * Gibt die ID der Beziehung zurück
-     * @return int
-     */
-    public function getId(): int;
-
 }

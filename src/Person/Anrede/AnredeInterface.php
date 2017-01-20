@@ -8,19 +8,13 @@
 
 namespace Demv\Werte\Person\Anrede;
 
+use Demv\Werte\ValueInterface;
+
 /**
  * Interface AnredeInterface
  * @package Demv\Werte\Person\Anrede
  */
-interface AnredeInterface
+interface AnredeInterface extends ValueInterface
 {
-    /**
-     * @return int
-     */
-    public function getId(): int;
 
-    /**
-     * @return string
-     */
-    public function getName(): string;
 }
