@@ -37,4 +37,24 @@ final class NoneValue implements ValueInterface
     {
         return true;
     }
+
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function is(int $id): bool
+    {
+        return false;
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function isNot(int $id): bool
+    {
+        return false;
+    }
 }
