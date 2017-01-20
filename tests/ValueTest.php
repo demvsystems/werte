@@ -55,18 +55,12 @@ class ValueTest extends TestCase
     {
         $some = new Value(1, 'test');
         $this->assertFalse($some->isNone());
-
-        $none = new NoneValue();
-        $this->assertTrue($none->isNone());
     }
 
     public function testIsSome()
     {
         $some = new Value(1, 'test');
         $this->assertTrue($some->isSome());
-
-        $none = new NoneValue();
-        $this->assertFalse($none->isSome());
     }
 
     public function testIs()
