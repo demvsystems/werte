@@ -8,9 +8,9 @@ namespace Demv\Werte\Tests;
  * Time: 11:43
  */
 use Demv\Werte\Value;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ValueTest extends PHPUnit_Framework_TestCase
+class ValueTest extends TestCase
 {
     public function testGetId()
     {
@@ -48,5 +48,16 @@ class ValueTest extends PHPUnit_Framework_TestCase
         $value1 = new Value(1, 'test');
         $value2 = new Value(2, 'test1');
         $this->assertFalse($value1->equals($value2));
+    }
+
+    public function testIs()
+    {
+        $value1 = new Value(1, 'test');
+        $value2 = new Value(2, 'test1');
+
+        $this->assertTrue($value1->is(1));
+        $this->assertFalse($value1->is(2));
+        $this->assertTrue($value1->isNot(2));
+        $this->assertTrue($value2->is(2));
     }
 }
