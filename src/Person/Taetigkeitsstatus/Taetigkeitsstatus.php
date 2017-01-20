@@ -27,6 +27,10 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Sonstige;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
 
+/**
+ * Class Taetigkeitsstatus
+ * @package Demv\Werte\Person\Taetigkeitsstatus
+ */
 final class Taetigkeitsstatus extends AbstractProvider
 {
     public function __construct()

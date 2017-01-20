@@ -11,6 +11,10 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
+/**
+ * Class Hausfrau
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
 final class Hausfrau extends Value implements TaetigkeitsstatusInterface
 {
     const ID = 17;

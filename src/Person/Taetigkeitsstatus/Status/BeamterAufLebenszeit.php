@@ -11,6 +11,10 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
+/**
+ * Class BeamterAufLebenszeit
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
 final class BeamterAufLebenszeit extends Value implements TaetigkeitsstatusInterface
 {
     const ID = 5;

@@ -11,6 +11,10 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Value;
 
+/**
+ * Class Elternzeit
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
 final class Elternzeit extends Value implements TaetigkeitsstatusInterface
 {
     const ID = 18;
