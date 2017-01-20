@@ -55,9 +55,17 @@ class Value implements ValueInterface
     /**
      * @return bool
      */
+    final public function isSome(): bool
+    {
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
     final public function isNone(): bool
     {
-        return false;
+        return !$this->isSome();
     }
 
     /**

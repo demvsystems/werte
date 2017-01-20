@@ -33,6 +33,14 @@ final class NoneValue implements ValueInterface
     /**
      * @return bool
      */
+    public function isSome(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @return bool
+     */
     public function isNone(): bool
     {
         return true;
