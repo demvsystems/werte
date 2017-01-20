@@ -6,15 +6,15 @@
  * Date: 19.01.17
  * Time: 14:58
  */
-namespace Demv\Werte\Person\Berufsunfaehigkeitsstatus;
+namespace Demv\Werte\Person\BuMoeglichkeit;
 
 use Demv\Werte\ValueInterface;
 
 /**
- * Interface BerufsunfaehigkeitsstatusInterface
- * @package Demv\Werte\Person\Berufsunfaehigkeitsstatus
+ * Interface BuMoeglichkeitInterface
+ * @package Demv\Werte\Person\BuMoeglichkeit
  */
-interface BerufsunfaehigkeitsstatusInterface extends ValueInterface
+interface BuMoeglichkeitInterface extends ValueInterface
 {
     /**
      * Gibt zurück, ob eine Berufsunfähigkeitsversicherung zum aktuellen Zeitpunkt möglich ist

@@ -6,16 +6,16 @@
  * Date: 19.01.17
  * Time: 15:00
  */
-namespace Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status;
+namespace Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten;
 
-use Demv\Werte\Person\Berufsunfaehigkeitsstatus\BerufsunfaehigkeitsstatusInterface;
+use Demv\Werte\Person\BuMoeglichkeit\BuMoeglichkeitInterface;
 use Demv\Werte\Value;
 
 /**
  * Class Moeglich
- * @package Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status
+ * @package Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten
  */
-final class Moeglich extends Value implements BerufsunfaehigkeitsstatusInterface
+final class Moeglich extends Value implements BuMoeglichkeitInterface
 {
     const ID = 0;
 

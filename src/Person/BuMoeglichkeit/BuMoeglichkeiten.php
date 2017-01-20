@@ -6,18 +6,18 @@
  * Date: 19.01.17
  * Time: 14:57
  */
-namespace Demv\Werte\Person\Berufsunfaehigkeitsstatus;
+namespace Demv\Werte\Person\BuMoeglichkeit;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status\Moeglich;
-use Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status\NichtMoeglich;
-use Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status\ZeitweiseNichtMoeglich;
+use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\Moeglich;
+use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\NichtMoeglich;
+use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\ZeitweiseNichtMoeglich;
 
 /**
- * Class Berufsunfaehigkeitsstatus
- * @package Demv\Werte\Person\Berufsunfaehigkeitsstatus
+ * Class BuMoeglichkeiten
+ * @package Demv\Werte\Person\BuMoeglichkeit
  */
-final class Berufsunfaehigkeitsstatus extends AbstractProvider
+final class BuMoeglichkeiten extends AbstractProvider
 {
     public function __construct()
     {
@@ -27,7 +27,7 @@ final class Berufsunfaehigkeitsstatus extends AbstractProvider
     }
 
     /**
-     * @return BerufsunfaehigkeitsstatusInterface[]
+     * @return BuMoeglichkeitInterface[]
      */
     public function getAll(): array
     {
@@ -37,7 +37,7 @@ final class Berufsunfaehigkeitsstatus extends AbstractProvider
     /**
      * @param int $id
      *
-     * @return BerufsunfaehigkeitsstatusInterface
+     * @return BuMoeglichkeitInterface
      */
     public function getOne(int $id)
     {
