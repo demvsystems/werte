@@ -8,7 +8,7 @@
  */
 namespace Demv\Werte;
 
-class Value
+class Value implements ValueInterface
 {
     /**
      * @var int
@@ -33,7 +33,7 @@ class Value
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId(): int
     {

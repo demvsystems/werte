@@ -23,7 +23,7 @@ abstract class AbstractProvider implements ProviderInterface
      */
     final protected function appendMember(Value $member)
     {
-        $this->members[] = $member;
+        $this->members[$member->getId()] = $member;
     }
 
     /**
@@ -62,13 +62,7 @@ abstract class AbstractProvider implements ProviderInterface
      */
     protected function fetchOne($id)
     {
-        foreach ($this->getAll() as $value) {
-            if ($value->getId() === $id) {
-                return $value;
-            }
-        }
-
-        return null;
+        return isset($this->members[$id]) ? $this->members[$id] : null;
     }
 
     /**
