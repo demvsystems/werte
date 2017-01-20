@@ -57,7 +57,17 @@ class ValueTest extends TestCase
 
         $this->assertTrue($value1->is(1));
         $this->assertFalse($value1->is(2));
-        $this->assertTrue($value1->isNot(2));
         $this->assertTrue($value2->is(2));
+    }
+
+    public function testIsNot()
+    {
+        $value1 = new Value(1, 'test');
+        $value2 = new Value(2, 'test1');
+
+        $this->assertFalse($value1->isNot(1));
+        $this->assertTrue($value1->isNot(2));
+        $this->assertTrue($value2->isNot(1));
+        $this->assertFalse($value2->isNot(2));
     }
 }
