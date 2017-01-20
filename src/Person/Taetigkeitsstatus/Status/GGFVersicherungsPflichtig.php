@@ -14,18 +14,15 @@ use Demv\Werte\Value;
 /**
  * Class GeschaeftsfuehrenderGesellschafter
  *
- * Ist eine Mischung aus Angestellter und Selbstständiger und hier gibt es ein paar Besonderheiten
- * TODO: klären der Endgeldforzahlung. Der Geschäftsführende Gesellschafter kann sich befreien lassen.
- *
  * @package Demv\Werte\Person\Taetigkeitsstatus\Status
  */
-final class GeschaeftsfuehrenderGesellschafter extends Value implements TaetigkeitsstatusInterface
+final class GGFVersicherungsPflichtig extends Value implements TaetigkeitsstatusInterface
 {
-    const ID = 11;
+    const ID = 25;
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Geschäftsführender Gesellschafter');
+        parent::__construct(self::ID, 'Geschäftsführender Gesellschafter ohne Entgeltfortzahlung');
     }
 
     /**

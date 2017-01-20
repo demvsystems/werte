@@ -17,7 +17,8 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
-use Demv\Werte\Person\Taetigkeitsstatus\Status\GeschaeftsfuehrenderGesellschafter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsFrei;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsPflichtig;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Hausfrau;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Minijob;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Rentner;
@@ -51,7 +52,8 @@ final class Taetigkeitsstatus extends AbstractProvider
         $this->appendMember(new Erwerbsunfaehig());
         $this->appendMember(new Minijob());
         $this->appendMember(new Sonstige());
-        $this->appendMember(new GeschaeftsfuehrenderGesellschafter());
+        $this->appendMember(new GGFVersicherungsFrei());
+        $this->appendMember(new GGFVersicherungsPflichtig());
     }
 
     /**

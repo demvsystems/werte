@@ -8,6 +8,7 @@
  */
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus;
 
+use Codeception\Specify;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
@@ -16,7 +17,8 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
-use Demv\Werte\Person\Taetigkeitsstatus\Status\GeschaeftsfuehrenderGesellschafter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsFrei;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsPflichtig;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Hausfrau;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Minijob;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Rentner;
@@ -33,6 +35,7 @@ use PHPUnit\Framework\TestCase;
 class TaetigkeitsstatusTest extends TestCase
 {
     use ProviderTestTrait;
+    use Specify;
 
     /**
      * @return Taetigkeitsstatus
@@ -45,10 +48,25 @@ class TaetigkeitsstatusTest extends TestCase
     public function testGetAll()
     {
         $provider = $this->getTaetigkeitsstatus();
-        $this->assertEquals(17, count($provider->getAll()));
-        foreach ($provider->getAll() as $member) {
-            $this->assertInstanceOf(TaetigkeitsstatusInterface::class, $member);
-        }
+
+        $this->specify('Alle Einträge wurden registriert', function () use ($provider) {
+            $this->assertEquals(18, count($provider->getAll()));
+        });
+
+        $this->specify('Alle Instanzen implementieren das gleiche Interface.', function () use ($provider) {
+            foreach ($provider->getAll() as $member) {
+
+                $this->assertInstanceOf(TaetigkeitsstatusInterface::class, $member);
+            }
+        });
+
+        $this->specify('Keine doppelten Ids', function () use ($provider) {
+            $ids = [];
+            foreach ($provider->getAll() as $member) {
+                $ids[] = $member->getId();
+            }
+            $this->assertEquals(count($ids), count(array_unique($ids)));
+        });
     }
 
     public function testEntries()
@@ -70,6 +88,7 @@ class TaetigkeitsstatusTest extends TestCase
         $this->checkGetOne($provider, Sonstige::class);
         $this->checkGetOne($provider, Studium::class);
         $this->checkGetOne($provider, Vorstand::class);
-        $this->checkGetOne($provider, GeschaeftsfuehrenderGesellschafter::class);
+        $this->checkGetOne($provider, GGFVersicherungsFrei::class);
+        $this->checkGetOne($provider, GGFVersicherungsPflichtig::class);
     }
 }
