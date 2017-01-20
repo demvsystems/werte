@@ -17,8 +17,8 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
-use Demv\Werte\Person\Taetigkeitsstatus\Status\GgfVersicherungsFrei;
-use Demv\Werte\Person\Taetigkeitsstatus\Status\GgfVersicherungsPflichtig;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsFrei;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsPflichtig;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Hausfrau;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Minijob;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Rentner;
@@ -88,7 +88,7 @@ class TaetigkeitsstatusTest extends TestCase
         $this->checkGetOne($provider, Sonstige::class);
         $this->checkGetOne($provider, Studium::class);
         $this->checkGetOne($provider, Vorstand::class);
-        $this->checkGetOne($provider, GgfVersicherungsFrei::class);
-        $this->checkGetOne($provider, GgfVersicherungsPflichtig::class);
+        $this->checkGetOne($provider, GGFVersicherungsFrei::class);
+        $this->checkGetOne($provider, GGFVersicherungsPflichtig::class);
     }
 }

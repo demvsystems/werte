@@ -8,14 +8,14 @@
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\GgfVersicherungsFrei;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsFrei;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class GgfVersicherungsFreiTest extends StatusTest
+final class GGFVersicherungsFreiTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new GgfVersicherungsFrei();
+        return new GGFVersicherungsFrei();
     }
 
     protected function getStatusname(): string

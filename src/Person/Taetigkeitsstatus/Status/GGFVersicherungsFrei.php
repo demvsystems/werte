@@ -16,13 +16,13 @@ use Demv\Werte\Value;
  *
  * @package Demv\Werte\Person\Taetigkeitsstatus\Status
  */
-final class GgfVersicherungsPflichtig extends Value implements TaetigkeitsstatusInterface
+final class GGFVersicherungsFrei extends Value implements TaetigkeitsstatusInterface
 {
-    const ID = 25;
+    const ID = 11;
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Geschäftsführender Gesellschafter ohne Entgeltfortzahlung');
+        parent::__construct(self::ID, 'Geschäftsführender Gesellschafter mit Entgeltfortzahlung');
     }
 
     /**
@@ -46,6 +46,6 @@ final class GgfVersicherungsPflichtig extends Value implements Taetigkeitsstatus
      */
     public function hasEntgeltfortzahlung(): bool
     {
-        return false;
+        return true;
     }
 }
