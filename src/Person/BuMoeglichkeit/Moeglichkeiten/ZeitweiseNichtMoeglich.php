@@ -31,5 +31,4 @@ final class ZeitweiseNichtMoeglich extends Value implements BuMoeglichkeitInterf
     {
         return false;
     }
-
 }

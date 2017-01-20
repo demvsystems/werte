@@ -43,5 +43,4 @@ final class BuMoeglichkeiten extends AbstractProvider
     {
         return parent::getOne($id);
     }
-
 }

@@ -31,5 +31,4 @@ final class Moeglich extends Value implements BuMoeglichkeitInterface
     {
         return true;
     }
-
 }

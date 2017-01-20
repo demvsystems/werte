@@ -31,5 +31,4 @@ final class NichtMoeglich extends Value implements BuMoeglichkeitInterface
     {
         return false;
     }
-
 }
