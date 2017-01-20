@@ -10,6 +10,10 @@ namespace Demv\Werte\Person\Berufsunfaehigkeitsstatus;
 
 use Demv\Werte\ValueInterface;
 
+/**
+ * Interface BerufsunfaehigkeitsstatusInterface
+ * @package Demv\Werte\Person\Berufsunfaehigkeitsstatus
+ */
 interface BerufsunfaehigkeitsstatusInterface extends ValueInterface
 {
     /**

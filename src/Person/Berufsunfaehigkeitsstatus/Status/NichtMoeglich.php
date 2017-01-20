@@ -11,6 +11,10 @@ namespace Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status;
 use Demv\Werte\Person\Berufsunfaehigkeitsstatus\BerufsunfaehigkeitsstatusInterface;
 use Demv\Werte\Value;
 
+/**
+ * Class NichtMoeglich
+ * @package Demv\Werte\Person\Berufsunfaehigkeitsstatus\Status
+ */
 final class NichtMoeglich extends Value implements BerufsunfaehigkeitsstatusInterface
 {
     const ID = 2;
