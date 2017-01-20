@@ -28,4 +28,17 @@ interface ValueInterface
      * @return bool
      */
     public function isNone(): bool;
+
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function is(int $id): bool;
+
+    /**
+     * @param int $id
+     *
+     * @return bool
+     */
+    public function isNot(int $id): bool;
 }
