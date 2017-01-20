@@ -8,24 +8,24 @@
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
-use Demv\Werte\Person\Taetigkeitsstatus\Status\GeschaeftsfuehrenderGesellschafter;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\GgfVersicherungsPflichtig;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
-final class GeschaeftsfuehrenderGesellschafterTest extends StatusTest
+final class GgfVersicherungsPflichtigTest extends StatusTest
 {
     protected function getTaetigkeitsstatus(): TaetigkeitsstatusInterface
     {
-        return new GeschaeftsfuehrenderGesellschafter();
+        return new GgfVersicherungsPflichtig();
     }
 
     protected function getStatusname(): string
     {
-        return 'Geschäftsführender Gesellschafter';
+        return 'Geschäftsführender Gesellschafter ohne Entgeltfortzahlung';
     }
 
     protected function getStatusId(): int
     {
-        return 11;
+        return 25;
     }
 
     protected function hasEntgeltfortzahlung(): bool
