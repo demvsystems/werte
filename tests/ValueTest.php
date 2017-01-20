@@ -7,6 +7,7 @@ namespace Demv\Werte\Tests;
  * Date: 06.01.17
  * Time: 11:43
  */
+use Demv\Werte\NoneValue;
 use Demv\Werte\Value;
 use PHPUnit_Framework_TestCase;
 
@@ -48,5 +49,14 @@ class ValueTest extends PHPUnit_Framework_TestCase
         $value1 = new Value(1, 'test');
         $value2 = new Value(2, 'test1');
         $this->assertFalse($value1->equals($value2));
+    }
+
+    public function testIsNone()
+    {
+        $some = new Value(1, 'test');
+        $this->assertFalse($some->isNone());
+
+        $none = new NoneValue();
+        $this->assertTrue($none->isNone());
     }
 }

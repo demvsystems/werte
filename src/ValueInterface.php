@@ -8,6 +8,10 @@
 
 namespace Demv\Werte;
 
+/**
+ * Interface ValueInterface
+ * @package Demv\Werte
+ */
 interface ValueInterface
 {
     /**
@@ -20,4 +24,8 @@ interface ValueInterface
      */
     public function getName(): string;
 
+    /**
+     * @return bool
+     */
+    public function isNone(): bool;
 }

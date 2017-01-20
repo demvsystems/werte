@@ -8,6 +8,10 @@
  */
 namespace Demv\Werte;
 
+/**
+ * Class Value
+ * @package Demv\Werte
+ */
 class Value implements ValueInterface
 {
     /**
@@ -49,6 +53,14 @@ class Value implements ValueInterface
     }
 
     /**
+     * @return bool
+     */
+    final public function isNone(): bool
+    {
+        return false;
+    }
+
+    /**
      * @param Value $value
      *
      * @return bool
@@ -57,5 +69,4 @@ class Value implements ValueInterface
     {
         return $this->getId() === $value->getId();
     }
-
 }
