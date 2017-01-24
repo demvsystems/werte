@@ -11,6 +11,10 @@ namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 use Demv\Werte\NoneValue;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 
+/**
+ * Class NoneTaetigkeisstatus
+ * @package Demv\Werte\Person\Taetigkeitsstatus\Status
+ */
 final class NoneTaetigkeisstatus extends NoneValue implements TaetigkeitsstatusInterface
 {
     /**
