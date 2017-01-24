@@ -12,7 +12,7 @@ namespace Demv\Werte;
  * Class NoneValue
  * @package Demv\Werte
  */
-final class NoneValue implements ValueInterface
+class NoneValue implements ValueInterface
 {
     /**
      * @return int
