@@ -6,7 +6,7 @@ namespace Demv\Werte\Sparte\Sparten;
  * Class Krankenversicherung
  * @package Demv\Werte\Sparte\Sparten
  */
-final class Krankenversicherung
+interface Krankenversicherung
 {
     const KRANKENTAGEGELD = 159;
 }
