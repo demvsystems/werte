@@ -9,10 +9,10 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Class Privathaftpflicht
+ * Interface Privathaftpflicht
  * @package Demv\Werte\Sparte\Sparten
  */
-final class Privathaftpflicht
+interface Privathaftpflicht
 {
     const ID = 165;
 }

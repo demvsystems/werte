@@ -8,10 +8,10 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Class RechtsschutzPrivat
+ * Interface RechtsschutzPrivat
  * @package Demv\Werte\Sparte\Sparten
  */
-final class RechtsschutzPrivat
+interface RechtsschutzPrivat
 {
     const ID = 169;
 
