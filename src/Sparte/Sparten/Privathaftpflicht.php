@@ -9,7 +9,7 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Class Privathaftpflicht
+ * Interface Privathaftpflicht
  * @package Demv\Werte\Sparte\Sparten
  */
 interface Privathaftpflicht

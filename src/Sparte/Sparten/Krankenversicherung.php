@@ -3,7 +3,7 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Class Krankenversicherung
+ * Interface Krankenversicherung
  * @package Demv\Werte\Sparte\Sparten
  */
 interface Krankenversicherung

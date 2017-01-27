@@ -8,7 +8,7 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Class RechtsschutzPrivat
+ * Interface RechtsschutzPrivat
  * @package Demv\Werte\Sparte\Sparten
  */
 interface RechtsschutzPrivat
