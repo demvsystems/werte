@@ -8,6 +8,7 @@
 
 namespace Demv\Werte\Tests\Person\Beziehung;
 
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
@@ -20,6 +21,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
+use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use PHPUnit_Framework_TestCase;
 
 class GegenbeziehungTest extends PHPUnit_Framework_TestCase
@@ -29,7 +31,7 @@ class GegenbeziehungTest extends PHPUnit_Framework_TestCase
      */
     private function getGegenbziehung()
     {
-        return new Gegenbeziehung();
+        return GegenbeziehungFactory::create();
     }
 
     /**
@@ -90,6 +92,13 @@ class GegenbeziehungTest extends PHPUnit_Framework_TestCase
     public function testFirmaVon()
     {
         $this->checkExistence(new FirmaVon(), new Geschaeftsfuehrer());
+    }
+
+    public function testMissing()
+    {
+        $this->expectException(EntryNotFoundException::class);
+        $gegenbeziehung = new Gegenbeziehung([]);
+        $gegenbeziehung->getFor(new Partner());
     }
 
 }

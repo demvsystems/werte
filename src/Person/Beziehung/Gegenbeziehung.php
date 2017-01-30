@@ -8,17 +8,8 @@
 
 namespace Demv\Werte\Person\Beziehung;
 
-use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
-use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
-use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
-use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
-use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
-use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
-use Demv\Werte\Person\Beziehung\Familiaer\Geschwister;
-use Demv\Werte\Person\Beziehung\Familiaer\Grosseltern;
-use Demv\Werte\Person\Beziehung\Familiaer\Kind;
-use Demv\Werte\Person\Beziehung\Familiaer\Partner;
-use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
+use Demv\Werte\Exception\EntryNotFoundException;
+
 use Exception;
 
 /**
@@ -27,32 +18,25 @@ use Exception;
  */
 final class Gegenbeziehung
 {
+    /**
+     * @var array
+     */
     private $pairs = [];
 
-    public function __construct()
-    {
-        $this->appendPair(Partner::ID, Partner::ID);
-        $this->appendPair(Eltern::ID, Kind::ID);
-        $this->appendPair(Arbeitgeber::ID, Arbeitnehmer::ID);
-        $this->appendPair(Geschaeftsfuehrer::ID, FirmaVon::ID);
-        $this->appendPair(Geschwister::ID, Geschwister::ID);
-        $this->appendPair(Schwager::ID, Schwager::ID);
-        $this->appendPair(Grosseltern::ID, Enkel::ID);
-    }
-
     /**
-     * @param int $firstId
-     * @param int $secondId
+     * Gegenbeziehung constructor.
+     *
+     * @param array $pairs
      */
-    private function appendPair(int $firstId, int $secondId)
+    public function __construct(array $pairs)
     {
-        $this->pairs[$firstId] = $secondId;
+        $this->pairs = $pairs;
     }
 
     /**
      * @param BeziehungsTypInterface $beziehungsTyp
      *
-     * @return mixed
+     * @return BeziehungsTypInterface
      * @throws Exception
      */
     public function getFor(BeziehungsTypInterface $beziehungsTyp): BeziehungsTypInterface
@@ -67,7 +51,7 @@ final class Gegenbeziehung
             }
         }
 
-        throw new Exception(sprintf('Für die Beziehung %s existiert keine Gegenbeziehung', $beziehungsTyp->getName()));
+        throw new EntryNotFoundException('Gegenbeziehung', $beziehungsTyp->getId());
     }
 
     /**
