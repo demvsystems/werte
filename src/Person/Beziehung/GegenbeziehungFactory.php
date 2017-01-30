@@ -46,5 +46,4 @@ final class GegenbeziehungFactory
 
         return $pairs;
     }
-
 }

@@ -14,10 +14,8 @@ use PHPUnit\Framework\TestCase;
 
 class GegenbeziehungFactoryTest extends TestCase
 {
-
     public function testCreate()
     {
         $this->assertInstanceOf(Gegenbeziehung::class, GegenbeziehungFactory::create());
     }
-
 }
