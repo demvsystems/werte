@@ -5,14 +5,12 @@ namespace Demv\Werte;
 /**
  * Class Ternary
  * @package Demv\Werte
- *
- * @see     https://de.wikipedia.org/wiki/Dreiwertige_Logik
  */
 final class Ternary
 {
-    const YES     = 0;
-    const NO      = 2;
-    const UNKNOWN = 6;
+    const YES     = 1;
+    const NO      = 0;
+    const UNKNOWN = -1;
 
     /**
      * @var array
@@ -113,13 +111,5 @@ final class Ternary
     public function isUnknown(): bool
     {
         return $this->is(self::UNKNOWN);
-    }
-
-    /**
-     * @return Ternary
-     */
-    public function invert(): self
-    {
-        return self::instance((386 >> $this->value) & self::UNKNOWN);
     }
 }

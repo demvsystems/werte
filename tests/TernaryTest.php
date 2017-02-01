@@ -30,11 +30,4 @@ class TernaryTest extends TestCase
         $this->assertFalse($ternary->isYes());
         $this->assertTrue($ternary->isNo());
     }
-
-    public function testInvert()
-    {
-        $this->assertTrue(Ternary::yes()->invert() === Ternary::no());
-        $this->assertTrue(Ternary::no()->invert() === Ternary::yes());
-        $this->assertTrue(Ternary::unknown()->invert() === Ternary::unknown());
-    }
 }
