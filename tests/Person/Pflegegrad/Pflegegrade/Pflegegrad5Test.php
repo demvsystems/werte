@@ -1,0 +1,68 @@
+<?php
+
+namespace Demv\Werte\Tests\Person\Pflegegrad\Pflegegrade;
+
+use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad5;
+use Demv\Werte\Person\Pflegegrad\PflegegradInterface;
+use PHPUnit\Framework\TestCase;
+use Codeception\Specify;
+
+class Pflegegrad5Test extends TestCase
+{
+    use Specify;
+
+    /**
+     * @var PflegegradInterface
+     */
+    private $pflegegrad;
+
+    public function setUp()
+    {
+        $this->pflegegrad = new Pflegegrad5();
+    }
+
+    public function testId()
+    {
+        $this->specify('TestId',
+            function () {
+                $this->assertSame(5, $this->pflegegrad->getId());
+            }
+        );
+    }
+
+    public function testName()
+    {
+        $this->specify('TestName',
+            function () {
+                $this->assertSame('Pflegegrad V', $this->pflegegrad->getName());
+            }
+        );
+    }
+
+    public function testMin()
+    {
+        $this->specify('TestMin',
+            function () {
+                $this->assertEquals(90, $this->pflegegrad->getMin());
+            }
+        );
+    }
+
+    public function testMax()
+    {
+        $this->specify('TestMax',
+            function () {
+                $this->assertEquals(100, $this->pflegegrad->getMax());
+            }
+        );
+    }
+
+    public function testHinweis()
+    {
+        $this->specify('TestHinweis',
+            function () {
+                $this->assertSame('Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung', $this->pflegegrad->getHinweis());
+            }
+        );
+    }
+}
