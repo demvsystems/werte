@@ -12,19 +12,24 @@ use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
 use Demv\Werte\Person\Beziehung\Familiaer\Grosseltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Kind;
+use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
+use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
+use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_TestCase;
 
-class GegenbeziehungTest extends PHPUnit_Framework_TestCase
+class GegenbeziehungTest extends TestCase
 {
     /**
      * @return Gegenbeziehung
@@ -94,11 +99,30 @@ class GegenbeziehungTest extends PHPUnit_Framework_TestCase
         $this->checkExistence(new FirmaVon(), new Geschaeftsfuehrer());
     }
 
+    public function testFirmaVonInhaber()
+    {
+        $this->checkExistence(new FirmaVonInhaber(), new Inhaber());
+    }
+
+    public function testInhaber()
+    {
+        $this->checkExistence(new Inhaber(), new FirmaVonInhaber());
+    }
+
+    public function testOnkel()
+    {
+        $this->checkExistence(new OnkelTante(), new NeffeNichte());
+    }
+
+    public function testNeffe()
+    {
+        $this->checkExistence(new NeffeNichte(), new OnkelTante());
+    }
+
     public function testMissing()
     {
         $this->expectException(EntryNotFoundException::class);
         $gegenbeziehung = new Gegenbeziehung([]);
         $gegenbeziehung->getFor(new Partner());
     }
-
 }
