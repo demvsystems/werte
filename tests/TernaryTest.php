@@ -13,6 +13,7 @@ class TernaryTest extends TestCase
         $this->assertTrue($ternary->isUnknown());
         $this->assertFalse($ternary->isYes());
         $this->assertFalse($ternary->isNo());
+        $this->assertEquals(Ternary::UNKNOWN, $ternary->getValue());
     }
 
     public function testYes()
@@ -21,6 +22,7 @@ class TernaryTest extends TestCase
         $this->assertFalse($ternary->isUnknown());
         $this->assertTrue($ternary->isYes());
         $this->assertFalse($ternary->isNo());
+        $this->assertEquals(Ternary::YES, $ternary->getValue());
     }
 
     public function testNo()
@@ -29,5 +31,13 @@ class TernaryTest extends TestCase
         $this->assertFalse($ternary->isUnknown());
         $this->assertFalse($ternary->isYes());
         $this->assertTrue($ternary->isNo());
+        $this->assertEquals(Ternary::NO, $ternary->getValue());
+    }
+
+    public function testTranslate()
+    {
+        $this->assertEquals(Ternary::unknown(), Ternary::translate(Ternary::UNKNOWN));
+        $this->assertEquals(Ternary::no(), Ternary::translate(Ternary::NO));
+        $this->assertEquals(Ternary::yes(), Ternary::translate(Ternary::YES));
     }
 }
