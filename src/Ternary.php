@@ -72,6 +72,31 @@ final class Ternary
     /**
      * @param int $value
      *
+     * @return Ternary
+     */
+    public static function translate(int $value): self
+    {
+        switch ($value) {
+            case self::NO:
+                return self::no();
+            case self::YES:
+                return self::yes();
+            default:
+                return self::unknown();
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue(): int
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param int $value
+     *
      * @return bool
      */
     public function is(int $value): bool
