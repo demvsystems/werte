@@ -18,7 +18,7 @@ interface Krankenversicherung
     /**
      * 156    Krankenversicherung->Private Krankenvollversicherung
      */
-    CONST PRIVATE_KRANKENVOLLVERSICHERUNG = 156;
+    const PRIVATE_KRANKENVOLLVERSICHERUNG = 156;
 
     /**
      * 368    Krankenversicherung->Freie Heilfürsorge
