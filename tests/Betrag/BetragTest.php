@@ -17,7 +17,7 @@ class BetragTest extends TestCase
         $this->assertEquals('4.20', $betrag->asText());
     }
 
-    public function testINegative()
+    public function testIsNegative()
     {
         $betrag = new Betrag(-2.3);
 
