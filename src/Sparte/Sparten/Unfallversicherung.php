@@ -8,8 +8,5 @@ namespace Demv\Werte\Sparte\Sparten;
  */
 interface Unfallversicherung
 {
-    /**
-     * 322    Private Sachversicherungen->Unfallversicherung->Funktionsinvalidität
-     */
     const FUNKTIONSINVALIDITAET = 322;
 }
