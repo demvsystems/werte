@@ -32,23 +32,43 @@ class Betrag implements BetragInterface
     }
 
     /**
-     * @param int $amount
+     * @param float $amount
      *
      * @return bool
      */
-    public function isGroesserAls(int $amount): bool
+    public function isGroesserAls(float $amount): bool
     {
         return $this->amount > $amount;
     }
 
     /**
-     * @param int $amount
+     * @param float $amount
      *
      * @return bool
      */
-    public function isKleinerAls(int $amount): bool
+    public function isGroesserOderGleich(float $amount): bool
+    {
+        return $this->amount >= $amount;
+    }
+
+    /**
+     * @param float $amount
+     *
+     * @return bool
+     */
+    public function isKleinerAls(float $amount): bool
     {
         return $this->amount < $amount;
+    }
+
+    /**
+     * @param float $amount
+     *
+     * @return bool
+     */
+    public function isKleinerOderGleich(float $amount): bool
+    {
+        return $this->amount <= $amount;
     }
 
     /**
@@ -56,7 +76,7 @@ class Betrag implements BetragInterface
      */
     final public function isPositiv(): bool
     {
-        return $this->amount >= 0;
+        return $this->isGroesserOderGleich(0);
     }
 
     /**
@@ -64,7 +84,7 @@ class Betrag implements BetragInterface
      */
     final public function isNegativ(): bool
     {
-        return $this->amount < 0;
+        return $this->isKleinerAls(0);
     }
 
     /**

@@ -14,18 +14,32 @@ interface BetragInterface
     public function getBetrag(): float;
 
     /**
-     * @param int $amount
+     * @param float $amount
      *
      * @return bool
      */
-    public function isGroesserAls(int $amount): bool;
+    public function isGroesserAls(float $amount): bool;
 
     /**
-     * @param int $amount
+     * @param float $amount
      *
      * @return bool
      */
-    public function isKleinerAls(int $amount): bool;
+    public function isGroesserOderGleich(float $amount): bool;
+
+    /**
+     * @param float $amount
+     *
+     * @return bool
+     */
+    public function isKleinerAls(float $amount): bool;
+
+    /**
+     * @param float $amount
+     *
+     * @return bool
+     */
+    public function isKleinerOderGleich(float $amount): bool;
 
     /**
      * @return bool
