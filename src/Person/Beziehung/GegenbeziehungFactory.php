@@ -11,12 +11,16 @@ namespace Demv\Werte\Person\Beziehung;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
 use Demv\Werte\Person\Beziehung\Familiaer\Geschwister;
 use Demv\Werte\Person\Beziehung\Familiaer\Grosseltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Kind;
+use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
+use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 
@@ -43,6 +47,8 @@ final class GegenbeziehungFactory
         $pairs[Geschwister::ID]       = Geschwister::ID;
         $pairs[Schwager::ID]          = Schwager::ID;
         $pairs[Grosseltern::ID]       = Enkel::ID;
+        $pairs[Inhaber::ID]           = FirmaVonInhaber::ID;
+        $pairs[OnkelTante::ID]        = NeffeNichte::ID;
 
         return $pairs;
     }
