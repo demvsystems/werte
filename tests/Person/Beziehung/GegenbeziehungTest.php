@@ -26,9 +26,10 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
+use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_TestCase;
 
-class GegenbeziehungTest extends PHPUnit_Framework_TestCase
+class GegenbeziehungTest extends TestCase
 {
     /**
      * @return Gegenbeziehung

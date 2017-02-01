@@ -10,13 +10,14 @@ namespace Demv\Werte\Tests\Person\Anrede;
 use Demv\Werte\Person\Anrede\Anreden;
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Tests\ProviderTestTrait;
+use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_TestCase;
 use Demv\Werte\Person\Anrede\Anreden\Herr;
 use Demv\Werte\Person\Anrede\Anreden\Frau;
 use Demv\Werte\Person\Anrede\Anreden\Firma;
 use Demv\Werte\Person\Anrede\Anreden\LeereAnrede;
 
-class AnredenTest extends PHPUnit_Framework_TestCase
+class AnredenTest extends TestCase
 {
     use ProviderTestTrait;
 
