@@ -3,7 +3,7 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Class PrivateKrankenZusatzVersicherung
+ * Interface PrivateKrankenZusatzVersicherung
  * @package Demv\Werte\Sparte\Sparten
  */
 interface PrivateKrankenZusatzVersicherung
