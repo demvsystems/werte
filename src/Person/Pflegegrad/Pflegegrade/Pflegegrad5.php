@@ -40,6 +40,9 @@ final class Pflegegrad5 extends Value implements PflegegradInterface
         return 100;
     }
 
+    /**
+     * @return string
+     */
     public function getHinweis(): string
     {
         return 'Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung';
