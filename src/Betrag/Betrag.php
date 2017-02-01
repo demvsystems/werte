@@ -6,7 +6,7 @@ namespace Demv\Werte\Betrag;
  * Class Betrag
  * @package Demv\Werte\Betrag
  */
-class Betrag
+class Betrag implements BetragInterface
 {
     /**
      * @var float
@@ -26,7 +26,7 @@ class Betrag
     /**
      * @return float
      */
-    final public function getAmount(): float
+    final public function getBetrag(): float
     {
         return $this->amount;
     }
@@ -34,7 +34,7 @@ class Betrag
     /**
      * @return bool
      */
-    final public function isPositive(): bool
+    final public function isPositiv(): bool
     {
         return $this->amount >= 0;
     }
@@ -42,7 +42,7 @@ class Betrag
     /**
      * @return bool
      */
-    final public function isNegative(): bool
+    final public function isNegativ(): bool
     {
         return $this->amount < 0;
     }
