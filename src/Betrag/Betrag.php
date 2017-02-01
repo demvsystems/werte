@@ -32,6 +32,26 @@ class Betrag implements BetragInterface
     }
 
     /**
+     * @param int $amount
+     *
+     * @return bool
+     */
+    public function isGroesserAls(int $amount): bool
+    {
+        return $this->amount > $amount;
+    }
+
+    /**
+     * @param int $amount
+     *
+     * @return bool
+     */
+    public function isKleinerAls(int $amount): bool
+    {
+        return $this->amount < $amount;
+    }
+
+    /**
      * @return bool
      */
     final public function isPositiv(): bool
@@ -52,6 +72,6 @@ class Betrag implements BetragInterface
      */
     public function asText(): string
     {
-        return number_format($this->amount, 2);
+        return number_format($this->amount, 2, ',', '.');
     }
 }

@@ -13,6 +13,6 @@ final class Euro extends Betrag
      */
     public function asText(): string
     {
-        return parent::asText() . '€';
+        return parent::asText() . ' €';
     }
 }

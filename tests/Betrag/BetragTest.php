@@ -9,21 +9,25 @@ class BetragTest extends TestCase
 {
     public function testIsPositiv()
     {
-        $betrag = new Betrag(4.2);
+        $betrag = new Betrag(4200.35);
 
         $this->assertTrue($betrag->isPositiv());
         $this->assertFalse($betrag->isNegativ());
-        $this->assertEquals(4.2, $betrag->getBetrag());
-        $this->assertEquals('4.20', $betrag->asText());
+        $this->assertTrue($betrag->isKleinerAls(4201));
+        $this->assertTrue($betrag->isGroesserAls(4200));
+        $this->assertEquals(4200.35, $betrag->getBetrag());
+        $this->assertEquals('4.200,35', $betrag->asText());
     }
 
     public function testIsNegative()
     {
-        $betrag = new Betrag(-2.3);
+        $betrag = new Betrag(-2300.5);
 
         $this->assertFalse($betrag->isPositiv());
         $this->assertTrue($betrag->isNegativ());
-        $this->assertEquals(-2.3, $betrag->getBetrag());
-        $this->assertEquals('-2.30', $betrag->asText());
+        $this->assertTrue($betrag->isKleinerAls(-2299));
+        $this->assertTrue($betrag->isGroesserAls(-2400));
+        $this->assertEquals(-2300.5, $betrag->getBetrag());
+        $this->assertEquals('-2.300,50', $betrag->asText());
     }
 }

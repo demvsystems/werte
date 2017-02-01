@@ -11,12 +11,12 @@ class EinkommenTest extends TestCase
 {
     public function testValidAmount()
     {
-        $einkommen = new Einkommen(new Euro(4.2));
+        $einkommen = new Einkommen(new Euro(410.2));
 
         $this->assertTrue($einkommen->getBetrag()->isPositiv());
         $this->assertFalse($einkommen->getBetrag()->isNegativ());
-        $this->assertEquals(4.2, $einkommen->getBetrag()->getBetrag());
-        $this->assertEquals('4.20€', $einkommen->getBetrag()->asText());
+        $this->assertEquals(410.2, $einkommen->getBetrag()->getBetrag());
+        $this->assertEquals('410,20 €', $einkommen->getBetrag()->asText());
     }
 
     public function testInvalidAmount()

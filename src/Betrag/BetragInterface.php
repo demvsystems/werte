@@ -14,6 +14,20 @@ interface BetragInterface
     public function getBetrag(): float;
 
     /**
+     * @param int $amount
+     *
+     * @return bool
+     */
+    public function isGroesserAls(int $amount): bool;
+
+    /**
+     * @param int $amount
+     *
+     * @return bool
+     */
+    public function isKleinerAls(int $amount): bool;
+
+    /**
      * @return bool
      */
     public function isPositiv(): bool;
