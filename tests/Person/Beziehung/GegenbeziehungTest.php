@@ -124,5 +124,4 @@ class GegenbeziehungTest extends PHPUnit_Framework_TestCase
         $gegenbeziehung = new Gegenbeziehung([]);
         $gegenbeziehung->getFor(new Partner());
     }
-
 }
