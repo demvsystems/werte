@@ -21,7 +21,7 @@ final class KeinPflegegrad extends Value implements PflegegradInterface
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'keine');
+        parent::__construct(self::ID, 'Kein Pflegegrad');
     }
 
     /**
