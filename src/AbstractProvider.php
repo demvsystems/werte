@@ -19,16 +19,16 @@ abstract class AbstractProvider implements ProviderInterface
     private $members = [];
 
     /**
-     * @param Value $member
+     * @param ValueInterface $member
      */
-    final protected function appendMember(Value $member)
+    final protected function appendMember(ValueInterface $member)
     {
         $this->members[$member->getId()] = $member;
     }
 
     /**
      * Gibt alle Einträge zurück
-     * @return array
+     * @return ValueInterface[]
      */
     public function getAll(): array
     {
