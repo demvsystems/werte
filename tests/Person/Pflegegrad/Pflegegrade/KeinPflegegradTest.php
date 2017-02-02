@@ -2,7 +2,6 @@
 
 namespace Demv\Werte\Tests\Person\Pflegegrad\Pflegegrade;
 
-use Demv\Werte\Person\Pflegegrad\Pflegegrade\Keine;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\KeinPflegegrad;
 use Demv\Werte\Person\Pflegegrad\PflegegradInterface;
 use PHPUnit\Framework\TestCase;
@@ -29,7 +28,7 @@ class KeinPflegegradTest extends TestCase
 
     public function testName()
     {
-        $this->assertSame('keine', $this->pflegegrad->getName());
+        $this->assertSame('Kein Pflegegrad', $this->pflegegrad->getName());
     }
 
     public function testMin()
