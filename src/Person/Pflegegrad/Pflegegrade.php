@@ -4,6 +4,7 @@ namespace Demv\Werte\Person\Pflegegrad;
 
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Keine;
+use Demv\Werte\Person\Pflegegrad\Pflegegrade\KeinPflegegrad;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad1;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad2;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad3;
@@ -21,7 +22,7 @@ final class Pflegegrade extends AbstractProvider
      */
     public function __construct()
     {
-        $this->appendMember(new Keine());
+        $this->appendMember(new KeinPflegegrad());
         $this->appendMember(new Pflegegrad1());
         $this->appendMember(new Pflegegrad2());
         $this->appendMember(new Pflegegrad3());

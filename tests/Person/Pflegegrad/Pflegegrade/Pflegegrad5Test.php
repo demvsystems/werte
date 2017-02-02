@@ -23,46 +23,26 @@ class Pflegegrad5Test extends TestCase
 
     public function testId()
     {
-        $this->specify('TestId',
-            function () {
-                $this->assertSame(5, $this->pflegegrad->getId());
-            }
-        );
+        $this->assertSame(5, $this->pflegegrad->getId());
     }
 
     public function testName()
     {
-        $this->specify('TestName',
-            function () {
-                $this->assertSame('Pflegegrad V', $this->pflegegrad->getName());
-            }
-        );
+        $this->assertSame('Pflegegrad V', $this->pflegegrad->getName());
     }
 
     public function testMin()
     {
-        $this->specify('TestMin',
-            function () {
-                $this->assertEquals(90, $this->pflegegrad->getMin());
-            }
-        );
+        $this->assertEquals(90, $this->pflegegrad->getMin());
     }
 
     public function testMax()
     {
-        $this->specify('TestMax',
-            function () {
-                $this->assertEquals(100, $this->pflegegrad->getMax());
-            }
-        );
+        $this->assertEquals(100, $this->pflegegrad->getMax());
     }
 
     public function testHinweis()
     {
-        $this->specify('TestHinweis',
-            function () {
-                $this->assertSame('Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung', $this->pflegegrad->getHinweis());
-            }
-        );
+        $this->assertSame('Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung', $this->pflegegrad->getHinweis());
     }
 }

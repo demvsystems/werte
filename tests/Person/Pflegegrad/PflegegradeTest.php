@@ -3,7 +3,7 @@
 namespace Demv\Werte\Tests\Person\BuMoeglichkeit;
 
 use Demv\Werte\Person\Pflegegrad\Pflegegrade;
-use Demv\Werte\Person\Pflegegrad\Pflegegrade\Keine;
+use Demv\Werte\Person\Pflegegrad\Pflegegrade\KeinPflegegrad;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad1;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad2;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad3;
@@ -45,7 +45,7 @@ class PflegegradeTest extends TestCase
     {
         $this->specify('testEntries',
             function () {
-                $this->checkGetOne($this->pflegegrade, Keine::class);
+                $this->checkGetOne($this->pflegegrade, KeinPflegegrad::class);
                 $this->checkGetOne($this->pflegegrade, Pflegegrad1::class);
                 $this->checkGetOne($this->pflegegrade, Pflegegrad2::class);
                 $this->checkGetOne($this->pflegegrade, Pflegegrad3::class);

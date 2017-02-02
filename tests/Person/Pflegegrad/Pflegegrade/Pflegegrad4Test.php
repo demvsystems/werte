@@ -23,46 +23,26 @@ class Pflegegrad4Test extends TestCase
 
     public function testId()
     {
-        $this->specify('TestId',
-            function () {
-                $this->assertSame(4, $this->pflegegrad->getId());
-            }
-        );
+        $this->assertSame(4, $this->pflegegrad->getId());
     }
 
     public function testName()
     {
-        $this->specify('TestName',
-            function () {
-                $this->assertSame('Pflegegrad IV', $this->pflegegrad->getName());
-            }
-        );
+        $this->assertSame('Pflegegrad IV', $this->pflegegrad->getName());
     }
 
     public function testMin()
     {
-        $this->specify('TestMin',
-            function () {
-                $this->assertEquals(70, $this->pflegegrad->getMin());
-            }
-        );
+        $this->assertEquals(70, $this->pflegegrad->getMin());
     }
 
     public function testMax()
     {
-        $this->specify('TestMax',
-            function () {
-                $this->assertEquals(90, $this->pflegegrad->getMax());
-            }
-        );
+        $this->assertEquals(90, $this->pflegegrad->getMax());
     }
 
     public function testHinweis()
     {
-        $this->specify('TestHinweis',
-            function () {
-                $this->assertSame('Schwerste Beeinträchtigung der Selbständigkeit', $this->pflegegrad->getHinweis());
-            }
-        );
+        $this->assertSame('Schwerste Beeinträchtigung der Selbständigkeit', $this->pflegegrad->getHinweis());
     }
 }

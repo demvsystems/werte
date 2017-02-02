@@ -6,10 +6,10 @@ use Demv\Werte\Value;
 use Demv\Werte\Person\Pflegegrad\PflegegradInterface;
 
 /**
- * Class Keine
+ * Class KeinPflegegrad
  * @package Demv\Werte\Person\Pflegegrad\Pflegegrade
  */
-final class Keine extends Value implements PflegegradInterface
+final class KeinPflegegrad extends Value implements PflegegradInterface
 {
     /**
      * ID des Pflegegrades

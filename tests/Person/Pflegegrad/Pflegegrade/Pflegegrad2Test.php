@@ -23,46 +23,26 @@ class Pflegegrad2Test extends TestCase
 
     public function testId()
     {
-        $this->specify('TestId',
-            function () {
-                $this->assertSame(2, $this->pflegegrad->getId());
-            }
-        );
+        $this->assertSame(2, $this->pflegegrad->getId());
     }
 
     public function testName()
     {
-        $this->specify('TestName',
-            function () {
-                $this->assertSame('Pflegegrad II', $this->pflegegrad->getName());
-            }
-        );
+        $this->assertSame('Pflegegrad II', $this->pflegegrad->getName());
     }
 
     public function testMin()
     {
-        $this->specify('TestMin',
-            function () {
-                $this->assertEquals(27, $this->pflegegrad->getMin());
-            }
-        );
+        $this->assertEquals(27, $this->pflegegrad->getMin());
     }
 
     public function testMax()
     {
-        $this->specify('TestMax',
-            function () {
-                $this->assertEquals(47.5, $this->pflegegrad->getMax());
-            }
-        );
+        $this->assertEquals(47.5, $this->pflegegrad->getMax());
     }
 
     public function testHinweis()
     {
-        $this->specify('TestHinweis',
-            function () {
-                $this->assertSame('Erhebliche Beeinträchtigung der Selbständigkeit', $this->pflegegrad->getHinweis());
-            }
-        );
+        $this->assertSame('Erhebliche Beeinträchtigung der Selbständigkeit', $this->pflegegrad->getHinweis());
     }
 }
