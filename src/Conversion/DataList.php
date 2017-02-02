@@ -26,7 +26,7 @@ final class DataList
      * @return array
      *          ['id' => 'name']
      */
-    public static function fromArray(array $values)
+    public static function fromArray(array $values): array
     {
         $data = [];
         foreach ($values as $item) {
@@ -44,7 +44,7 @@ final class DataList
      * @return array
      *          ['id' => 'name']
      */
-    public static function fromProvider(ProviderInterface $provider)
+    public static function fromProvider(ProviderInterface $provider): array
     {
         return self::fromArray($provider->getAll());
     }
