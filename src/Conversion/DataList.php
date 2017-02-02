@@ -13,14 +13,18 @@ use Demv\Werte\ValueInterface;
 
 /**
  * Class DataList
+ *
  * @package Demv\Werte\Conversion
  */
 final class DataList
 {
     /**
+     * Kovertiert das übergebene Value-Array in ein Array der Form ['id' => 'name']
+     *
      * @param ValueInterface[] $values
      *
      * @return array
+     *          ['id' => 'name']
      */
     public static function fromArray(array $values)
     {
@@ -33,9 +37,12 @@ final class DataList
     }
 
     /**
+     * Kovertiert das Value-Array der getAll-Methode in ein Array der Form ['id' => 'name']
+     *
      * @param ProviderInterface $provider
      *
      * @return array
+     *          ['id' => 'name']
      */
     public static function fromProvider(ProviderInterface $provider)
     {
