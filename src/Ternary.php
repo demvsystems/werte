@@ -6,8 +6,10 @@ namespace Demv\Werte;
  * Class Ternary
  * @package Demv\Werte
  */
-final class Ternary extends Value
+final class Ternary implements ValueInterface
 {
+    use ValueTrait;
+
     const YES     = 1;
     const NO      = 0;
     const UNKNOWN = -1;
@@ -16,6 +18,18 @@ final class Ternary extends Value
      * @var array
      */
     private static $instances = [];
+
+    /**
+     * Ternary constructor.
+     *
+     * @param int    $id
+     * @param string $name
+     */
+    private function __construct(int $id, string $name)
+    {
+        $this->id   = $id;
+        $this->name = $name;
+    }
 
     /**
      * @param int    $id
