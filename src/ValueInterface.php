@@ -25,16 +25,6 @@ interface ValueInterface
     public function getName(): string;
 
     /**
-     * @return bool
-     */
-    public function isNone(): bool;
-
-    /**
-     * @return bool
-     */
-    public function isSome(): bool;
-
-    /**
      * @param int $id
      *
      * @return bool
