@@ -47,7 +47,7 @@ trait ValueTrait
      */
     public function equals(ValueInterface $value): bool
     {
-        return $value->getHash() == $this->getHash();
+        return $value->getHash() === $this->getHash();
     }
 
     /**
