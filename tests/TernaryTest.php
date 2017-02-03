@@ -40,4 +40,11 @@ class TernaryTest extends TestCase
         $this->assertEquals(Ternary::no(), Ternary::translate(Ternary::NO));
         $this->assertEquals(Ternary::yes(), Ternary::translate(Ternary::YES));
     }
+
+    public function testNames()
+    {
+        $this->assertEquals('Ja', Ternary::yes()->getName());
+        $this->assertEquals('Nein', Ternary::no()->getName());
+        $this->assertEquals('Nicht angegeben', Ternary::unknown()->getName());
+    }
 }

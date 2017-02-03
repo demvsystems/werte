@@ -7,7 +7,7 @@ namespace Demv\Werte\Tests;
  * Date: 06.01.17
  * Time: 11:43
  */
-use Demv\Werte\NoneValue;
+use Demv\Werte\Person\Anrede\Anreden;
 use Demv\Werte\Value;
 use PHPUnit\Framework\TestCase;
 
@@ -40,27 +40,15 @@ class ValueTest extends TestCase
     public function testEquals()
     {
         $value1 = new Value(1, 'test');
-        $value2 = new Value(1, 'test1');
+        $value2 = new Value(1, 'test');
         $this->assertTrue($value1->equals($value2));
     }
 
     public function testEqualsNot()
     {
-        $value1 = new Value(1, 'test');
+        $value1 = new Value(1, 'Herr');
         $value2 = new Value(2, 'test1');
         $this->assertFalse($value1->equals($value2));
-    }
-
-    public function testIsNone()
-    {
-        $some = new Value(1, 'test');
-        $this->assertFalse($some->isNone());
-    }
-
-    public function testIsSome()
-    {
-        $some = new Value(1, 'test');
-        $this->assertTrue($some->isSome());
     }
 
     public function testIs()

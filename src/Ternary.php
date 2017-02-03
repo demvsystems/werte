@@ -6,8 +6,10 @@ namespace Demv\Werte;
  * Class Ternary
  * @package Demv\Werte
  */
-final class Ternary
+final class Ternary implements ValueInterface
 {
+    use ValueTrait;
+
     const YES     = 1;
     const NO      = 0;
     const UNKNOWN = -1;
@@ -16,33 +18,32 @@ final class Ternary
      * @var array
      */
     private static $instances = [];
-    /**
-     * @var int
-     */
-    private $value = self::UNKNOWN;
 
     /**
      * Ternary constructor.
      *
-     * @param int $value
+     * @param int    $id
+     * @param string $name
      */
-    private function __construct(int $value)
+    private function __construct(int $id, string $name)
     {
-        $this->value = $value;
+        $this->id   = $id;
+        $this->name = $name;
     }
 
     /**
-     * @param int $value
+     * @param int    $id
+     * @param string $name
      *
      * @return Ternary
      */
-    private static function instance(int $value): self
+    private static function instance(int $id, string $name): self
     {
-        if (!array_key_exists($value, self::$instances)) {
-            self::$instances[$value] = new self($value);
+        if (!array_key_exists($id, self::$instances)) {
+            self::$instances[$id] = new self($id, $name);
         }
 
-        return self::$instances[$value];
+        return self::$instances[$id];
     }
 
     /**
@@ -50,7 +51,7 @@ final class Ternary
      */
     public static function yes(): self
     {
-        return self::instance(self::YES);
+        return self::instance(self::YES, 'Ja');
     }
 
     /**
@@ -58,7 +59,7 @@ final class Ternary
      */
     public static function no(): self
     {
-        return self::instance(self::NO);
+        return self::instance(self::NO, 'Nein');
     }
 
     /**
@@ -66,7 +67,7 @@ final class Ternary
      */
     public static function unknown(): self
     {
-        return self::instance(self::UNKNOWN);
+        return self::instance(self::UNKNOWN, 'Nicht angegeben');
     }
 
     /**
@@ -84,34 +85,6 @@ final class Ternary
             default:
                 return self::unknown();
         }
-    }
-
-    /**
-     * @return int
-     */
-    public function getValue(): int
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param int $value
-     *
-     * @return bool
-     */
-    public function is(int $value): bool
-    {
-        return $this->value === $value;
-    }
-
-    /**
-     * @param int $value
-     *
-     * @return bool
-     */
-    public function isNot(int $value): bool
-    {
-        return $this->value !== $value;
     }
 
     /**
@@ -136,5 +109,13 @@ final class Ternary
     public function isUnknown(): bool
     {
         return $this->is(self::UNKNOWN);
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue(): int
+    {
+        return $this->getId();
     }
 }
