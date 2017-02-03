@@ -2,6 +2,7 @@
 
 namespace Demv\Werte\Tests;
 
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Ternary;
 use PHPUnit\Framework\TestCase;
 
@@ -39,5 +40,12 @@ class TernaryTest extends TestCase
         $this->assertEquals(Ternary::unknown(), Ternary::translate(Ternary::UNKNOWN));
         $this->assertEquals(Ternary::no(), Ternary::translate(Ternary::NO));
         $this->assertEquals(Ternary::yes(), Ternary::translate(Ternary::YES));
+    }
+
+    public function testNames()
+    {
+        $this->assertEquals('Ja', Ternary::yes()->getName());
+        $this->assertEquals('Nein', Ternary::no()->getName());
+        $this->assertEquals('Nicht gesetzt', Ternary::unknown()->getName());
     }
 }

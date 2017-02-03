@@ -2,11 +2,13 @@
 
 namespace Demv\Werte;
 
+use Demv\Werte\Exception\EntryNotFoundException;
+
 /**
  * Class Ternary
  * @package Demv\Werte
  */
-final class Ternary
+final class Ternary extends Value
 {
     const YES     = 1;
     const NO      = 0;
@@ -16,33 +18,30 @@ final class Ternary
      * @var array
      */
     private static $instances = [];
+
     /**
      * @var int
      */
-    private $value = self::UNKNOWN;
+    protected $id = self::UNKNOWN;
 
     /**
-     * Ternary constructor.
-     *
-     * @param int $value
-     */
-    private function __construct(int $value)
-    {
-        $this->value = $value;
-    }
-
-    /**
-     * @param int $value
+     * @param int $id
      *
      * @return Ternary
+     * @throws EntryNotFoundException
      */
-    private static function instance(int $value): self
+    private static function instance(int $id): self
     {
-        if (!array_key_exists($value, self::$instances)) {
-            self::$instances[$value] = new self($value);
+        if (empty(self::$instances)) {
+            self::$instances[self::YES]     = new Ternary(self::YES, 'Ja');
+            self::$instances[self::NO]      = new Ternary(self::NO, 'Nein');
+            self::$instances[self::UNKNOWN] = new Ternary(self::UNKNOWN, 'Nicht gesetzt');
+        }
+        if (!array_key_exists($id, self::$instances)) {
+            throw new EntryNotFoundException(self::class, $id);
         }
 
-        return self::$instances[$value];
+        return self::$instances[$id];
     }
 
     /**
@@ -87,34 +86,6 @@ final class Ternary
     }
 
     /**
-     * @return int
-     */
-    public function getValue(): int
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param int $value
-     *
-     * @return bool
-     */
-    public function is(int $value): bool
-    {
-        return $this->value === $value;
-    }
-
-    /**
-     * @param int $value
-     *
-     * @return bool
-     */
-    public function isNot(int $value): bool
-    {
-        return $this->value !== $value;
-    }
-
-    /**
      * @return bool
      */
     public function isYes(): bool
@@ -136,5 +107,13 @@ final class Ternary
     public function isUnknown(): bool
     {
         return $this->is(self::UNKNOWN);
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue(): int
+    {
+        return $this->getId();
     }
 }
