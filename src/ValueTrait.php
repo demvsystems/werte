@@ -41,13 +41,15 @@ trait ValueTrait
     }
 
     /**
-     * @param Value $value
+     * @param ValueInterface $value
      *
      * @return bool
      */
-    public function equals(Value $value): bool
+    public function equals(ValueInterface $value): bool
     {
-        return $this->getId() === $value->getId();
+        return get_class($value) === static::class &&
+               $this->getId() === $value->getId() &&
+               $this->getName() === $value->getName();
     }
 
     /**
@@ -68,5 +70,15 @@ trait ValueTrait
     public function isNot(int $id): bool
     {
         return !$this->is($id);
+    }
+
+    /**
+     * @param string $class
+     *
+     * @return bool
+     */
+    private function hasSameClass(string $class): bool
+    {
+        return static::class === $class;
     }
 }
