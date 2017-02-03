@@ -2,8 +2,6 @@
 
 namespace Demv\Werte;
 
-use Demv\Werte\Exception\EntryNotFoundException;
-
 /**
  * Class Ternary
  * @package Demv\Werte
@@ -20,25 +18,15 @@ final class Ternary extends Value
     private static $instances = [];
 
     /**
-     * @var int
-     */
-    protected $id = self::UNKNOWN;
-
-    /**
-     * @param int $id
+     * @param int    $id
+     * @param string $name
      *
      * @return Ternary
-     * @throws EntryNotFoundException
      */
-    private static function instance(int $id): self
+    private static function instance(int $id, string $name): self
     {
-        if (empty(self::$instances)) {
-            self::$instances[self::YES]     = new Ternary(self::YES, 'Ja');
-            self::$instances[self::NO]      = new Ternary(self::NO, 'Nein');
-            self::$instances[self::UNKNOWN] = new Ternary(self::UNKNOWN, 'Nicht gesetzt');
-        }
         if (!array_key_exists($id, self::$instances)) {
-            throw new EntryNotFoundException(self::class, $id);
+            self::$instances[$id] = new self($id, $name);
         }
 
         return self::$instances[$id];
@@ -49,7 +37,7 @@ final class Ternary extends Value
      */
     public static function yes(): self
     {
-        return self::instance(self::YES);
+        return self::instance(self::YES, 'Ja');
     }
 
     /**
@@ -57,7 +45,7 @@ final class Ternary extends Value
      */
     public static function no(): self
     {
-        return self::instance(self::NO);
+        return self::instance(self::NO, 'Nein');
     }
 
     /**
@@ -65,7 +53,7 @@ final class Ternary extends Value
      */
     public static function unknown(): self
     {
-        return self::instance(self::UNKNOWN);
+        return self::instance(self::UNKNOWN, 'Nicht angegeben');
     }
 
     /**
