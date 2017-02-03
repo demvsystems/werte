@@ -37,4 +37,10 @@ interface ValueInterface
      * @return bool
      */
     public function isNot(int $id): bool;
+
+    /**
+     * @return string
+     */
+    public function getHash(): string;
+
 }

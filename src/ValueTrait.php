@@ -47,9 +47,7 @@ trait ValueTrait
      */
     public function equals(ValueInterface $value): bool
     {
-        return get_class($value) === static::class &&
-               $this->getId() === $value->getId() &&
-               $this->getName() === $value->getName();
+        return $value->getHash() == $this->getHash();
     }
 
     /**
@@ -73,12 +71,10 @@ trait ValueTrait
     }
 
     /**
-     * @param string $class
-     *
-     * @return bool
+     * @return string
      */
-    private function hasSameClass(string $class): bool
+    public function getHash(): string
     {
-        return static::class === $class;
+        return base64_encode(static::class . $this->getId() . $this->getName());
     }
 }
