@@ -25,7 +25,7 @@
             "Demv\\Werte\\": "src/Werte",
             "Demv\\Werte\\Tests\\": "tests/Werte",
             "Demv\\Http\\": "src/Http",
-            "Demv\\Http\\Tests\\": "tests/Http",
+            "Demv\\Http\\Tests\\": "tests/Http"
         }
     },
     "autoload-dev": {
