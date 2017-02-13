@@ -54,7 +54,7 @@ abstract class AbstractStatusResponse implements StatusResponseInterface
     {
         $code = $response->getStatusCode();
         $stream = $response->getBody()->getContents();
-        $body = json_decode($stream);
+        $body = json_decode($stream, true);
 
         if ($code >= 200 && $code < 300) {
             return (bool) $body['success'] ? new Success($body['content']) : new Fail($body['content']);
