@@ -11,7 +11,6 @@ use Demv\Werte\Person\Anrede\Anreden;
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
-use PHPUnit_Framework_TestCase;
 use Demv\Werte\Person\Anrede\Anreden\Herr;
 use Demv\Werte\Person\Anrede\Anreden\Frau;
 use Demv\Werte\Person\Anrede\Anreden\Firma;
