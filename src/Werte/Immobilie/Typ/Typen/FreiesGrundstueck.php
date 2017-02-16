@@ -8,7 +8,7 @@ use Demv\Werte\Value;
  * Class FreiesGrundstueck
  * @package Demv\Werte\Immobilie\Typ\Typen
  */
-class FreiesGrundstueck extends Value implements ImmobilienTypInterface
+final class FreiesGrundstueck extends Value implements ImmobilienTypInterface
 {
     const ID = 3;
 

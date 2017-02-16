@@ -8,7 +8,7 @@ use Demv\Werte\Value;
  * Class Haus
  * @package Demv\Werte\Immobilie\Typ\Typen
  */
-class Haus extends Value implements ImmobilienTypInterface
+final class Haus extends Value implements ImmobilienTypInterface
 {
     const ID = 1;
 
