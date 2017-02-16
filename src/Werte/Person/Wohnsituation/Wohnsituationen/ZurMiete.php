@@ -8,7 +8,7 @@ use Demv\Werte\Value;
  * Class ZurMiete
  * @package Demv\Werte\Person\Wohnsituation\Wohnsituationen
  */
-class ZurMiete extends Value implements WohnsituationInterface
+final class ZurMiete extends Value implements WohnsituationInterface
 {
     const ID = 1;
 

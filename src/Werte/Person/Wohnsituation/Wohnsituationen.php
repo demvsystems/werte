@@ -10,7 +10,7 @@ use Demv\Werte\Person\Wohnsituation\Wohnsituationen\ZurMiete;
  * Class Wohnsituation
  * @package Demv\Werte\Person\Wohnsituation
  */
-class Wohnsituationen extends AbstractProvider
+final class Wohnsituationen extends AbstractProvider
 {
     /**
      * Wohnsituation constructor.

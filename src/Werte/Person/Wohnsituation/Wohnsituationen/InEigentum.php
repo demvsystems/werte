@@ -9,7 +9,7 @@ use Demv\Werte\Value;
  * Class InEigentum
  * @package Demv\Werte\Person\Wohnsituation\Wohnsituationen
  */
-class InEigentum extends Value implements WohnsituationInterface
+final class InEigentum extends Value implements WohnsituationInterface
 {
     const ID = 2;
 
