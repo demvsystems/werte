@@ -2,6 +2,8 @@
 
 namespace Demv\Werte;
 
+use Exception;
+
 /**
  * Class Ternary
  * @package Demv\Werte
@@ -109,6 +111,22 @@ final class Ternary implements ValueInterface
     public function isUnknown(): bool
     {
         return $this->is(self::UNKNOWN);
+    }
+
+    /**
+     * @return bool
+     * @throws Exception
+     */
+    public function asBool(): bool
+    {
+        switch ($this->id) {
+            case self::YES:
+                return true;
+            case self::NO:
+                return false;
+            default:
+                throw new Exception('Der Zustand "Unbekannt" kann nicht als bool dargestellt werden');
+        }
     }
 
     /**
