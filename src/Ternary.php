@@ -1,6 +1,7 @@
 <?php
 
 namespace Demv\Werte;
+use Exception;
 
 /**
  * Class Ternary
@@ -136,5 +137,21 @@ final class Ternary
     public function isUnknown(): bool
     {
         return $this->is(self::UNKNOWN);
+    }
+
+    /**
+     * @return bool
+     * @throws Exception
+     */
+    public function asBool(): bool
+    {
+        switch ($this->value) {
+            case self::YES:
+                return true;
+            case self::NO:
+                return false;
+            default:
+                throw new Exception('Der Zustand "Unbekannt" kann nicht als bool dargestellt werden');
+        }
     }
 }

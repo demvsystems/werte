@@ -3,6 +3,7 @@
 namespace Demv\Werte\Tests;
 
 use Demv\Werte\Ternary;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class TernaryTest extends TestCase
@@ -39,5 +40,16 @@ class TernaryTest extends TestCase
         $this->assertEquals(Ternary::unknown(), Ternary::translate(Ternary::UNKNOWN));
         $this->assertEquals(Ternary::no(), Ternary::translate(Ternary::NO));
         $this->assertEquals(Ternary::yes(), Ternary::translate(Ternary::YES));
+    }
+
+    public function testAsBool()
+    {
+        $this->assertTrue(Ternary::yes()->asBool());
+        $this->assertFalse(Ternary::no()->asBool());
+
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessage('Der Zustand "Unbekannt" kann nicht als bool dargestellt werden');
+
+        Ternary::unknown()->asBool();
     }
 }
