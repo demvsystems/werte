@@ -1,18 +1,18 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: alex
- * Date: 06.01.17
- * Time: 11:28
+ * Date: 03.02.17
+ * Time: 10:06
  */
+
 namespace Demv\Werte;
 
 /**
- * Class Value
+ * Class ValueTrait
  * @package Demv\Werte
  */
-class Value implements ValueInterface
+trait ValueTrait
 {
     /**
      * @var int
@@ -23,18 +23,6 @@ class Value implements ValueInterface
      * @var string
      */
     protected $name;
-
-    /**
-     * Value constructor.
-     *
-     * @param int    $id
-     * @param string $name
-     */
-    public function __construct(int $id, string $name)
-    {
-        $this->id   = $id;
-        $this->name = $name;
-    }
 
     /**
      * @return int
@@ -53,29 +41,13 @@ class Value implements ValueInterface
     }
 
     /**
-     * @return bool
-     */
-    final public function isSome(): bool
-    {
-        return true;
-    }
-
-    /**
-     * @return bool
-     */
-    final public function isNone(): bool
-    {
-        return !$this->isSome();
-    }
-
-    /**
-     * @param Value $value
+     * @param ValueInterface $value
      *
      * @return bool
      */
-    public function equals(Value $value): bool
+    public function equals(ValueInterface $value): bool
     {
-        return $this->getId() === $value->getId();
+        return $value->getHash() === $this->getHash();
     }
 
     /**
@@ -96,5 +68,13 @@ class Value implements ValueInterface
     public function isNot(int $id): bool
     {
         return !$this->is($id);
+    }
+
+    /**
+     * @return string
+     */
+    public function getHash(): string
+    {
+        return base64_encode(static::class . $this->getId() . $this->getName());
     }
 }

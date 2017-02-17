@@ -52,4 +52,11 @@ class TernaryTest extends TestCase
 
         Ternary::unknown()->asBool();
     }
+
+    public function testNames()
+    {
+        $this->assertEquals('Ja', Ternary::yes()->getName());
+        $this->assertEquals('Nein', Ternary::no()->getName());
+        $this->assertEquals('Nicht angegeben', Ternary::unknown()->getName());
+    }
 }
