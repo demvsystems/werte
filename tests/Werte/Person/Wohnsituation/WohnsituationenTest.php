@@ -57,5 +57,4 @@ class WohnsituationenTest extends TestCase
         $this->expectException(EntryNotFoundException::class);
         $this->getWohnsituationen()->getOne(5);
     }
-
 }
