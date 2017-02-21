@@ -8,6 +8,7 @@ use Demv\Werte\Person\Wohnsituation\Wohnsituationen\InEigentum;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\ZurMiete;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
+use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiAndererPerson;
 
 /**
  * Class WohnsituationenTest
@@ -28,28 +29,33 @@ class WohnsituationenTest extends TestCase
     public function testGetAll()
     {
         $wohnsituationen = $this->getWohnsituationen();
-        $this->assertEquals(3, count($wohnsituationen->getAll()));
+        $this->assertEquals(4, count($wohnsituationen->getAll()));
     }
 
-    public function testGetHerr()
+    public function testZurMiete()
     {
         $this->checkGetOne($this->getWohnsituationen(), ZurMiete::class);
     }
 
-    public function testGetFrau()
+    public function testInEigentum()
     {
         $this->checkGetOne($this->getWohnsituationen(), InEigentum::class);
     }
 
-    public function testGetFirma()
+    public function testBeiEltern()
     {
         $this->checkGetOne($this->getWohnsituationen(), BeiEltern::class);
+    }
+
+    public function testBeiAndererPerson()
+    {
+        $this->checkGetOne($this->getWohnsituationen(), BeiAndererPerson::class);
     }
 
     public function testNotFound()
     {
         $this->expectException(EntryNotFoundException::class);
-        $this->getWohnsituationen()->getOne(4);
+        $this->getWohnsituationen()->getOne(5);
     }
 
 }
