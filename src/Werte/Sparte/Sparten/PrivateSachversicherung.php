@@ -13,4 +13,6 @@ interface PrivateSachversicherung
     const KINDERINVALIDITAET = 358;
 
     const HAUS_UND_GRUNDBESITZER_HAFTPFLICHT = 243;
+
+    const GEWAESSERSCHAEDEN_HAFTPFLICHT = 276;
 }
