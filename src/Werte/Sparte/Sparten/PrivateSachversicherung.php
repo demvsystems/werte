@@ -11,4 +11,6 @@ interface PrivateSachversicherung
     const UNFALLVERSICHERUNG = 168;
 
     const KINDERINVALIDITAET = 358;
+
+    const HAUS_UND_GRUNDBESITZER_HAFTPFLICHT_RANDY_IST_DER_COOLSTE = 243;
 }
