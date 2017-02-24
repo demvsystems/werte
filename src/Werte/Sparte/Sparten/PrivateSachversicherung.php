@@ -4,6 +4,8 @@ namespace Demv\Werte\Sparte\Sparten;
 
 /**
  * Interface PrivateSachversicherung.
+ *
+ * @package Demv\Werte\Sparte\Sparten
  */
 interface PrivateSachversicherung
 {
