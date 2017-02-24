@@ -15,4 +15,9 @@ interface PrivateSachversicherung
     const HAUS_UND_GRUNDBESITZER_HAFTPFLICHT = 243;
 
     const GEWAESSERSCHAEDEN_HAFTPFLICHT = 276;
+
+    /**
+     * TODO: Muss noch durch echte id ersetzt werden
+     */
+    const BETREIBERHAFTPFLICHT = 999;
 }
