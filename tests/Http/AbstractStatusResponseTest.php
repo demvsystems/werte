@@ -34,7 +34,8 @@ final class AbstractStatusResponseTest extends TestCase
 
     public function testTranslateFromHttp()
     {
-        $translated = AbstractStatusResponse::translateFromHttp($this->getResponse(200, ['success' => true, 'content' => ['test1' => 'test2']]));
+        $translated = AbstractStatusResponse::translateFromHttp(
+            $this->getResponse(200, ['success' => true, 'content' => ['test1' => 'test2']]));
         $this->assertInstanceOf(Success::class, $translated);
         $this->assertEquals(200, $translated->getCode());
         $this->assertEquals(['test1' => 'test2'], $translated->getContent());
