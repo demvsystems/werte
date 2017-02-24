@@ -3,8 +3,7 @@
 namespace Demv\Werte\Sparte\Sparten;
 
 /**
- * Interface PrivateSachversicherung
- * @package Demv\Werte\Sparte\Sparten
+ * Interface PrivateSachversicherung.
  */
 interface PrivateSachversicherung
 {
@@ -17,7 +16,9 @@ interface PrivateSachversicherung
     const GEWAESSERSCHAEDEN_HAFTPFLICHT = 276;
 
     /**
-     * TODO: Muss noch durch echte id ersetzt werden
+     * TODO: Muss noch durch echte id ersetzt werden.
      */
     const BETREIBERHAFTPFLICHT = 999;
+
+    const WOHNGEBAUEDEVERSICHERUNG = 167;
 }
