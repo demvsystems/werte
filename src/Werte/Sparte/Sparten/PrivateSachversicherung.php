@@ -17,6 +17,8 @@ interface PrivateSachversicherung
 
     const GEWAESSERSCHAEDEN_HAFTPFLICHT = 276;
 
+    const HAUSRAT = 166;
+
     /**
      * TODO: Muss noch durch echte id ersetzt werden.
      */
