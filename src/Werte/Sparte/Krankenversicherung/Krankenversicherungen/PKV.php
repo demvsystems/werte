@@ -1,13 +1,13 @@
 <?php
 
-namespace Demv\Werte\Person\Krankenversicherung\Krankenversicherung;
+namespace Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen;
 
-use Demv\Werte\Person\Krankenversicherung\KrankenversicherungInterface;
+use Demv\Werte\Sparte\Krankenversicherung\KrankenversicherungInterface;
 use Demv\Werte\Value;
 
 /**
  * Class PKV
- * @package Demv\Werte\Person\Krankenversicherung\Krankenversicherung
+ * @package Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen
  */
 final class PKV extends Value implements KrankenversicherungInterface
 {

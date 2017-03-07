@@ -1,6 +1,6 @@
 <?php
 
-namespace Demv\Werte\Person\Krankenversicherung;
+namespace Demv\Werte\Sparte\Krankenversicherung;
 
 use Demv\Werte\ValueInterface;
 

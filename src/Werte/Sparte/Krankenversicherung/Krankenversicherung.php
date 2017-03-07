@@ -1,16 +1,16 @@
 <?php
 
-namespace Demv\Werte\Person\Krankenversicherung;
+namespace Demv\Werte\Sparte\Krankenversicherung;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Person\Krankenversicherung\Krankenversicherung\Beihilfe;
-use Demv\Werte\Person\Krankenversicherung\Krankenversicherung\FreieHeilfuersorge;
-use Demv\Werte\Person\Krankenversicherung\Krankenversicherung\GKV;
-use Demv\Werte\Person\Krankenversicherung\Krankenversicherung\PKV;
+use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\Beihilfe;
+use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\FreieHeilfuersorge;
+use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\GKV;
+use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\PKV;
 
 /**
  * Class Krankenversicherung
- * @package Demv\Werte\Person\Krankenversicherung
+ * @package Demv\Werte\Sparte\Krankenversicherung
  */
 final class Krankenversicherung extends AbstractProvider
 {
