@@ -19,10 +19,11 @@ interface PrivateSachversicherung
 
     const HAUSRAT = 166;
 
+    const WOHNGEBAUEDEVERSICHERUNG = 167;
+
     /**
      * TODO: Muss noch durch echte id ersetzt werden.
      */
     const BETREIBERHAFTPFLICHT = 999;
 
-    const WOHNGEBAUEDEVERSICHERUNG = 167;
 }
