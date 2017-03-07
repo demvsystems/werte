@@ -23,7 +23,7 @@ class AnredenTest extends TestCase
     /**
      * @return Anreden
      */
-    private function getAnreden()
+    private function getAnreden(): Anreden
     {
         return new Anreden();
     }
@@ -59,5 +59,4 @@ class AnredenTest extends TestCase
         $this->expectException(EntryNotFoundException::class);
         $this->getAnreden()->getOne(5);
     }
-
 }
