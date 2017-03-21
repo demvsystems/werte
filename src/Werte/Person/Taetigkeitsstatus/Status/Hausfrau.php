@@ -47,5 +47,4 @@ final class Hausfrau extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

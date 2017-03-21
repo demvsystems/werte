@@ -2,8 +2,8 @@
 
 namespace Demv\Werte\Person\Pflegegrad\Pflegegrade;
 
-use Demv\Werte\Value;
 use Demv\Werte\Person\Pflegegrad\PflegegradInterface;
+use Demv\Werte\Value;
 
 /**
  * Class KeinPflegegrad

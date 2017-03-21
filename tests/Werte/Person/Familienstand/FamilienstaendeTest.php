@@ -5,18 +5,18 @@ namespace Demv\Werte\Tests\Person\Familienstaende;
 use Codeception\Specify;
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Familienstand\Familienstaende;
+use Demv\Werte\Person\Familienstand\Familienstaende\EingetrageneLebenspartnerschaft;
+use Demv\Werte\Person\Familienstand\Familienstaende\Geschieden;
+use Demv\Werte\Person\Familienstand\Familienstaende\GetrenntLebend;
+use Demv\Werte\Person\Familienstand\Familienstaende\Lebensgemeinschaft;
+use Demv\Werte\Person\Familienstand\Familienstaende\Ledig;
+use Demv\Werte\Person\Familienstand\Familienstaende\Unbekannt;
+use Demv\Werte\Person\Familienstand\Familienstaende\Verheiratet;
+use Demv\Werte\Person\Familienstand\Familienstaende\Verwitwet;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
-use Demv\Werte\Person\Familienstand\Familienstaende\Ledig;
-use Demv\Werte\Person\Familienstand\Familienstaende\Verwitwet;
-use Demv\Werte\Person\Familienstand\Familienstaende\Verheiratet;
-use Demv\Werte\Person\Familienstand\Familienstaende\Geschieden;
-use Demv\Werte\Person\Familienstand\Familienstaende\Unbekannt;
-use Demv\Werte\Person\Familienstand\Familienstaende\EingetrageneLebenspartnerschaft;
-use Demv\Werte\Person\Familienstand\Familienstaende\Lebensgemeinschaft;
-use Demv\Werte\Person\Familienstand\Familienstaende\GetrenntLebend;
 
-class FamilienstaendeTestclass extends TestCase
+class FamilienstaendeTest extends TestCase
 {
     use ProviderTestTrait;
     use Specify;

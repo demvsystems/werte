@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Person\Wohnsituation;
 
 use Demv\Werte\AbstractProvider;

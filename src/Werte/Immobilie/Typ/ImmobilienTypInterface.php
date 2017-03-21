@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Immobilie\Typ;
 
 use Demv\Werte\ValueInterface;
@@ -9,5 +10,4 @@ use Demv\Werte\ValueInterface;
  */
 interface ImmobilienTypInterface extends ValueInterface
 {
-
 }

@@ -1,18 +1,15 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 06.01.17
- * Time: 11:20
- */
 namespace Demv\Werte;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 
+/**
+ * Interface ProviderInterface
+ * @package Demv\Werte
+ */
 interface ProviderInterface
 {
-
     /**
      * Gibt ein Array aller Werte zurück
      *
@@ -43,5 +40,4 @@ interface ProviderInterface
      *          true, wenn der Eintrag existiert, sonst false
      */
     public function exists(int $id): bool;
-
 }

@@ -1,20 +1,15 @@
 <?php
+
 namespace Demv\Werte\Tests\Person\Anrede;
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 09.01.17
- * Time: 11:32
- */
-use Demv\Werte\Person\Anrede\Anreden;
 use Demv\Werte\Exception\EntryNotFoundException;
+use Demv\Werte\Person\Anrede\Anreden;
+use Demv\Werte\Person\Anrede\Anreden\Firma;
+use Demv\Werte\Person\Anrede\Anreden\Frau;
+use Demv\Werte\Person\Anrede\Anreden\Herr;
+use Demv\Werte\Person\Anrede\Anreden\LeereAnrede;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
-use Demv\Werte\Person\Anrede\Anreden\Herr;
-use Demv\Werte\Person\Anrede\Anreden\Frau;
-use Demv\Werte\Person\Anrede\Anreden\Firma;
-use Demv\Werte\Person\Anrede\Anreden\LeereAnrede;
 
 class AnredenTest extends TestCase
 {

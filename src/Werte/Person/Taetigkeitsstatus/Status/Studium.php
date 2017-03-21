@@ -47,5 +47,4 @@ final class Studium extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

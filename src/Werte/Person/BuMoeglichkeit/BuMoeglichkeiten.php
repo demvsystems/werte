@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 14:57
- */
 namespace Demv\Werte\Person\BuMoeglichkeit;
 
 use Demv\Werte\AbstractProvider;

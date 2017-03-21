@@ -47,5 +47,4 @@ final class BeamterAufLebenszeit extends Value implements TaetigkeitsstatusInter
     {
         return true;
     }
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Tests\Http;
 
 use Demv\Http\Error;

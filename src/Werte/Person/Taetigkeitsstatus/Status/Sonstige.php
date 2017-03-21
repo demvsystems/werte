@@ -47,5 +47,4 @@ final class Sonstige extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

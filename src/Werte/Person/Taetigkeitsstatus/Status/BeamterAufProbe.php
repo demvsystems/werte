@@ -47,5 +47,4 @@ final class BeamterAufProbe extends Value implements TaetigkeitsstatusInterface
     {
         return true;
     }
-
 }

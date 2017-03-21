@@ -47,5 +47,4 @@ final class Schulausbildung extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

@@ -47,5 +47,4 @@ final class Berufsausbildung extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

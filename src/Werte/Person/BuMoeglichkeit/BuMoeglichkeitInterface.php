@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 14:58
- */
 namespace Demv\Werte\Person\BuMoeglichkeit;
 
 use Demv\Werte\ValueInterface;
@@ -21,5 +15,4 @@ interface BuMoeglichkeitInterface extends ValueInterface
      * @return bool
      */
     public function isBuAktuellMoeglich(): bool;
-
 }

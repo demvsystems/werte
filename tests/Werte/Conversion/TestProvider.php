@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 02.02.17
- * Time: 15:04
- */
 
 namespace Demv\Werte\Tests\Conversion;
 
@@ -24,5 +18,4 @@ final class TestProvider extends AbstractProvider
             $this->appendMember($value);
         }
     }
-
 }

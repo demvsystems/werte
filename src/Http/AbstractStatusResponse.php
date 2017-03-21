@@ -52,9 +52,9 @@ abstract class AbstractStatusResponse implements StatusResponseInterface
      */
     public static function translateFromHttp(ResponseInterface $response): StatusResponseInterface
     {
-        $code = $response->getStatusCode();
+        $code   = $response->getStatusCode();
         $stream = $response->getBody()->getContents();
-        $body = json_decode($stream, true);
+        $body   = json_decode($stream, true);
 
         if ($code >= 200 && $code < 300) {
             return (bool) $body['success'] ? new Success($body['content']) : new Fail($body['content']);

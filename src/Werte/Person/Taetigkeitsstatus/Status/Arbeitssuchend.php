@@ -47,5 +47,4 @@ final class Arbeitssuchend extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

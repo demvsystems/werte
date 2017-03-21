@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 11:30
- */
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus;
 
 use Codeception\Specify;

@@ -1,18 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 06.01.17
- * Time: 11:57
- */
 
 namespace Demv\Werte;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 
+/**
+ * Class AbstractProvider
+ * @package Demv\Werte
+ */
 abstract class AbstractProvider implements ProviderInterface
 {
-
     /**
      * @var array
      */
@@ -78,5 +75,4 @@ abstract class AbstractProvider implements ProviderInterface
     {
         return $this->fetchOne($id) !== null;
     }
-
 }

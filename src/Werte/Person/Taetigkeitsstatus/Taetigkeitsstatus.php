@@ -73,5 +73,4 @@ final class Taetigkeitsstatus extends AbstractProvider
     {
         return parent::getOne($id);
     }
-
 }

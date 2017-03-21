@@ -1,13 +1,7 @@
 <?php
+
 namespace Demv\Werte\Tests;
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 06.01.17
- * Time: 11:43
- */
-use Demv\Werte\Person\Anrede\Anreden;
 use Demv\Werte\Value;
 use PHPUnit\Framework\TestCase;
 

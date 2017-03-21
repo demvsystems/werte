@@ -2,10 +2,10 @@
 
 namespace Demv\Werte\Tests\Person\Pflegegrad\Pflegegrade;
 
+use Codeception\Specify;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad3;
 use Demv\Werte\Person\Pflegegrad\PflegegradInterface;
 use PHPUnit\Framework\TestCase;
-use Codeception\Specify;
 
 class Pflegegrad3Test extends TestCase
 {

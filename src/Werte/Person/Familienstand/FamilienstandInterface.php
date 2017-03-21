@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Person\Familienstand;
 
 use Demv\Werte\ValueInterface;

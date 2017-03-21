@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Tests\Conversion;
 
 use Demv\Werte\Conversion\DataList;
@@ -36,5 +37,4 @@ class DataListTest extends TestCase
         ];
         $this->assertEquals([1 => 'test1', 2 => 'test2', 3 => 'test3'], DataList::fromProvider(new TestProvider($values)));
     }
-
 }

@@ -1,14 +1,15 @@
 <?php
+
 namespace Demv\Werte\Tests\Person\Wohnsituation;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen;
+use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiAndererPerson;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiEltern;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\InEigentum;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\ZurMiete;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
-use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiAndererPerson;
 
 /**
  * Class WohnsituationenTest

@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 10.01.17
- * Time: 10:52
- */
 namespace Demv\Werte\Person\Anrede\Anreden;
 
 use Demv\Werte\Person\Anrede\AnredeInterface;
@@ -23,5 +17,4 @@ final class Frau extends Value implements AnredeInterface
     {
         parent::__construct(self::ID, 'Frau');
     }
-
 }

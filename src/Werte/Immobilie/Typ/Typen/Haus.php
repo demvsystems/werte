@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Immobilie\Typ\Typen;
 
 use Demv\Werte\Immobilie\Typ\ImmobilienTypInterface;

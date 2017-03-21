@@ -9,5 +9,4 @@ use Demv\Werte\ValueInterface;
  */
 interface KrankenversicherungInterface extends ValueInterface
 {
-
 }

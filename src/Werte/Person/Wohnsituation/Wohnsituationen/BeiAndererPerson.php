@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Person\Wohnsituation\Wohnsituationen;
 
 use Demv\Werte\Person\Wohnsituation\WohnsituationInterface;

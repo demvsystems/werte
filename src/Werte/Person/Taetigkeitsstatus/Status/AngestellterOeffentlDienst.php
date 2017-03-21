@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 10:30
- */
 namespace Demv\Werte\Person\Taetigkeitsstatus\Status;
 
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
@@ -47,5 +41,4 @@ final class AngestellterOeffentlDienst extends Value implements Taetigkeitsstatu
     {
         return true;
     }
-
 }

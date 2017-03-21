@@ -1,12 +1,7 @@
 <?php
+
 namespace Demv\Werte\Tests;
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 09.01.17
- * Time: 17:13
- */
 use Demv\Werte\ProviderInterface;
 use Demv\Werte\ValueInterface;
 
@@ -17,7 +12,7 @@ trait ProviderTestTrait
         /**
          * @var ValueInterface $instance
          */
-        $instance = new $classname;
+        $instance = new $classname();
         $this->assertNotEmpty($provider->getOne($instance->getId()));
         $this->assertTrue($provider->exists($instance->getId()));
         $value = $provider->getOne($instance->getId());

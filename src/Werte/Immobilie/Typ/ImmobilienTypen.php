@@ -1,4 +1,5 @@
 <?php
+
 namespace Demv\Werte\Immobilie\Typ;
 
 use Demv\Werte\AbstractProvider;

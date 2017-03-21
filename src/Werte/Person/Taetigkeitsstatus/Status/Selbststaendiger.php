@@ -47,5 +47,4 @@ final class Selbststaendiger extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }

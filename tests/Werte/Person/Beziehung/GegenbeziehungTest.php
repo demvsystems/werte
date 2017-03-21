@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 10.01.17
- * Time: 10:25
- */
 
 namespace Demv\Werte\Tests\Person\Beziehung;
 
@@ -27,7 +21,6 @@ use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use PHPUnit\Framework\TestCase;
-use PHPUnit_Framework_TestCase;
 
 class GegenbeziehungTest extends TestCase
 {

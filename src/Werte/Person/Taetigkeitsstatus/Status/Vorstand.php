@@ -47,5 +47,4 @@ final class Vorstand extends Value implements TaetigkeitsstatusInterface
     {
         return true;
     }
-
 }

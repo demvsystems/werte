@@ -2,6 +2,7 @@
 
 namespace Demv\Werte\Tests\Person\BuMoeglichkeit;
 
+use Codeception\Specify;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\KeinPflegegrad;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad1;
@@ -10,7 +11,6 @@ use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad3;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad4;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad5;
 use Demv\Werte\Tests\ProviderTestTrait;
-use Codeception\Specify;
 use PHPUnit\Framework\TestCase;
 
 /**

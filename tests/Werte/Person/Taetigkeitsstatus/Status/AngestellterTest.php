@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 11:50
- */
 
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
@@ -42,5 +36,4 @@ final class AngestellterTest extends StatusTest
     {
         return true;
     }
-
 }

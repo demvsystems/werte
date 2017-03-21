@@ -47,5 +47,4 @@ final class Elternzeit extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
-
 }
