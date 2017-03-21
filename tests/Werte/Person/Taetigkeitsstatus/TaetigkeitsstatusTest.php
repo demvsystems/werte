@@ -49,7 +49,6 @@ class TaetigkeitsstatusTest extends TestCase
 
         $this->specify('Alle Instanzen implementieren das gleiche Interface.', function () use ($provider) {
             foreach ($provider->getAll() as $member) {
-
                 $this->assertInstanceOf(TaetigkeitsstatusInterface::class, $member);
             }
         });

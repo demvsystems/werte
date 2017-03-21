@@ -59,5 +59,4 @@ class FamilienstaendeTest extends TestCase
         $this->expectException(EntryNotFoundException::class);
         $this->getProvider()->getOne(9);
     }
-
 }
