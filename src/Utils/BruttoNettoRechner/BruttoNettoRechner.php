@@ -16,6 +16,14 @@ final class BruttoNettoRechner
     private $mapping;
 
     /**
+     * @return BruttoNettoRechner
+     */
+    public static function new(): self
+    {
+        return new self();
+    }
+
+    /**
      * BruttoToNettoRechner constructor.
      */
     public function __construct()
