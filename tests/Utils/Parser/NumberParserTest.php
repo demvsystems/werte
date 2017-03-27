@@ -1,8 +1,8 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-use Demv\Utils\Parser\NumberParser;
 use Codeception\Specify;
+use Demv\Utils\Parser\NumberParser;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class NumberParserTest
