@@ -45,9 +45,9 @@ final class NumberParser
      *
      * @param string $string
      *
-     * @return string
+     * @return float
      */
-    private function parse(string $string)
+    private function parse(string $string): float
     {
         $s = trim($string);
         $s = preg_replace('/[^\d\.,-]/', '', $s);
