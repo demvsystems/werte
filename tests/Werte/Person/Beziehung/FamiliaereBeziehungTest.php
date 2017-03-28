@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 30.01.17
- * Time: 09:51
- */
 
 namespace Demv\Werte\Tests\Person\Beziehung;
 
@@ -23,5 +17,17 @@ class FamiliaereBeziehungTest extends TestCase
     {
         $beziehung = new FamiliaereBeziehung(1, 'test');
         $this->assertFalse($beziehung->isBeruflich());
+    }
+
+    public function testZusammenlebend()
+    {
+        $beziehung = new FamiliaereBeziehung(1, 'test');
+        $this->assertFalse($beziehung->getLebenZusammen());
+
+        $beziehung->setLebenZusammen(false);
+        $this->assertFalse($beziehung->getLebenZusammen());
+
+        $beziehung->setLebenZusammen(true);
+        $this->assertTrue($beziehung->getLebenZusammen());
     }
 }

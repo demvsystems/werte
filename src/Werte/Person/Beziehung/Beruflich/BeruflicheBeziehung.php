@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 09.01.17
- * Time: 16:33
- */
 
 namespace Demv\Werte\Person\Beziehung\Beruflich;
 
@@ -31,5 +25,20 @@ class BeruflicheBeziehung extends Value implements BeziehungsTypInterface
     final public function isBeruflich(): bool
     {
         return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getLebenZusammen(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @param bool $lebenZusammen
+     */
+    public function setLebenZusammen(bool $lebenZusammen)
+    {
     }
 }
