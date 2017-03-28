@@ -15,7 +15,7 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, Famil
     /**
      * @var boolean
      */
-    protected $zusammenlebend;
+    private $zusammenlebend;
 
     /**
      * FamiliaereBeziehung constructor.
@@ -23,7 +23,7 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, Famil
      * @param int    $id
      * @param string $name
      */
-    public function __construct($id, $name)
+    public function __construct(int $id, string $name)
     {
         parent::__construct($id, $name);
         $this->zusammenlebend = false;
@@ -48,7 +48,7 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, Famil
     /**
      * @return bool
      */
-    public function isZusammenlebend(): bool
+    final public function isZusammenlebend(): bool
     {
         return $this->zusammenlebend;
     }
@@ -56,7 +56,7 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, Famil
     /**
      * @param bool $zusammenlebend
      */
-    public function setZusammenlebend(bool $zusammenlebend)
+    final public function setZusammenlebend(bool $zusammenlebend)
     {
         $this->zusammenlebend = $zusammenlebend;
     }
