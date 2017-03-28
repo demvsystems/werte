@@ -22,12 +22,12 @@ class FamiliaereBeziehungTest extends TestCase
     public function testZusammenlebend()
     {
         $beziehung = new FamiliaereBeziehung(1, 'test');
-        $this->assertFalse($beziehung->isZusammenlebend());
+        $this->assertFalse($beziehung->getLebenZusammen());
 
-        $beziehung->setZusammenlebend(false);
-        $this->assertFalse($beziehung->isZusammenlebend());
+        $beziehung->setLebenZusammen(false);
+        $this->assertFalse($beziehung->getLebenZusammen());
 
-        $beziehung->setZusammenlebend(true);
-        $this->assertTrue($beziehung->isZusammenlebend());
+        $beziehung->setLebenZusammen(true);
+        $this->assertTrue($beziehung->getLebenZusammen());
     }
 }

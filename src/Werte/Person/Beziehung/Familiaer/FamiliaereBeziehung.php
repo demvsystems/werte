@@ -3,19 +3,18 @@
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
-use Demv\Werte\Person\Beziehung\FamiliaereBeziehungInterface;
 use Demv\Werte\Value;
 
 /**
  * Class FamiliaereBeziehung
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, FamiliaereBeziehungInterface
+class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
 {
     /**
      * @var boolean
      */
-    private $zusammenlebend;
+    private $lebenZusammen;
 
     /**
      * FamiliaereBeziehung constructor.
@@ -26,7 +25,7 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, Famil
     public function __construct(int $id, string $name)
     {
         parent::__construct($id, $name);
-        $this->zusammenlebend = false;
+        $this->lebenZusammen = false;
     }
 
     /**
@@ -48,16 +47,16 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface, Famil
     /**
      * @return bool
      */
-    final public function isZusammenlebend(): bool
+    final public function getLebenZusammen(): bool
     {
-        return $this->zusammenlebend;
+        return $this->lebenZusammen;
     }
 
     /**
      * @param bool $zusammenlebend
      */
-    final public function setZusammenlebend(bool $zusammenlebend)
+    final public function setLebenZusammen(bool $zusammenlebend)
     {
-        $this->zusammenlebend = $zusammenlebend;
+        $this->lebenZusammen = $zusammenlebend;
     }
 }

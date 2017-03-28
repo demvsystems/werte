@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 09.01.17
- * Time: 16:26
- */
 namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\ValueInterface;
@@ -27,4 +21,14 @@ interface BeziehungsTypInterface extends ValueInterface
      * @return bool
      */
     public function isBeruflich(): bool;
+
+    /**
+     * @return bool
+     */
+    public function getLebenZusammen(): bool;
+
+    /**
+     * @param bool $lebenZusammen
+     */
+    public function setLebenZusammen(bool $lebenZusammen);
 }
