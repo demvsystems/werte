@@ -21,6 +21,10 @@ interface PrivateSachversicherung
 
     const WOHNGEBAUEDEVERSICHERUNG = 167;
 
+    const KFZ = 171;
+
+    const TIERHALTERHAFTPFLICHT = 170;
+
     /**
      * TODO: Muss noch durch echte id ersetzt werden.
      */
