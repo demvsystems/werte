@@ -75,4 +75,30 @@ final class NumberParserTest extends TestCase
             $this->assertEquals(-1234.0, $this->parser->parseFloat('-12-34'));
         });
     }
+
+    public function testIsParseable()
+    {
+        $this->specify('Mit Zahlen', function () {
+            $this->assertTrue($this->parser->isParseable('10.000€'));
+        });
+
+        $this->specify('Mit Zahlen (sinnlos)', function () {
+            $this->assertTrue($this->parser->isParseable('1ab5hd5'));
+        });
+        $this->specify('Mit Zahlen (Trennzeichen)', function () {
+            $this->assertTrue($this->parser->isParseable('52.658,63€'));
+        });
+
+        $this->specify('Nur Zahlen', function () {
+            $this->assertTrue($this->parser->isParseable('10000'));
+        });
+
+        $this->specify('Ohne Zahlen', function () {
+            $this->assertFalse($this->parser->isParseable('tausend euro'));
+        });
+
+        $this->specify('leer', function () {
+            $this->assertFalse($this->parser->isParseable(''));
+        });
+    }
 }
