@@ -26,19 +26,4 @@ class BeruflicheBeziehung extends Value implements BeziehungsTypInterface
     {
         return true;
     }
-
-    /**
-     * @return bool
-     */
-    public function getLebenZusammen(): bool
-    {
-        return false;
-    }
-
-    /**
-     * @param bool $lebenZusammen
-     */
-    public function setLebenZusammen(bool $lebenZusammen)
-    {
-    }
 }
