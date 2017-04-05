@@ -18,16 +18,4 @@ class FamiliaereBeziehungTest extends TestCase
         $beziehung = new FamiliaereBeziehung(1, 'test');
         $this->assertFalse($beziehung->isBeruflich());
     }
-
-    public function testZusammenlebend()
-    {
-        $beziehung = new FamiliaereBeziehung(1, 'test');
-        $this->assertFalse($beziehung->getLebenZusammen());
-
-        $beziehung->setLebenZusammen(false);
-        $this->assertFalse($beziehung->getLebenZusammen());
-
-        $beziehung->setLebenZusammen(true);
-        $this->assertTrue($beziehung->getLebenZusammen());
-    }
 }

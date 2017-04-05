@@ -12,11 +12,6 @@ use Demv\Werte\Value;
 class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
 {
     /**
-     * @var boolean
-     */
-    private $lebenZusammen;
-
-    /**
      * FamiliaereBeziehung constructor.
      *
      * @param int    $id
@@ -42,21 +37,5 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
     final public function isBeruflich(): bool
     {
         return false;
-    }
-
-    /**
-     * @return bool
-     */
-    final public function getLebenZusammen(): bool
-    {
-        return $this->lebenZusammen;
-    }
-
-    /**
-     * @param bool $zusammenlebend
-     */
-    final public function setLebenZusammen(bool $zusammenlebend)
-    {
-        $this->lebenZusammen = $zusammenlebend;
     }
 }

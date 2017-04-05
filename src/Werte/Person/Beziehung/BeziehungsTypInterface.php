@@ -21,14 +21,4 @@ interface BeziehungsTypInterface extends ValueInterface
      * @return bool
      */
     public function isBeruflich(): bool;
-
-    /**
-     * @return bool
-     */
-    public function getLebenZusammen(): bool;
-
-    /**
-     * @param bool $lebenZusammen
-     */
-    public function setLebenZusammen(bool $lebenZusammen);
 }
