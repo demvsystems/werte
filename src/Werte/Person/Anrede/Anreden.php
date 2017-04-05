@@ -6,6 +6,7 @@
  * Date: 06.01.17
  * Time: 11:14
  */
+
 namespace Demv\Werte\Person\Anrede;
 
 use Demv\Werte\AbstractProvider;

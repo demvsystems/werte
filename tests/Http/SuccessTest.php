@@ -52,6 +52,9 @@ final class SuccessTest extends TestCase
     {
         $response = $this->getSuccess(['daten1' => 'test1', 'daten2' => 5])->translateToHttp();
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertEquals(json_encode(['success' => true, 'content' => ['daten1' => 'test1', 'daten2' => 5]]), $response->getBody()->getContents());
+        $this->assertEquals(json_encode([
+                                            'success' => true,
+                                            'content' => ['daten1' => 'test1', 'daten2' => 5]
+                                        ]), $response->getBody()->getContents());
     }
 }

@@ -38,7 +38,9 @@ final class BruttoNettoProzentMappingTest extends TestCase
         $bruttoProzentMapping = new BruttoNettoProzentMapping();
 
         foreach ($mapping as $brutto => $prozent) {
-            $this->assertEquals($prozent, $bruttoProzentMapping->getProzentValueByBrutto($brutto), 'Testfall Brutto:' . $brutto . ' Netto:' . $prozent);
+            $this->assertEquals($prozent,
+                                $bruttoProzentMapping->getProzentValueByBrutto($brutto),
+                                'Testfall Brutto:' . $brutto . ' Netto:' . $prozent);
         }
     }
 
@@ -69,7 +71,9 @@ final class BruttoNettoProzentMappingTest extends TestCase
         $bruttoProzentMapping = new BruttoNettoProzentMapping();
 
         foreach ($mapping as $netto => $prozent) {
-            $this->assertEquals($prozent, $bruttoProzentMapping->getProzentValueByNetto($netto), 'Testfall Brutto:' . $netto . ' Netto:' . $prozent);
+            $this->assertEquals($prozent,
+                                $bruttoProzentMapping->getProzentValueByNetto($netto),
+                                'Testfall Brutto:' . $netto . ' Netto:' . $prozent);
         }
     }
 }

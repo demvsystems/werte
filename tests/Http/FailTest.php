@@ -52,6 +52,7 @@ final class FailTest extends TestCase
     {
         $response = $this->getFail(['daten1' => 'test1', 'daten2' => 5])->translateToHttp();
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertEquals(json_encode(['success' => false, 'content' => ['daten1' => 'test1', 'daten2' => 5]]), $response->getBody()->getContents());
+        $this->assertEquals(
+            json_encode(['success' => false, 'content' => ['daten1' => 'test1', 'daten2' => 5]]), $response->getBody()->getContents());
     }
 }

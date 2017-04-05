@@ -29,7 +29,8 @@ final class BruttoNettoRechnerTest extends TestCase
         $rechner = new BruttoNettoRechner();
 
         foreach (self::MAPPING as $brutto => $netto) {
-            $this->assertEquals($netto, $rechner->convertBruttoToNetto($brutto), 'Testfall Brutto:' . $brutto . ' Netto:' . $netto);
+            $this->assertEquals($netto,
+                                $rechner->convertBruttoToNetto($brutto), 'Testfall Brutto:' . $brutto . ' Netto:' . $netto);
         }
     }
 
@@ -38,7 +39,8 @@ final class BruttoNettoRechnerTest extends TestCase
         $rechner = new BruttoNettoRechner();
 
         foreach (self::MAPPING as $brutto => $netto) {
-            $this->assertEquals($brutto, $rechner->convertNettoToBrutto($netto), 'Testfall Netto:' . $netto . ' Brutto:' . $brutto);
+            $this->assertEquals($brutto,
+                                $rechner->convertNettoToBrutto($netto), 'Testfall Netto:' . $netto . ' Brutto:' . $brutto);
         }
     }
 }

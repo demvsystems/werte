@@ -1,11 +1,14 @@
 <?php
 
+namespace Demv\Utils\Tests\Parser;
+
 use Codeception\Specify;
 use Demv\Utils\Parser\NumberParser;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class NumberParserTest
+ * @package Demv\Utils\Tests\Parser
  */
 final class NumberParserTest extends TestCase
 {

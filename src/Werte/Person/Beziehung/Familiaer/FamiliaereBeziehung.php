@@ -12,17 +12,6 @@ use Demv\Werte\Value;
 class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
 {
     /**
-     * FamiliaereBeziehung constructor.
-     *
-     * @param int    $id
-     * @param string $name
-     */
-    public function __construct(int $id, string $name)
-    {
-        parent::__construct($id, $name);
-    }
-
-    /**
      * @return bool
      */
     final public function isFamiliaer(): bool

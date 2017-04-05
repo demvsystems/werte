@@ -43,6 +43,8 @@ class Pflegegrad5Test extends TestCase
 
     public function testHinweis()
     {
-        $this->assertSame('Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung', $this->pflegegrad->getHinweis());
+        $this->assertSame(
+            'Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung',
+            $this->pflegegrad->getHinweis());
     }
 }

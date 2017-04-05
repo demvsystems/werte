@@ -6,6 +6,7 @@
  * Date: 19.01.17
  * Time: 15:47
  */
+
 namespace Demv\Werte\Tests\Person\BuMoeglichkeit;
 
 use Demv\Werte\Person\BuMoeglichkeit\BuMoeglichkeiten;

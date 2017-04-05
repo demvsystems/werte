@@ -6,6 +6,7 @@
  * Date: 19.01.17
  * Time: 11:40
  */
+
 namespace Demv\Werte\Tests\Person\Taetigkeitsstatus\Status;
 
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;

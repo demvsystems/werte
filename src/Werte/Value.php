@@ -6,6 +6,7 @@
  * Date: 06.01.17
  * Time: 11:28
  */
+
 namespace Demv\Werte;
 
 /**
