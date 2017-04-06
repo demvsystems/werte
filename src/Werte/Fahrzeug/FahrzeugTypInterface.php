@@ -10,5 +10,4 @@ use Demv\Werte\ValueInterface;
  */
 interface FahrzeugTypInterface extends ValueInterface
 {
-
 }
