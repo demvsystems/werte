@@ -23,6 +23,7 @@ final class FahrzeugTypen extends AbstractProvider
         $this->appendMember(new Ebike());
         $this->appendMember(new Fahrrad());
         $this->appendMember(new Drohne());
+        $this->appendMember(new Boot());
     }
 
     /**
