@@ -14,6 +14,6 @@ final class Pkw extends Value implements FahrzeugTypInterface
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Auto');
+        parent::__construct(self::ID, 'Pkw');
     }
 }
