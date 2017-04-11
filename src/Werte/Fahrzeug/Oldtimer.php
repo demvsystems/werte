@@ -2,13 +2,11 @@
 
 namespace Demv\Werte\Fahrzeug;
 
-use Demv\Werte\Value;
-
 /**
  * Class Oldtimer
  * @package Demv\Werte\Fahrzeug
  */
-final class Oldtimer extends Value implements FahrzeugTypInterface
+final class Oldtimer extends FahrzeugTyp implements FahrzeugTypInterface
 {
     const ID = 7;
 

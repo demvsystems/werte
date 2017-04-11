@@ -10,4 +10,10 @@ use Demv\Werte\ValueInterface;
  */
 interface FahrzeugTypInterface extends ValueInterface
 {
+    /**
+     * Gibt den Namen für die Mehrzahl zurück
+     *
+     * @return string
+     */
+    public function getMehrzahl(): string;
 }

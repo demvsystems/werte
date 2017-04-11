@@ -2,13 +2,11 @@
 
 namespace Demv\Werte\Fahrzeug;
 
-use Demv\Werte\Value;
-
 /**
  * Class Anhaenger
  * @package Demv\Werte\Fahrzeug
  */
-final class Anhaenger extends Value implements FahrzeugTypInterface
+final class Anhaenger extends FahrzeugTyp implements FahrzeugTypInterface
 {
     const ID = 4;
 
