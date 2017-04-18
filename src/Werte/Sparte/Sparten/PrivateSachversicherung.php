@@ -25,6 +25,10 @@ interface PrivateSachversicherung
 
     const TIERHALTERHAFTPFLICHT = 170;
 
+    const JAGDHAFTPFLICHT = 253;
+
+    const CAMPINGVERSICHERUNG = 311;
+
     /**
      * TODO: Muss noch durch echte id ersetzt werden.
      */

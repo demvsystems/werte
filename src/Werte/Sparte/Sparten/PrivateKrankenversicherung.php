@@ -9,4 +9,6 @@ namespace Demv\Werte\Sparte\Sparten;
 interface PrivateKrankenversicherung
 {
     const ID = 156;
+
+    const AUSLANDSKRANKENREISEVERSICHERUNG = 273;
 }
