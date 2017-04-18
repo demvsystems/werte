@@ -27,8 +27,8 @@ final class TierartenTest extends TestCase
 
     public function testGetAll()
     {
-        $fahrzeugTypen = $this->getTierarten();
-        $this->assertCount(2, $fahrzeugTypen->getAll());
+        $tierarten = $this->getTierarten();
+        $this->assertCount(2, $tierarten->getAll());
     }
 
     public function testGetHund()

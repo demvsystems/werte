@@ -29,8 +29,8 @@ final class HobbiesTest extends TestCase
 
     public function testGetAll()
     {
-        $fahrzeugTypen = $this->getHobbies();
-        $this->assertCount(4, $fahrzeugTypen->getAll());
+        $hobbies = $this->getHobbies();
+        $this->assertCount(4, $hobbies->getAll());
     }
 
     public function testGetJagdsport()
