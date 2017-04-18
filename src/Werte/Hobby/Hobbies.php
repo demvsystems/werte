@@ -39,5 +39,4 @@ final class Hobbies extends AbstractProvider
     {
         return parent::getOne($id);
     }
-
 }

@@ -10,5 +10,4 @@ use Demv\Werte\ValueInterface;
  */
 interface HobbyInterface extends ValueInterface
 {
-
 }
