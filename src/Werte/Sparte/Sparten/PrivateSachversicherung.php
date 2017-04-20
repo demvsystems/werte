@@ -29,6 +29,8 @@ interface PrivateSachversicherung
 
     const CAMPINGVERSICHERUNG = 311;
 
+    const WASSERSPORTVERSICHERUNG = 345;
+
     /**
      * TODO: Muss noch durch echte id ersetzt werden.
      */
