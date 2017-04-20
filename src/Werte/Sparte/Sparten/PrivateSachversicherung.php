@@ -34,5 +34,10 @@ interface PrivateSachversicherung
     /**
      * TODO: Muss noch durch echte id ersetzt werden.
      */
+    const LUFTFAHRTHAFTPFLICHT = 1234;
+
+    /**
+     * TODO: Muss noch durch echte id ersetzt werden.
+     */
     const BETREIBERHAFTPFLICHT = 999;
 }
