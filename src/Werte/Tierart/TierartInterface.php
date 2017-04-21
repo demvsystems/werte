@@ -10,4 +10,10 @@ use Demv\Werte\ValueInterface;
  */
 interface TierartInterface extends ValueInterface
 {
+    /**
+     * Gibt die Mehrzahlbezeichnung zurück
+     *
+     * @return string
+     */
+    public function getMehrzahl(): string;
 }

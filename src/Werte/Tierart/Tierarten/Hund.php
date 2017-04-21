@@ -17,4 +17,12 @@ final class Hund extends Value implements TierartInterface
     {
         parent::__construct(self::ID, 'Hund');
     }
+
+    /**
+     * @return string
+     */
+    public function getMehrzahl(): string
+    {
+        return 'Hunde';
+    }
 }
