@@ -31,13 +31,7 @@ interface PrivateSachversicherung
 
     const WASSERSPORTVERSICHERUNG = 345;
 
-    /**
-     * TODO: Muss noch durch echte id ersetzt werden.
-     */
-    const LUFTFAHRTHAFTPFLICHT = 1234;
+    const LUFTFAHRTHAFTPFLICHT = 374;
 
-    /**
-     * TODO: Muss noch durch echte id ersetzt werden.
-     */
-    const BETREIBERHAFTPFLICHT = 999;
+    const BETREIBERHAFTPFLICHT = 373;
 }
