@@ -37,7 +37,7 @@ final class DataList
     }
 
     /**
-     * Kovertiert das Value-Array der getAll-Methode in ein Array der Form ['id' => 'name']
+     * Konvertiert das Value-Array der getAll-Methode in ein Array der Form ['id' => 'name']
      *
      * @param ProviderInterface $provider
      *
@@ -46,6 +46,9 @@ final class DataList
      */
     public static function fromProvider(ProviderInterface $provider): array
     {
-        return self::fromArray($provider->getAll());
+        $values = self::fromArray($provider->getAll());
+        asort($values);
+
+        return $values;
     }
 }
