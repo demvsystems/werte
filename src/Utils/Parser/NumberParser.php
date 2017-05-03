@@ -2,6 +2,10 @@
 
 namespace Demv\Utils\Parser;
 
+use function Dgame\Ensurance\enforce;
+use function Dgame\Ensurance\ensure;
+use Exception;
+
 /**
  * Diese Klasse kümmert sich um das parsen von Zahlen aus einem String. Hierbei werden alle nicht numerischen Werte entfernt.
  * Als Trennzeichen können sowohl "." als auch "," genutzt werden.
@@ -20,44 +24,26 @@ final class NumberParser
     }
 
     /**
-     * Such den Offset für die Nachkommastellen, sofern einer existiert.
-     * Maximal 2 Nachkommastellen sind valide bzw. werden als solche erkannt.
-     *
-     * @param string $s
-     *
-     * @return int
-     */
-    private function offsetOf(string $s): int
-    {
-        $len = strlen($s);
-        foreach (['.', ','] as $offset) {
-            if (($pos = strrpos($s, $offset)) !== false && $pos >= ($len - 3)) {
-                return $pos;
-            }
-        }
-
-        return 0;
-    }
-
-    /**
      * Alles außer Zahlen, Punkt, Komma und Minus wird ignoriert.
      * 2 Nachkommastellen sind maximal erlaubt bzw. werden als solche erkannt.
      *
      * @param string $string
      *
      * @return float
+     * @throws Exception
      */
     private function parse(string $string): float
     {
         $s = trim($string);
         $s = preg_replace('/[^\d\.,-]/', '', $s);
-        for ($i = 1, $l = strlen($s) - $this->offsetOf($s); $i < $l; $i++) {
-            if (in_array($s[$i], [',', '.', '-'])) {
-                $s[$i] = '_';
-            }
-        }
+        $s = preg_replace('/(?<=\d)(-)/', '', $s);
+        $s = preg_replace('/(?:\.|,)(\d{1,2})$/', '_$1', $s);
+        $s = preg_replace('/(\d)(?:,|\.)(\d)/', '$1$2', $s);
+        $s = str_replace('_', '.', $s);
 
-        $s = str_replace(['_', ','], ['', '.'], $s);
+        if (!empty($s) && !is_numeric($s)) {
+            throw new Exception('Invalid numeric value: ' . $s);
+        }
 
         return (float) $s;
     }
