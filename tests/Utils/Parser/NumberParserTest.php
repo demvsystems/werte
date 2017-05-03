@@ -93,6 +93,9 @@ final class NumberParserTest extends TestCase
             '23..42'        => 23.42,
             '2.3..42'       => 23.42,
             '2.3.42'        => 23.42,
+            '12-3.42'       => 123.42,
+            '-12-3.42'      => -123.42,
+            '-1--2-3.42'    => -123.42,
             '45qm und 50qm' => 45
         ];
         foreach ($values as $value => $expected) {

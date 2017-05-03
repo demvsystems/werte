@@ -35,8 +35,8 @@ final class NumberParser
         $s = trim($string);
         $s = preg_replace('/(.+?)\s+.*?$/', '$1', $s);
         $s = preg_replace('/[^\d\.,-]/', '', $s);
+        $s = preg_replace('/(\.|,|-){2,}/', '$1', $s);
         $s = preg_replace('/(?<=\d)(-)/', '', $s);
-        $s = preg_replace('/(\.|,){2,}/', '$1', $s);
         $s = preg_replace('/(?:\.|,)(\d{1,2})$/', '_$1', $s);
         $s = preg_replace('/(\d)(?:,|\.)(\d)/', '$1$2', $s);
         $s = str_replace('_', '.', $s);
