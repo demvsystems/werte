@@ -77,6 +77,32 @@ final class NumberParserTest extends TestCase
         $this->specify('String mit "-"', function () {
             $this->assertEquals(-1234.0, $this->parser->parseFloat('-12-34'));
         });
+
+        $values = [
+            '100.365.42'    => 100365.42,
+            '100.365,38'    => 100365.38,
+            '34.42'         => 34.42,
+            '45.46 €'       => 45.46,
+            '1.000.000'     => 1000000,
+            '1.000.000,00'  => 1000000,
+            '1.000.000.00'  => 1000000,
+            '1.000.000.03'  => 1000000.03,
+            '1.000.000,42'  => 1000000.42,
+            '8.8 8'         => 8.8,
+            '34.23 42'      => 34.23,
+            '23..42'        => 23.42,
+            '2.3..42'       => 23.42,
+            '2.3.42'        => 23.42,
+            '12-3.42'       => 123.42,
+            '-12-3.42'      => -123.42,
+            '-1--2-3.42'    => -123.42,
+            '45qm und 50qm' => 45
+        ];
+        foreach ($values as $value => $expected) {
+            $this->specify(sprintf('String "%s"', $value), function () use ($expected, $value) {
+                $this->assertEquals($expected, $this->parser->parseFloat($value));
+            });
+        }
     }
 
     public function testIsParseable()
