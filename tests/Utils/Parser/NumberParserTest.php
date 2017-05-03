@@ -87,7 +87,7 @@ final class NumberParserTest extends TestCase
             '1.000.000,00' => 1000000,
             '1.000.000.00' => 1000000,
             '1.000.000.03' => 1000000.03,
-            '1.000.000.42' => 1000000.42
+            '1.000.000,42' => 1000000.42
         ];
         foreach ($values as $value => $expected) {
             $this->specify(sprintf('String "%s"', $value), function () use ($expected, $value) {
