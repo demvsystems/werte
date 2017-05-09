@@ -18,5 +18,5 @@ interface Vorsorge
 
     const PFLEGEVERSICHERUNG = 239;
 
-    const ALTERSVORSORGE = 215;
+    const ALTERSVORSORGE = 375;
 }
