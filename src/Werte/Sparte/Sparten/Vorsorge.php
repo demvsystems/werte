@@ -17,4 +17,6 @@ interface Vorsorge
     const BERUFSUNFAEHIGKEITSVERSICHERUNG = 135;
 
     const PFLEGEVERSICHERUNG = 239;
+
+    const ALTERSVORSORGE = 215;
 }
