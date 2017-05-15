@@ -5,6 +5,6 @@ php:
   - nightly
 before_script:
   - composer self-update
-  - composer update
+  - composer install
 script:
   - composer test
