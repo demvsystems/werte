@@ -2,6 +2,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/demvsystems/werte/badges/coverage.png?b=master&s=cb1befcc15c074c6e2f0e0c331707f1114deeb44)](https://scrutinizer-ci.com/g/demvsystems/werte/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/demvsystems/werte/badges/build.png?b=master&s=7d51c0db2e1da9190551c0edb98d498ff8bc5cfd)](https://scrutinizer-ci.com/g/demvsystems/werte/build-status/master)
 [![StyleCI](https://styleci.io/repos/78105159/shield?branch=master)](https://styleci.io/repos/78105159)
+[![Build Status](https://travis-ci.com/demvsystems/werte.svg?token=m5EWbRyNnpgR3VbxcZQa&branch=master)](https://travis-ci.com/demvsystems/werte)
 
 # Werte
 Hier werden verschiedene Werte abgebildet, die allgemein genutzt werdne können.
