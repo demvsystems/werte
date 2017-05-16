@@ -78,6 +78,10 @@ final class NumberParserTest extends TestCase
             $this->assertEquals(-1234.0, $this->parser->parseFloat('-12-34'));
         });
 
+        $this->specify('String ohne Zahl, nur mit "-"', function () {
+            $this->assertEquals(0, $this->parser->parseFloat('-'));
+        });
+
         $values = [
             '100.365.42'    => 100365.42,
             '100.365,38'    => 100365.38,
