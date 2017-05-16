@@ -42,7 +42,7 @@ final class NumberParser
         $s = str_replace('_', '.', $s);
 
         if (!empty($s) && !is_numeric($s)) {
-            throw new Exception('Invalid numeric value: ' . $s);
+            return 0.0;
         }
 
         return (float) $s;
