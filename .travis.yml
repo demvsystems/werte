@@ -3,8 +3,9 @@ php:
   - 7.0
   - 7.1
   - nightly
-before_script:
-  - phpenv config-rm xdebug.ini
+before_install:
+   - if [[ $TRAVIS_PHP_VERSION != "nightly" ]]; then phpenv config-rm xdebug.ini; fi
+install:
   - composer self-update
   - composer install --prefer-dist --optimize-autoloader
 script:
