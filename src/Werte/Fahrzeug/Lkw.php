@@ -12,7 +12,7 @@ final class Lkw extends FahrzeugTyp implements FahrzeugTypInterface
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'LKW');
+        parent::__construct(self::ID, 'Lkw');
         $this->mehrzahl = 'Lkw';
     }
 }
