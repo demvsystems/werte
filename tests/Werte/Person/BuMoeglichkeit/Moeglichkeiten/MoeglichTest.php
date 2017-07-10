@@ -30,7 +30,7 @@ class MoeglichTest extends TestCase
 
     public function testName()
     {
-        $this->assertSame('BU Möglich', $this->getBuMoeglichkeit()->getName());
+        $this->assertSame('BU möglich', $this->getBuMoeglichkeit()->getName());
     }
 
     public function testAktuellMoeglich()

@@ -30,7 +30,7 @@ class ZeitweiseNichtMoeglichTest extends TestCase
 
     public function testName()
     {
-        $this->assertSame('BU zeitweise nicht Möglich', $this->getBuMoeglichkeit()->getName());
+        $this->assertSame('BU zeitweise nicht möglich', $this->getBuMoeglichkeit()->getName());
     }
 
     public function testAktuellMoeglich()

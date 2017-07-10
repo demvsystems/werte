@@ -22,7 +22,7 @@ final class Moeglich extends Value implements BuMoeglichkeitInterface
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'BU Möglich');
+        parent::__construct(self::ID, 'BU möglich');
     }
 
     /**

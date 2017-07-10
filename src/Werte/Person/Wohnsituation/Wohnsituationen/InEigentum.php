@@ -18,6 +18,6 @@ final class InEigentum extends Value implements WohnsituationInterface
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'In Eigentum');
+        parent::__construct(self::ID, 'Eigentum');
     }
 }
