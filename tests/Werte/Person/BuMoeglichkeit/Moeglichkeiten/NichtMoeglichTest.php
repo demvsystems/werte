@@ -30,7 +30,7 @@ class NichtMoeglichTest extends TestCase
 
     public function testName()
     {
-        $this->assertSame('BU nicht Möglich', $this->getBuMoeglichkeit()->getName());
+        $this->assertSame('BU nicht möglich', $this->getBuMoeglichkeit()->getName());
     }
 
     public function testAktuellMoeglich()

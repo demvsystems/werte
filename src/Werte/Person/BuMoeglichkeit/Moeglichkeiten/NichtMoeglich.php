@@ -22,7 +22,7 @@ final class NichtMoeglich extends Value implements BuMoeglichkeitInterface
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'BU nicht Möglich');
+        parent::__construct(self::ID, 'BU nicht möglich');
     }
 
     /**

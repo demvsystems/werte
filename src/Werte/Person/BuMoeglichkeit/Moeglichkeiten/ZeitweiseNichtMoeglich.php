@@ -22,7 +22,7 @@ final class ZeitweiseNichtMoeglich extends Value implements BuMoeglichkeitInterf
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'BU zeitweise nicht Möglich');
+        parent::__construct(self::ID, 'BU zeitweise nicht möglich');
     }
 
     /**
