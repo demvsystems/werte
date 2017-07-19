@@ -15,6 +15,8 @@ interface PrivateSachversicherung
 
     const HAUS_UND_GRUNDBESITZER_HAFTPFLICHT = 243;
 
+    const BAUHERREN_HAFPFLICHT = 242;
+
     const GEWAESSERSCHAEDEN_HAFTPFLICHT = 276;
 
     const HAUSRAT = 166;
