@@ -18,6 +18,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
 use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
+use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
+use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
 
 /**
  * Class Beziehungstypen
@@ -42,6 +44,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Inhaber());
         $this->appendMember(new OnkelTante());
         $this->appendMember(new NeffeNichte());
+        $this->appendMember(new Schwiegereltern());
+        $this->appendMember(new Schwiegerkind());
     }
 
     /**

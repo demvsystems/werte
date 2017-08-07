@@ -18,6 +18,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
 use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
+use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
+use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use PHPUnit\Framework\TestCase;
@@ -110,6 +112,11 @@ class GegenbeziehungTest extends TestCase
     public function testNeffe()
     {
         $this->checkExistence(new NeffeNichte(), new OnkelTante());
+    }
+
+    public function testSchwiegereltern()
+    {
+        $this->checkExistence(new Schwiegereltern(), new Schwiegerkind());
     }
 
     public function testMissing()
