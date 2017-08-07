@@ -23,6 +23,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
 use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
+use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
+use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
 
 final class GegenbeziehungFactory
 {
@@ -49,6 +51,7 @@ final class GegenbeziehungFactory
         $pairs[Grosseltern::ID]       = Enkel::ID;
         $pairs[Inhaber::ID]           = FirmaVonInhaber::ID;
         $pairs[OnkelTante::ID]        = NeffeNichte::ID;
+        $pairs[Schwiegereltern::ID]   = Schwiegerkind::ID;
 
         return $pairs;
     }
