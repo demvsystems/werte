@@ -19,4 +19,6 @@ interface Vorsorge
     const PFLEGEVERSICHERUNG = 239;
 
     const ALTERSVORSORGE = 375;
+
+    const RISIKOLEBEN = 136;
 }
