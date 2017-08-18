@@ -11,6 +11,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
+use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
 use Demv\Werte\Person\Beziehung\Familiaer\Geschwister;
 use Demv\Werte\Person\Beziehung\Familiaer\Grosseltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Kind;
@@ -20,6 +21,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 
 /**
  * Class Beziehungstypen
@@ -46,6 +48,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new NeffeNichte());
         $this->appendMember(new Schwiegereltern());
         $this->appendMember(new Schwiegerkind());
+        $this->appendMember(new FreundBekannter());
+        $this->appendMember(new ExPartner());
     }
 
     /**

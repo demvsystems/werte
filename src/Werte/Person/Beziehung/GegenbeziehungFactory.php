@@ -16,6 +16,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
+use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
 use Demv\Werte\Person\Beziehung\Familiaer\Geschwister;
 use Demv\Werte\Person\Beziehung\Familiaer\Grosseltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Kind;
@@ -25,6 +26,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 
 final class GegenbeziehungFactory
 {
@@ -52,6 +54,8 @@ final class GegenbeziehungFactory
         $pairs[Inhaber::ID]           = FirmaVonInhaber::ID;
         $pairs[OnkelTante::ID]        = NeffeNichte::ID;
         $pairs[Schwiegereltern::ID]   = Schwiegerkind::ID;
+        $pairs[ExPartner::ID]         = ExPartner::ID;
+        $pairs[FreundBekannter::ID]   = FreundBekannter::ID;
 
         return $pairs;
     }

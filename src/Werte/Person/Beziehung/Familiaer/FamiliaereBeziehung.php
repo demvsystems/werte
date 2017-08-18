@@ -26,4 +26,12 @@ class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
     {
         return false;
     }
+
+    /**
+     * @return bool
+     */
+    public function isPrivat(): bool
+    {
+        return false;
+    }
 }
