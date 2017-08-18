@@ -26,4 +26,12 @@ class BeruflicheBeziehung extends Value implements BeziehungsTypInterface
     {
         return true;
     }
+
+    /**
+     * @return bool
+     */
+    public function isPrivat(): bool
+    {
+        return false;
+    }
 }

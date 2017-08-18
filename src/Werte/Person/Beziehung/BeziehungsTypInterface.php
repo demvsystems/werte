@@ -21,4 +21,10 @@ interface BeziehungsTypInterface extends ValueInterface
      * @return bool
      */
     public function isBeruflich(): bool;
+
+    /**
+     * Gibt zurück, ob es sich um eine private aber nicht familiäre Beziehung handelt
+     * @return bool
+     */
+    public function isPrivat(): bool;
 }

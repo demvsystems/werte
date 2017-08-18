@@ -12,6 +12,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
+use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
 use Demv\Werte\Person\Beziehung\Familiaer\Grosseltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
@@ -22,6 +23,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
+use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use PHPUnit\Framework\TestCase;
 
 class GegenbeziehungTest extends TestCase
@@ -117,6 +119,16 @@ class GegenbeziehungTest extends TestCase
     public function testSchwiegereltern()
     {
         $this->checkExistence(new Schwiegereltern(), new Schwiegerkind());
+    }
+
+    public function testFreundBekannter()
+    {
+        $this->checkExistence(new FreundBekannter(), new FreundBekannter());
+    }
+
+    public function testExPartner()
+    {
+        $this->checkExistence(new ExPartner(), new ExPartner());
     }
 
     public function testMissing()
