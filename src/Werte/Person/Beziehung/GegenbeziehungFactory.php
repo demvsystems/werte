@@ -26,7 +26,9 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 
 final class GegenbeziehungFactory
 {
@@ -43,19 +45,20 @@ final class GegenbeziehungFactory
      */
     private static function getPairs(): array
     {
-        $pairs                        = [];
-        $pairs[Partner::ID]           = Partner::ID;
-        $pairs[Eltern::ID]            = Kind::ID;
-        $pairs[Arbeitgeber::ID]       = Arbeitnehmer::ID;
-        $pairs[Geschaeftsfuehrer::ID] = FirmaVon::ID;
-        $pairs[Geschwister::ID]       = Geschwister::ID;
-        $pairs[Schwager::ID]          = Schwager::ID;
-        $pairs[Grosseltern::ID]       = Enkel::ID;
-        $pairs[Inhaber::ID]           = FirmaVonInhaber::ID;
-        $pairs[OnkelTante::ID]        = NeffeNichte::ID;
-        $pairs[Schwiegereltern::ID]   = Schwiegerkind::ID;
-        $pairs[ExPartner::ID]         = ExPartner::ID;
-        $pairs[FreundBekannter::ID]   = FreundBekannter::ID;
+        $pairs                                        = [];
+        $pairs[Partner::ID]                           = Partner::ID;
+        $pairs[Eltern::ID]                            = Kind::ID;
+        $pairs[Arbeitgeber::ID]                       = Arbeitnehmer::ID;
+        $pairs[Geschaeftsfuehrer::ID]                 = FirmaVon::ID;
+        $pairs[Geschwister::ID]                       = Geschwister::ID;
+        $pairs[Schwager::ID]                          = Schwager::ID;
+        $pairs[Grosseltern::ID]                       = Enkel::ID;
+        $pairs[Inhaber::ID]                           = FirmaVonInhaber::ID;
+        $pairs[OnkelTante::ID]                        = NeffeNichte::ID;
+        $pairs[Schwiegereltern::ID]                   = Schwiegerkind::ID;
+        $pairs[ExPartner::ID]                         = ExPartner::ID;
+        $pairs[FreundBekannter::ID]                   = FreundBekannter::ID;
+        $pairs[MitgliedInEigentuemergemeinschaft::ID] = Eigentuemergemeinschaft::ID;
 
         return $pairs;
     }
