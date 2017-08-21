@@ -10,10 +10,4 @@ use Demv\Werte\ValueInterface;
  */
 interface AdressTypInterface extends ValueInterface
 {
-    /**
-     * Gibt die Mehrzahlbezeichnung zurück
-     *
-     * @return string
-     */
-    public function getMehrzahl(): string;
 }

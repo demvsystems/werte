@@ -17,12 +17,4 @@ final class Geschaeftlich extends Value implements AdressTypInterface
     {
         parent::__construct(self::ID, 'Geschäftlich');
     }
-
-    /**
-     * @return string
-     */
-    public function getMehrzahl(): string
-    {
-        return 'Geschäftliche';
-    }
 }

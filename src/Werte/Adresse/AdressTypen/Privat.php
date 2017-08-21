@@ -17,12 +17,4 @@ final class Privat extends Value implements AdressTypInterface
     {
         parent::__construct(self::ID, 'Privat');
     }
-
-    /**
-     * @return string
-     */
-    public function getMehrzahl(): string
-    {
-        return 'Private';
-    }
 }
