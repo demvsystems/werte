@@ -21,7 +21,9 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 
 /**
  * Class Beziehungstypen
@@ -50,6 +52,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Schwiegerkind());
         $this->appendMember(new FreundBekannter());
         $this->appendMember(new ExPartner());
+        $this->appendMember(new MitgliedInEigentuemergemeinschaft());
+        $this->appendMember(new Eigentuemergemeinschaft());
     }
 
     /**

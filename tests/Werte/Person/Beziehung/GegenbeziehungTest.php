@@ -23,7 +23,9 @@ use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
+use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use PHPUnit\Framework\TestCase;
 
 class GegenbeziehungTest extends TestCase
@@ -129,6 +131,16 @@ class GegenbeziehungTest extends TestCase
     public function testExPartner()
     {
         $this->checkExistence(new ExPartner(), new ExPartner());
+    }
+
+    public function testEigentuemergemeinschaft()
+    {
+        $this->checkExistence(new Eigentuemergemeinschaft(), new MitgliedInEigentuemergemeinschaft());
+    }
+
+    public function testMitgliedInEigentuemergemeinschaft()
+    {
+        $this->checkExistence(new MitgliedInEigentuemergemeinschaft(), new Eigentuemergemeinschaft());
     }
 
     public function testMissing()
