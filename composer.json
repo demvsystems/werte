@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": "~7.0.0||~7.1.0",
+        "php": "^7.0",
         "dgame/php-ensurance": "0.*.*",
         "guzzlehttp/guzzle": "^6",
         "illuminate/http": "5.4.*"
