@@ -48,9 +48,7 @@ class FamilienstaendeTest extends TestCase
         ];
 
         foreach ($entries as $entry) {
-            $this->specify(sprintf('Überprüft den Eintrag für %s', $entry, function () use ($entry) {
-                $this->checkGetOne($this->getProvider(), $entry);
-            }));
+            $this->checkGetOne($this->getProvider(), $entry);
         }
     }
 
