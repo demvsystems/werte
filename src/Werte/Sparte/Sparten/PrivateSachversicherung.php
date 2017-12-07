@@ -36,4 +36,8 @@ interface PrivateSachversicherung
     const LUFTFAHRTHAFTPFLICHT = 374;
 
     const BETREIBERHAFTPFLICHT = 373;
+
+    const FEUERROHBAU_VERSICHERUNG = 354;
+
+    const BAULEISTUNGS_VERSICHERUNG = 241;
 }
