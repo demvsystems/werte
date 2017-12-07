@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class TernaryTest extends TestCase
 {
-    public function testUnknown()
+    public function testUnknown(): void
     {
         $ternary = Ternary::unknown();
         $this->assertTrue($ternary->isUnknown());
@@ -17,7 +17,7 @@ class TernaryTest extends TestCase
         $this->assertEquals(Ternary::UNKNOWN, $ternary->getValue());
     }
 
-    public function testYes()
+    public function testYes(): void
     {
         $ternary = Ternary::yes();
         $this->assertFalse($ternary->isUnknown());
@@ -26,7 +26,7 @@ class TernaryTest extends TestCase
         $this->assertEquals(Ternary::YES, $ternary->getValue());
     }
 
-    public function testNo()
+    public function testNo(): void
     {
         $ternary = Ternary::no();
         $this->assertFalse($ternary->isUnknown());
@@ -35,14 +35,14 @@ class TernaryTest extends TestCase
         $this->assertEquals(Ternary::NO, $ternary->getValue());
     }
 
-    public function testTranslate()
+    public function testTranslate(): void
     {
         $this->assertEquals(Ternary::unknown(), Ternary::translate(Ternary::UNKNOWN));
         $this->assertEquals(Ternary::no(), Ternary::translate(Ternary::NO));
         $this->assertEquals(Ternary::yes(), Ternary::translate(Ternary::YES));
     }
 
-    public function testAsBool()
+    public function testAsBool(): void
     {
         $this->assertTrue(Ternary::yes()->asBool());
         $this->assertFalse(Ternary::no()->asBool());
@@ -53,7 +53,7 @@ class TernaryTest extends TestCase
         Ternary::unknown()->asBool();
     }
 
-    public function testNames()
+    public function testNames(): void
     {
         $this->assertEquals('Ja', Ternary::yes()->getName());
         $this->assertEquals('Nein', Ternary::no()->getName());

@@ -23,17 +23,17 @@ class ZeitweiseNichtMoeglichTest extends TestCase
         return new ZeitweiseNichtMoeglich();
     }
 
-    public function testId()
+    public function testId(): void
     {
         $this->assertSame(1, $this->getBuMoeglichkeit()->getId());
     }
 
-    public function testName()
+    public function testName(): void
     {
         $this->assertSame('BU zeitweise nicht möglich', $this->getBuMoeglichkeit()->getName());
     }
 
-    public function testAktuellMoeglich()
+    public function testAktuellMoeglich(): void
     {
         $this->assertSame(false, $this->getBuMoeglichkeit()->isBuAktuellMoeglich());
     }

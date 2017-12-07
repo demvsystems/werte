@@ -16,32 +16,32 @@ class Pflegegrad3Test extends TestCase
      */
     private $pflegegrad;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->pflegegrad = new Pflegegrad3();
     }
 
-    public function testId()
+    public function testId(): void
     {
         $this->assertSame(3, $this->pflegegrad->getId());
     }
 
-    public function testName()
+    public function testName(): void
     {
         $this->assertSame('Pflegegrad III', $this->pflegegrad->getName());
     }
 
-    public function testMin()
+    public function testMin(): void
     {
         $this->assertEquals(47.5, $this->pflegegrad->getMin());
     }
 
-    public function testMax()
+    public function testMax(): void
     {
         $this->assertEquals(70, $this->pflegegrad->getMax());
     }
 
-    public function testHinweis()
+    public function testHinweis(): void
     {
         $this->assertSame('Schwere Beeinträchtigung der Selbständigkeit', $this->pflegegrad->getHinweis());
     }

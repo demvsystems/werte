@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 
 class EuroTest extends TestCase
 {
-    public function testIPositive()
+    public function testIPositive(): void
     {
         $euro = new Euro(4200.35);
 
@@ -25,7 +25,7 @@ class EuroTest extends TestCase
         $this->assertEquals('4.200,35 €', $euro->asText());
     }
 
-    public function testIsNegative()
+    public function testIsNegative(): void
     {
         $euro = new Euro(-2300.5);
 

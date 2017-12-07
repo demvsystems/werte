@@ -39,21 +39,21 @@ class TaetigkeitsstatusTest extends TestCase
         return new Taetigkeitsstatus();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $provider = $this->getTaetigkeitsstatus();
 
-        $this->specify('Alle Einträge wurden registriert', function () use ($provider) {
+        $this->specify('Alle Einträge wurden registriert', function () use ($provider): void {
             $this->assertEquals(18, count($provider->getAll()));
         });
 
-        $this->specify('Alle Instanzen implementieren das gleiche Interface.', function () use ($provider) {
+        $this->specify('Alle Instanzen implementieren das gleiche Interface.', function () use ($provider): void {
             foreach ($provider->getAll() as $member) {
                 $this->assertInstanceOf(TaetigkeitsstatusInterface::class, $member);
             }
         });
 
-        $this->specify('Keine doppelten Ids', function () use ($provider) {
+        $this->specify('Keine doppelten Ids', function () use ($provider): void {
             $ids = [];
             foreach ($provider->getAll() as $member) {
                 $ids[] = $member->getId();
@@ -62,7 +62,7 @@ class TaetigkeitsstatusTest extends TestCase
         });
     }
 
-    public function testEntries()
+    public function testEntries(): void
     {
         $provider = $this->getTaetigkeitsstatus();
         $this->checkGetOne($provider, Angestellter::class);

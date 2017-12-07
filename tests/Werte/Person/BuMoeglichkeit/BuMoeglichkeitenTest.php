@@ -28,13 +28,13 @@ class BuMoeglichkeitenTest extends TestCase
         return new BuMoeglichkeiten();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $provider = $this->getBuMoeglichkeiten();
         $this->assertEquals(3, count($provider->getAll()));
     }
 
-    public function testEntries()
+    public function testEntries(): void
     {
         $provider = $this->getBuMoeglichkeiten();
         $this->checkGetOne($provider, Moeglich::class);

@@ -32,7 +32,7 @@ final class AbstractStatusResponseTest extends TestCase
         return $response;
     }
 
-    public function testTranslateFromHttp()
+    public function testTranslateFromHttp(): void
     {
         $translated = AbstractStatusResponse::translateFromHttp(
             $this->getResponse(200, ['success' => true, 'content' => ['test1' => 'test2']]));

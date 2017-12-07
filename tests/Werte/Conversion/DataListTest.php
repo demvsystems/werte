@@ -8,17 +8,17 @@ use PHPUnit\Framework\TestCase;
 
 class DataListTest extends TestCase
 {
-    public function testForEmptyArray()
+    public function testForEmptyArray(): void
     {
         $this->assertEmpty(DataList::fromArray([]));
     }
 
-    public function testForEmptyProvider()
+    public function testForEmptyProvider(): void
     {
         $this->assertEmpty(DataList::fromProvider(new TestProvider([])));
     }
 
-    public function testForArray()
+    public function testForArray(): void
     {
         $values = [
             new Value(1, 'test1'),
@@ -28,7 +28,7 @@ class DataListTest extends TestCase
         $this->assertEquals([1 => 'test1', 2 => 'test2', 3 => 'test3'], DataList::fromArray($values));
     }
 
-    public function testForProvider()
+    public function testForProvider(): void
     {
         $values = [
             new Value(1, 'test1'),

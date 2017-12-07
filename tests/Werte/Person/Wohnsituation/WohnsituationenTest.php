@@ -27,33 +27,33 @@ class WohnsituationenTest extends TestCase
         return new Wohnsituationen();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $wohnsituationen = $this->getWohnsituationen();
         $this->assertEquals(4, count($wohnsituationen->getAll()));
     }
 
-    public function testZurMiete()
+    public function testZurMiete(): void
     {
         $this->checkGetOne($this->getWohnsituationen(), ZurMiete::class);
     }
 
-    public function testInEigentum()
+    public function testInEigentum(): void
     {
         $this->checkGetOne($this->getWohnsituationen(), InEigentum::class);
     }
 
-    public function testBeiEltern()
+    public function testBeiEltern(): void
     {
         $this->checkGetOne($this->getWohnsituationen(), BeiEltern::class);
     }
 
-    public function testBeiAndererPerson()
+    public function testBeiAndererPerson(): void
     {
         $this->checkGetOne($this->getWohnsituationen(), BeiAndererPerson::class);
     }
 
-    public function testNotFound()
+    public function testNotFound(): void
     {
         $this->expectException(EntryNotFoundException::class);
         $this->getWohnsituationen()->getOne(5);

@@ -16,32 +16,32 @@ class KeinPflegegradTest extends TestCase
      */
     private $pflegegrad;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->pflegegrad = new KeinPflegegrad();
     }
 
-    public function testId()
+    public function testId(): void
     {
         $this->assertSame(0, $this->pflegegrad->getId());
     }
 
-    public function testName()
+    public function testName(): void
     {
         $this->assertSame('Kein Pflegegrad', $this->pflegegrad->getName());
     }
 
-    public function testMin()
+    public function testMin(): void
     {
         $this->assertEquals(0, $this->pflegegrad->getMin());
     }
 
-    public function testMax()
+    public function testMax(): void
     {
         $this->assertSame(12.5, $this->pflegegrad->getMax());
     }
 
-    public function testHinweis()
+    public function testHinweis(): void
     {
         $this->assertSame('Es besteht keine Beeinträchtigung der Selbständigkeit', $this->pflegegrad->getHinweis());
     }

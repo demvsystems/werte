@@ -21,34 +21,34 @@ final class FailTest extends TestCase
         return new Fail($body);
     }
 
-    public function testIsSuccess()
+    public function testIsSuccess(): void
     {
         $this->assertFalse($this->getFail([])->isSuccess());
     }
 
-    public function testIsFail()
+    public function testIsFail(): void
     {
         $this->assertTrue($this->getFail([])->isFail());
     }
 
-    public function testIsError()
+    public function testIsError(): void
     {
         $this->assertFalse($this->getFail([])->isError());
     }
 
-    public function testGetCode()
+    public function testGetCode(): void
     {
         $this->assertEquals(200, $this->getFail([])->getCode());
     }
 
-    public function testGetContent()
+    public function testGetContent(): void
     {
         $this->assertEquals([], $this->getFail([])->getContent());
         $this->assertEquals([1 => 2], $this->getFail([1 => 2])->getContent());
         $this->assertEquals([1 => 2, 'test1' => 'abc'], $this->getFail([1 => 2, 'test1' => 'abc'])->getContent());
     }
 
-    public function testTranslateToHttp()
+    public function testTranslateToHttp(): void
     {
         $response = $this->getFail(['daten1' => 'test1', 'daten2' => 5])->translateToHttp();
         $this->assertEquals(200, $response->getStatusCode());

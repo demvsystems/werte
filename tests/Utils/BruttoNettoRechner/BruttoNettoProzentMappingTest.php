@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class BruttoNettoProzentMappingTest extends TestCase
 {
-    public function testProzentIntervalByBrutto()
+    public function testProzentIntervalByBrutto(): void
     {
         $mapping = [
             10000  => 79.23,
@@ -44,7 +44,7 @@ final class BruttoNettoProzentMappingTest extends TestCase
         }
     }
 
-    public function testProzentIntervalByNetto()
+    public function testProzentIntervalByNetto(): void
     {
         $mapping = [
             10000 => 79.23,

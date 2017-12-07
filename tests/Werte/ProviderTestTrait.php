@@ -7,7 +7,7 @@ use Demv\Werte\ValueInterface;
 
 trait ProviderTestTrait
 {
-    private function checkGetOne(ProviderInterface $provider, string $classname)
+    private function checkGetOne(ProviderInterface $provider, string $classname): void
     {
         /**
          * @var ValueInterface $instance

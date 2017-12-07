@@ -25,23 +25,23 @@ final class TierartenTest extends TestCase
         return new Tierarten();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $tierarten = $this->getTierarten();
         $this->assertCount(2, $tierarten->getAll());
     }
 
-    public function testGetHund()
+    public function testGetHund(): void
     {
         $this->checkGetOne($this->getTierarten(), Hund::class);
     }
 
-    public function testGetPferd()
+    public function testGetPferd(): void
     {
         $this->checkGetOne($this->getTierarten(), Pferd::class);
     }
 
-    public function testNotFound()
+    public function testNotFound(): void
     {
         $this->expectException(EntryNotFoundException::class);
         $this->getTierarten()->getOne(3);

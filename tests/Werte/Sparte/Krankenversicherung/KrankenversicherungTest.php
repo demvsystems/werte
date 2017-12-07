@@ -27,33 +27,33 @@ final class KrankenversicherungTest extends TestCase
         return new Krankenversicherung();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $anreden = $this->getKrankenversicherung();
         $this->assertEquals(4, count($anreden->getAll()));
     }
 
-    public function testGetHerr()
+    public function testGetHerr(): void
     {
         $this->checkGetOne($this->getKrankenversicherung(), GKV::class);
     }
 
-    public function testGetFrau()
+    public function testGetFrau(): void
     {
         $this->checkGetOne($this->getKrankenversicherung(), PKV::class);
     }
 
-    public function testGetFirma()
+    public function testGetFirma(): void
     {
         $this->checkGetOne($this->getKrankenversicherung(), FreieHeilfuersorge::class);
     }
 
-    public function testGetLeer()
+    public function testGetLeer(): void
     {
         $this->checkGetOne($this->getKrankenversicherung(), Beihilfe::class);
     }
 
-    public function testNotFound()
+    public function testNotFound(): void
     {
         $this->expectException(EntryNotFoundException::class);
         $this->getKrankenversicherung()->getOne(5);

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class ValueTest extends TestCase
 {
-    public function testGetId()
+    public function testGetId(): void
     {
         $value = new Value(1, 'test1');
         $this->assertEquals(1, $value->getId());
@@ -19,7 +19,7 @@ class ValueTest extends TestCase
         $this->assertEquals(3, $value->getId());
     }
 
-    public function testGetName()
+    public function testGetName(): void
     {
         $value = new Value(1, 'test1');
         $this->assertEquals('test1', $value->getName());
@@ -31,21 +31,21 @@ class ValueTest extends TestCase
         $this->assertEquals('dwa123', $value->getName());
     }
 
-    public function testEquals()
+    public function testEquals(): void
     {
         $value1 = new Value(1, 'test');
         $value2 = new Value(1, 'test');
         $this->assertTrue($value1->equals($value2));
     }
 
-    public function testEqualsNot()
+    public function testEqualsNot(): void
     {
         $value1 = new Value(1, 'Herr');
         $value2 = new Value(2, 'test1');
         $this->assertFalse($value1->equals($value2));
     }
 
-    public function testIs()
+    public function testIs(): void
     {
         $value1 = new Value(1, 'test');
         $value2 = new Value(2, 'test1');
@@ -55,7 +55,7 @@ class ValueTest extends TestCase
         $this->assertTrue($value2->is(2));
     }
 
-    public function testIsNot()
+    public function testIsNot(): void
     {
         $value1 = new Value(1, 'test');
         $value2 = new Value(2, 'test1');
