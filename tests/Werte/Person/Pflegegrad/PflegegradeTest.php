@@ -27,24 +27,24 @@ class PflegegradeTest extends TestCase
      */
     private $pflegegrade;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->pflegegrade = new Pflegegrade();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $this->specify('testGetAll',
-            function () {
+            function (): void {
                 $this->assertCount(6, $this->pflegegrade->getAll());
             }
         );
     }
 
-    public function testEntries()
+    public function testEntries(): void
     {
         $this->specify('testEntries',
-            function () {
+            function (): void {
                 $this->checkGetOne($this->pflegegrade, KeinPflegegrad::class);
                 $this->checkGetOne($this->pflegegrade, Pflegegrad1::class);
                 $this->checkGetOne($this->pflegegrade, Pflegegrad2::class);

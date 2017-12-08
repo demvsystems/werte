@@ -18,7 +18,7 @@ abstract class AbstractProvider implements ProviderInterface
     /**
      * @param ValueInterface $member
      */
-    final protected function appendMember(ValueInterface $member)
+    final protected function appendMember(ValueInterface $member): void
     {
         $this->members[$member->getId()] = $member;
     }

@@ -30,27 +30,27 @@ abstract class StatusTest extends TestCase
 
     abstract protected function isErwerbstaetig(): bool;
 
-    public function testName()
+    public function testName(): void
     {
         $this->assertSame($this->getStatusname(), $this->getTaetigkeitsstatus()->getName());
     }
 
-    public function testId()
+    public function testId(): void
     {
         $this->assertSame($this->getStatusId(), $this->getTaetigkeitsstatus()->getId());
     }
 
-    public function testErwerbstaetig()
+    public function testErwerbstaetig(): void
     {
         $this->assertSame($this->isErwerbstaetig(), $this->getTaetigkeitsstatus()->isErwerbstaetig());
     }
 
-    public function testArbeitnehmer()
+    public function testArbeitnehmer(): void
     {
         $this->assertSame($this->isArbeitnehmer(), $this->getTaetigkeitsstatus()->isArbeitnehmer());
     }
 
-    public function testEntgeltfortzahlung()
+    public function testEntgeltfortzahlung(): void
     {
         $this->assertSame($this->hasEntgeltfortzahlung(), $this->getTaetigkeitsstatus()->hasEntgeltfortzahlung());
     }

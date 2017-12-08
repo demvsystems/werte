@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class JsonResponseFactoryTest extends TestCase
 {
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $response = JsonResponseFactory::success(200, ['daten1' => 'test1', 'daten2' => 5]);
         $this->assertEquals(200, $response->getStatusCode());
@@ -21,7 +21,7 @@ final class JsonResponseFactoryTest extends TestCase
                                         ]), $response->getBody()->getContents());
     }
 
-    public function testFailed()
+    public function testFailed(): void
     {
         $response = JsonResponseFactory::failed(200, ['daten1' => 'test1', 'daten2' => 5]);
         $this->assertEquals(200, $response->getStatusCode());
@@ -31,7 +31,7 @@ final class JsonResponseFactoryTest extends TestCase
                                         ]), $response->getBody()->getContents());
     }
 
-    public function testError()
+    public function testError(): void
     {
         $response = JsonResponseFactory::error(400, ['daten1' => 'test1', 'daten2' => 5]);
         $this->assertEquals(400, $response->getStatusCode());

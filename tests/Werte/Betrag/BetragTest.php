@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class BetragTest extends TestCase
 {
-    public function testIsPositiv()
+    public function testIsPositiv(): void
     {
         $betrag = new Betrag(4200.35);
 
@@ -21,7 +21,7 @@ class BetragTest extends TestCase
         $this->assertEquals('4.200,35', $betrag->asText());
     }
 
-    public function testIsNegative()
+    public function testIsNegative(): void
     {
         $betrag = new Betrag(-2300.5);
 

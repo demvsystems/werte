@@ -24,7 +24,7 @@ final class BruttoNettoRechnerTest extends TestCase
         100000 => 62860,
     ];
 
-    public function testBruttoToNetto()
+    public function testBruttoToNetto(): void
     {
         $rechner = new BruttoNettoRechner();
 
@@ -34,7 +34,7 @@ final class BruttoNettoRechnerTest extends TestCase
         }
     }
 
-    public function testNettoToBrutto()
+    public function testNettoToBrutto(): void
     {
         $rechner = new BruttoNettoRechner();
 

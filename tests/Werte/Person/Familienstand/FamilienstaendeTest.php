@@ -29,12 +29,12 @@ class FamilienstaendeTest extends TestCase
         return new Familienstaende();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $this->assertEquals(8, count($this->getProvider()->getAll()));
     }
 
-    public function testEntries()
+    public function testEntries(): void
     {
         $entries = [
             Ledig::class,
@@ -52,7 +52,7 @@ class FamilienstaendeTest extends TestCase
         }
     }
 
-    public function testNotFound()
+    public function testNotFound(): void
     {
         $this->expectException(EntryNotFoundException::class);
         $this->getProvider()->getOne(9);

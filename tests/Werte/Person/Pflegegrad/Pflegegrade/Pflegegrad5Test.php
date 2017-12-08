@@ -16,32 +16,32 @@ class Pflegegrad5Test extends TestCase
      */
     private $pflegegrad;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->pflegegrad = new Pflegegrad5();
     }
 
-    public function testId()
+    public function testId(): void
     {
         $this->assertSame(5, $this->pflegegrad->getId());
     }
 
-    public function testName()
+    public function testName(): void
     {
         $this->assertSame('Pflegegrad V', $this->pflegegrad->getName());
     }
 
-    public function testMin()
+    public function testMin(): void
     {
         $this->assertEquals(90, $this->pflegegrad->getMin());
     }
 
-    public function testMax()
+    public function testMax(): void
     {
         $this->assertEquals(100, $this->pflegegrad->getMax());
     }
 
-    public function testHinweis()
+    public function testHinweis(): void
     {
         $this->assertSame(
             'Schwerste Beeinträchtigung der Selbstständigkeit mit besonderen Anforderungen an die pflegerische Versorgung',

@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class EinkommenTest extends TestCase
 {
-    public function testValidAmount()
+    public function testValidAmount(): void
     {
         $einkommen = new Einkommen(new Euro(410.2));
 
@@ -19,7 +19,7 @@ class EinkommenTest extends TestCase
         $this->assertEquals('410,20 €', $einkommen->getBetrag()->asText());
     }
 
-    public function testInvalidAmount()
+    public function testInvalidAmount(): void
     {
         $this->expectException(EnsuranceException::class);
         $this->expectExceptionMessage('Der Betrag des Einkommens muss positiv sein');

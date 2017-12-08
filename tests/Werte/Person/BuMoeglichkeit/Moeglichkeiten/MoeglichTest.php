@@ -23,17 +23,17 @@ class MoeglichTest extends TestCase
         return new Moeglich();
     }
 
-    public function testId()
+    public function testId(): void
     {
         $this->assertSame(0, $this->getBuMoeglichkeit()->getId());
     }
 
-    public function testName()
+    public function testName(): void
     {
         $this->assertSame('BU möglich', $this->getBuMoeglichkeit()->getName());
     }
 
-    public function testAktuellMoeglich()
+    public function testAktuellMoeglich(): void
     {
         $this->assertSame(true, $this->getBuMoeglichkeit()->isBuAktuellMoeglich());
     }

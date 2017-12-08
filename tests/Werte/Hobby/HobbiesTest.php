@@ -27,33 +27,33 @@ final class HobbiesTest extends TestCase
         return new Hobbies();
     }
 
-    public function testGetAll()
+    public function testGetAll(): void
     {
         $hobbies = $this->getHobbies();
         $this->assertCount(4, $hobbies->getAll());
     }
 
-    public function testGetJagdsport()
+    public function testGetJagdsport(): void
     {
         $this->checkGetOne($this->getHobbies(), Jagdsport::class);
     }
 
-    public function testGetWassersport()
+    public function testGetWassersport(): void
     {
         $this->checkGetOne($this->getHobbies(), Wassersport::class);
     }
 
-    public function testGetLuftsport()
+    public function testGetLuftsport(): void
     {
         $this->checkGetOne($this->getHobbies(), Luftsport::class);
     }
 
-    public function testGetCamping()
+    public function testGetCamping(): void
     {
         $this->checkGetOne($this->getHobbies(), Camping::class);
     }
 
-    public function testNotFound()
+    public function testNotFound(): void
     {
         $this->expectException(EntryNotFoundException::class);
         $this->getHobbies()->getOne(5);

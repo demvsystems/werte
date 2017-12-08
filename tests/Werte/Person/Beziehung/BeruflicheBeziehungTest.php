@@ -13,13 +13,13 @@ use PHPUnit\Framework\TestCase;
 
 class BeruflicheBeziehungTest extends TestCase
 {
-    public function testIsFamiliaer()
+    public function testIsFamiliaer(): void
     {
         $beziehung = new BeruflicheBeziehung(1, 'test');
         $this->assertFalse($beziehung->isFamiliaer());
     }
 
-    public function testIsBeruflich()
+    public function testIsBeruflich(): void
     {
         $beziehung = new BeruflicheBeziehung(1, 'test');
         $this->assertTrue($beziehung->isBeruflich());

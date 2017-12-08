@@ -22,36 +22,36 @@ final class ErrorTest extends TestCase
         return new Error($code, $body);
     }
 
-    public function testIsSuccess()
+    public function testIsSuccess(): void
     {
         $this->assertFalse($this->getError(400, [])->isSuccess());
     }
 
-    public function testIsFail()
+    public function testIsFail(): void
     {
         $this->assertFalse($this->getError(400, [])->isFail());
     }
 
-    public function testIsError()
+    public function testIsError(): void
     {
         $this->assertTrue($this->getError(400, [])->isError());
     }
 
-    public function testGetCode()
+    public function testGetCode(): void
     {
         $this->assertEquals(400, $this->getError(400, [])->getCode());
         $this->assertEquals(401, $this->getError(401, [])->getCode());
         $this->assertEquals(403, $this->getError(403, [])->getCode());
     }
 
-    public function testGetContent()
+    public function testGetContent(): void
     {
         $this->assertEquals([], $this->getError(400, [])->getContent());
         $this->assertEquals([1 => 2], $this->getError(400, [1 => 2])->getContent());
         $this->assertEquals([1 => 2, 'test1' => 'abc'], $this->getError(400, [1 => 2, 'test1' => 'abc'])->getContent());
     }
 
-    public function testTranslateToHttp()
+    public function testTranslateToHttp(): void
     {
         $response = $this->getError(400, ['daten1' => 'test1', 'daten2' => 5])->translateToHttp();
         $this->assertEquals(400, $response->getStatusCode());
