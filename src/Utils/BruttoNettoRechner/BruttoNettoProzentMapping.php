@@ -6,6 +6,7 @@ namespace Demv\Utils\BruttoNettoRechner;
  * Klasse kappselt das Mapping zwischen Brutto, Netto und Prozentwert
  *
  * Class BruttoProzentMapping
+ *
  * @package Demv\Utils\BrottuNettoRechner
  */
 final class BruttoNettoProzentMapping
@@ -36,12 +37,12 @@ final class BruttoNettoProzentMapping
             return $this->mapping[0]['prozent'];
         }
 
-        $testValue = last($this->mapping);
+        $testValue = end($this->mapping);
         if ($brutto >= $testValue['brutto']) {
             return $testValue['prozent'];
         }
 
-        for ($i = 1, $iMax = count($this->mapping); $i < $iMax; $i++) {
+        for ($i = 1, $iMax = count($this->mapping); $i < $iMax; ++$i) {
             $lastValue    = $this->mapping[$i - 1];
             $currentValue = $this->mapping[$i];
 
@@ -68,12 +69,12 @@ final class BruttoNettoProzentMapping
             return $this->mapping[0]['prozent'];
         }
 
-        $testValue = last($this->mapping);
+        $testValue = end($this->mapping);
         if ($netto >= $testValue['netto']) {
             return $testValue['prozent'];
         }
 
-        for ($i = 1, $iMax = count($this->mapping); $i < $iMax; $i++) {
+        for ($i = 1, $iMax = count($this->mapping); $i < $iMax; ++$i) {
             $lastValue    = $this->mapping[$i - 1];
             $currentValue = $this->mapping[$i];
 
