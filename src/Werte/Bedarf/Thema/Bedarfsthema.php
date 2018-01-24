@@ -5,10 +5,10 @@ namespace Demv\Werte\Bedarf\Thema;
 use Demv\Werte\Value;
 
 /**
- * Class BaseBedarfsthema
+ * Class Bedarfsthema
  * @package Demv\Werte\Bedarf\Thema
  */
-abstract class BaseBedarfsthema extends Value implements BedarfthemaInterface
+class Bedarfsthema extends Value implements BedarfthemaInterface
 {
     /**
      * @var array
