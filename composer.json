@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": "~7.1.0",
+        "php": "^7.1",
         "dgame/php-ensurance": "^1",
         "guzzlehttp/psr7": "^1.4"
     },
