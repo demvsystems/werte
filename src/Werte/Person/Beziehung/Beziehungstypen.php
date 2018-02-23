@@ -5,6 +5,8 @@ namespace Demv\Werte\Person\Beziehung;
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
+use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
@@ -54,6 +56,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new ExPartner());
         $this->appendMember(new MitgliedInEigentuemergemeinschaft());
         $this->appendMember(new Eigentuemergemeinschaft());
+        $this->appendMember(new ExArbeitgeber());
+        $this->appendMember(new ExArbeitnehmer());
     }
 
     /**
