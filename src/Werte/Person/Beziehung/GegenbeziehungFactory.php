@@ -10,6 +10,8 @@ namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
+use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
@@ -30,6 +32,10 @@ use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 
+/**
+ * Class GegenbeziehungFactory
+ * @package Demv\Werte\Person\Beziehung
+ */
 final class GegenbeziehungFactory
 {
     /**
@@ -59,6 +65,7 @@ final class GegenbeziehungFactory
         $pairs[ExPartner::ID]                         = ExPartner::ID;
         $pairs[FreundBekannter::ID]                   = FreundBekannter::ID;
         $pairs[MitgliedInEigentuemergemeinschaft::ID] = Eigentuemergemeinschaft::ID;
+        $pairs[ExArbeitgeber::ID]                     = ExArbeitnehmer::ID;
 
         return $pairs;
     }
