@@ -9,7 +9,6 @@
 namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\Exception\EntryNotFoundException;
-
 use Exception;
 
 /**
