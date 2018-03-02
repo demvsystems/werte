@@ -6,7 +6,7 @@ use Demv\Werte\AbstractProvider;
 use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\PrivateKrankenversicherung;
-use Demv\Werte\Bedarf\Thema\Themen\RisikoLeben;
+use Demv\Werte\Bedarf\Thema\Themen\Risikoleben;
 use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
@@ -22,7 +22,7 @@ final class Bedarfsthemen extends AbstractProvider
     {
         $this->appendMember(new Berufsunfaehigkeit());
         $this->appendMember(new PrivateKrankenversicherung());
-        $this->appendMember(new RisikoLeben());
+        $this->appendMember(new Risikoleben());
         $this->appendMember(new Altersvorsorge());
     }
 

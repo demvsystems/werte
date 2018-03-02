@@ -6,7 +6,7 @@ use Demv\Werte\Bedarf\Thema\Bedarfsthemen;
 use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\PrivateKrankenversicherung;
-use Demv\Werte\Bedarf\Thema\Themen\RisikoLeben;
+use Demv\Werte\Bedarf\Thema\Themen\Risikoleben;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
 
@@ -44,7 +44,7 @@ final class BedarfsthemenTest extends TestCase
 
     public function testGetRisikoLeben(): void
     {
-        $this->checkGetOne($this->getBedarfsthemen(), RisikoLeben::class);
+        $this->checkGetOne($this->getBedarfsthemen(), Risikoleben::class);
     }
 
     public function testGetAltersVorsorge(): void

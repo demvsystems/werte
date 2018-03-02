@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class RisikoLeben
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class RisikoLeben extends Bedarfsthema
+final class Risikoleben extends Bedarfsthema
 {
     const ID = 3;
 
@@ -18,6 +18,6 @@ final class RisikoLeben extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Risiko Leben', [Vorsorge::RISIKOLEBEN]);
+        parent::__construct(self::ID, 'Risikolebensversicherung', [Vorsorge::RISIKOLEBEN]);
     }
 }
