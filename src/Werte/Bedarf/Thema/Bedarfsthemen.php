@@ -3,8 +3,11 @@
 namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\PrivateKrankenversicherung;
+use Demv\Werte\Bedarf\Thema\Themen\Risikoleben;
+use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
  * Class Bedarfsthemen
@@ -19,6 +22,8 @@ final class Bedarfsthemen extends AbstractProvider
     {
         $this->appendMember(new Berufsunfaehigkeit());
         $this->appendMember(new PrivateKrankenversicherung());
+        $this->appendMember(new Risikoleben());
+        $this->appendMember(new Altersvorsorge());
     }
 
     /**
@@ -33,6 +38,7 @@ final class Bedarfsthemen extends AbstractProvider
      * @param int $id
      *
      * @return BedarfthemaInterface
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id): BedarfthemaInterface
     {
