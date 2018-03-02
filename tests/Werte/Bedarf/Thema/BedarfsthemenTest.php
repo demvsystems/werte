@@ -42,7 +42,7 @@ final class BedarfsthemenTest extends TestCase
         $this->checkGetOne($this->getBedarfsthemen(), PrivateKrankenversicherung::class);
     }
 
-    public function testGetRisikoLeben(): void
+    public function testGetRisikoleben(): void
     {
         $this->checkGetOne($this->getBedarfsthemen(), Risikoleben::class);
     }
