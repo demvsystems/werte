@@ -6,7 +6,7 @@ use Demv\Werte\Bedarf\Thema\Bedarfsthema;
 use Demv\Werte\Sparte\Sparten\Vorsorge;
 
 /**
- * Class RisikoLeben
+ * Class Risikoleben
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
 final class Risikoleben extends Bedarfsthema
