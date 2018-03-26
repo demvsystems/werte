@@ -1,6 +1,5 @@
 [![StyleCI](https://styleci.io/repos/78105159/shield?branch=master)](https://styleci.io/repos/78105159)
-[![Build Status](https://travis-ci.com/demvsystems/werte.svg?token=m5EWbRyNnpgR3VbxcZQa&branch=master)](https://travis-ci.com/demvsystems/werte)
-
+[![Build Status](https://travis-ci.org/demvsystems/werte.svg?branch=master)](https://travis-ci.org/demvsystems/werte)
 # Werte
 Hier werden verschiedene Werte abgebildet, die allgemein genutzt werdne können.
 
