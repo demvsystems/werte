@@ -39,8 +39,7 @@
         "test": [
             "phpunit"
         ],
-        "coverage": [
-            "phpunit --coverage-clover=coverage"
-        ]
+        "coverage": "phpunit --coverage-clover=coverage.xml",
+        "coverage-html": "phpunit --coverage-html=coverage"
     }
 }
