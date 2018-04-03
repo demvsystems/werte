@@ -17,6 +17,7 @@ final class StaatlichFoerderbar extends Value implements PrioritaetenInterface
     {
         parent::__construct(self::ID, 'Anlage staatlich förderbar');
     }
+
     /**
      * @return string
      */

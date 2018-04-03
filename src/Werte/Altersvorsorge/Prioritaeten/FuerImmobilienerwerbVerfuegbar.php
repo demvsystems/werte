@@ -17,6 +17,7 @@ final class FuerImmobilienerwerbVerfuegbar extends Value implements Prioritaeten
     {
         parent::__construct(self::ID, 'Anlage für Immobilienerwerb verfuegbar');
     }
+
     /**
      * @return string
      */

@@ -17,6 +17,7 @@ final class NichtFamiliaereVererbung extends Value implements PrioritaetenInterf
     {
         parent::__construct(self::ID, 'Vererbung auch nicht Familiaer möglich');
     }
+
     /**
      * @return string
      */

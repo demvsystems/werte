@@ -17,6 +17,7 @@ final class EinmaligeAuszahlungVorRentenbeginn extends Value implements Priorita
     {
         parent::__construct(self::ID, 'Einmalige Auszahlung vor Rentenbeginn');
     }
+
     /**
      * @return string
      */
