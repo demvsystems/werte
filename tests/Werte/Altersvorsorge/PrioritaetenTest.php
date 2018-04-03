@@ -37,6 +37,9 @@ final class PrioritaetenTest extends TestCase
         $this->assertCount(8, $adressTypen->getAll());
     }
 
+    /**
+     * @return array
+     */
     private function statements()
     {
         return [
