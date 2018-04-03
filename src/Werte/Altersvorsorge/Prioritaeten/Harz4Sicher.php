@@ -17,6 +17,7 @@ final class Harz4Sicher extends Value implements PrioritaetenInterface
     {
         parent::__construct(self::ID, 'Anlage Harz IV sicher');
     }
+
     /**
      * @return string
      */

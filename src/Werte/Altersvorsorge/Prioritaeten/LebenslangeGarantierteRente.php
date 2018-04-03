@@ -17,6 +17,7 @@ final class LebenslangeGarantierteRente extends Value implements PrioritaetenInt
     {
         parent::__construct(self::ID, 'Lebenslange Garantierte Rente');
     }
+
     /**
      * @return string
      */
