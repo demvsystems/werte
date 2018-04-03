@@ -5,6 +5,10 @@ namespace Demv\Werte\Tests;
 use Demv\Werte\ProviderInterface;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Trait ProviderTestTrait
+ * @package Demv\Werte\Tests
+ */
 trait ProviderTestTrait
 {
     private function checkGetOne(ProviderInterface $provider, string $classname): void
