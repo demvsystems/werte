@@ -35,4 +35,13 @@ final class Produktwissen extends AbstractProvider
     {
         return parent::getOne($id);
     }
+
+    /**
+     * @return ProduktwissenInterface[]
+     */
+    public function getAll(): array
+    {
+        return parent::getAll();
+    }
+
 }

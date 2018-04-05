@@ -33,4 +33,12 @@ final class Produkterfahrung extends AbstractProvider
     {
         return parent::getOne($id);
     }
+
+    /**
+     * @return ProdukterfahrungInterface[]
+     */
+    public function getAll(): array
+    {
+        return parent::getAll();
+    }
 }
