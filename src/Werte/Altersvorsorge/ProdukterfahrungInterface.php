@@ -2,6 +2,12 @@
 
 namespace Demv\Werte\Altersvorsorge;
 
-interface ProdukterfahrungInterface
+use Demv\Werte\ValueInterface;
+
+/**
+ * Interface ProdukterfahrungInterface
+ * @package Demv\Werte\Altersvorsorge
+ */
+interface ProdukterfahrungInterface extends ValueInterface
 {
 }
