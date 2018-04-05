@@ -5,8 +5,11 @@ namespace Demv\Werte\Tests\Bedarf\Thema;
 use Demv\Werte\Bedarf\Thema\Bedarfsthemen;
 use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
+use Demv\Werte\Bedarf\Thema\Themen\Krankentagegeld;
+use Demv\Werte\Bedarf\Thema\Themen\KVZStationaer;
 use Demv\Werte\Bedarf\Thema\Themen\PrivateKrankenversicherung;
 use Demv\Werte\Bedarf\Thema\Themen\Risikoleben;
+use Demv\Werte\Bedarf\Thema\Themen\Zahnzusatz;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
 
@@ -29,7 +32,7 @@ final class BedarfsthemenTest extends TestCase
     public function testGetAll(): void
     {
         $themen = $this->getBedarfsthemen();
-        $this->assertCount(4, $themen->getAll());
+        $this->assertCount(7, $themen->getAll());
     }
 
     public function testGetBerufsunfaehigkeit(): void
@@ -50,5 +53,20 @@ final class BedarfsthemenTest extends TestCase
     public function testGetAltersVorsorge(): void
     {
         $this->checkGetOne($this->getBedarfsthemen(), Altersvorsorge::class);
+    }
+
+    public function testGetKTG(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Krankentagegeld::class);
+    }
+
+    public function testGetStationaer(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), KVZStationaer::class);
+    }
+
+    public function testGetZahnzusatz(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Zahnzusatz::class);
     }
 }
