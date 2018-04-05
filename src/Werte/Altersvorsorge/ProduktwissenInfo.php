@@ -1,0 +1,36 @@
+<?php
+
+namespace Demv\Werte\Altersvorsorge;
+
+use Demv\Werte\AbstractProvider;
+use Demv\Werte\Altersvorsorge\Produktwissen\Info\Fondsgebunden;
+use Demv\Werte\Altersvorsorge\Produktwissen\Info\Hybrid;
+use Demv\Werte\Altersvorsorge\Produktwissen\Info\Klassisch;
+
+/**
+ * Class ProduktwissenInfo
+ * @package Demv\Werte\Altersvorsorge
+ */
+final class ProduktwissenInfo extends AbstractProvider
+{
+    /**
+     * Produktwissen constructor.
+     */
+    public function __construct()
+    {
+        $this->appendMember(new Fondsgebunden());
+        $this->appendMember(new Hybrid());
+        $this->appendMember(new Klassisch());
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return ProduktwissenInfoInterface
+     * @throws \Demv\Werte\Exception\EntryNotFoundException
+     */
+    public function getOne(int $id): ProduktwissenInfoInterface
+    {
+        return parent::getOne($id);
+    }
+}
