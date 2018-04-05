@@ -1,6 +1,7 @@
 <?php
 
 namespace Demv\Werte\Altersvorsorge\Produktwissen;
+
 use Demv\Werte\Altersvorsorge\ProduktwissenInterface;
 use Demv\Werte\Value;
 
