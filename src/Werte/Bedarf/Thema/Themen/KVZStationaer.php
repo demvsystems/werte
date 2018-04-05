@@ -4,7 +4,6 @@ namespace Demv\Werte\Bedarf\Thema\Themen;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthema;
 use Demv\Werte\Sparte\Sparten\PrivateKrankenzusatzversicherung;
-use Demv\Werte\Sparte\Sparten\Vorsorge;
 
 /**
  * Class KVZStationaer
