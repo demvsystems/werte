@@ -5,8 +5,11 @@ namespace Demv\Werte\Bedarf\Thema;
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
+use Demv\Werte\Bedarf\Thema\Themen\Krankentagegeld;
+use Demv\Werte\Bedarf\Thema\Themen\KVZStationaer;
 use Demv\Werte\Bedarf\Thema\Themen\PrivateKrankenversicherung;
 use Demv\Werte\Bedarf\Thema\Themen\Risikoleben;
+use Demv\Werte\Bedarf\Thema\Themen\Zahnzusatz;
 use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
@@ -24,6 +27,9 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new PrivateKrankenversicherung());
         $this->appendMember(new Risikoleben());
         $this->appendMember(new Altersvorsorge());
+        $this->appendMember(new KVZStationaer());
+        $this->appendMember(new Zahnzusatz());
+        $this->appendMember(new Krankentagegeld());
     }
 
     /**
