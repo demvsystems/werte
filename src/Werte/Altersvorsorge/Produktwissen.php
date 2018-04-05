@@ -43,5 +43,4 @@ final class Produktwissen extends AbstractProvider
     {
         return parent::getAll();
     }
-
 }
