@@ -17,6 +17,6 @@ final class Privathaftpflicht extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Privathaftpflicht', [Privathaftpflicht::ID]);
+        parent::__construct(self::ID, 'Privathaftpflicht', [self::ID]);
     }
 }
