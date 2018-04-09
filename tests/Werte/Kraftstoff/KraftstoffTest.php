@@ -7,6 +7,7 @@ use Demv\Werte\Kraftstoff\Kraftstoffe;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Benzin;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Diesel;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Elektro;
+use Demv\Werte\Kraftstoff\Kraftstoffe\Gas;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Hybrid;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
@@ -30,7 +31,8 @@ final class KraftstoffTest extends TestCase
 
     public function testGetAll(): void
     {
-        $this->assertEquals(5, count($this->provider->getAll()));
+        $kraftstoffe = new Kraftstoffe();
+        $this->assertCount(5, $kraftstoffe->getAll());
     }
 
     public function testBenzin(): void
@@ -51,6 +53,11 @@ final class KraftstoffTest extends TestCase
     public function testHybrid(): void
     {
         $this->checkGetOne($this->provider, Hybrid::class);
+    }
+
+    public function testGas(): void
+    {
+        $this->checkGetOne($this->provider, Gas::class);
     }
 
     public function testNotFound(): void

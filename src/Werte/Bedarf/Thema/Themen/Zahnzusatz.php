@@ -18,6 +18,6 @@ final class Zahnzusatz extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Zahnzusatz', [PrivateKrankenzusatzversicherung::DENTAL_ZAHN]);
+        parent::__construct(self::ID, 'Zahnzusatzversicherung', [PrivateKrankenzusatzversicherung::DENTAL_ZAHN]);
     }
 }
