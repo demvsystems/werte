@@ -8,6 +8,6 @@ use Demv\Werte\ValueInterface;
  * Interface DokumentTypInterface
  * @package Demv\Werte\Dokumente
  */
-Interface DokumentTypInterface extends ValueInterface
+interface DokumentTypInterface extends ValueInterface
 {
 }
