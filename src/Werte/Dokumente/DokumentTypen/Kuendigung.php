@@ -6,15 +6,15 @@ use Demv\Werte\Dokumente\DokumentTypInterface;
 use Demv\Werte\Value;
 
 /**
- * Class Leistungsvergleich
+ * Class Kuendigung
  * @package Demv\Werte\Dokumente\DokumentTypen
  */
-final class Leistungsvergleich extends Value implements DokumentTypInterface
+final class Kuendigung extends Value implements DokumentTypInterface
 {
-    const ID = 80;
+    const ID = 68;
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Leistungsvergleich');
+        parent::__construct(self::ID, 'Kuendigung');
     }
 }

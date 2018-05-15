@@ -9,12 +9,12 @@ use Demv\Werte\Value;
  * Class Erstantrag
  * @package Demv\Werte\Dokumente\DokumentTypen
  */
-final class Erstantrag extends Value implements DokumentTypInterface
+final class Angebot extends Value implements DokumentTypInterface
 {
-    const ID = 24;
+    const ID = 62;
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Erstantrag');
+        parent::__construct(self::ID, 'Angebot');
     }
 }
