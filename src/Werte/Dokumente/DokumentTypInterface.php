@@ -2,7 +2,12 @@
 
 namespace Demv\Werte\Dokumente;
 
-Interface DokumentTypInterface
-{
+use Demv\Werte\ValueInterface;
 
+/**
+ * Interface DokumentTypInterface
+ * @package Demv\Werte\Dokumente
+ */
+Interface DokumentTypInterface extends ValueInterface
+{
 }
