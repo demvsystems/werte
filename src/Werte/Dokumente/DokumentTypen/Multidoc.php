@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Multidoc extends Value implements DokumentTypInterface
 {
-    const ID = 129;
+    public const ID = 129;
 
     public function __construct()
     {

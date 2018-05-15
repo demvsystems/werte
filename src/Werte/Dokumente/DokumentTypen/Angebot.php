@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Angebot extends Value implements DokumentTypInterface
 {
-    const ID = 62;
+    public const ID = 62;
 
     public function __construct()
     {

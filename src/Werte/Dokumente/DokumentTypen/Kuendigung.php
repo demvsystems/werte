@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Kuendigung extends Value implements DokumentTypInterface
 {
-    const ID = 68;
+    public const ID = 68;
 
     public function __construct()
     {

@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Antrag extends Value implements DokumentTypInterface
 {
-    const ID = 59;
+    public const ID = 59;
 
     public function __construct()
     {

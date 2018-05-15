@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Leistungsuebersicht extends Value implements DokumentTypInterface
 {
-    const ID = 66;
+    public const ID = 66;
 
     public function __construct()
     {

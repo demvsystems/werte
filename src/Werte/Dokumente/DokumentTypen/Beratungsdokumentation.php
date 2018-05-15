@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Beratungsdokumentation extends Value implements DokumentTypInterface
 {
-    const ID = 58;
+    public const ID = 58;
 
     public function __construct()
     {

@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Sepamandant extends Value implements DokumentTypInterface
 {
-    const ID = 94;
+    public const ID = 94;
 
     public function __construct()
     {
