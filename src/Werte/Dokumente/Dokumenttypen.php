@@ -16,7 +16,7 @@ use Demv\Werte\Exception\EntryNotFoundException;
  * Class DokumentTypen
  * @package Demv\Werte\Dokumente
  */
-final class DokumentTypen extends AbstractProvider
+final class Dokumenttypen extends AbstractProvider
 {
     /**
      * DokumentTypen constructor.
@@ -35,10 +35,10 @@ final class DokumentTypen extends AbstractProvider
     /**
      * @param int $id
      *
-     * @return DokumentTypInterface
+     * @return DokumenttypInterface
      * @throws EntryNotFoundException
      */
-    public function getOne(int $id): DokumentTypInterface
+    public function getOne(int $id): DokumenttypInterface
     {
         return parent::getOne($id);
     }

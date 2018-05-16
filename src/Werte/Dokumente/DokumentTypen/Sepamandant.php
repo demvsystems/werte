@@ -1,15 +1,15 @@
 <?php
 
-namespace Demv\Werte\Dokumente\DokumentTypen;
+namespace Demv\Werte\Dokumente\Dokumenttypen;
 
-use Demv\Werte\Dokumente\DokumentTypInterface;
+use Demv\Werte\Dokumente\DokumenttypInterface;
 use Demv\Werte\Value;
 
 /**
  * Class Sepamandant
  * @package Demv\Werte\Dokumente\DokumentTypen
  */
-final class Sepamandant extends Value implements DokumentTypInterface
+final class Sepamandant extends Value implements DokumenttypInterface
 {
     public const ID = 94;
 
