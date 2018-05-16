@@ -14,4 +14,9 @@ interface BedarfthemaInterface extends ValueInterface
      * @return array
      */
     public function getSpartenIds(): array;
+
+    /**
+     * @return string
+     */
+    public function getDisplayname(): string;
 }
