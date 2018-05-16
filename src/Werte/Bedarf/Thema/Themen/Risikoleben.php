@@ -18,6 +18,11 @@ final class Risikoleben extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Risikolebensversicherung', [Vorsorge::RISIKOLEBEN]);
+        parent::__construct(
+            self::ID,
+            'Risikolebensversicherung',
+            [Vorsorge::RISIKOLEBEN],
+            'Risikolebens&shy;versicherung'
+        );
     }
 }

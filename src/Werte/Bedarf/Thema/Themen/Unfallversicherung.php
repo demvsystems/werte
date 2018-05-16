@@ -18,6 +18,11 @@ final class Unfallversicherung extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Unfallversicherung', [PrivateSachversicherung::UNFALLVERSICHERUNG]);
+        parent::__construct(
+            self::ID,
+            'Unfallversicherung',
+            [PrivateSachversicherung::UNFALLVERSICHERUNG],
+            'Unfall&shy;ver&shy;sicherung'
+        );
     }
 }

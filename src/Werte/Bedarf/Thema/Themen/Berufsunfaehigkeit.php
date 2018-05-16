@@ -18,6 +18,11 @@ final class Berufsunfaehigkeit extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Berufsunfähigkeitsversicherung', [Vorsorge::BERUFSUNFAEHIGKEITSVERSICHERUNG]);
+        parent::__construct(
+            self::ID,
+            'Berufsunfähigkeitsversicherung',
+            [Vorsorge::BERUFSUNFAEHIGKEITSVERSICHERUNG],
+            'Berufsunfähigkeits&shy;versicherung'
+        );
     }
 }

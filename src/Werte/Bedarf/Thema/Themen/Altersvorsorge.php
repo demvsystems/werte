@@ -18,6 +18,6 @@ final class Altersvorsorge extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Altersvorsorge', [Vorsorge::ALTERSVORSORGE]);
+        parent::__construct(self::ID, 'Altersvorsorge', [Vorsorge::ALTERSVORSORGE], 'Alters&shy;vorsorge');
     }
 }

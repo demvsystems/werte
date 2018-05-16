@@ -18,6 +18,11 @@ final class KVZStationaer extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Krankenhauszusatzversicherung', [PrivateKrankenzusatzversicherung::STATIONAER]);
+        parent::__construct(
+            self::ID,
+            'Krankenhauszusatzversicherung',
+            [PrivateKrankenzusatzversicherung::STATIONAER],
+            'Krankenhaus&shy;zusatz&shy;versicherung'
+        );
     }
 }

@@ -18,6 +18,11 @@ final class PrivateKrankenversicherung extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Private Krankenversicherung', [Krankenversicherung::PRIVATE_KRANKENVOLLVERSICHERUNG]);
+        parent::__construct(
+            self::ID,
+            'Private Krankenvollversicherung',
+            [Krankenversicherung::PRIVATE_KRANKENVOLLVERSICHERUNG],
+            'Private Kranken&shy;vollversicherung'
+        );
     }
 }

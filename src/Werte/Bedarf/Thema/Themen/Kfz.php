@@ -18,6 +18,6 @@ final class Kfz extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'KFZ', [PrivateSachversicherung::KFZ]);
+        parent::__construct(self::ID, 'Kfz-Versicherung', [PrivateSachversicherung::KFZ]);
     }
 }

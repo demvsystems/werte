@@ -18,6 +18,6 @@ final class Pflegevorsorge extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Pflegevorsorge', [Vorsorge::PFLEGEVERSICHERUNG]);
+        parent::__construct(self::ID, 'Pflegevorsorge', [Vorsorge::PFLEGEVERSICHERUNG], 'Pflege&shy;vorsorge');
     }
 }
