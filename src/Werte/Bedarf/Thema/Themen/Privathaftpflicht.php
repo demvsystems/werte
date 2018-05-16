@@ -17,6 +17,11 @@ final class Privathaftpflicht extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Privathaftpflicht', [\Demv\Werte\Sparte\Sparten\Privathaftpflicht::ID]);
+        parent::__construct(
+            self::ID,
+            'Privathaftpflicht',
+            [\Demv\Werte\Sparte\Sparten\Privathaftpflicht::ID],
+            'Privat&shy;haft&shy;pflicht'
+        );
     }
 }

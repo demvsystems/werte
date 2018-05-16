@@ -16,16 +16,23 @@ class Bedarfsthema extends Value implements BedarfthemaInterface
     private $spartenIds;
 
     /**
-     * BaseBedarfsthema constructor.
-     *
-     * @param int    $identifier
-     * @param string $name
-     * @param array  $spartenids
+     * @var string|null
      */
-    public function __construct(int $identifier, string $name, array $spartenids)
+    private $displayname;
+
+    /**
+     * Bedarfsthema constructor.
+     *
+     * @param int         $identifier
+     * @param string      $name
+     * @param array       $spartenids
+     * @param string|null $displayname
+     */
+    public function __construct(int $identifier, string $name, array $spartenids, string $displayname = null)
     {
         parent::__construct($identifier, $name);
-        $this->spartenIds = $spartenids;
+        $this->spartenIds  = $spartenids;
+        $this->displayname = $displayname;
     }
 
     /**
@@ -34,5 +41,17 @@ class Bedarfsthema extends Value implements BedarfthemaInterface
     public function getSpartenIds(): array
     {
         return $this->spartenIds;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayname(): string
+    {
+        if ($this->displayname === null) {
+            return $this->getName();
+        }
+
+        return $this->displayname;
     }
 }

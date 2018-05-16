@@ -18,6 +18,11 @@ final class Krankentagegeld extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Krankentagegeld', [Krankenversicherung::KRANKENTAGEGELD]);
+        parent::__construct(
+            self::ID,
+            'Krankentagegeld',
+            [Krankenversicherung::KRANKENTAGEGELD],
+            'Kranken&shy;tagegeld'
+        );
     }
 }
