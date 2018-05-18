@@ -3,6 +3,7 @@
 namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
@@ -10,7 +11,10 @@ use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
+use Demv\Werte\Person\Beziehung\Beruflich\Hauptgeschaeftsstelle;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
 use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
@@ -58,6 +62,9 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Eigentuemergemeinschaft());
         $this->appendMember(new ExArbeitgeber());
         $this->appendMember(new ExArbeitnehmer());
+        $this->appendMember(new Geschaeftspartner());
+        $this->appendMember(new Hauptgeschaeftsstelle());
+        $this->appendMember(new Zweigstelle());
     }
 
     /**
@@ -72,6 +79,7 @@ final class Beziehungstypen extends AbstractProvider
      * @param int $id
      *
      * @return BeziehungsTypInterface
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id)
     {
