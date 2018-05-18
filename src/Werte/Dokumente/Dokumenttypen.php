@@ -3,13 +3,13 @@
 namespace Demv\Werte\Dokumente;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Dokumente\DokumentTypen\Angebot;
-use Demv\Werte\Dokumente\DokumentTypen\Antrag;
-use Demv\Werte\Dokumente\DokumentTypen\Beratungsdokumentation;
-use Demv\Werte\Dokumente\DokumentTypen\Kuendigung;
-use Demv\Werte\Dokumente\DokumentTypen\Leistungsuebersicht;
-use Demv\Werte\Dokumente\DokumentTypen\Multidoc;
-use Demv\Werte\Dokumente\DokumentTypen\Sepamandant;
+use Demv\Werte\Dokumente\Dokumenttypen\Angebot;
+use Demv\Werte\Dokumente\Dokumenttypen\Antrag;
+use Demv\Werte\Dokumente\Dokumenttypen\Beratungsdokumentation;
+use Demv\Werte\Dokumente\Dokumenttypen\Kuendigung;
+use Demv\Werte\Dokumente\Dokumenttypen\Leistungsuebersicht;
+use Demv\Werte\Dokumente\Dokumenttypen\Multidoc;
+use Demv\Werte\Dokumente\Dokumenttypen\Sepamandant;
 use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
