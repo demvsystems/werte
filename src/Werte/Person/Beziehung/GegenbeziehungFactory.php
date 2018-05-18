@@ -15,7 +15,10 @@ use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
+use Demv\Werte\Person\Beziehung\Beruflich\Hauptgeschaeftsstelle;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
 use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
@@ -66,6 +69,8 @@ final class GegenbeziehungFactory
         $pairs[FreundBekannter::ID]                   = FreundBekannter::ID;
         $pairs[MitgliedInEigentuemergemeinschaft::ID] = Eigentuemergemeinschaft::ID;
         $pairs[ExArbeitgeber::ID]                     = ExArbeitnehmer::ID;
+        $pairs[Geschaeftspartner::ID]                 = Geschaeftspartner::ID;
+        $pairs[Hauptgeschaeftsstelle::ID]             = Zweigstelle::ID;
 
         return $pairs;
     }
