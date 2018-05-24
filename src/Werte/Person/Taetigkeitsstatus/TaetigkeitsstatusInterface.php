@@ -31,4 +31,9 @@ interface TaetigkeitsstatusInterface extends ValueInterface
      * @return bool
      */
     public function hasEntgeltfortzahlung(): bool;
+
+    /**
+     * @return bool
+     */
+    public function hasAnspruchGrv(): bool;
 }

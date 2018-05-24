@@ -48,4 +48,12 @@ final class BeamterAufProbe extends Value implements TaetigkeitsstatusInterface
     {
         return true;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function hasAnspruchGrv(): bool
+    {
+        return false;
+    }
 }

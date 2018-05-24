@@ -48,4 +48,12 @@ final class Sonstige extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function hasAnspruchGrv(): bool
+    {
+        return false;
+    }
 }

@@ -48,4 +48,12 @@ final class GGFVersicherungsFrei extends Value implements TaetigkeitsstatusInter
     {
         return true;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function hasAnspruchGrv(): bool
+    {
+        return false;
+    }
 }

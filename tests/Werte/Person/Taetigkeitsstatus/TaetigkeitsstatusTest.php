@@ -23,12 +23,10 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
 use Demv\Werte\Person\Taetigkeitsstatus\Taetigkeitsstatus;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
-use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
 
 class TaetigkeitsstatusTest extends TestCase
 {
-    use ProviderTestTrait;
     use Specify;
 
     /**
@@ -65,23 +63,41 @@ class TaetigkeitsstatusTest extends TestCase
     public function testEntries(): void
     {
         $provider = $this->getTaetigkeitsstatus();
-        $this->checkGetOne($provider, Angestellter::class);
-        $this->checkGetOne($provider, AngestellterOeffentlDienst::class);
-        $this->checkGetOne($provider, Arbeitssuchend::class);
-        $this->checkGetOne($provider, BeamterAufLebenszeit::class);
-        $this->checkGetOne($provider, BeamterAufProbe::class);
-        $this->checkGetOne($provider, Berufsausbildung::class);
-        $this->checkGetOne($provider, Elternzeit::class);
-        $this->checkGetOne($provider, Erwerbsunfaehig::class);
-        $this->checkGetOne($provider, Hausfrau::class);
-        $this->checkGetOne($provider, Minijob::class);
-        $this->checkGetOne($provider, Rentner::class);
-        $this->checkGetOne($provider, Schulausbildung::class);
-        $this->checkGetOne($provider, Selbststaendiger::class);
-        $this->checkGetOne($provider, Sonstige::class);
-        $this->checkGetOne($provider, Studium::class);
-        $this->checkGetOne($provider, Vorstand::class);
-        $this->checkGetOne($provider, GGFVersicherungsFrei::class);
-        $this->checkGetOne($provider, GGFVersicherungsPflichtig::class);
+        $this->checkGetOne($provider, Angestellter::class, true, true);
+        $this->checkGetOne($provider, AngestellterOeffentlDienst::class, true, true);
+        $this->checkGetOne($provider, Arbeitssuchend::class, false, false);
+        $this->checkGetOne($provider, BeamterAufLebenszeit::class, true, false);
+        $this->checkGetOne($provider, BeamterAufProbe::class, true, false);
+        $this->checkGetOne($provider, Berufsausbildung::class, false, true);
+        $this->checkGetOne($provider, Elternzeit::class, false, false);
+        $this->checkGetOne($provider, Erwerbsunfaehig::class, false, false);
+        $this->checkGetOne($provider, Hausfrau::class, false, false);
+        $this->checkGetOne($provider, Minijob::class, true, false);
+        $this->checkGetOne($provider, Rentner::class, false, false);
+        $this->checkGetOne($provider, Schulausbildung::class, false, false);
+        $this->checkGetOne($provider, Selbststaendiger::class, false, false);
+        $this->checkGetOne($provider, Sonstige::class, false, false);
+        $this->checkGetOne($provider, Studium::class, false, false);
+        $this->checkGetOne($provider, Vorstand::class, true, false);
+        $this->checkGetOne($provider, GGFVersicherungsFrei::class, true, false);
+        $this->checkGetOne($provider, GGFVersicherungsPflichtig::class, false, false);
+    }
+
+    /**
+     * @param Taetigkeitsstatus $provider
+     * @param string            $classname
+     * @param bool              $entgeltfortzahlung
+     * @param bool              $grvanspruch
+     */
+    private function checkGetOne(Taetigkeitsstatus $provider, string $classname, bool $entgeltfortzahlung, bool $grvanspruch): void
+    {
+        $instance = new $classname();
+        $this->assertNotEmpty($provider->getOne($instance->getId()));
+        $this->assertTrue($provider->exists($instance->getId()));
+        $value = $provider->getOne($instance->getId());
+        $this->assertSame($instance->getId(), $value->getId());
+        $this->assertInstanceOf($classname, $value);
+        $this->assertEquals($entgeltfortzahlung, $value->hasEntgeltfortzahlung());
+        $this->assertEquals($grvanspruch, $value->hasAnspruchGrv());
     }
 }
