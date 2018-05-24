@@ -48,4 +48,12 @@ final class Vorstand extends Value implements TaetigkeitsstatusInterface
     {
         return true;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function hasAnspruchGkv(): bool
+    {
+        return false;
+    }
 }

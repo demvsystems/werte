@@ -48,4 +48,12 @@ final class Hausfrau extends Value implements TaetigkeitsstatusInterface
     {
         return false;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function hasAnspruchGkv(): bool
+    {
+        return false;
+    }
 }
