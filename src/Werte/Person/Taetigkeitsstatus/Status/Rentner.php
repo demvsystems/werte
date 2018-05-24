@@ -52,7 +52,7 @@ final class Rentner extends Value implements TaetigkeitsstatusInterface
     /**
      * @inheritdoc
      */
-    public function hasAnspruchGkv(): bool
+    public function hasAnspruchGrv(): bool
     {
         return false;
     }

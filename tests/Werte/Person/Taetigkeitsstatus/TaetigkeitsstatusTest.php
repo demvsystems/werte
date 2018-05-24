@@ -87,9 +87,9 @@ class TaetigkeitsstatusTest extends TestCase
      * @param Taetigkeitsstatus $provider
      * @param string            $classname
      * @param bool              $entgeltfortzahlung
-     * @param bool              $gkvanspruch
+     * @param bool              $grvanspruch
      */
-    private function checkGetOne(Taetigkeitsstatus $provider, string $classname, bool $entgeltfortzahlung, bool $gkvanspruch): void
+    private function checkGetOne(Taetigkeitsstatus $provider, string $classname, bool $entgeltfortzahlung, bool $grvanspruch): void
     {
         $instance = new $classname();
         $this->assertNotEmpty($provider->getOne($instance->getId()));
@@ -98,6 +98,6 @@ class TaetigkeitsstatusTest extends TestCase
         $this->assertSame($instance->getId(), $value->getId());
         $this->assertInstanceOf($classname, $value);
         $this->assertEquals($entgeltfortzahlung, $value->hasEntgeltfortzahlung());
-        $this->assertEquals($gkvanspruch, $value->hasAnspruchGkv());
+        $this->assertEquals($grvanspruch, $value->hasAnspruchGrv());
     }
 }

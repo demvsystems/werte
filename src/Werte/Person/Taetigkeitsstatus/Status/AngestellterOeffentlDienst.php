@@ -45,7 +45,7 @@ final class AngestellterOeffentlDienst extends Value implements Taetigkeitsstatu
     /**
      * @inheritdoc
      */
-    public function hasAnspruchGkv(): bool
+    public function hasAnspruchGrv(): bool
     {
         return true;
     }

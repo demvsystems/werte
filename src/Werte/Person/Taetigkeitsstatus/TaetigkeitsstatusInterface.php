@@ -35,5 +35,5 @@ interface TaetigkeitsstatusInterface extends ValueInterface
     /**
      * @return bool
      */
-    public function hasAnspruchGkv(): bool;
+    public function hasAnspruchGrv(): bool;
 }

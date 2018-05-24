@@ -52,7 +52,7 @@ final class Berufsausbildung extends Value implements TaetigkeitsstatusInterface
     /**
      * @inheritdoc
      */
-    public function hasAnspruchGkv(): bool
+    public function hasAnspruchGrv(): bool
     {
         return true;
     }

@@ -52,7 +52,7 @@ final class GGFVersicherungsPflichtig extends Value implements Taetigkeitsstatus
     /**
      * @inheritdoc
      */
-    public function hasAnspruchGkv(): bool
+    public function hasAnspruchGrv(): bool
     {
         return false;
     }

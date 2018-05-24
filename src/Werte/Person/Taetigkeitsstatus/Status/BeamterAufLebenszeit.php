@@ -52,7 +52,7 @@ final class BeamterAufLebenszeit extends Value implements TaetigkeitsstatusInter
     /**
      * @inheritdoc
      */
-    public function hasAnspruchGkv(): bool
+    public function hasAnspruchGrv(): bool
     {
         return false;
     }
