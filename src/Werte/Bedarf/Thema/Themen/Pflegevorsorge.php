@@ -3,6 +3,7 @@
 namespace Demv\Werte\Bedarf\Thema\Themen;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthema;
+use Demv\Werte\Sparte\Sparten\Krankenzusatzversicherung;
 use Demv\Werte\Sparte\Sparten\Vorsorge;
 
 /**
@@ -18,6 +19,10 @@ final class Pflegevorsorge extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Pflegevorsorge', [Vorsorge::PFLEGEVERSICHERUNG], 'Pflege&shy;vorsorge');
+        parent::__construct(self::ID, 'Pflegevorsorge', [
+            Vorsorge::PFLEGEVERSICHERUNG,
+            Krankenzusatzversicherung::PFLEGETAGEGELD,
+            Krankenzusatzversicherung::PFLEGEKOSTENVERSICHERUNG,
+        ], 'Pflege&shy;vorsorge');
     }
 }
