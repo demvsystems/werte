@@ -37,9 +37,9 @@
     },
     "scripts": {
         "test": [
-            "phpunit"
+            "./vendor/bin/phpunit"
         ],
-        "coverage": "phpunit --coverage-clover=coverage.xml",
-        "coverage-html": "phpunit --coverage-html=coverage"
+        "coverage": "./vendor/bin/phpunit --coverage-clover=coverage.xml",
+        "coverage-html": "./vendor/bin/phpunit --coverage-html=coverage"
     }
 }
