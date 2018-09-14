@@ -4,6 +4,7 @@ namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
+use Demv\Werte\Bedarf\Thema\Themen\AmbulanteKrankenzusatzversicherung;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\Hausrat;
 use Demv\Werte\Bedarf\Thema\Themen\Kfz;
@@ -44,6 +45,7 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new Rechtsschutz());
         $this->appendMember(new Unfallversicherung());
         $this->appendMember(new Wohngebaeude());
+        $this->appendMember(new AmbulanteKrankenzusatzversicherung());
     }
 
     /**
