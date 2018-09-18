@@ -21,6 +21,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Familiaer\Stiefelternteil;
+use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
@@ -141,6 +143,16 @@ class GegenbeziehungTest extends TestCase
     public function testMitgliedInEigentuemergemeinschaft(): void
     {
         $this->checkExistence(new MitgliedInEigentuemergemeinschaft(), new Eigentuemergemeinschaft());
+    }
+
+    public function testStiefkind(): void
+    {
+        $this->checkExistence(new Stiefkind(), new Stiefelternteil());
+    }
+
+    public function testStiefElternteil(): void
+    {
+        $this->checkExistence(new Stiefelternteil(), new Stiefkind());
     }
 
     public function testMissing(): void
