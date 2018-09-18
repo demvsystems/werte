@@ -31,6 +31,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Familiaer\Stiefelternteil;
+use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
@@ -71,6 +73,7 @@ final class GegenbeziehungFactory
         $pairs[ExArbeitgeber::ID]                     = ExArbeitnehmer::ID;
         $pairs[Geschaeftspartner::ID]                 = Geschaeftspartner::ID;
         $pairs[Hauptgeschaeftsstelle::ID]             = Zweigstelle::ID;
+        $pairs[Stiefelternteil::ID]                   = Stiefkind::ID;
 
         return $pairs;
     }

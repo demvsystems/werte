@@ -27,6 +27,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\Partner;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
+use Demv\Werte\Person\Beziehung\Familiaer\Stiefelternteil;
+use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
@@ -65,6 +67,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Geschaeftspartner());
         $this->appendMember(new Hauptgeschaeftsstelle());
         $this->appendMember(new Zweigstelle());
+        $this->appendMember(new Stiefelternteil());
+        $this->appendMember(new Stiefkind());
     }
 
     /**
