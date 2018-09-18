@@ -4,6 +4,7 @@ namespace Demv\Werte\Tests\Bedarf\Thema;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthemen;
 use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
+use Demv\Werte\Bedarf\Thema\Themen\AmbulanteKrankenzusatzversicherung;
 use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\Krankentagegeld;
 use Demv\Werte\Bedarf\Thema\Themen\KVZStationaer;
@@ -32,7 +33,7 @@ final class BedarfsthemenTest extends TestCase
     public function testGetAll(): void
     {
         $themen = $this->getBedarfsthemen();
-        $this->assertCount(14, $themen->getAll());
+        $this->assertCount(15, $themen->getAll());
     }
 
     public function testGetBerufsunfaehigkeit(): void
@@ -68,5 +69,10 @@ final class BedarfsthemenTest extends TestCase
     public function testGetZahnzusatz(): void
     {
         $this->checkGetOne($this->getBedarfsthemen(), Zahnzusatz::class);
+    }
+
+    public function testGetAmbulanteKrankenzusatzversicherung(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), AmbulanteKrankenzusatzversicherung::class);
     }
 }
