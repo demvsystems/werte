@@ -16,7 +16,7 @@ final class BBG
     /**
      * Bemessungsgrenze für Kranken- und Pflegeversicherungen
      */
-    const KRANKEN_UND_PFLEGE = 60750;
+    const KRANKEN_UND_PFLEGE = 54450;
 
     /**
      * Bemessungsgrenze für die gesetzliche Rentenversicherung
