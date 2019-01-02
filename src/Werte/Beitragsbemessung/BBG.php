@@ -11,16 +11,16 @@ final class BBG
     /**
      * Versicherungspflichtgrenze
      */
-    const JAEG = 59400;
+    const JAEG = 60750;
 
     /**
      * Bemessungsgrenze für Kranken- und Pflegeversicherungen
      */
-    const KRANKEN_UND_PFLEGE = 53100;
+    const KRANKEN_UND_PFLEGE = 54450;
 
     /**
      * Bemessungsgrenze für die gesetzliche Rentenversicherung
      * Hier wird der Durchschnitt von West und Ost genommen
      */
-    const GESETZLICHE_RENTE = (78000 + 69600) / 2;
+    const GESETZLICHE_RENTE = (80400 + 73800) / 2;
 }
