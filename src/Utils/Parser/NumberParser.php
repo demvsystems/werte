@@ -14,7 +14,7 @@ final class NumberParser
     /**
      * @return NumberParser
      */
-    public static function new(): NumberParser
+    public static function new(): self
     {
         return new self();
     }
