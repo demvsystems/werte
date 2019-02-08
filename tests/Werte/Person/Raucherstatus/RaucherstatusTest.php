@@ -2,7 +2,6 @@
 
 namespace Demv\Werte\Tests\Person\Raucherstatus;
 
-use Codeception\Specify;
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Gelegentlich;
@@ -18,8 +17,6 @@ use PHPUnit\Framework\TestCase;
  */
 class RaucherstatusTest extends TestCase
 {
-    use Specify;
-
     /**
      * @var Raucherstatus
      */
