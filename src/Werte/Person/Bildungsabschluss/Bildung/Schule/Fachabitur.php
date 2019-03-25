@@ -8,7 +8,7 @@ use Demv\Werte\Value;
 
 /**
  * Class Fachabitur
- * @package Demv\Werte\Person\Bildung\Bildung\Schule
+ * @package Demv\Werte\Person\Bildungsabschluss\Bildung\Schule
  */
 final class Fachabitur extends Value implements BildungsabschlussInterface
 {

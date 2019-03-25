@@ -8,7 +8,7 @@ use Demv\Werte\Value;
 
 /**
  * Class Hauptschulabschluss
- * @package Demv\Werte\Person\Bildung\Bildung
+ * @package Demv\Werte\Person\Bildungsabschluss\Bildung\Schule
  */
 final class Hauptschulabschluss extends Value implements BildungsabschlussInterface
 {

@@ -8,7 +8,7 @@ use Demv\Werte\Value;
 
 /**
  * Class AbschlussAlsMeister
- * @package Demv\Werte\Person\Bildung\Bildung\Beruflich
+ * @package Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich
  */
 final class AbschlussAlsMeister extends Value implements BildungsabschlussInterface
 {

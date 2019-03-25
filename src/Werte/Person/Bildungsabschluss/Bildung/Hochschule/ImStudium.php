@@ -8,7 +8,7 @@ use Demv\Werte\Value;
 
 /**
  * Class ImStudium
- * @package Demv\Werte\Person\Bildung\Bildung\Hochschule
+ * @package Demv\Werte\Person\Bildungsabschluss\Bildung\Hochschule
  */
 final class ImStudium extends Value implements BildungsabschlussInterface
 {
