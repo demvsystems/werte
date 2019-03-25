@@ -16,7 +16,7 @@ final class BachelorUniversitaet extends Value implements BildungsabschlussInter
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Bachelor (Univ)');
+        parent::__construct(self::ID, 'Bachelor (Universität)');
     }
 
     /**

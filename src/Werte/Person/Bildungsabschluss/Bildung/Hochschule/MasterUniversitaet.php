@@ -16,7 +16,7 @@ final class MasterUniversitaet extends Value implements BildungsabschlussInterfa
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Master (Univ)');
+        parent::__construct(self::ID, 'Master (Universität)');
     }
 
     /**

@@ -16,7 +16,7 @@ final class Abitur extends Value implements BildungsabschlussInterface
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Fachabitur');
+        parent::__construct(self::ID, 'Abitur');
     }
 
     /**
