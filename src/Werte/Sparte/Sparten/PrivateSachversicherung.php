@@ -27,6 +27,10 @@ interface PrivateSachversicherung
 
     const TIERHALTERHAFTPFLICHT = 170;
 
+    const HUNDEHALTERHAFTPFLICHT = 461;
+
+    const PFERDEHALTERHAFTPFLICHT = 462;
+
     const JAGDHAFTPFLICHT = 253;
 
     const CAMPINGVERSICHERUNG = 311;
