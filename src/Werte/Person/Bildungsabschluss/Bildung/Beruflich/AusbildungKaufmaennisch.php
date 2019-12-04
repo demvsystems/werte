@@ -16,7 +16,7 @@ final class AusbildungKaufmaennisch extends Value implements BildungsabschlussIn
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'abgeschlossene Berufsausbildung kaufmänisch');
+        parent::__construct(self::ID, 'abgeschlossene Berufsausbildung kaufmännisch');
     }
 
     /**
