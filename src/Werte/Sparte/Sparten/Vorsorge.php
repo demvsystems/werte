@@ -8,6 +8,8 @@ namespace Demv\Werte\Sparte\Sparten;
  */
 interface Vorsorge
 {
+    const ID = 129;
+
     const GRUNDFAEHIGKEITSVERSICHERUNG = 138;
 
     const ERWERBSUNFAEHIGKEITSVERSICHERUNG = 250;

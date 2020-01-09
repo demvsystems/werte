@@ -44,4 +44,8 @@ interface PrivateSachversicherung
     const FEUERROHBAU_VERSICHERUNG = 354;
 
     const BAULEISTUNGS_VERSICHERUNG = 241;
+
+    const ELEMENTARVERSICHERUNG = 429;
+
+    const SONSTIGES = 196;
 }
