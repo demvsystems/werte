@@ -24,4 +24,6 @@ interface Gewerbe
     const TRANSPORT                   = 178;
     const VERANSTALTERHAFTPFLICHT     = 259;
     const VERMOEGENSCHADENHAFTPFLICHT = 175;
+    const FLOTTENVERSICHERUNG         = 180;
+    const GRUPPEN_UNFALLVERSICHERUNG  = 234;
 }

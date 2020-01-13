@@ -9,6 +9,8 @@ namespace Demv\Werte\Sparte\Sparten;
  */
 interface PrivateSachversicherung
 {
+    const ID = 164;
+
     const UNFALLVERSICHERUNG = 168;
 
     const KINDERINVALIDITAET = 358;
@@ -50,4 +52,8 @@ interface PrivateSachversicherung
     const ELEKTRONIKVERSICHERUNG = 272;
 
     const SONSTIGES = 196;
+
+    const KFZ_SCHUTZBRIEF = 282;
+
+    const RECHTSSCHUTZVERSICHERUNG = 169;
 }
