@@ -47,5 +47,7 @@ interface PrivateSachversicherung
 
     const ELEMENTARVERSICHERUNG = 429;
 
+    const ELEKTRONIKVERSICHERUNG = 272;
+
     const SONSTIGES = 196;
 }
