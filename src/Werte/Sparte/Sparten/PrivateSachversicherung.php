@@ -56,4 +56,6 @@ interface PrivateSachversicherung
     const KFZ_SCHUTZBRIEF = 282;
 
     const RECHTSSCHUTZVERSICHERUNG = 169;
+
+    const MOTORRAD = 392;
 }
