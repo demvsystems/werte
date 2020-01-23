@@ -11,7 +11,6 @@ use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\Camping;
 use Demv\Werte\Bedarf\Thema\Themen\DreadDisease;
 use Demv\Werte\Bedarf\Thema\Themen\Erwerbsunfaehigkeit;
-use Demv\Werte\Bedarf\Thema\Themen\Gebaeudeversicherung;
 use Demv\Werte\Bedarf\Thema\Themen\Grundfaehigkeit;
 use Demv\Werte\Bedarf\Thema\Themen\Hausrat;
 use Demv\Werte\Bedarf\Thema\Themen\Jagdhaftpflicht;
