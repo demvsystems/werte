@@ -30,7 +30,6 @@ final class Dokumenttypen extends AbstractProvider
         $this->appendMember(new Leistungsuebersicht());
         $this->appendMember(new Kuendigung());
         $this->appendMember(new Sepamandant());
-        $this->appendMember(new Multidoc());
         $this->appendMember(new VVG());
     }
 
