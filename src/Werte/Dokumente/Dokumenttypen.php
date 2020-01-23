@@ -8,7 +8,6 @@ use Demv\Werte\Dokumente\Dokumenttypen\Antrag;
 use Demv\Werte\Dokumente\Dokumenttypen\Beratungsdokumentation;
 use Demv\Werte\Dokumente\Dokumenttypen\Kuendigung;
 use Demv\Werte\Dokumente\Dokumenttypen\Leistungsuebersicht;
-use Demv\Werte\Dokumente\Dokumenttypen\Multidoc;
 use Demv\Werte\Dokumente\Dokumenttypen\Sepamandant;
 use Demv\Werte\Dokumente\Dokumenttypen\VVG;
 use Demv\Werte\Exception\EntryNotFoundException;
@@ -30,7 +29,6 @@ final class Dokumenttypen extends AbstractProvider
         $this->appendMember(new Leistungsuebersicht());
         $this->appendMember(new Kuendigung());
         $this->appendMember(new Sepamandant());
-        $this->appendMember(new Multidoc());
         $this->appendMember(new VVG());
     }
 
