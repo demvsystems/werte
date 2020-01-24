@@ -3,32 +3,6 @@
 namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Bedarf\Thema\Themen\Altersvorsorge;
-use Demv\Werte\Bedarf\Thema\Themen\AmbulanteKrankenzusatzversicherung;
-use Demv\Werte\Bedarf\Thema\Themen\AuslandsKV;
-use Demv\Werte\Bedarf\Thema\Themen\Bauherren;
-use Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit;
-use Demv\Werte\Bedarf\Thema\Themen\Camping;
-use Demv\Werte\Bedarf\Thema\Themen\DreadDisease;
-use Demv\Werte\Bedarf\Thema\Themen\Erwerbsunfaehigkeit;
-use Demv\Werte\Bedarf\Thema\Themen\Grundfaehigkeit;
-use Demv\Werte\Bedarf\Thema\Themen\Hausrat;
-use Demv\Werte\Bedarf\Thema\Themen\Jagdhaftpflicht;
-use Demv\Werte\Bedarf\Thema\Themen\Kfz;
-use Demv\Werte\Bedarf\Thema\Themen\Krankentagegeld;
-use Demv\Werte\Bedarf\Thema\Themen\KVZStationaer;
-use Demv\Werte\Bedarf\Thema\Themen\Luftfahrthaftpflicht;
-use Demv\Werte\Bedarf\Thema\Themen\Pflegevorsorge;
-use Demv\Werte\Bedarf\Thema\Themen\Photovoltaik;
-use Demv\Werte\Bedarf\Thema\Themen\PrivateKrankenversicherung;
-use Demv\Werte\Bedarf\Thema\Themen\Privathaftpflicht;
-use Demv\Werte\Bedarf\Thema\Themen\Rechtsschutz;
-use Demv\Werte\Bedarf\Thema\Themen\Risikoleben;
-use Demv\Werte\Bedarf\Thema\Themen\Tierhalterhaftpflicht;
-use Demv\Werte\Bedarf\Thema\Themen\Unfallversicherung;
-use Demv\Werte\Bedarf\Thema\Themen\Wohngebaeude;
-use Demv\Werte\Bedarf\Thema\Themen\Zahnzusatz;
-use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
  * Class Bedarfsthemen
@@ -41,49 +15,31 @@ final class Bedarfsthemen extends AbstractProvider
      */
     public function __construct()
     {
-        $this->appendMember(new Berufsunfaehigkeit());
-        $this->appendMember(new PrivateKrankenversicherung());
-        $this->appendMember(new Risikoleben());
-        $this->appendMember(new Altersvorsorge());
-        $this->appendMember(new KVZStationaer());
-        $this->appendMember(new Zahnzusatz());
-        $this->appendMember(new Krankentagegeld());
-        $this->appendMember(new Hausrat());
-        $this->appendMember(new Kfz());
-        $this->appendMember(new Pflegevorsorge());
-        $this->appendMember(new Privathaftpflicht());
-        $this->appendMember(new Rechtsschutz());
-        $this->appendMember(new Unfallversicherung());
-        $this->appendMember(new Wohngebaeude());
-        $this->appendMember(new AmbulanteKrankenzusatzversicherung());
-        $this->appendMember(new AuslandsKV());
-        $this->appendMember(new Bauherren());
-        $this->appendMember(new Camping());
-        $this->appendMember(new DreadDisease());
-        $this->appendMember(new Erwerbsunfaehigkeit());
-        $this->appendMember(new Grundfaehigkeit());
-        $this->appendMember(new Jagdhaftpflicht());
-        $this->appendMember(new Luftfahrthaftpflicht());
-        $this->appendMember(new Photovoltaik());
-        $this->appendMember(new Tierhalterhaftpflicht());
-    }
-
-    /**
-     * @return BedarfthemaInterface[]
-     */
-    public function getAll(): array
-    {
-        return parent::getAll();
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return BedarfthemaInterface
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): BedarfthemaInterface
-    {
-        return parent::getOne($id);
+        $this->appendMember(new Themen\Berufsunfaehigkeit());
+        $this->appendMember(new Themen\PrivateKrankenversicherung());
+        $this->appendMember(new Themen\Risikoleben());
+        $this->appendMember(new Themen\Altersvorsorge());
+        $this->appendMember(new Themen\KVZStationaer());
+        $this->appendMember(new Themen\Zahnzusatz());
+        $this->appendMember(new Themen\Krankentagegeld());
+        $this->appendMember(new Themen\Hausrat());
+        $this->appendMember(new Themen\Kfz());
+        $this->appendMember(new Themen\Pflegevorsorge());
+        $this->appendMember(new Themen\Privathaftpflicht());
+        $this->appendMember(new Themen\Rechtsschutz());
+        $this->appendMember(new Themen\Unfallversicherung());
+        $this->appendMember(new Themen\Wohngebaeude());
+        $this->appendMember(new Themen\AmbulanteKrankenzusatzversicherung());
+        $this->appendMember(new Themen\AuslandsKV());
+        $this->appendMember(new Themen\Bauherren());
+        $this->appendMember(new Themen\Camping());
+        $this->appendMember(new Themen\DreadDisease());
+        $this->appendMember(new Themen\Erwerbsunfaehigkeit());
+        $this->appendMember(new Themen\Grundfaehigkeit());
+        $this->appendMember(new Themen\Jagdhaftpflicht());
+        $this->appendMember(new Themen\Luftfahrthaftpflicht());
+        $this->appendMember(new Themen\Photovoltaik());
+        $this->appendMember(new Themen\Tierhalterhaftpflicht());
+        $this->appendMember(new Themen\Kinderinvaliditaet());
     }
 }
