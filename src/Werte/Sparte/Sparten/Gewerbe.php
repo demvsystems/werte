@@ -26,4 +26,5 @@ interface Gewerbe
     const VERMOEGENSCHADENHAFTPFLICHT = 175;
     const FLOTTENVERSICHERUNG         = 180;
     const GRUPPEN_UNFALLVERSICHERUNG  = 234;
+    const SACHVERSICHERUNG            = 172;
 }

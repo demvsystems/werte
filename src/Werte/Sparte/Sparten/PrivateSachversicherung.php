@@ -58,4 +58,12 @@ interface PrivateSachversicherung
     const RECHTSSCHUTZVERSICHERUNG = 169;
 
     const MOTORRAD = 392;
+
+    const FEUERVERSICHERUNG = 376;
+
+    const GLAS = 231;
+
+    const LEISTUNGSWASSERVERSICHERUNG = 427;
+
+    const STURM_HAGELVERSICHERUNG = 428;
 }
