@@ -34,5 +34,5 @@ interface Gewerbe
     const MONTAGEVERSICHERUNG              = 386;
     const UMWELTSCHADENVERSICHERUNG        = 317;
     const WASSERSPORTKASKO                 = 459;
-    const GESCHÄFTSINHALTSVERSICHERUNG     = 176;
+    const LUFTFAHRTKASKOVERSICHERUNG       = 402;
 }
