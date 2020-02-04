@@ -15,5 +15,4 @@ class Patenkind extends FamiliaereBeziehung
     {
         parent::__construct(self::ID, 'Patenkind');
     }
-
 }
