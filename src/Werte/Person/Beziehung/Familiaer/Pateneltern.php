@@ -6,7 +6,7 @@ namespace Demv\Werte\Person\Beziehung\Familiaer;
 
 class Pateneltern extends FamiliaereBeziehung
 {
-    const ID = 30;
+    const ID = 29;
 
     /**
      * Patenelter constructor.
