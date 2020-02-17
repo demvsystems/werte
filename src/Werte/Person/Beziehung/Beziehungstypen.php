@@ -24,6 +24,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
 use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
+use Demv\Werte\Person\Beziehung\Familiaer\Patenkind;
+use Demv\Werte\Person\Beziehung\Familiaer\PatenOnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
@@ -69,6 +71,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Zweigstelle());
         $this->appendMember(new Stiefelternteil());
         $this->appendMember(new Stiefkind());
+        $this->appendMember(new PatenOnkelTante());
+        $this->appendMember(new Patenkind());
     }
 
     /**

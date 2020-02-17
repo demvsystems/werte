@@ -28,6 +28,8 @@ use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
 use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
+use Demv\Werte\Person\Beziehung\Familiaer\Patenkind;
+use Demv\Werte\Person\Beziehung\Familiaer\PatenOnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
@@ -56,24 +58,25 @@ final class GegenbeziehungFactory
      */
     private static function getPairs(): array
     {
-        $pairs                                        = [];
-        $pairs[Partner::ID]                           = Partner::ID;
-        $pairs[Eltern::ID]                            = Kind::ID;
-        $pairs[Arbeitgeber::ID]                       = Arbeitnehmer::ID;
-        $pairs[Geschaeftsfuehrer::ID]                 = FirmaVon::ID;
-        $pairs[Geschwister::ID]                       = Geschwister::ID;
-        $pairs[Schwager::ID]                          = Schwager::ID;
-        $pairs[Grosseltern::ID]                       = Enkel::ID;
-        $pairs[Inhaber::ID]                           = FirmaVonInhaber::ID;
-        $pairs[OnkelTante::ID]                        = NeffeNichte::ID;
-        $pairs[Schwiegereltern::ID]                   = Schwiegerkind::ID;
-        $pairs[ExPartner::ID]                         = ExPartner::ID;
-        $pairs[FreundBekannter::ID]                   = FreundBekannter::ID;
-        $pairs[MitgliedInEigentuemergemeinschaft::ID] = Eigentuemergemeinschaft::ID;
-        $pairs[ExArbeitgeber::ID]                     = ExArbeitnehmer::ID;
-        $pairs[Geschaeftspartner::ID]                 = Geschaeftspartner::ID;
-        $pairs[Hauptgeschaeftsstelle::ID]             = Zweigstelle::ID;
-        $pairs[Stiefelternteil::ID]                   = Stiefkind::ID;
+        $pairs                                            = [];
+        $pairs[Partner::ID]                               = Partner::ID;
+        $pairs[Eltern::ID]                                = Kind::ID;
+        $pairs[Arbeitgeber::ID]                           = Arbeitnehmer::ID;
+        $pairs[Geschaeftsfuehrer::ID]                     = FirmaVon::ID;
+        $pairs[Geschwister::ID]                           = Geschwister::ID;
+        $pairs[Schwager::ID]                              = Schwager::ID;
+        $pairs[Grosseltern::ID]                           = Enkel::ID;
+        $pairs[Inhaber::ID]                               = FirmaVonInhaber::ID;
+        $pairs[OnkelTante::ID]                            = NeffeNichte::ID;
+        $pairs[Schwiegereltern::ID]                       = Schwiegerkind::ID;
+        $pairs[ExPartner::ID]                             = ExPartner::ID;
+        $pairs[FreundBekannter::ID]                       = FreundBekannter::ID;
+        $pairs[MitgliedInEigentuemergemeinschaft::ID]     = Eigentuemergemeinschaft::ID;
+        $pairs[ExArbeitgeber::ID]                         = ExArbeitnehmer::ID;
+        $pairs[Geschaeftspartner::ID]                     = Geschaeftspartner::ID;
+        $pairs[Hauptgeschaeftsstelle::ID]                 = Zweigstelle::ID;
+        $pairs[Stiefelternteil::ID]                       = Stiefkind::ID;
+        $pairs[PatenOnkelTante::ID]                       = Patenkind::ID;
 
         return $pairs;
     }
