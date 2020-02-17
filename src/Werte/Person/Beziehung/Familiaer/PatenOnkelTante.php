@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-class Pateneltern extends FamiliaereBeziehung
+class PatenOnkelTante extends FamiliaereBeziehung
 {
     const ID = 29;
 
@@ -13,6 +13,6 @@ class Pateneltern extends FamiliaereBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Pateneltern');
+        parent::__construct(self::ID, 'PatenOnkelTante');
     }
 }

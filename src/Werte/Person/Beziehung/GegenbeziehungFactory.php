@@ -28,7 +28,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Kind;
 use Demv\Werte\Person\Beziehung\Familiaer\NeffeNichte;
 use Demv\Werte\Person\Beziehung\Familiaer\OnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Partner;
-use Demv\Werte\Person\Beziehung\Familiaer\Pateneltern;
+use Demv\Werte\Person\Beziehung\Familiaer\PatenOnkelTante;
 use Demv\Werte\Person\Beziehung\Familiaer\Patenkind;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwager;
 use Demv\Werte\Person\Beziehung\Familiaer\Schwiegereltern;
@@ -76,7 +76,7 @@ final class GegenbeziehungFactory
         $pairs[Geschaeftspartner::ID]                 = Geschaeftspartner::ID;
         $pairs[Hauptgeschaeftsstelle::ID]             = Zweigstelle::ID;
         $pairs[Stiefelternteil::ID]                   = Stiefkind::ID;
-        $pairs[Pateneltern::ID]                       = Patenkind::ID;
+        $pairs[PatenOnkelTante::ID]                       = Patenkind::ID;
 
         return $pairs;
     }
