@@ -33,6 +33,7 @@ use Demv\Werte\Person\Beziehung\Familiaer\Stiefelternteil;
 use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 
 /**
@@ -73,6 +74,7 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Stiefkind());
         $this->appendMember(new PatenOnkelTante());
         $this->appendMember(new Patenkind());
+        $this->appendMember(new Mitbewohner());
     }
 
     /**
