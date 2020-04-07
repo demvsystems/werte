@@ -27,6 +27,7 @@ use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use PHPUnit\Framework\TestCase;
 
@@ -160,5 +161,10 @@ class GegenbeziehungTest extends TestCase
         $this->expectException(EntryNotFoundException::class);
         $gegenbeziehung = new Gegenbeziehung([]);
         $gegenbeziehung->getFor(new Partner());
+    }
+
+    public function testMitbewohner(): void
+    {
+        $this->checkExistence(new Mitbewohner(), new Mitbewohner());
     }
 }
