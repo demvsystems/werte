@@ -10,6 +10,8 @@ namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Berufsbetreuer;
+use Demv\Werte\Person\Beziehung\Beruflich\Betreuter;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
@@ -79,6 +81,7 @@ final class GegenbeziehungFactory
         $pairs[Stiefelternteil::ID]                   = Stiefkind::ID;
         $pairs[PatenOnkelTante::ID]                   = Patenkind::ID;
         $pairs[Mitbewohner::ID]                       = Mitbewohner::ID;
+        $pairs[Berufsbetreuer::ID]                    = Betreuter ::ID;
 
         return $pairs;
     }
