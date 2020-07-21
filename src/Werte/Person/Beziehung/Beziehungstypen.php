@@ -6,6 +6,8 @@ use Demv\Werte\AbstractProvider;
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Berufsbetreuer;
+use Demv\Werte\Person\Beziehung\Beruflich\Betreuter;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
@@ -75,6 +77,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new PatenOnkelTante());
         $this->appendMember(new Patenkind());
         $this->appendMember(new Mitbewohner());
+        $this->appendMember(new Betreuter());
+        $this->appendMember(new Berufsbetreuer());
     }
 
     /**
