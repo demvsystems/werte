@@ -27,7 +27,7 @@ final class Anreden extends AbstractProvider
         return parent::getAll();
     }
 
-    public function getOne(int $id):AnredeInterface
+    public function getOne(int $id): AnredeInterface
     {
         return parent::getOne($id);
     }
