@@ -1,7 +1,7 @@
 {
     "name": "demvsystems/werte",
-    "description": "Abbildung von allgemeinen Werten",
     "type": "library",
+    "description": "Abbildung von allgemeinen Werten",
     "homepage": "https://github.com/demvsystems/werte",
     "authors": [
         {
@@ -16,13 +16,13 @@
         "guzzlehttp/psr7": "^1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.5",
         "codeception/specify": "^0.4.5",
         "doctrine/instantiator": "^1.4",
-        "phpstan/phpstan": "^0.12.80",
-        "spaceemotion/php-coding-standard": "dev-wip/v1",
         "ergebnis/composer-normalize": "^2.8",
-        "php-parallel-lint/php-parallel-lint": "^1.2"
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "phpstan/phpstan": "^0.12.80",
+        "phpunit/phpunit": "^7.5",
+        "spaceemotion/php-coding-standard": "dev-wip/v1"
     },
     "autoload": {
         "psr-4": {
@@ -40,11 +40,11 @@
         ]
     },
     "scripts": {
-        "test": [
-            "./vendor/bin/phpunit"
-        ],
         "analyze": "phpcstd",
         "coverage": "./vendor/bin/phpunit --coverage-clover=coverage.xml",
-        "coverage-html": "./vendor/bin/phpunit --coverage-html=coverage"
+        "coverage-html": "./vendor/bin/phpunit --coverage-html=coverage",
+        "test": [
+            "./vendor/bin/phpunit"
+        ]
     }
 }

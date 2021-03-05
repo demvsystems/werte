@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63883fd842196aa6ec8d84ae4f078cab",
+    "content-hash": "aad70849b7ab380479392fabdff0689f",
     "packages": [
         {
             "name": "dgame/php-ensurance",
@@ -57,6 +57,10 @@
                 "Ensurance",
                 "assertion"
             ],
+            "support": {
+                "issues": "https://github.com/Dgame/php-ensurance/issues",
+                "source": "https://github.com/Dgame/php-ensurance/tree/master"
+            },
             "time": "2017-11-23T10:20:53+00:00"
         },
         {
@@ -122,6 +126,10 @@
                 "uri",
                 "url"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/1.4.2"
+            },
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
@@ -172,6 +180,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         }
     ],
@@ -214,6 +225,10 @@
                 }
             ],
             "description": "BDD code blocks for PHPUnit and Codeception",
+            "support": {
+                "issues": "https://github.com/Codeception/Specify/issues",
+                "source": "https://github.com/Codeception/Specify/tree/master"
+            },
             "time": "2016-10-21T09:42:00+00:00"
         },
         {
