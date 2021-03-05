@@ -18,7 +18,11 @@
     "require-dev": {
         "phpunit/phpunit": "^7.5",
         "codeception/specify": "^0.4.5",
-        "doctrine/instantiator": "^1.4"
+        "doctrine/instantiator": "^1.4",
+        "phpstan/phpstan": "^0.12.80",
+        "spaceemotion/php-coding-standard": "dev-wip/v1",
+        "ergebnis/composer-normalize": "^2.8",
+        "php-parallel-lint/php-parallel-lint": "^1.2"
     },
     "autoload": {
         "psr-4": {
@@ -39,6 +43,7 @@
         "test": [
             "./vendor/bin/phpunit"
         ],
+        "analyze": "phpcstd",
         "coverage": "./vendor/bin/phpunit --coverage-clover=coverage.xml",
         "coverage-html": "./vendor/bin/phpunit --coverage-html=coverage"
     }
