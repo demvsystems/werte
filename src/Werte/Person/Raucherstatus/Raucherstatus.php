@@ -8,16 +8,10 @@ use Demv\Werte\Person\Raucherstatus\Raucherstatus\Gelegentlich;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Ja;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Nein;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Unbekannt;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Raucherstatus
- * @package Demv\Werte\Person\Raucherstatus
- */
 class Raucherstatus extends AbstractProvider
 {
-    /**
-     * Raucherstatus constructor.
-     */
     public function __construct()
     {
         $this->appendMember(new Unbekannt());
@@ -27,7 +21,7 @@ class Raucherstatus extends AbstractProvider
     }
 
     /**
-     * @return RaucherstatusInterface[]
+     * @return RaucherstatusInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
@@ -35,9 +29,6 @@ class Raucherstatus extends AbstractProvider
     }
 
     /**
-     * @param int $id
-     *
-     * @return RaucherstatusInterface
      * @throws EntryNotFoundException
      */
     public function getOne(int $id): RaucherstatusInterface

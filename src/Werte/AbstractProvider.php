@@ -4,10 +4,6 @@ namespace Demv\Werte;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 
-/**
- * Class AbstractProvider
- * @package Demv\Werte
- */
 abstract class AbstractProvider implements ProviderInterface
 {
     /**
@@ -15,9 +11,6 @@ abstract class AbstractProvider implements ProviderInterface
      */
     private $members = [];
 
-    /**
-     * @param ValueInterface $member
-     */
     final protected function appendMember(ValueInterface $member): void
     {
         $this->members[$member->getId()] = $member;
@@ -53,11 +46,9 @@ abstract class AbstractProvider implements ProviderInterface
     }
 
     /**
-     * @param $id
-     *
      * @return mixed|null
      */
-    protected function fetchOne($id)
+    protected function fetchOne(int $id)
     {
         return isset($this->members[$id]) ? $this->members[$id] : null;
     }

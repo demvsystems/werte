@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 10:49
- */
 
 namespace Demv\Werte\Person\Taetigkeitsstatus;
 
@@ -27,11 +21,8 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Sonstige;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Taetigkeitsstatus
- * @package Demv\Werte\Person\Taetigkeitsstatus
- */
 final class Taetigkeitsstatus extends AbstractProvider
 {
     public function __construct()
@@ -57,19 +48,14 @@ final class Taetigkeitsstatus extends AbstractProvider
     }
 
     /**
-     * @return TaetigkeitsstatusInterface[]
+     * @return TaetigkeitsstatusInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return TaetigkeitsstatusInterface
-     */
-    public function getOne(int $id)
+    public function getOne(int $id): TaetigkeitsstatusInterface
     {
         return parent::getOne($id);
     }

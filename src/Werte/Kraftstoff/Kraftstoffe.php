@@ -8,11 +8,8 @@ use Demv\Werte\Kraftstoff\Kraftstoffe\Diesel;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Elektro;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Gas;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Hybrid;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Kraftstoffe
- * @package Demv\Werte\Kraftstoff
- */
 final class Kraftstoffe extends AbstractProvider
 {
     /**
@@ -28,18 +25,13 @@ final class Kraftstoffe extends AbstractProvider
     }
 
     /**
-     * @return KraftstoffInterface[]
+     * @return KraftstoffInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return KraftstoffInterface
-     */
     public function getOne(int $id): KraftstoffInterface
     {
         return parent::getOne($id);

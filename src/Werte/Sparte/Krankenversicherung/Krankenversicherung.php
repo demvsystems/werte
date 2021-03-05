@@ -7,16 +7,10 @@ use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\Beihilfe;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\FreieHeilfuersorge;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\GKV;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\PKV;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Krankenversicherung
- * @package Demv\Werte\Sparte\Krankenversicherung
- */
 final class Krankenversicherung extends AbstractProvider
 {
-    /**
-     * Krankenversicherung constructor.
-     */
     public function __construct()
     {
         $this->appendMember(new GKV());
@@ -26,19 +20,14 @@ final class Krankenversicherung extends AbstractProvider
     }
 
     /**
-     * @return KrankenversicherungInterface[]
+     * @return KrankenversicherungInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return KrankenversicherungInterface
-     */
-    public function getOne(int $id)
+    public function getOne(int $id): KrankenversicherungInterface
     {
         return parent::getOne($id);
     }

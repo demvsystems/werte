@@ -6,11 +6,8 @@ use Demv\Werte\AbstractProvider;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\Moeglich;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\NichtMoeglich;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\ZeitweiseNichtMoeglich;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class BuMoeglichkeiten
- * @package Demv\Werte\Person\BuMoeglichkeit
- */
 final class BuMoeglichkeiten extends AbstractProvider
 {
     public function __construct()
@@ -21,19 +18,14 @@ final class BuMoeglichkeiten extends AbstractProvider
     }
 
     /**
-     * @return BuMoeglichkeitInterface[]
+     * @return BuMoeglichkeitInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return BuMoeglichkeitInterface
-     */
-    public function getOne(int $id)
+    public function getOne(int $id): BuMoeglichkeitInterface
     {
         return parent::getOne($id);
     }

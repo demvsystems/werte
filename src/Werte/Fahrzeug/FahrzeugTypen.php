@@ -3,11 +3,8 @@
 namespace Demv\Werte\Fahrzeug;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class FahrzeugTypen
- * @package Demv\Werte\Fahrzeug
- */
 final class FahrzeugTypen extends AbstractProvider
 {
     public function __construct()
@@ -28,18 +25,13 @@ final class FahrzeugTypen extends AbstractProvider
     }
 
     /**
-     * @return FahrzeugTypInterface[]
+     * @return FahrzeugTypInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return FahrzeugTypInterface
-     */
     public function getOne(int $id): FahrzeugTypInterface
     {
         return parent::getOne($id);

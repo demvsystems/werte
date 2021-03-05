@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 03.02.17
- * Time: 11:17
- */
 
 namespace Demv\Werte\Person\Familienstand;
 
@@ -17,11 +11,8 @@ use Demv\Werte\Person\Familienstand\Familienstaende\Ledig;
 use Demv\Werte\Person\Familienstand\Familienstaende\Unbekannt;
 use Demv\Werte\Person\Familienstand\Familienstaende\Verheiratet;
 use Demv\Werte\Person\Familienstand\Familienstaende\Verwitwet;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Familienstaende
- * @package Demv\Werte\Person\Familienstand
- */
 class Familienstaende extends AbstractProvider
 {
     public function __construct()
@@ -37,19 +28,14 @@ class Familienstaende extends AbstractProvider
     }
 
     /**
-     * @return FamilienstandInterface[]
+     * @return FamilienstandInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return FamilienstandInterface
-     */
-    public function getOne(int $id)
+    public function getOne(int $id): FamilienstandInterface
     {
         return parent::getOne($id);
     }

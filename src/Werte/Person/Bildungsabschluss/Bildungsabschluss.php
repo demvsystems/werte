@@ -23,11 +23,8 @@ use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\Fachabitur;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\Hauptschulabschluss;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\KeinAbschluss;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\MittlereReife;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Bildungsabschluss
- * @package Demv\Werte\Person\Bildungsabschluss
- */
 class Bildungsabschluss extends AbstractProvider
 {
     public function __construct()
@@ -38,25 +35,20 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]
+     * @return BildungsabschlussInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return BildungsabschlussInterface
-     */
     public function getOne(int $id): BildungsabschlussInterface
     {
         return parent::getOne($id);
     }
 
     /**
-     * @return BildungsabschlussInterface[]
+     * @return BildungsabschlussInterface[]|ValueInterface[]
      */
     public function getBildungSchule(): array
     {
@@ -64,7 +56,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]
+     * @return BildungsabschlussInterface[]|ValueInterface[]
      */
     public function getBildungBeruflich(): array
     {
@@ -72,7 +64,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]
+     * @return BildungsabschlussInterface[]|ValueInterface[]
      */
     public function getBildungHochschule(): array
     {
@@ -98,7 +90,7 @@ class Bildungsabschluss extends AbstractProvider
         $this->appendMember(new BetriebswirtFachwirt());
     }
 
-    private function appendHochschuleMembers()
+    private function appendHochschuleMembers(): void
     {
         $this->appendMember(new ImStudium());
         $this->appendMember(new BachelorFachhochschule());
@@ -112,9 +104,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @param string $gruppe
-     *
-     * @return BildungsabschlussInterface[]
+     * @return BildungsabschlussInterface[]|ValueInterface[]
      */
     private function getMembers(string $gruppe): array
     {

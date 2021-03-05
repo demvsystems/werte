@@ -6,11 +6,9 @@ use Demv\Werte\AbstractProvider;
 use Demv\Werte\Altersvorsorge\Produkterfahrung\KeineErfahrung;
 use Demv\Werte\Altersvorsorge\Produkterfahrung\VielErfahrung;
 use Demv\Werte\Altersvorsorge\Produkterfahrung\WenigErfahrung;
+use Demv\Werte\Exception\EntryNotFoundException;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Produkterfahrung
- * @package Demv\Werte\Altersvorsorge
- */
 final class Produkterfahrung extends AbstractProvider
 {
     /**
@@ -24,10 +22,7 @@ final class Produkterfahrung extends AbstractProvider
     }
 
     /**
-     * @param int $id
-     *
-     * @return ProdukterfahrungInterface
-     * @throws \Demv\Werte\Exception\EntryNotFoundException
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id): ProdukterfahrungInterface
     {
@@ -35,7 +30,7 @@ final class Produkterfahrung extends AbstractProvider
     }
 
     /**
-     * @return ProdukterfahrungInterface[]
+     * @return ProdukterfahrungInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {

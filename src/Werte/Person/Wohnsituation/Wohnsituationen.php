@@ -7,16 +7,10 @@ use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiAndererPerson;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiEltern;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\InEigentum;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\ZurMiete;
+use Demv\Werte\ValueInterface;
 
-/**
- * Class Wohnsituation
- * @package Demv\Werte\Person\Wohnsituation
- */
 final class Wohnsituationen extends AbstractProvider
 {
-    /**
-     * Wohnsituation constructor.
-     */
     public function __construct()
     {
         $this->appendMember(new ZurMiete());
@@ -26,19 +20,14 @@ final class Wohnsituationen extends AbstractProvider
     }
 
     /**
-     * @return WohnsituationInterface[]
+     * @return WohnsituationInterface[]|ValueInterface[]
      */
     public function getAll(): array
     {
         return parent::getAll();
     }
 
-    /**
-     * @param int $id
-     *
-     * @return WohnsituationInterface
-     */
-    public function getOne(int $id)
+    public function getOne(int $id): WohnsituationInterface
     {
         return parent::getOne($id);
     }

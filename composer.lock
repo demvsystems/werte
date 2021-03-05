@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aad70849b7ab380479392fabdff0689f",
+    "content-hash": "356a28f64e0d919e4c48c19ab7087920",
     "packages": [
         {
             "name": "dgame/php-ensurance",
@@ -3145,7 +3145,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
