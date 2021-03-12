@@ -4,6 +4,10 @@ namespace Demv\Werte;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 
+/**
+ * Class AbstractProvider
+ * @package Demv\Werte
+ */
 abstract class AbstractProvider implements ProviderInterface
 {
     /**

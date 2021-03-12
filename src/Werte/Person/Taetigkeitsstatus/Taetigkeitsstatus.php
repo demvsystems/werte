@@ -3,6 +3,7 @@
 namespace Demv\Werte\Person\Taetigkeitsstatus;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
@@ -23,6 +24,10 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Class Taetigkeitsstatus
+ * @package Demv\Werte\Person\Taetigkeitsstatus
+ */
 final class Taetigkeitsstatus extends AbstractProvider
 {
     public function __construct()
@@ -55,6 +60,13 @@ final class Taetigkeitsstatus extends AbstractProvider
         return parent::getAll();
     }
 
+    /**
+     * @param int $id
+     *
+     * @return TaetigkeitsstatusInterface
+     *
+     * @throws EntryNotFoundException
+     */
     public function getOne(int $id): TaetigkeitsstatusInterface
     {
         return parent::getOne($id);
