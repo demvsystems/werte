@@ -116,8 +116,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
-          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+          key: ${{ runner.os }}-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}-composer
+          restore-keys: ${{ runner.os }}-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}-composer
 
       - name: Install dependencies
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
