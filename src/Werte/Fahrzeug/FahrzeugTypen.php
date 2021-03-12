@@ -30,7 +30,7 @@ final class FahrzeugTypen extends AbstractProvider
     }
 
     /**
-     * @return FahrzeugTypInterface[]|ValueInterface[]
+     * @return FahrzeugTypInterface[]
      */
     public function getAll(): array
     {

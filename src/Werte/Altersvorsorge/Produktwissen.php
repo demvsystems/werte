@@ -40,7 +40,7 @@ final class Produktwissen extends AbstractProvider
     }
 
     /**
-     * @return ProduktwissenInterface[]|ValueInterface[]
+     * @return ProduktwissenInterface[]
      */
     public function getAll(): array
     {

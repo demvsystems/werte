@@ -26,7 +26,7 @@ final class ImmobilienTypen extends AbstractProvider
     }
 
     /**
-     * @return ImmobilienTypInterface[]|ValueInterface[]
+     * @return ImmobilienTypInterface[]
      */
     public function getAll(): array
     {

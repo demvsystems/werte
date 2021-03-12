@@ -83,7 +83,7 @@ final class Beziehungstypen extends AbstractProvider
     }
 
     /**
-     * @return BeziehungsTypInterface[]|ValueInterface[]
+     * @return BeziehungsTypInterface[]
      */
     public function getAll(): array
     {

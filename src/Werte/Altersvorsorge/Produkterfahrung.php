@@ -37,7 +37,7 @@ final class Produkterfahrung extends AbstractProvider
     }
 
     /**
-     * @return ProdukterfahrungInterface[]|ValueInterface[]
+     * @return ProdukterfahrungInterface[]
      */
     public function getAll(): array
     {

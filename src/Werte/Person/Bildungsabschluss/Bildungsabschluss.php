@@ -40,7 +40,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]|ValueInterface[]
+     * @return BildungsabschlussInterface[]
      */
     public function getAll(): array
     {
@@ -60,7 +60,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]|ValueInterface[]
+     * @return BildungsabschlussInterface[]
      */
     public function getBildungSchule(): array
     {
@@ -68,7 +68,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]|ValueInterface[]
+     * @return BildungsabschlussInterface[]
      */
     public function getBildungBeruflich(): array
     {
@@ -76,7 +76,7 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
-     * @return BildungsabschlussInterface[]|ValueInterface[]
+     * @return BildungsabschlussInterface[]
      */
     public function getBildungHochschule(): array
     {
@@ -118,7 +118,7 @@ class Bildungsabschluss extends AbstractProvider
     /**
      * @param string $gruppe
      *
-     * @return BildungsabschlussInterface[]|ValueInterface[]
+     * @return BildungsabschlussInterface[]
      */
     private function getMembers(string $gruppe): array
     {

@@ -25,7 +25,7 @@ final class Hobbies extends AbstractProvider
     }
 
     /**
-     * @return HobbyInterface[]|ValueInterface[]
+     * @return HobbyInterface[]
      */
     public function getAll(): array
     {

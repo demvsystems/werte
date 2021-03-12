@@ -25,7 +25,7 @@ final class Wohnsituationen extends AbstractProvider
     }
 
     /**
-     * @return WohnsituationInterface[]|ValueInterface[]
+     * @return WohnsituationInterface[]
      */
     public function getAll(): array
     {

@@ -25,7 +25,7 @@ final class Anreden extends AbstractProvider
     }
 
     /**
-     * @return AnredeInterface[]|ValueInterface[]
+     * @return AnredeInterface[]
      */
     public function getAll(): array
     {

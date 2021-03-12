@@ -25,7 +25,7 @@ class Raucherstatus extends AbstractProvider
     }
 
     /**
-     * @return RaucherstatusInterface[]|ValueInterface[]
+     * @return RaucherstatusInterface[]
      */
     public function getAll(): array
     {

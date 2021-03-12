@@ -53,7 +53,7 @@ final class Taetigkeitsstatus extends AbstractProvider
     }
 
     /**
-     * @return TaetigkeitsstatusInterface[]|ValueInterface[]
+     * @return TaetigkeitsstatusInterface[]
      */
     public function getAll(): array
     {

@@ -21,7 +21,7 @@ final class Tierarten extends AbstractProvider
     }
 
     /**
-     * @return TierartInterface[]|ValueInterface[]
+     * @return TierartInterface[]
      */
     public function getAll(): array
     {

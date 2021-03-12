@@ -30,7 +30,7 @@ final class Kraftstoffe extends AbstractProvider
     }
 
     /**
-     * @return KraftstoffInterface[]|ValueInterface[]
+     * @return KraftstoffInterface[]
      */
     public function getAll(): array
     {

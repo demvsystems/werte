@@ -25,7 +25,7 @@ final class Krankenversicherung extends AbstractProvider
     }
 
     /**
-     * @return KrankenversicherungInterface[]|ValueInterface[]
+     * @return KrankenversicherungInterface[]
      */
     public function getAll(): array
     {

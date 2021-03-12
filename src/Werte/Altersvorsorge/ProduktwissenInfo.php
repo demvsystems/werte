@@ -38,7 +38,7 @@ final class ProduktwissenInfo extends AbstractProvider
     }
 
     /**
-     * @return ProduktwissenInfoInterface[]|ValueInterface[]
+     * @return ProduktwissenInfoInterface[]
      */
     public function getAll(): array
     {

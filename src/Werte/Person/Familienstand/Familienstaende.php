@@ -33,7 +33,7 @@ class Familienstaende extends AbstractProvider
     }
 
     /**
-     * @return FamilienstandInterface[]|ValueInterface[]
+     * @return FamilienstandInterface[]
      */
     public function getAll(): array
     {

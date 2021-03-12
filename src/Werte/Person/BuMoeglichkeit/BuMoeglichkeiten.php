@@ -23,7 +23,7 @@ final class BuMoeglichkeiten extends AbstractProvider
     }
 
     /**
-     * @return BuMoeglichkeitInterface[]|ValueInterface[]
+     * @return BuMoeglichkeitInterface[]
      */
     public function getAll(): array
     {
