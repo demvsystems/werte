@@ -3,6 +3,7 @@
 namespace Demv\Werte\Kraftstoff;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Benzin;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Diesel;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Elektro;
@@ -10,6 +11,10 @@ use Demv\Werte\Kraftstoff\Kraftstoffe\Gas;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Hybrid;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Class Kraftstoffe
+ * @package Demv\Werte\Kraftstoff
+ */
 final class Kraftstoffe extends AbstractProvider
 {
     /**
@@ -32,6 +37,13 @@ final class Kraftstoffe extends AbstractProvider
         return parent::getAll();
     }
 
+    /**
+     * @param int $id
+     *
+     * @return KraftstoffInterface
+     *
+     * @throws EntryNotFoundException
+     */
     public function getOne(int $id): KraftstoffInterface
     {
         return parent::getOne($id);

@@ -3,6 +3,7 @@
 namespace Demv\Werte\Person\Bildungsabschluss;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AbschlussAlsMeister;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungHandwerk;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungKaufmaennisch;
@@ -25,6 +26,10 @@ use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\KeinAbschluss;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\MittlereReife;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Class Bildungsabschluss
+ * @package Demv\Werte\Person\Bildungsabschluss
+ */
 class Bildungsabschluss extends AbstractProvider
 {
     public function __construct()
@@ -42,6 +47,13 @@ class Bildungsabschluss extends AbstractProvider
         return parent::getAll();
     }
 
+    /**
+     * @param int $id
+     *
+     * @return BildungsabschlussInterface
+     *
+     * @throws EntryNotFoundException
+     */
     public function getOne(int $id): BildungsabschlussInterface
     {
         return parent::getOne($id);
@@ -104,6 +116,8 @@ class Bildungsabschluss extends AbstractProvider
     }
 
     /**
+     * @param string $gruppe
+     *
      * @return BildungsabschlussInterface[]|ValueInterface[]
      */
     private function getMembers(string $gruppe): array

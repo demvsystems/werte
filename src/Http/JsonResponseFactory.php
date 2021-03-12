@@ -12,7 +12,10 @@ use Psr\Http\Message\ResponseInterface;
 final class JsonResponseFactory
 {
     /**
+     * @param int $code
      * @param mixed[] $content
+     *
+     * @return ResponseInterface
      */
     public static function success(int $code, array $content): ResponseInterface
     {
@@ -22,7 +25,10 @@ final class JsonResponseFactory
     }
 
     /**
+     * @param int $code
      * @param mixed[] $content
+     *
+     * @return ResponseInterface
      */
     public static function failed(int $code, array $content): ResponseInterface
     {
@@ -32,7 +38,10 @@ final class JsonResponseFactory
     }
 
     /**
+     * @param int $code
      * @param mixed[] $body
+     *
+     * @return ResponseInterface
      */
     public static function error(int $code, array $body): ResponseInterface
     {
@@ -49,6 +58,8 @@ final class JsonResponseFactory
 
     /**
      * @param mixed[] $body
+     *
+     * @return string
      */
     private static function getJsonEncode(array $body): string
     {

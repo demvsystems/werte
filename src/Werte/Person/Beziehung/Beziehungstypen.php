@@ -39,6 +39,10 @@ use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Class Beziehungstypen
+ * @package Demv\Werte\Person\Beziehung
+ */
 final class Beziehungstypen extends AbstractProvider
 {
     public function __construct()
@@ -87,6 +91,10 @@ final class Beziehungstypen extends AbstractProvider
     }
 
     /**
+     * @param int $id
+     *
+     * @return BeziehungsTypInterface
+     *
      * @throws EntryNotFoundException
      */
     public function getOne(int $id): BeziehungsTypInterface

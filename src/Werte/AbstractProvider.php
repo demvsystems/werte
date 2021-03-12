@@ -11,6 +11,9 @@ abstract class AbstractProvider implements ProviderInterface
      */
     private $members = [];
 
+    /**
+     * @param ValueInterface $member
+     */
     final protected function appendMember(ValueInterface $member): void
     {
         $this->members[$member->getId()] = $member;
@@ -46,6 +49,8 @@ abstract class AbstractProvider implements ProviderInterface
     }
 
     /**
+     * @param int $id
+     *
      * @return mixed|null
      */
     protected function fetchOne(int $id)

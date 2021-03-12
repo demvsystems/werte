@@ -10,6 +10,10 @@ use Demv\Werte\Person\Raucherstatus\Raucherstatus\Nein;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Unbekannt;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Class Raucherstatus
+ * @package Demv\Werte\Person\Raucherstatus
+ */
 class Raucherstatus extends AbstractProvider
 {
     public function __construct()
@@ -29,6 +33,10 @@ class Raucherstatus extends AbstractProvider
     }
 
     /**
+     * @param int $id
+     *
+     * @return RaucherstatusInterface
+     *
      * @throws EntryNotFoundException
      */
     public function getOne(int $id): RaucherstatusInterface

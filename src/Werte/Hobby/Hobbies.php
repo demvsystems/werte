@@ -3,12 +3,17 @@
 namespace Demv\Werte\Hobby;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Hobby\Hobbies\Camping;
 use Demv\Werte\Hobby\Hobbies\Jagdsport;
 use Demv\Werte\Hobby\Hobbies\Luftsport;
 use Demv\Werte\Hobby\Hobbies\Wassersport;
 use Demv\Werte\ValueInterface;
 
+/**
+ * Class Hobbies
+ * @package Demv\Werte\Hobby
+ */
 final class Hobbies extends AbstractProvider
 {
     public function __construct()
@@ -27,6 +32,13 @@ final class Hobbies extends AbstractProvider
         return parent::getAll();
     }
 
+    /**
+     * @param int $id
+     *
+     * @return HobbyInterface
+     *
+     * @throws EntryNotFoundException
+     */
     public function getOne(int $id): HobbyInterface
     {
         return parent::getOne($id);

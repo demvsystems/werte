@@ -4,9 +4,14 @@ namespace Demv\Werte\Exception;
 
 use Exception;
 
+/**
+ * Class EntryNotFoundException
+ * @package Demv\Werte\Exception
+ */
 class EntryNotFoundException extends Exception
 {
     /**
+     * @param string $classname
      * @param string|int $id
      */
     public function __construct(string $classname, $id)
