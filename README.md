@@ -21,7 +21,7 @@ Zum Entwickeln ist ein Dockerfile enthalten.
 
 1. `$ cp ./.env.example ./.env`
 2. Einen Github Token zur `.env` hinzufügen
-3. `sh run.sh composer install`
+3. `bash run.sh composer install`
 
 ### Benutzung
 
