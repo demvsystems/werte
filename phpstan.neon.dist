@@ -13,3 +13,6 @@ parameters:
 
   scanDirectories:
     - src
+
+  ignoreErrors:
+    - '#but returns array<Demv\\Werte\\ValueInterface>#'
