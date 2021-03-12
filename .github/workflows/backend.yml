@@ -14,27 +14,25 @@ on:
 
 env:
   PHP_TOOLS: composer:v2
-  PHP_VERSION: '7.1'
 
 jobs:
-  lint-and-test:
-    runs-on: ubuntu-18.04
+  test:
+    runs-on: ${{ matrix.operating-system }}
     if: github.event.pull_request.draft == false
+    strategy:
+      matrix:
+        operating-system: [ 'ubuntu-latest' ]
+        php-versions: [ '7.1', '7.2', '7.3', '7.4']
     env:
       APP_ENV: test
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.6.0
-        with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ env.PHP_VERSION }}
+          php-version: ${{ matrix.php-versions }}
           tools: ${{ env.PHP_TOOLS }}
           ini-values: memory_limit=512M, short_open_tag=On
           coverage: none
@@ -56,8 +54,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
-          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+          key: ${{ runner.os }}-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}-composer
+          restore-keys: ${{ runner.os }}-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}-composer
 
       - name: Install dependencies
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
