@@ -21,7 +21,7 @@ Zum Entwickeln ist ein Dockerfile enthalten.
 
 1. `$ cp ./.env.example ./.env`
 2. Einen Github Token zur `.env` hinzufügen
-3. Für Php Version 7 `bash run.sh -v7 composer install`
+3. Für Php Version 7 `bash run.sh -v7 composer install`<br/>
 Für Php Version 8 `bash run.sh -v8 composer install`
 
 ### Benutzung
@@ -30,5 +30,5 @@ Beim ausführen des `run.sh` Scripts muss mit dem Argument `-v` die Php Version 
 
 Befehle im Docker Container führt ihr aus mit:
 
-Für Php Version 7: `sh run.sh -v7 composer test`
+Für Php Version 7: `sh run.sh -v7 composer test`<br/>
 Für Php Version 8: `sh run.sh -v8 composer test`
