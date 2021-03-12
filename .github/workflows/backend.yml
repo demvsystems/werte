@@ -56,8 +56,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
-          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer-2
+          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer-2
 
       - name: Install dependencies
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
@@ -83,11 +83,6 @@ jobs:
     env:
       APP_ENV: test
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.6.0
-        with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Checkout
         uses: actions/checkout@v2
 
