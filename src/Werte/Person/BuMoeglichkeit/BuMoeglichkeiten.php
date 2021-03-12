@@ -7,7 +7,6 @@ use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\Moeglich;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\NichtMoeglich;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\ZeitweiseNichtMoeglich;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class BuMoeglichkeiten

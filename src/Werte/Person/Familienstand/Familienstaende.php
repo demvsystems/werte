@@ -12,7 +12,6 @@ use Demv\Werte\Person\Familienstand\Familienstaende\Ledig;
 use Demv\Werte\Person\Familienstand\Familienstaende\Unbekannt;
 use Demv\Werte\Person\Familienstand\Familienstaende\Verheiratet;
 use Demv\Werte\Person\Familienstand\Familienstaende\Verwitwet;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Familienstaende

@@ -8,7 +8,6 @@ use Demv\Werte\Person\Raucherstatus\Raucherstatus\Gelegentlich;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Ja;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Nein;
 use Demv\Werte\Person\Raucherstatus\Raucherstatus\Unbekannt;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Raucherstatus

@@ -8,7 +8,6 @@ use Demv\Werte\Altersvorsorge\Produktwissen\RentenversicherungAnsparphase;
 use Demv\Werte\Altersvorsorge\Produktwissen\RentenversicherungAuszahlungsphase;
 use Demv\Werte\Altersvorsorge\Produktwissen\TermfixLebensversicherung;
 use Demv\Werte\Exception\EntryNotFoundException;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Produktwissen

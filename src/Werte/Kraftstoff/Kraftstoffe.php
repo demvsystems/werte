@@ -9,7 +9,6 @@ use Demv\Werte\Kraftstoff\Kraftstoffe\Diesel;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Elektro;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Gas;
 use Demv\Werte\Kraftstoff\Kraftstoffe\Hybrid;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Kraftstoffe

@@ -8,7 +8,6 @@ use Demv\Werte\Hobby\Hobbies\Camping;
 use Demv\Werte\Hobby\Hobbies\Jagdsport;
 use Demv\Werte\Hobby\Hobbies\Luftsport;
 use Demv\Werte\Hobby\Hobbies\Wassersport;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Hobbies

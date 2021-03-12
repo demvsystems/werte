@@ -7,7 +7,6 @@ use Demv\Werte\Altersvorsorge\Produktwissen\Info\Fondsgebunden;
 use Demv\Werte\Altersvorsorge\Produktwissen\Info\Hybrid;
 use Demv\Werte\Altersvorsorge\Produktwissen\Info\Klassisch;
 use Demv\Werte\Exception\EntryNotFoundException;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class ProduktwissenInfo

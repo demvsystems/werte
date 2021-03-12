@@ -22,7 +22,6 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Sonstige;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Taetigkeitsstatus

@@ -8,7 +8,6 @@ use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\Beihilfe;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\FreieHeilfuersorge;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\GKV;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\PKV;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Krankenversicherung

@@ -4,7 +4,6 @@ namespace Demv\Werte\Fahrzeug;
 
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Exception\EntryNotFoundException;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class FahrzeugTypen

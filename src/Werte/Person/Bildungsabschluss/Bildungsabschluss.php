@@ -24,7 +24,6 @@ use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\Fachabitur;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\Hauptschulabschluss;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\KeinAbschluss;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Schule\MittlereReife;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Bildungsabschluss

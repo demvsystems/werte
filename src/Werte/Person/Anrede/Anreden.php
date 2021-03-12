@@ -8,7 +8,6 @@ use Demv\Werte\Person\Anrede\Anreden\Firma;
 use Demv\Werte\Person\Anrede\Anreden\Frau;
 use Demv\Werte\Person\Anrede\Anreden\Herr;
 use Demv\Werte\Person\Anrede\Anreden\LeereAnrede;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Anreden

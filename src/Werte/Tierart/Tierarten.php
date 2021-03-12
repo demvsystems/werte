@@ -6,7 +6,6 @@ use Demv\Werte\AbstractProvider;
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Tierart\Tierarten\Hund;
 use Demv\Werte\Tierart\Tierarten\Pferd;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Tierarten

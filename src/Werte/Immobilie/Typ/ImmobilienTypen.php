@@ -7,7 +7,6 @@ use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Immobilie\Typ\Typen\FreiesGrundstueck;
 use Demv\Werte\Immobilie\Typ\Typen\Haus;
 use Demv\Werte\Immobilie\Typ\Typen\Wohnung;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class ImmobilienTypen

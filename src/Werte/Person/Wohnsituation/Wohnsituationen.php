@@ -8,7 +8,6 @@ use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiAndererPerson;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiEltern;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\InEigentum;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\ZurMiete;
-use Demv\Werte\ValueInterface;
 
 /**
  * Class Wohnsituationen
