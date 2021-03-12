@@ -17,7 +17,7 @@ env:
   PHP_VERSION: '7.1'
 
 jobs:
-  lint-and-test:
+  lint:
     runs-on: ubuntu-18.04
     if: github.event.pull_request.draft == false
     env:
@@ -35,6 +35,66 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
+          tools: ${{ env.PHP_TOOLS }}
+          ini-values: memory_limit=512M, short_open_tag=On
+          coverage: none
+          extensions: ${{ env.PHP_EXTENSIONS }}
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Display PHP information
+        run: |
+          php -v
+          php -m
+          composer --version
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
+
+      - name: Cache phpstan
+        uses: actions/cache@v2
+        with:
+          path: /tmp/phpstan/cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
+          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
+
+      - name: Run phpcstd
+        if: github.event_name == 'pull_request'
+        run: vendor/bin/phpcstd --ci --ansi --continue
+
+  test:
+    runs-on: ${{ matrix.operating-system }}
+    if: github.event.pull_request.draft == false
+    strategy:
+      matrix:
+        operating-system: [ 'ubuntu-latest' ]
+        php-versions: [ '7.1', '7.2', '7.3', '7.4', '8.0']
+    env:
+      APP_ENV: test
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.6.0
+        with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
           tools: ${{ env.PHP_TOOLS }}
           ini-values: memory_limit=512M, short_open_tag=On
           coverage: none
