@@ -2,7 +2,7 @@
 
 namespace Demv\Werte\Betrag;
 
-use function Dgame\Ensurance\enforce;
+use Exception;
 
 /**
  * Class Einkommen
@@ -22,7 +22,9 @@ final class Einkommen
      */
     public function __construct(BetragInterface $betrag)
     {
-        enforce($betrag->isPositiv())->orThrow('Der Betrag des Einkommens muss positiv sein');
+        if (!$betrag->isPositiv()) {
+            throw new Exception('Der Betrag des Einkommens muss positiv sein');
+        }
 
         $this->betrag = $betrag;
     }

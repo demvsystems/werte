@@ -4,7 +4,6 @@ namespace Demv\Werte\Tests\Betrag;
 
 use Demv\Werte\Betrag\Einkommen;
 use Demv\Werte\Betrag\Euro;
-use Dgame\Ensurance\Exception\EnsuranceException;
 use PHPUnit\Framework\TestCase;
 
 class EinkommenTest extends TestCase
@@ -21,7 +20,7 @@ class EinkommenTest extends TestCase
 
     public function testInvalidAmount(): void
     {
-        $this->expectException(EnsuranceException::class);
+        $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Der Betrag des Einkommens muss positiv sein');
 
         new Einkommen(new Euro(-100));
