@@ -1,0 +1,18 @@
+includes:
+  - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+  - vendor/phpstan/phpstan-phpunit/extension.neon
+  - vendor/phpstan/phpstan-phpunit/rules.neon
+
+parameters:
+  level: max
+  checkMissingIterableValueType: false
+  tipsOfTheDay: false
+
+  paths:
+    - src
+
+  scanDirectories:
+    - src
+
+  ignoreErrors:
+    - '#but returns array<Demv\\Werte\\ValueInterface>#'

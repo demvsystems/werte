@@ -3,6 +3,7 @@
 namespace Demv\Werte\Person\BuMoeglichkeit;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\Moeglich;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\NichtMoeglich;
 use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\ZeitweiseNichtMoeglich;
@@ -32,8 +33,10 @@ final class BuMoeglichkeiten extends AbstractProvider
      * @param int $id
      *
      * @return BuMoeglichkeitInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): BuMoeglichkeitInterface
     {
         return parent::getOne($id);
     }

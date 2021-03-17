@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 10:49
- */
 
 namespace Demv\Werte\Person\Taetigkeitsstatus;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
@@ -68,8 +63,10 @@ final class Taetigkeitsstatus extends AbstractProvider
      * @param int $id
      *
      * @return TaetigkeitsstatusInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): TaetigkeitsstatusInterface
     {
         return parent::getOne($id);
     }

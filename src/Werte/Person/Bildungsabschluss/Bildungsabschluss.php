@@ -3,6 +3,7 @@
 namespace Demv\Werte\Person\Bildungsabschluss;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AbschlussAlsMeister;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungHandwerk;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungKaufmaennisch;
@@ -49,6 +50,8 @@ class Bildungsabschluss extends AbstractProvider
      * @param int $id
      *
      * @return BildungsabschlussInterface
+     *
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id): BildungsabschlussInterface
     {
@@ -98,7 +101,7 @@ class Bildungsabschluss extends AbstractProvider
         $this->appendMember(new BetriebswirtFachwirt());
     }
 
-    private function appendHochschuleMembers()
+    private function appendHochschuleMembers(): void
     {
         $this->appendMember(new ImStudium());
         $this->appendMember(new BachelorFachhochschule());

@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 03.02.17
- * Time: 11:17
- */
 
 namespace Demv\Werte\Person\Familienstand;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Familienstand\Familienstaende\EingetrageneLebenspartnerschaft;
 use Demv\Werte\Person\Familienstand\Familienstaende\Geschieden;
 use Demv\Werte\Person\Familienstand\Familienstaende\GetrenntLebend;
@@ -48,8 +43,10 @@ class Familienstaende extends AbstractProvider
      * @param int $id
      *
      * @return FamilienstandInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): FamilienstandInterface
     {
         return parent::getOne($id);
     }

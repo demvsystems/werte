@@ -3,6 +3,7 @@
 namespace Demv\Werte\Fahrzeug;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
  * Class FahrzeugTypen
@@ -39,6 +40,8 @@ final class FahrzeugTypen extends AbstractProvider
      * @param int $id
      *
      * @return FahrzeugTypInterface
+     *
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id): FahrzeugTypInterface
     {

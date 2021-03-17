@@ -3,6 +3,7 @@
 namespace Demv\Werte\Immobilie\Typ;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Immobilie\Typ\Typen\FreiesGrundstueck;
 use Demv\Werte\Immobilie\Typ\Typen\Haus;
 use Demv\Werte\Immobilie\Typ\Typen\Wohnung;
@@ -35,8 +36,10 @@ final class ImmobilienTypen extends AbstractProvider
      * @param int $id
      *
      * @return ImmobilienTypInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): ImmobilienTypInterface
     {
         return parent::getOne($id);
     }

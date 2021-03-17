@@ -15,9 +15,6 @@ use Demv\Werte\Person\Raucherstatus\Raucherstatus\Unbekannt;
  */
 class Raucherstatus extends AbstractProvider
 {
-    /**
-     * Raucherstatus constructor.
-     */
     public function __construct()
     {
         $this->appendMember(new Unbekannt());
@@ -38,6 +35,7 @@ class Raucherstatus extends AbstractProvider
      * @param int $id
      *
      * @return RaucherstatusInterface
+     *
      * @throws EntryNotFoundException
      */
     public function getOne(int $id): RaucherstatusInterface

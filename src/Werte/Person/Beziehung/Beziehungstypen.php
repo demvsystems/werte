@@ -93,9 +93,10 @@ final class Beziehungstypen extends AbstractProvider
      * @param int $id
      *
      * @return BeziehungsTypInterface
+     *
      * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): BeziehungsTypInterface
     {
         return parent::getOne($id);
     }

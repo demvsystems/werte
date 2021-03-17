@@ -12,8 +12,8 @@ use Psr\Http\Message\ResponseInterface;
 final class JsonResponseFactory
 {
     /**
-     * @param int   $code
-     * @param array $content
+     * @param int $code
+     * @param mixed[] $content
      *
      * @return ResponseInterface
      */
@@ -21,12 +21,12 @@ final class JsonResponseFactory
     {
         $body = ['success' => true, 'content' => $content];
 
-        return new Response($code, self::getHeader(), json_encode($body));
+        return new Response($code, self::getHeader(), self::getJsonEncode($body));
     }
 
     /**
-     * @param int   $code
-     * @param array $content
+     * @param int $code
+     * @param mixed[] $content
      *
      * @return ResponseInterface
      */
@@ -34,18 +34,18 @@ final class JsonResponseFactory
     {
         $body = ['success' => false, 'content' => $content];
 
-        return new Response($code, self::getHeader(), json_encode($body));
+        return new Response($code, self::getHeader(), self::getJsonEncode($body));
     }
 
     /**
-     * @param int   $code
-     * @param array $body
+     * @param int $code
+     * @param mixed[] $body
      *
      * @return ResponseInterface
      */
     public static function error(int $code, array $body): ResponseInterface
     {
-        return new Response($code, self::getHeader(), json_encode($body));
+        return new Response($code, self::getHeader(), self::getJsonEncode($body));
     }
 
     /**
@@ -54,5 +54,21 @@ final class JsonResponseFactory
     private static function getHeader(): array
     {
         return [];
+    }
+
+    /**
+     * @param mixed[] $body
+     *
+     * @return string
+     */
+    private static function getJsonEncode(array $body): string
+    {
+        $json = json_encode($body);
+
+        if ($json === false) {
+            return '';
+        }
+
+        return $json;
     }
 }
