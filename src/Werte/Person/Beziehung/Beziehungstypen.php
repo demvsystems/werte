@@ -37,6 +37,8 @@ use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
+use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 
 /**
  * Class Beziehungstypen
@@ -79,6 +81,8 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Mitbewohner());
         $this->appendMember(new Betreuter());
         $this->appendMember(new Berufsbetreuer());
+        $this->appendMember(new Verein());
+        $this->appendMember(new VorstandVonVerein());
     }
 
     /**
