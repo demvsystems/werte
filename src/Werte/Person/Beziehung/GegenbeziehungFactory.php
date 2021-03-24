@@ -15,11 +15,17 @@ use Demv\Werte\Person\Beziehung\Beruflich\Betreuter;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonGesellschafter;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
+use Demv\Werte\Person\Beziehung\Beruflich\Gesellschafter;
 use Demv\Werte\Person\Beziehung\Beruflich\Hauptgeschaeftsstelle;
+use Demv\Werte\Person\Beziehung\Beruflich\Hausverwaltung;
+use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienVerwaltetVon;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\Muttergesellschaft;
+use Demv\Werte\Person\Beziehung\Beruflich\Tochtergesellschaft;
 use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
@@ -41,6 +47,8 @@ use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
+use Demv\Werte\Person\Beziehung\Privat\Pflegeeltern;
+use Demv\Werte\Person\Beziehung\Privat\Pflegekind;
 
 /**
  * Class GegenbeziehungFactory
@@ -81,7 +89,11 @@ final class GegenbeziehungFactory
         $pairs[Stiefelternteil::ID]                   = Stiefkind::ID;
         $pairs[PatenOnkelTante::ID]                   = Patenkind::ID;
         $pairs[Mitbewohner::ID]                       = Mitbewohner::ID;
-        $pairs[Berufsbetreuer::ID]                    = Betreuter ::ID;
+        $pairs[Berufsbetreuer::ID]                    = Betreuter::ID;
+        $pairs[Muttergesellschaft::ID]                = Tochtergesellschaft::ID;
+        $pairs[Pflegeeltern::ID]                      = Pflegekind::ID;
+        $pairs[Gesellschafter::ID]                    = FirmaVonGesellschafter::ID;
+        $pairs[Hausverwaltung::ID]                    = ImmobilienVerwaltetVon::ID;
 
         return $pairs;
     }
