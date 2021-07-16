@@ -10,13 +10,13 @@ use Demv\Werte\Vorgang\VorgangTypen\Risikovoranfrage;
 use Demv\Werte\Vorgang\VorgangTypen\Schadenmeldung;
 
 /**
- * Class Kraftstoffe
+ * Class VorgangTyp
  * @package Demv\Werte\Vorgang
  */
-final class VorgangTyp extends AbstractProvider
+final class VorgangTypen extends AbstractProvider
 {
     /**
-     * Kraftstoffe constructor.
+     * VorgangTyp constructor.
      */
     public function __construct()
     {
