@@ -4,7 +4,6 @@ namespace Demv\Werte\Tests\Vorgang;
 
 use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Tests\ProviderTestTrait;
-use Demv\Werte\Vorgang\VorgangTyp;
 use Demv\Werte\Vorgang\VorgangTypen;
 use Demv\Werte\Vorgang\VorgangTypen\AntragEinreichen;
 use Demv\Werte\Vorgang\VorgangTypen\Kuendigung;
