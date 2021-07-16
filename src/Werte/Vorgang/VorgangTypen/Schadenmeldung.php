@@ -2,8 +2,8 @@
 
 namespace Demv\Werte\Vorgang\VorgangTypen;
 
-use Demv\Werte\Vorgang\VorgangTypInterface;
 use Demv\Werte\Value;
+use Demv\Werte\Vorgang\VorgangTypInterface;
 
 /**
  * Class Schadenmeldung
