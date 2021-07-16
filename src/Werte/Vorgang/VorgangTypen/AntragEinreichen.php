@@ -7,7 +7,7 @@ use Demv\Werte\Vorgang\VorgangTypInterface;
 
 /**
  * Class AntragEinreichen
- * @package Demv\Werte\Kraftstoff\Kraftstoffe
+ * @package Demv\Werte\Vorgang\VorgangTypen
  */
 final class AntragEinreichen extends Value implements VorgangTypInterface
 {

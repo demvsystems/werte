@@ -7,7 +7,7 @@ use Demv\Werte\Vorgang\VorgangTypInterface;
 
 /**
  * Class Kuendigung
- * @package Demv\Werte\Kraftstoff\Kraftstoffe
+ * @package Demv\Werte\Vorgang\VorgangTypen
  */
 final class Kuendigung extends Value implements VorgangTypInterface
 {

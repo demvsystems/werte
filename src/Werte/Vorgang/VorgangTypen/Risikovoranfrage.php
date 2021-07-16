@@ -7,7 +7,7 @@ use Demv\Werte\Vorgang\VorgangTypInterface;
 
 /**
  * Class Risikovoranfrage
- * @package Demv\Werte\Kraftstoff\Kraftstoffe
+ * @package Demv\Werte\Vorgang\VorgangTypen
  */
 final class Risikovoranfrage extends Value implements VorgangTypInterface
 {
