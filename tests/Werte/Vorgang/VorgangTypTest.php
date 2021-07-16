@@ -34,22 +34,22 @@ final class VorgangTypTest extends TestCase
         $this->assertCount(4, $vorgangTypen->getAll());
     }
 
-    public function testBenzin(): void
+    public function testAntragEinreichen(): void
     {
         $this->checkGetOne($this->provider, AntragEinreichen::class);
     }
 
-    public function testDiesel(): void
+    public function testKuendigung(): void
     {
         $this->checkGetOne($this->provider, Kuendigung::class);
     }
 
-    public function testElektro(): void
+    public function testSchadenmeldung(): void
     {
         $this->checkGetOne($this->provider, Schadenmeldung::class);
     }
 
-    public function testHybrid(): void
+    public function testRisikovoranfrage(): void
     {
         $this->checkGetOne($this->provider, Risikovoranfrage::class);
     }
