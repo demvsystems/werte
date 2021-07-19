@@ -11,7 +11,7 @@ use Demv\Werte\Vorgang\VorgangTypInterface;
  */
 final class Kuendigung extends Value implements VorgangTypInterface
 {
-    const ID = 1;
+    const ID = 9;
 
     public function __construct()
     {
