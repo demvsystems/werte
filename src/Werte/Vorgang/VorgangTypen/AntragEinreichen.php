@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Vorgang\VorgangTypen;
 
 use Demv\Werte\Value;
