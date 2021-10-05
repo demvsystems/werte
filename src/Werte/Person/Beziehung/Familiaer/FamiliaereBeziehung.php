@@ -10,7 +10,7 @@ use Demv\Werte\Person\Beziehung\Beziehung;
  * Class FamiliaereBeziehung
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-abstract class FamiliaereBeziehung extends Beziehung
+class FamiliaereBeziehung extends Beziehung
 {
     /**
      * @return bool

@@ -10,7 +10,7 @@ use Demv\Werte\Person\Beziehung\Beziehung;
  * Class PrivateBeziehung
  * @package Demv\Werte\Person\Beziehung\Privat
  */
-abstract class PrivateBeziehung extends Beziehung
+class PrivateBeziehung extends Beziehung
 {
     /**
      * @return bool
