@@ -3,13 +3,26 @@
 namespace Demv\Werte\Tests\Person\Beziehung;
 
 use Demv\Werte\Exception\EntryNotFoundException;
+use Demv\Werte\Person\Beziehung\Beruflich\Angehoeriger;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Aufsichtsrat;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaAufsichtsrat;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVorstand;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKommanditist;
+use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
+use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
+use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
+use Demv\Werte\Person\Beziehung\Beruflich\Verein;
+use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
+use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonVerein;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
+use Demv\Werte\Person\Beziehung\Familiaer\CousinCousine;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
 use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
@@ -166,5 +179,40 @@ class GegenbeziehungTest extends TestCase
     public function testMitbewohner(): void
     {
         $this->checkExistence(new Mitbewohner(), new Mitbewohner());
+    }
+
+    public function testVorstandFirma(): void
+    {
+        $this->checkExistence(new VorstandVonFirma(), new FirmaVorstand());
+    }
+
+    public function testVorstandVerein(): void
+    {
+        $this->checkExistence(new VorstandVonVerein(), new Verein());
+    }
+
+    public function testVorstandAufsichtsrat(): void
+    {
+        $this->checkExistence(new Aufsichtsrat(), new FirmaAufsichtsrat());
+    }
+
+    public function testCousinCousine(): void
+    {
+        $this->checkExistence(new CousinCousine(), new CousinCousine());
+    }
+
+    public function testKommanditgesellschaftKommanditist(): void
+    {
+        $this->checkExistence(new KommanditgesellschaftKommanditist(), new Kommanditist());
+    }
+
+    public function testKommanditgesellschaftKomplementaer(): void
+    {
+        $this->checkExistence(new KommanditgesellschaftKomplementaer(), new Komplementaer());
+    }
+
+    public function testAngehoeriger(): void
+    {
+        $this->checkExistence(new Angehoeriger(), new InhaberGeschaeftsfuehrer());
     }
 }
