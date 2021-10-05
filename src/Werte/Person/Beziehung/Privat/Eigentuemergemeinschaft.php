@@ -17,6 +17,6 @@ final class Eigentuemergemeinschaft extends PrivateBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID,'Eigentümergemeinschaft');
+        parent::__construct(self::ID, 'Eigentümergemeinschaft');
     }
 }

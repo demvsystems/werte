@@ -17,6 +17,6 @@ final class Verein extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID,'Verein');
+        parent::__construct(self::ID, 'Verein');
     }
 }
