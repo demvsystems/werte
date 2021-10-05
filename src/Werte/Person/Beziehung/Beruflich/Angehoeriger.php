@@ -17,6 +17,6 @@ final class Angehoeriger extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID,'Angehöriger');
+        parent::__construct(self::ID, 'Angehöriger');
     }
 }

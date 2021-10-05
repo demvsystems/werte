@@ -17,6 +17,6 @@ final class MitgliedInEigentuemergemeinschaft extends PrivateBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID,'Mitglied in Eigentümergemeinschaft');
+        parent::__construct(self::ID, 'Mitglied in Eigentümergemeinschaft');
     }
 }

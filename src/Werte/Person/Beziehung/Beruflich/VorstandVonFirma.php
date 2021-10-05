@@ -17,6 +17,6 @@ final class VorstandVonFirma extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID,'Vorstand');
+        parent::__construct(self::ID, 'Vorstand');
     }
 }
