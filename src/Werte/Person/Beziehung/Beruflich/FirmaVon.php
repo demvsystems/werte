@@ -14,6 +14,6 @@ final class FirmaVon extends BeruflicheBeziehung
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Firma von', '<i>Geschäftsführer von Firma</i> <b>{kunde1}</b> ist <b>{kunde2}</b>');
+        parent::__construct(self::ID, 'Firma von');
     }
 }

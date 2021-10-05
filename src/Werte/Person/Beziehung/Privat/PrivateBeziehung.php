@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Demv\Werte\Person\Beziehung\Privat;
 
-use Demv\Werte\Person\Beziehung\Beziehung;
+use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
+use Demv\Werte\Value;
 
 /**
  * Class PrivateBeziehung
  * @package Demv\Werte\Person\Beziehung\Privat
  */
-class PrivateBeziehung extends Beziehung
+class PrivateBeziehung extends Value implements BeziehungsTypInterface
 {
     /**
      * @return bool

@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-use Demv\Werte\Person\Beziehung\Beziehung;
+use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
+use Demv\Werte\Value;
 
 /**
  * Class FamiliaereBeziehung
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-class FamiliaereBeziehung extends Beziehung
+class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
 {
     /**
      * @return bool

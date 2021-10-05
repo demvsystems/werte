@@ -14,10 +14,6 @@ final class ImmobilienVerwaltetVon extends BeruflicheBeziehung
 
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Immobilien verwaltet von',
-            '<b>{kunde2}</b> verwaltet die Immobilien von <b>{kunde1}</b>'
-        );
+        parent::__construct(self::ID,'Immobilien verwaltet von');
     }
 }

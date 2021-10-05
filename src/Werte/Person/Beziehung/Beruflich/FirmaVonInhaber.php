@@ -14,6 +14,6 @@ final class FirmaVonInhaber extends BeruflicheBeziehung
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Firma von (Inhaber)', '<i>Inhaber von Firma</i> <b>{kunde1}</b> ist <b>{kunde2}</b>');
+        parent::__construct(self::ID, 'Firma von (Inhaber)');
     }
 }

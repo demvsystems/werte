@@ -17,10 +17,6 @@ final class Angehoeriger extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Angehöriger',
-            '<b>{kunde1}</b> ist <i>Angehöriger</i> des Inhabers/Geschäftsführers <b>{kunde2}</b>'
-        );
+        parent::__construct(self::ID,'Angehöriger');
     }
 }

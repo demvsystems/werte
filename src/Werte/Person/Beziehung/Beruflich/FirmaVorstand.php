@@ -17,10 +17,6 @@ final class FirmaVorstand extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Firma hat Vorstand',
-            '<b>{kunde1}</b> hat den <i>Vorstand</i> <b>{kunde2}</b>'
-        );
+        parent::__construct(self::ID, 'Firma hat Vorstand');
     }
 }

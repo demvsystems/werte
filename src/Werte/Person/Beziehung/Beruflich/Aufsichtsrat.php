@@ -17,10 +17,6 @@ final class Aufsichtsrat extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Aufsichtsrat',
-            '<b>{kunde1}</b> ist <i>Aufsichtsrat</i> von <b>{kunde2}</b>'
-        );
+        parent::__construct(self::ID, 'Aufsichtsrat');
     }
 }

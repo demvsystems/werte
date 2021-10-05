@@ -17,10 +17,6 @@ final class Komplementaer extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Komplementär',
-            '<b>{kunde1}</b> ist <i>Komplementär</i> von Kommanditgesellschaft <b>{kunde2}</b>'
-        );
+        parent::__construct(self::ID, 'Komplementär');
     }
 }

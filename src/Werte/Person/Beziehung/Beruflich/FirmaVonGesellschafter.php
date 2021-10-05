@@ -14,10 +14,6 @@ final class FirmaVonGesellschafter extends BeruflicheBeziehung
 
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Firma von Gesellschafter',
-            '<b>{kunde2}</b> ist Gesellschafter von <b>{kunde1}</b>'
-        );
+        parent::__construct(self::ID, 'Firma von Gesellschafter');
     }
 }

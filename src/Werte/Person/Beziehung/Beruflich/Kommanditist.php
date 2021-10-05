@@ -17,10 +17,6 @@ final class Kommanditist extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(
-            self::ID,
-            'Kommanditist',
-            '<b>{kunde1}</b> ist <i>Kommanditist</i> von Kommanditgesellschaft <b>{kunde2}</b>'
-        );
+        parent::__construct(self::ID, 'Kommanditist');
     }
 }
