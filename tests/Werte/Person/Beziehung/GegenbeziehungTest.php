@@ -18,9 +18,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
-use Demv\Werte\Person\Beziehung\Beruflich\Verein;
 use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
-use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonVerein;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 use Demv\Werte\Person\Beziehung\Familiaer\CousinCousine;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
@@ -42,6 +40,8 @@ use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
+use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 use PHPUnit\Framework\TestCase;
 
 class GegenbeziehungTest extends TestCase

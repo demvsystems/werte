@@ -31,9 +31,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Muttergesellschaft;
 use Demv\Werte\Person\Beziehung\Beruflich\Tochtergesellschaft;
-use Demv\Werte\Person\Beziehung\Beruflich\Verein;
 use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
-use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonVerein;
 use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
 use Demv\Werte\Person\Beziehung\Familiaer\CousinCousine;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
@@ -58,6 +56,8 @@ use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\Pflegeeltern;
 use Demv\Werte\Person\Beziehung\Privat\Pflegekind;
+use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 
 /**
  * Class Beziehungstypen

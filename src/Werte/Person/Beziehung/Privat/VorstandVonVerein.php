@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Demv\Werte\Person\Beziehung\Beruflich;
+namespace Demv\Werte\Person\Beziehung\Privat;
 
 /**
  * Class VorstandVonVerein
- * @package Demv\Werte\Person\Beziehung\Beruflich
+ * @package Demv\Werte\Person\Beziehung\Privat
  */
-final class VorstandVonVerein extends BeruflicheBeziehung
+final class VorstandVonVerein extends PrivateBeziehung
 {
     const ID = 34;
 
