@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
 /**

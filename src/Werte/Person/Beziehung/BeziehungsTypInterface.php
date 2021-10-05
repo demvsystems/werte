@@ -27,4 +27,14 @@ interface BeziehungsTypInterface extends ValueInterface
      * @return bool
      */
     public function isPrivat(): bool;
+
+    /**
+     * @return string|null
+     */
+    public function getText(): ?string;
+
+    /**
+     * @return bool
+     */
+    public function hasText(): bool;
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Person\Beziehung\Beruflich;
 
 /**
@@ -12,6 +14,6 @@ final class FirmaVon extends BeruflicheBeziehung
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Firma von');
+        parent::__construct(self::ID, 'Firma von', '<i>Geschäftsführer von Firma</i> <b>{kunde1}</b> ist <b>{kunde2}</b>');
     }
 }

@@ -1,15 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
-use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
-use Demv\Werte\Value;
+use Demv\Werte\Person\Beziehung\Beziehung;
 
 /**
  * Class FamiliaereBeziehung
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-class FamiliaereBeziehung extends Value implements BeziehungsTypInterface
+abstract class FamiliaereBeziehung extends Beziehung
 {
     /**
      * @return bool

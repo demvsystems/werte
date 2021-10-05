@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Person\Beziehung\Privat;
 
 /**
@@ -15,6 +17,10 @@ final class MitgliedInEigentuemergemeinschaft extends PrivateBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Mitglied in Eigentümergemeinschaft');
+        parent::__construct(
+            self::ID,
+            'Mitglied in Eigentümergemeinschaft',
+            '<b>{kunde1}</b> ist Mitglied in der Eigentümergemeinschaft <b>{kunde2}</b>'
+        );
     }
 }

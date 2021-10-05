@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Demv\Werte\Person\Beziehung\Privat;
 
-class Mitbewohner extends PrivateBeziehung
+final class Mitbewohner extends PrivateBeziehung
 {
     const ID = 31;
 

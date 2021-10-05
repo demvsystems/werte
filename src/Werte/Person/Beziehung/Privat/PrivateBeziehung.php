@@ -1,15 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Person\Beziehung\Privat;
 
-use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
-use Demv\Werte\Value;
+use Demv\Werte\Person\Beziehung\Beziehung;
 
 /**
  * Class PrivateBeziehung
  * @package Demv\Werte\Person\Beziehung\Privat
  */
-class PrivateBeziehung extends Value implements BeziehungsTypInterface
+abstract class PrivateBeziehung extends Beziehung
 {
     /**
      * @return bool
