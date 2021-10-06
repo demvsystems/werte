@@ -5,18 +5,18 @@ declare(strict_types=1);
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
 /**
- * Class Stiefkind
+ * Class CousinCousine
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-final class Stiefkind extends FamiliaereBeziehung
+final class CousinCousine extends FamiliaereBeziehung
 {
-    const ID = 27;
+    const ID = 48;
 
     /**
-     * ExPartner constructor.
+     * CousinCousine constructor.
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Stiefkind');
+        parent::__construct(self::ID, 'Cousin/Cousine');
     }
 }

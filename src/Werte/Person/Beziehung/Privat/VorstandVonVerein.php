@@ -17,6 +17,6 @@ final class VorstandVonVerein extends PrivateBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Teil des Vorstands (Verein)');
+        parent::__construct(self::ID, 'Vorstands (Verein)');
     }
 }

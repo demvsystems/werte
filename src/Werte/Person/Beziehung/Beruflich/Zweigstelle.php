@@ -1,14 +1,14 @@
 <?php
 
-namespace Demv\Werte\Person\Beziehung\Beruflich;
+declare(strict_types=1);
 
-use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
+namespace Demv\Werte\Person\Beziehung\Beruflich;
 
 /**
  * Class Zweigstelle
  * @package Demv\Werte\Person\Beziehung\Beruflich
  */
-final class Zweigstelle extends BeruflicheBeziehung implements BeziehungsTypInterface
+final class Zweigstelle extends BeruflicheBeziehung
 {
     const ID = 26;
 

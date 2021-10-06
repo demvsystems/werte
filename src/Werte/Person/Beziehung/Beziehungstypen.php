@@ -4,15 +4,19 @@ namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Exception\EntryNotFoundException;
+use Demv\Werte\Person\Beziehung\Beruflich\Angehoeriger;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Aufsichtsrat;
 use Demv\Werte\Person\Beziehung\Beruflich\Berufsbetreuer;
 use Demv\Werte\Person\Beziehung\Beruflich\Betreuter;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaAufsichtsrat;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonGesellschafter;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVorstand;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
 use Demv\Werte\Person\Beziehung\Beruflich\Gesellschafter;
@@ -20,9 +24,16 @@ use Demv\Werte\Person\Beziehung\Beruflich\Hauptgeschaeftsstelle;
 use Demv\Werte\Person\Beziehung\Beruflich\Hausverwaltung;
 use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienVerwaltetVon;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKommanditist;
+use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
+use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
+use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Muttergesellschaft;
 use Demv\Werte\Person\Beziehung\Beruflich\Tochtergesellschaft;
+use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
 use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
+use Demv\Werte\Person\Beziehung\Familiaer\CousinCousine;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
 use Demv\Werte\Person\Beziehung\Familiaer\Enkel;
 use Demv\Werte\Person\Beziehung\Familiaer\ExPartner;
@@ -99,6 +110,17 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new ImmobilienVerwaltetVon());
         $this->appendMember(new Muttergesellschaft());
         $this->appendMember(new Tochtergesellschaft());
+        $this->appendMember(new Angehoeriger());
+        $this->appendMember(new Aufsichtsrat());
+        $this->appendMember(new CousinCousine());
+        $this->appendMember(new FirmaAufsichtsrat());
+        $this->appendMember(new FirmaVorstand());
+        $this->appendMember(new InhaberGeschaeftsfuehrer());
+        $this->appendMember(new KommanditgesellschaftKommanditist());
+        $this->appendMember(new KommanditgesellschaftKomplementaer());
+        $this->appendMember(new Kommanditist());
+        $this->appendMember(new Komplementaer());
+        $this->appendMember(new VorstandVonFirma());
     }
 
     /**
