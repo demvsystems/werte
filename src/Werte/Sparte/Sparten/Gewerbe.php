@@ -35,4 +35,5 @@ interface Gewerbe
     const UMWELTSCHADENVERSICHERUNG        = 317;
     const WASSERSPORTKASKO                 = 459;
     const LUFTFAHRTKASKOVERSICHERUNG       = 402;
+    const CYBER                            = 401;
 }
