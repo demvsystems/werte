@@ -67,7 +67,7 @@ jobs:
           restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
 
       - name: Run phpcstd
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && false
         run: vendor/bin/phpcstd --ci --ansi --continue
 
       - name: Setup problem matchers for PHPUnit
