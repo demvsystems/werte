@@ -18,7 +18,7 @@
     "require-dev": {
         "codeception/specify": "^0.4.5",
         "doctrine/instantiator": "^1.4",
-        "ergebnis/composer-normalize": "2.8.0",
+        "ergebnis/composer-normalize": "^2.8",
         "php-parallel-lint/php-parallel-lint": "^1.2",
         "phpstan/phpstan": "^0.12.81",
         "phpstan/phpstan-deprecation-rules": "^0.12.6",
