@@ -26,11 +26,6 @@
         "phpunit/phpunit": "^7.5 || ^9.5",
         "spaceemotion/php-coding-standard": "dev-wip/v1"
     },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        }
-    },
     "autoload": {
         "psr-4": {
             "Demv\\Werte\\": "src/Werte",
