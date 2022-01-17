@@ -1,8 +1,7 @@
 {
     "name": "demvsystems/werte",
-    "type": "library",
     "description": "Abbildung von allgemeinen Werten",
-    "homepage": "https://github.com/demvsystems/werte",
+    "type": "library",
     "authors": [
         {
             "name": "DEMV-Systems",
@@ -10,6 +9,7 @@
             "homepage": "https://github.com/demvsystems"
         }
     ],
+    "homepage": "https://github.com/demvsystems/werte",
     "require": {
         "php": "^7.1 || ^8.0",
         "ext-json": "*",
