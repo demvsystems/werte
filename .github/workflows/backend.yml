@@ -21,7 +21,7 @@ jobs:
     if: github.event.pull_request.draft == false
     strategy:
       matrix:
-        php-version: ['7.1', '7.2', '7.3', '7.4', '8.0']
+        php-version: ['7.2', '7.3', '7.4', '8.0', '8.1']
     env:
       APP_ENV: test
     steps:
@@ -81,7 +81,7 @@ jobs:
     if: github.event.pull_request.draft == false
     env:
       APP_ENV: test
-      PHP_VERSION: '7.4'
+      PHP_VERSION: '8.1'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
