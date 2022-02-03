@@ -56,7 +56,6 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new Themen\Cyberversicherung());
     }
 
-
     /**
      * Filters registered bedarfsthemen including one or more Ids of a Sparte.
      * @param $sparteClasses
@@ -72,11 +71,13 @@ final class Bedarfsthemen extends AbstractProvider
                         $thema->getSpartenIds(),
                         array_values($refl->getConstants())
                     );
+
                     return count($intersection) > 0;
                 } catch (ReflectionException $ex) {
                     return false;
                 }
             });
+
             return array_merge($carry, $themen);
         }, []);
     }

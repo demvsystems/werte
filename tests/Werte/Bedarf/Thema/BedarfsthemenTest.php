@@ -183,7 +183,7 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Cyberversicherung()
         ];
 
-        foreach($this->getBedarfsthemen()->forGewerbe() as $thema) {
+        foreach ($this->getBedarfsthemen()->forGewerbe() as $thema) {
             $this->assertTrue(in_array($thema, $themen));
         }
     }
@@ -228,7 +228,7 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Cyberversicherung()
         ];
 
-        foreach($this->getBedarfsthemen()->forTaetigkeit(Selbststaendiger::ID) as $thema) {
+        foreach ($this->getBedarfsthemen()->forTaetigkeit(Selbststaendiger::ID) as $thema) {
             $this->assertTrue(in_array($thema, $themen));
         }
     }
