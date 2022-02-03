@@ -5,6 +5,8 @@ namespace Demv\Werte\Bedarf\Thema;
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Sparte\Sparten;
+use ReflectionClass;
+use ReflectionException;
 
 /**
  * Class Bedarfsthemen
@@ -65,7 +67,7 @@ final class Bedarfsthemen extends AbstractProvider
         return array_reduce($sparteClasses, function ($carry, $sparteClass) {
             $themen = array_filter($this->getAll(), static function (BedarfthemaInterface $thema) use ($sparteClass) {
                 try {
-                    $refl = new \ReflectionClass($sparteClass);
+                    $refl = new ReflectionClass($sparteClass);
                     $intersection = array_intersect(
                         $thema->getSpartenIds(),
                         array_values($refl->getConstants())
