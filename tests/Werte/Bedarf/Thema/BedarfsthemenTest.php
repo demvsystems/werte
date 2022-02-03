@@ -26,7 +26,7 @@ final class BedarfsthemenTest extends TestCase
     public function testGetAll(): void
     {
         $themen = $this->getBedarfsthemen();
-        $this->assertCount(27, $themen->getAll());
+        $this->assertCount(35, $themen->getAll());
     }
 
     public function testGetBerufsunfaehigkeit(): void
@@ -127,5 +127,45 @@ final class BedarfsthemenTest extends TestCase
     public function testGetFunktionsinvaliditaet(): void
     {
         $this->checkGetOne($this->getBedarfsthemen(), Themen\Funktionsinvaliditaet::class);
+    }
+
+    public function testGetBerufshaftpflicht(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Berufshaftpflicht::class);
+    }
+
+    public function testGetGeschaeftsinhaltsversicherung(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Geschaeftsinhaltsversicherung::class);
+    }
+
+    public function testGetVermoegensschadenhaftpflicht(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Vermoegensschadenhaftpflicht::class);
+    }
+
+    public function testGetBetriebshaftpflicht(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Betriebshaftpflicht::class);
+    }
+
+    public function testGetD_0(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\D_O::class);
+    }
+
+    public function testGetFirmenrechtsschutz(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Firmenrechtsschutz::class);
+    }
+
+    public function testGetGewerblicheGebaeudeversicherung(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\GewerblicheGebaeudeversicherung::class);
+    }
+
+    public function testGetCyberversicherung(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Cyberversicherung::class);
     }
 }
