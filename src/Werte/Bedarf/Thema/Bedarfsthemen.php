@@ -3,6 +3,8 @@
 namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
+use Demv\Werte\Sparte\Sparten;
 
 /**
  * Class Bedarfsthemen
@@ -50,5 +52,62 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new Themen\Firmenrechtsschutz());
         $this->appendMember(new Themen\GewerblicheGebaeudeversicherung());
         $this->appendMember(new Themen\Cyberversicherung());
+    }
+
+
+    /**
+     * Filters registered bedarfsthemen including one or more Ids of a Sparte.
+     * @param $sparteClasses
+     * @return array
+     */
+    private function forSparten($sparteClasses): array
+    {
+        return array_reduce($sparteClasses, function ($carry, $sparteClass) {
+            $themen = array_filter($this->getAll(), static function (BedarfthemaInterface $thema) use ($sparteClass) {
+                try {
+                    $refl = new \ReflectionClass($sparteClass);
+                    $intersection = array_intersect(
+                        $thema->getSpartenIds(),
+                        array_values($refl->getConstants())
+                    );
+                    return count($intersection) > 0;
+                } catch (ReflectionException $ex) {
+                    return false;
+                }
+            });
+            return array_merge($carry, $themen);
+        }, []);
+    }
+
+    /**
+     * Returns Gewerbe Bedarfsthemen
+     */
+    public function forGewerbe(): array
+    {
+        return $this->forSparten([Sparten\Gewerbe::class]);
+    }
+
+    /**
+     * Returns Taetigkeits Bedarfsthemen
+     */
+    public function forTaetigkeit(int $id)
+    {
+        $sparten = [
+            Sparten\Krankenversicherung::class,
+            Sparten\Krankenzusatzversicherung::class,
+            Sparten\PrivateKrankenversicherung::class,
+            Sparten\PrivateKrankenzusatzversicherung::class,
+            Sparten\PrivateSachversicherung::class,
+            Sparten\Privathaftpflicht::class,
+            Sparten\RechtsschutzPrivat::class,
+            Sparten\Unfallversicherung::class,
+            Sparten\Vorsorge::class,
+        ];
+
+        if ($id === Selbststaendiger::ID) {
+            $sparten[] = Sparten\Gewerbe::class;
+        }
+
+        return $this->forSparten($sparten);
     }
 }
