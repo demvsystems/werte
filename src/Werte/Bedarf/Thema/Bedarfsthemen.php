@@ -41,6 +41,7 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new Themen\Photovoltaik());
         $this->appendMember(new Themen\Tierhalterhaftpflicht());
         $this->appendMember(new Themen\Kinderinvaliditaet());
+        $this->appendMember(new Themen\Funktionsinvaliditaet());
         $this->appendMember(new Themen\Berufshaftpflicht());
         $this->appendMember(new Themen\Geschaeftsinhaltsversicherung());
         $this->appendMember(new Themen\Vermoegensschadenhaftpflicht());
