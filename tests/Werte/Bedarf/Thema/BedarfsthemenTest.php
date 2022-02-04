@@ -184,7 +184,7 @@ final class BedarfsthemenTest extends TestCase
 
     public function testGetBedarfsthemenForGewerbe(): void
     {
-        $themen = [
+        $should = [
             new Themen\Berufshaftpflicht(),
             new Themen\Geschaeftsinhaltsversicherung(),
             new Themen\Vermoegensschadenhaftpflicht(),
@@ -195,14 +195,16 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Cyberversicherung()
         ];
 
-        foreach ($this->getBedarfsthemen()->forGewerbe() as $thema) {
-            $this->assertTrue(in_array($thema, $themen));
+        $is = $this->getBedarfsthemen()->forGewerbe();
+        $this->assertCount(count($should), $is);
+        foreach ($is as $thema) {
+            $this->assertTrue(in_array($thema, $should, false));
         }
     }
 
     public function testGetBedarfsthemenForSelbststaendig(): void
     {
-        $themen = [
+        $should = [
             new Themen\Berufsunfaehigkeit(),
             new Themen\PrivateKrankenversicherung(),
             new Themen\Risikoleben(),
@@ -240,14 +242,16 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Cyberversicherung()
         ];
 
-        foreach ($this->getBedarfsthemen()->forTaetigkeit(Selbststaendiger::ID) as $thema) {
-            $this->assertTrue(in_array($thema, $themen));
+        $is = $this->getBedarfsthemen()->forTaetigkeit(Selbststaendiger::ID);
+        $this->assertCount(count($should), $is);
+        foreach ($is as $thema) {
+            $this->assertTrue(in_array($thema, $should, false));
         }
     }
 
     public function testGetBedarfsthemenForVerbeamtet(): void
     {
-        $themen = [
+        $should = [
             new Themen\Berufsunfaehigkeit(),
             new Themen\PrivateKrankenversicherung(),
             new Themen\Risikoleben(),
@@ -275,21 +279,15 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Tierhalterhaftpflicht(),
             new Themen\Kinderinvaliditaet(),
             new Themen\Funktionsinvaliditaet(),
-            new Themen\Berufshaftpflicht(),
-            new Themen\Geschaeftsinhaltsversicherung(),
-            new Themen\Vermoegensschadenhaftpflicht(),
-            new Themen\Betriebshaftpflicht(),
-            new Themen\D_O(),
-            new Themen\Firmenrechtsschutz(),
-            new Themen\GewerblicheGebaeudeversicherung(),
-            new Themen\Cyberversicherung(),
             new Themen\Dienstunfaehigkeitsversicherung(),
             new Themen\Diensthaftpflicht(),
         ];
 
         foreach ([BeamterAufLebenszeit::ID, BeamterAufProbe::ID] as $taetigkeit) {
-            foreach ($this->getBedarfsthemen()->forTaetigkeit($taetigkeit) as $thema) {
-                $this->assertTrue(in_array($thema, $themen));
+            $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit);
+            $this->assertCount(count($should), $is);
+            foreach ($is as $thema) {
+                $this->assertTrue(in_array($thema, $should, false));
             }
         }
     }

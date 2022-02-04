@@ -111,7 +111,7 @@ final class Bedarfsthemen extends AbstractProvider
     /**
      * Returns Taetigkeits Bedarfsthemen.
      */
-    public function forTaetigkeit(int $id): array
+    public function forTaetigkeit(int $taetigkeitsId): array
     {
         // get all private Sparten. Beamten Sparten are included.
         $sparten = [
