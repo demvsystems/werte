@@ -127,15 +127,15 @@ final class Bedarfsthemen extends AbstractProvider
         ];
 
         // Selbständige are shown gewerbe sparten
-        if ($id === Selbststaendiger::ID) {
+        if ($taetigkeitsId === Selbststaendiger::ID) {
             $sparten[] = Sparten\Gewerbe::class;
         }
 
-        $ids = $this->getSpartenIds($sparten);
+        $spartenIds = $this->getSpartenIds($sparten);
 
         // remove Beamten Sparten, if not verbeamtet
-        if (!in_array($id, [BeamterAufProbe::ID, BeamterAufLebenszeit::ID], true)) {
-            $ids = array_filter($ids, static function ($id) {
+        if (!in_array($taetigkeitsId, [BeamterAufProbe::ID, BeamterAufLebenszeit::ID], true)) {
+            $spartenIds = array_filter($spartenIds, static function ($id) {
                 return !in_array($id, [
                     Sparten\Privathaftpflicht::DIENSTHAFTPFLICHT,
                     Sparten\Vorsorge::DIENSTUNFAEHIGKEITSVERSICHERUNG
@@ -143,6 +143,6 @@ final class Bedarfsthemen extends AbstractProvider
             });
         }
 
-        return $this->forSparten($ids);
+        return $this->forSparten($spartenIds);
     }
 }
