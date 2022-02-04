@@ -83,7 +83,7 @@ final class Bedarfsthemen extends AbstractProvider
     }
 
     /**
-     * Returns Gewerbe Bedarfsthemen
+     * Returns Gewerbe Bedarfsthemen.
      */
     public function forGewerbe(): array
     {
@@ -91,7 +91,7 @@ final class Bedarfsthemen extends AbstractProvider
     }
 
     /**
-     * Returns Taetigkeits Bedarfsthemen
+     * Returns Taetigkeits Bedarfsthemen.
      */
     public function forTaetigkeit(int $id)
     {
