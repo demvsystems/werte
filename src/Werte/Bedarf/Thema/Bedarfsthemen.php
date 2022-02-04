@@ -3,8 +3,6 @@
 namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
-use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Sparte\Sparten;
 use ReflectionClass;
