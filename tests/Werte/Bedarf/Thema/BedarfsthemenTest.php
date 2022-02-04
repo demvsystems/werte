@@ -287,11 +287,10 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Diensthaftpflicht(),
         ];
 
-        foreach ($this->getBedarfsthemen()->forTaetigkeit(BeamterAufLebenszeit::ID) as $thema) {
-            $this->assertTrue(in_array($thema, $themen));
-        }
-        foreach ($this->getBedarfsthemen()->forTaetigkeit(BeamterAufProbe::ID) as $thema) {
-            $this->assertTrue(in_array($thema, $themen));
+        foreach ([BeamterAufLebenszeit::ID, BeamterAufProbe::ID] as $taetigkeit) {
+            foreach ($this->getBedarfsthemen()->forTaetigkeit($taetigkeit) as $thema) {
+                $this->assertTrue(in_array($thema, $themen));
+            }
         }
     }
 }
