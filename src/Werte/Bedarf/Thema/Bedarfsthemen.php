@@ -58,10 +58,10 @@ final class Bedarfsthemen extends AbstractProvider
 
     /**
      * Filters registered bedarfsthemen including one or more Ids of a Sparte.
-     * @param $sparteClasses
+     * @param mixed $sparteClasses
      * @return array
      */
-    private function forSparten($sparteClasses): array
+    private function forSparten(mixed $sparteClasses): array
     {
         return array_reduce($sparteClasses, function ($carry, $sparteClass) {
             $themen = array_filter($this->getAll(), static function (BedarfthemaInterface $thema) use ($sparteClass) {
@@ -93,7 +93,7 @@ final class Bedarfsthemen extends AbstractProvider
     /**
      * Returns Taetigkeits Bedarfsthemen.
      */
-    public function forTaetigkeit(int $id)
+    public function forTaetigkeit(int $id): array
     {
         $sparten = [
             Sparten\Krankenversicherung::class,
