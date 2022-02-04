@@ -29,7 +29,7 @@ final class BedarfsthemenTest extends TestCase
     public function testGetAll(): void
     {
         $themen = $this->getBedarfsthemen();
-        $this->assertCount(35, $themen->getAll());
+        $this->assertCount(37, $themen->getAll());
     }
 
     public function testGetBerufsunfaehigkeit(): void

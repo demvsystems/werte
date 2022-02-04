@@ -17,7 +17,7 @@ class Dienstunfaehigkeitsversicherung extends Bedarfsthema
             self::ID,
             'Dienstunfaehigkeitsversicherung',
             [Vorsorge::DIENSTUNFAEHIGKEITSVERSICHERUNG],
-            'Dienstunfaehigkeits&shy;versicherung',
+            'Dienstunfaehigkeits&shy;versicherung'
         );
     }
 }
