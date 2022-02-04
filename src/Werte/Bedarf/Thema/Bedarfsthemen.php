@@ -58,10 +58,10 @@ final class Bedarfsthemen extends AbstractProvider
 
     /**
      * Filters registered bedarfsthemen including one or more Ids of a Sparte.
-     * @param mixed $sparteClasses
+     * @param array $sparteClasses
      * @return array
      */
-    private function forSparten(mixed $sparteClasses): array
+    private function forSparten(array $sparteClasses): array
     {
         return array_reduce($sparteClasses, function ($carry, $sparteClass) {
             $themen = array_filter($this->getAll(), static function (BedarfthemaInterface $thema) use ($sparteClass) {
