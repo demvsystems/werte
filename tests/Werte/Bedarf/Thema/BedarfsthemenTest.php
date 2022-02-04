@@ -170,6 +170,16 @@ final class BedarfsthemenTest extends TestCase
         $this->checkGetOne($this->getBedarfsthemen(), Themen\Cyberversicherung::class);
     }
 
+    public function testGetDiensthaftpflicht(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Diensthaftpflicht::class);
+    }
+
+    public function testGetDienstunfaehigkeitsversicherung(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Dienstunfaehigkeitsversicherung::class);
+    }
+
     public function testGetBedarfsthemenForGewerbe(): void
     {
         $themen = [

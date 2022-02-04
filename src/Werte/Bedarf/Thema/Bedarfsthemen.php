@@ -3,6 +3,8 @@
 namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Sparte\Sparten;
 use ReflectionClass;
@@ -54,6 +56,8 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new Themen\Firmenrechtsschutz());
         $this->appendMember(new Themen\GewerblicheGebaeudeversicherung());
         $this->appendMember(new Themen\Cyberversicherung());
+        $this->appendMember(new Themen\Dienstunfaehigkeitsversicherung());
+        $this->appendMember(new Themen\Diensthaftpflicht());
     }
 
     /**
