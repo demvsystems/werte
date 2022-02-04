@@ -4,6 +4,8 @@ namespace Demv\Werte\Tests\Bedarf\Thema;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthemen;
 use Demv\Werte\Bedarf\Thema\Themen;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
@@ -239,6 +241,56 @@ final class BedarfsthemenTest extends TestCase
         ];
 
         foreach ($this->getBedarfsthemen()->forTaetigkeit(Selbststaendiger::ID) as $thema) {
+            $this->assertTrue(in_array($thema, $themen));
+        }
+    }
+
+    public function testGetBedarfsthemenForVerbeamtet(): void
+    {
+        $themen = [
+            new Themen\Berufsunfaehigkeit(),
+            new Themen\PrivateKrankenversicherung(),
+            new Themen\Risikoleben(),
+            new Themen\Altersvorsorge(),
+            new Themen\KVZStationaer(),
+            new Themen\Zahnzusatz(),
+            new Themen\Krankentagegeld(),
+            new Themen\Hausrat(),
+            new Themen\Kfz(),
+            new Themen\Pflegevorsorge(),
+            new Themen\Privathaftpflicht(),
+            new Themen\Rechtsschutz(),
+            new Themen\Unfallversicherung(),
+            new Themen\Wohngebaeude(),
+            new Themen\AmbulanteKrankenzusatzversicherung(),
+            new Themen\AuslandsKV(),
+            new Themen\Bauherren(),
+            new Themen\Camping(),
+            new Themen\DreadDisease(),
+            new Themen\Erwerbsunfaehigkeit(),
+            new Themen\Grundfaehigkeit(),
+            new Themen\Jagdhaftpflicht(),
+            new Themen\Luftfahrthaftpflicht(),
+            new Themen\Photovoltaik(),
+            new Themen\Tierhalterhaftpflicht(),
+            new Themen\Kinderinvaliditaet(),
+            new Themen\Funktionsinvaliditaet(),
+            new Themen\Berufshaftpflicht(),
+            new Themen\Geschaeftsinhaltsversicherung(),
+            new Themen\Vermoegensschadenhaftpflicht(),
+            new Themen\Betriebshaftpflicht(),
+            new Themen\D_O(),
+            new Themen\Firmenrechtsschutz(),
+            new Themen\GewerblicheGebaeudeversicherung(),
+            new Themen\Cyberversicherung(),
+            new Themen\Dienstunfaehigkeitsversicherung(),
+            new Themen\Diensthaftpflicht(),
+        ];
+
+        foreach ($this->getBedarfsthemen()->forTaetigkeit(BeamterAufLebenszeit::ID) as $thema) {
+            $this->assertTrue(in_array($thema, $themen));
+        }
+        foreach ($this->getBedarfsthemen()->forTaetigkeit(BeamterAufProbe::ID) as $thema) {
             $this->assertTrue(in_array($thema, $themen));
         }
     }
