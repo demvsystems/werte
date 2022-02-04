@@ -61,37 +61,51 @@ final class Bedarfsthemen extends AbstractProvider
     }
 
     /**
-     * Filters registered bedarfsthemen including one or more Ids of a Sparte.
+     * Filters registered bedarfsthemen including at least one SparteId.
+     * @param array $ids
+     * @return array
+     */
+    private function forSparten(array $ids): array
+    {
+        return array_filter(
+            $this->getAll(),
+            static function (Bedarfsthema $thema) use ($ids) {
+                $intersection = array_intersect(
+                    $thema->getSpartenIds(),
+                    $ids
+                );
+                return count($intersection) > 0;
+            });
+    }
+
+
+    /**
+     * Get IDs wrapped inside a Sparte interface.
      * @param array $sparteClasses
      * @return array
      */
-    private function forSparten(array $sparteClasses): array
+    private function getSpartenIds(array $sparteClasses): array
     {
         return array_reduce($sparteClasses, function ($carry, $sparteClass) {
-            $themen = array_filter($this->getAll(), static function (BedarfthemaInterface $thema) use ($sparteClass) {
-                try {
-                    $refl = new ReflectionClass($sparteClass);
-                    $intersection = array_intersect(
-                        $thema->getSpartenIds(),
-                        array_values($refl->getConstants())
-                    );
-
-                    return count($intersection) > 0;
-                } catch (ReflectionException $ex) {
-                    return false;
-                }
-            });
-
-            return array_merge($carry, $themen);
+            try {
+                $refl = new ReflectionClass($sparteClass);
+                return array_merge(
+                    $carry,
+                    array_values($refl->getConstants())
+                );
+            } catch (ReflectionException $ex) {
+                return $carry;
+            }
         }, []);
     }
+
 
     /**
      * Returns Gewerbe Bedarfsthemen.
      */
     public function forGewerbe(): array
     {
-        return $this->forSparten([Sparten\Gewerbe::class]);
+        return $this->forSparten($this->getSpartenIds([Sparten\Gewerbe::class]));
     }
 
     /**
@@ -99,6 +113,7 @@ final class Bedarfsthemen extends AbstractProvider
      */
     public function forTaetigkeit(int $id): array
     {
+        // get all private Sparten. Beamten Sparten are included.
         $sparten = [
             Sparten\Krankenversicherung::class,
             Sparten\Krankenzusatzversicherung::class,
@@ -111,10 +126,24 @@ final class Bedarfsthemen extends AbstractProvider
             Sparten\Vorsorge::class,
         ];
 
+        // Selbständige are shown gewerbe sparten
         if ($id === Selbststaendiger::ID) {
             $sparten[] = Sparten\Gewerbe::class;
         }
 
-        return $this->forSparten($sparten);
+        $ids = $this->getSpartenIds($sparten);
+        print_r($ids);
+
+        // remove Beamten Sparten, if not verbeamtet
+        if (!in_array($id, [BeamterAufProbe::ID, BeamterAufLebenszeit::ID], true)) {
+            $ids = array_filter($ids, static function ($id) {
+                return !in_array($id, [
+                    Sparten\Privathaftpflicht::DIENSTHAFTPFLICHT,
+                    Sparten\Vorsorge::DIENSTUNFAEHIGKEITSVERSICHERUNG
+                ], true);
+            });
+        }
+
+        return $this->forSparten($ids);
     }
 }
