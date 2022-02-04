@@ -132,7 +132,6 @@ final class Bedarfsthemen extends AbstractProvider
         }
 
         $ids = $this->getSpartenIds($sparten);
-        print_r($ids);
 
         // remove Beamten Sparten, if not verbeamtet
         if (!in_array($id, [BeamterAufProbe::ID, BeamterAufLebenszeit::ID], true)) {
