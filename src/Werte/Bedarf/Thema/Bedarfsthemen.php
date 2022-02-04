@@ -74,10 +74,10 @@ final class Bedarfsthemen extends AbstractProvider
                     $thema->getSpartenIds(),
                     $ids
                 );
+
                 return count($intersection) > 0;
             });
     }
-
 
     /**
      * Get IDs wrapped inside a Sparte interface.
@@ -89,6 +89,7 @@ final class Bedarfsthemen extends AbstractProvider
         return array_reduce($sparteClasses, function ($carry, $sparteClass) {
             try {
                 $refl = new ReflectionClass($sparteClass);
+
                 return array_merge(
                     $carry,
                     array_values($refl->getConstants())
@@ -98,7 +99,6 @@ final class Bedarfsthemen extends AbstractProvider
             }
         }, []);
     }
-
 
     /**
      * Returns Gewerbe Bedarfsthemen.
