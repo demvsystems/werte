@@ -4,6 +4,10 @@ namespace Demv\Werte\Tests\Bedarf\Thema;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthemen;
 use Demv\Werte\Bedarf\Thema\Themen;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
+use Demv\Werte\Person\Taetigkeitsstatus\Taetigkeitsstatus;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
 
@@ -26,7 +30,7 @@ final class BedarfsthemenTest extends TestCase
     public function testGetAll(): void
     {
         $themen = $this->getBedarfsthemen();
-        $this->assertCount(35, $themen->getAll());
+        $this->assertCount(37, $themen->getAll());
     }
 
     public function testGetBerufsunfaehigkeit(): void
@@ -167,5 +171,173 @@ final class BedarfsthemenTest extends TestCase
     public function testGetCyberversicherung(): void
     {
         $this->checkGetOne($this->getBedarfsthemen(), Themen\Cyberversicherung::class);
+    }
+
+    public function testGetDiensthaftpflicht(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Diensthaftpflicht::class);
+    }
+
+    public function testGetDienstunfaehigkeitsversicherung(): void
+    {
+        $this->checkGetOne($this->getBedarfsthemen(), Themen\Dienstunfaehigkeitsversicherung::class);
+    }
+
+    public function testGetBedarfsthemenForGewerbe(): void
+    {
+        $should = [
+            new Themen\Berufshaftpflicht(),
+            new Themen\Geschaeftsinhaltsversicherung(),
+            new Themen\Vermoegensschadenhaftpflicht(),
+            new Themen\Betriebshaftpflicht(),
+            new Themen\D_O(),
+            new Themen\Firmenrechtsschutz(),
+            new Themen\GewerblicheGebaeudeversicherung(),
+            new Themen\Cyberversicherung()
+        ];
+
+        $is = $this->getBedarfsthemen()->forGewerbe();
+        $this->assertCount(count($should), $is);
+        foreach ($is as $thema) {
+            $this->assertTrue(in_array($thema, $should, false));
+        }
+    }
+
+    public function testGetBedarfsthemenForSelbststaendig(): void
+    {
+        $should = [
+            new Themen\Berufsunfaehigkeit(),
+            new Themen\PrivateKrankenversicherung(),
+            new Themen\Risikoleben(),
+            new Themen\Altersvorsorge(),
+            new Themen\KVZStationaer(),
+            new Themen\Zahnzusatz(),
+            new Themen\Krankentagegeld(),
+            new Themen\Hausrat(),
+            new Themen\Kfz(),
+            new Themen\Pflegevorsorge(),
+            new Themen\Privathaftpflicht(),
+            new Themen\Rechtsschutz(),
+            new Themen\Unfallversicherung(),
+            new Themen\Wohngebaeude(),
+            new Themen\AmbulanteKrankenzusatzversicherung(),
+            new Themen\AuslandsKV(),
+            new Themen\Bauherren(),
+            new Themen\Camping(),
+            new Themen\DreadDisease(),
+            new Themen\Erwerbsunfaehigkeit(),
+            new Themen\Grundfaehigkeit(),
+            new Themen\Jagdhaftpflicht(),
+            new Themen\Luftfahrthaftpflicht(),
+            new Themen\Photovoltaik(),
+            new Themen\Tierhalterhaftpflicht(),
+            new Themen\Kinderinvaliditaet(),
+            new Themen\Funktionsinvaliditaet(),
+            new Themen\Berufshaftpflicht(),
+            new Themen\Geschaeftsinhaltsversicherung(),
+            new Themen\Vermoegensschadenhaftpflicht(),
+            new Themen\Betriebshaftpflicht(),
+            new Themen\D_O(),
+            new Themen\Firmenrechtsschutz(),
+            new Themen\GewerblicheGebaeudeversicherung(),
+            new Themen\Cyberversicherung()
+        ];
+
+        $is = $this->getBedarfsthemen()->forTaetigkeit(Selbststaendiger::ID);
+        $this->assertCount(count($should), $is);
+        foreach ($is as $thema) {
+            $this->assertTrue(in_array($thema, $should, false));
+        }
+    }
+
+    public function testGetBedarfsthemenForVerbeamtet(): void
+    {
+        $should = [
+            new Themen\Berufsunfaehigkeit(),
+            new Themen\PrivateKrankenversicherung(),
+            new Themen\Risikoleben(),
+            new Themen\Altersvorsorge(),
+            new Themen\KVZStationaer(),
+            new Themen\Zahnzusatz(),
+            new Themen\Krankentagegeld(),
+            new Themen\Hausrat(),
+            new Themen\Kfz(),
+            new Themen\Pflegevorsorge(),
+            new Themen\Privathaftpflicht(),
+            new Themen\Rechtsschutz(),
+            new Themen\Unfallversicherung(),
+            new Themen\Wohngebaeude(),
+            new Themen\AmbulanteKrankenzusatzversicherung(),
+            new Themen\AuslandsKV(),
+            new Themen\Bauherren(),
+            new Themen\Camping(),
+            new Themen\DreadDisease(),
+            new Themen\Erwerbsunfaehigkeit(),
+            new Themen\Grundfaehigkeit(),
+            new Themen\Jagdhaftpflicht(),
+            new Themen\Luftfahrthaftpflicht(),
+            new Themen\Photovoltaik(),
+            new Themen\Tierhalterhaftpflicht(),
+            new Themen\Kinderinvaliditaet(),
+            new Themen\Funktionsinvaliditaet(),
+            new Themen\Dienstunfaehigkeitsversicherung(),
+            new Themen\Diensthaftpflicht(),
+        ];
+
+        foreach ([BeamterAufLebenszeit::ID, BeamterAufProbe::ID] as $taetigkeit) {
+            $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit);
+            $this->assertCount(count($should), $is);
+            foreach ($is as $thema) {
+                $this->assertTrue(in_array($thema, $should, false));
+            }
+        }
+    }
+
+    /**
+     * Person is everything except Selbständig, Verbeamtet, Firma
+     */
+    public function testGetBedarfsthemenForPerson(): void
+    {
+        $should = [
+            new Themen\Berufsunfaehigkeit(),
+            new Themen\PrivateKrankenversicherung(),
+            new Themen\Risikoleben(),
+            new Themen\Altersvorsorge(),
+            new Themen\KVZStationaer(),
+            new Themen\Zahnzusatz(),
+            new Themen\Krankentagegeld(),
+            new Themen\Hausrat(),
+            new Themen\Kfz(),
+            new Themen\Pflegevorsorge(),
+            new Themen\Privathaftpflicht(),
+            new Themen\Rechtsschutz(),
+            new Themen\Unfallversicherung(),
+            new Themen\Wohngebaeude(),
+            new Themen\AmbulanteKrankenzusatzversicherung(),
+            new Themen\AuslandsKV(),
+            new Themen\Bauherren(),
+            new Themen\Camping(),
+            new Themen\DreadDisease(),
+            new Themen\Erwerbsunfaehigkeit(),
+            new Themen\Grundfaehigkeit(),
+            new Themen\Jagdhaftpflicht(),
+            new Themen\Luftfahrthaftpflicht(),
+            new Themen\Photovoltaik(),
+            new Themen\Tierhalterhaftpflicht(),
+            new Themen\Kinderinvaliditaet(),
+            new Themen\Funktionsinvaliditaet(),
+        ];
+
+        $taetigkeiten = array_filter((new Taetigkeitsstatus())->getAll(), static function ($taetigkeit) {
+            return !in_array($taetigkeit::ID, [BeamterAufLebenszeit::ID, BeamterAufProbe::ID, Selbststaendiger::ID], true);
+        });
+
+        foreach ($taetigkeiten as $taetigkeit) {
+            $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit::ID);
+            $this->assertCount(count($should), $is);
+            foreach ($is as $thema) {
+                $this->assertTrue(in_array($thema, $should, false));
+            }
+        }
     }
 }

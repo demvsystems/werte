@@ -23,4 +23,6 @@ interface Vorsorge
     const ALTERSVORSORGE = 375;
 
     const RISIKOLEBEN = 136;
+
+    const DIENSTUNFAEHIGKEITSVERSICHERUNG = 290;
 }

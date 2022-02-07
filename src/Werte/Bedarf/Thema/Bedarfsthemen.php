@@ -3,6 +3,12 @@
 namespace Demv\Werte\Bedarf\Thema;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
+use Demv\Werte\Sparte\Sparten;
+use ReflectionClass;
+use ReflectionException;
 
 /**
  * Class Bedarfsthemen
@@ -50,5 +56,93 @@ final class Bedarfsthemen extends AbstractProvider
         $this->appendMember(new Themen\Firmenrechtsschutz());
         $this->appendMember(new Themen\GewerblicheGebaeudeversicherung());
         $this->appendMember(new Themen\Cyberversicherung());
+        $this->appendMember(new Themen\Dienstunfaehigkeitsversicherung());
+        $this->appendMember(new Themen\Diensthaftpflicht());
+    }
+
+    /**
+     * Filters registered bedarfsthemen including at least one SparteId.
+     * @param array $ids
+     * @return array
+     */
+    private function forSparten(array $ids): array
+    {
+        return array_filter(
+            $this->getAll(),
+            static function (Bedarfsthema $thema) use ($ids) {
+                $intersection = array_intersect(
+                    $thema->getSpartenIds(),
+                    $ids
+                );
+
+                return count($intersection) > 0;
+            });
+    }
+
+    /**
+     * Get IDs wrapped inside a Sparte interface.
+     * @param array $sparteClasses
+     * @return array
+     */
+    private function getSpartenIds(array $sparteClasses): array
+    {
+        return array_reduce($sparteClasses, function ($carry, $sparteClass) {
+            try {
+                $refl = new ReflectionClass($sparteClass);
+
+                return array_merge(
+                    $carry,
+                    array_values($refl->getConstants())
+                );
+            } catch (ReflectionException $ex) {
+                return $carry;
+            }
+        }, []);
+    }
+
+    /**
+     * Returns Gewerbe Bedarfsthemen.
+     */
+    public function forGewerbe(): array
+    {
+        return $this->forSparten($this->getSpartenIds([Sparten\Gewerbe::class]));
+    }
+
+    /**
+     * Returns Taetigkeits Bedarfsthemen.
+     */
+    public function forTaetigkeit(int $taetigkeitsId): array
+    {
+        // get all private Sparten. Beamten Sparten are included.
+        $sparten = [
+            Sparten\Krankenversicherung::class,
+            Sparten\Krankenzusatzversicherung::class,
+            Sparten\PrivateKrankenversicherung::class,
+            Sparten\PrivateKrankenzusatzversicherung::class,
+            Sparten\PrivateSachversicherung::class,
+            Sparten\Privathaftpflicht::class,
+            Sparten\RechtsschutzPrivat::class,
+            Sparten\Unfallversicherung::class,
+            Sparten\Vorsorge::class,
+        ];
+
+        // Selbständige are shown gewerbe sparten
+        if ($taetigkeitsId === Selbststaendiger::ID) {
+            $sparten[] = Sparten\Gewerbe::class;
+        }
+
+        $spartenIds = $this->getSpartenIds($sparten);
+
+        // remove Beamten Sparten, if not verbeamtet
+        if (!in_array($taetigkeitsId, [BeamterAufProbe::ID, BeamterAufLebenszeit::ID], true)) {
+            $spartenIds = array_filter($spartenIds, static function ($id) {
+                return !in_array($id, [
+                    Sparten\Privathaftpflicht::DIENSTHAFTPFLICHT,
+                    Sparten\Vorsorge::DIENSTUNFAEHIGKEITSVERSICHERUNG
+                ], true);
+            });
+        }
+
+        return $this->forSparten($spartenIds);
     }
 }
