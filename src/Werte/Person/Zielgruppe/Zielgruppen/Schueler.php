@@ -2,9 +2,10 @@
 
 namespace Demv\Werte\Person\Zielgruppe\Zielgruppen;
 
+use Demv\Werte\Person\Zielgruppe\ZielgruppeInterface;
 use Demv\Werte\Value;
 
-class Schueler extends Value
+class Schueler extends Value implements ZielgruppeInterface
 {
     const ID = 22;
 
