@@ -8,6 +8,7 @@ use Demv\Werte\Value;
 class Kinder extends Value implements ZielgruppeInterface
 {
     const ID = 19;
+
     public function __construct()
     {
         parent::__construct(self::ID, 'Kinder');
