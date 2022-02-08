@@ -3,7 +3,6 @@
 namespace Demv\Werte\Tests\Person\Zielgruppe;
 
 use Codeception\Specify;
-use Demv\Werte\Person\Beziehung\Beruflich\Gesellschafter;
 use Demv\Werte\Person\Zielgruppe\Zielgruppe;
 use Demv\Werte\Person\Zielgruppe\ZielgruppeInterface;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\Aerzte;
@@ -14,6 +13,7 @@ use Demv\Werte\Person\Zielgruppe\Zielgruppen\Beamte;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\Existenzgruender;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\Familie;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\FreieBerufe;
+use Demv\Werte\Person\Zielgruppe\Zielgruppen\Gesellschafter;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\HaeusleBauer;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\Kinder;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\Kuenstler;
