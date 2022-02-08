@@ -6,5 +6,4 @@ use Demv\Werte\ValueInterface;
 
 interface ZielgruppeInterface extends ValueInterface
 {
-
 }
