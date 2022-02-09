@@ -8,6 +8,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\Taetigkeitsstatus;
+use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
 
@@ -328,12 +329,20 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Funktionsinvaliditaet(),
         ];
 
+        $is = $this->getBedarfsthemen()->forTaetigkeit(null);
+        $this->assertCount(count($should), $is);
+        foreach ($is as $thema) {
+            $this->assertTrue(in_array($thema, $should, false));
+        }
+
         $taetigkeiten = array_filter((new Taetigkeitsstatus())->getAll(), static function ($taetigkeit) {
             return !in_array($taetigkeit::ID, [BeamterAufLebenszeit::ID, BeamterAufProbe::ID, Selbststaendiger::ID], true);
         });
 
-        foreach ($taetigkeiten as $taetigkeit) {
-            $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit::ID);
+        foreach (array_merge([null], $taetigkeiten) as $taetigkeit) {
+            $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit instanceof TaetigkeitsstatusInterface
+                ? $taetigkeit::ID
+                : null);
             $this->assertCount(count($should), $is);
             foreach ($is as $thema) {
                 $this->assertTrue(in_array($thema, $should, false));
