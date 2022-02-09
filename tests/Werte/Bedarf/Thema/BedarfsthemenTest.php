@@ -329,22 +329,16 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Funktionsinvaliditaet(),
         ];
 
-        $is = $this->getBedarfsthemen()->forTaetigkeit(null);
-        $this->assertCount(count($should), $is);
-        foreach ($is as $thema) {
-            $this->assertTrue(in_array($thema, $should, false));
-        }
-
         $taetigkeiten = array_filter((new Taetigkeitsstatus())->getAll(), static function ($taetigkeit) {
             return !in_array($taetigkeit::ID, [BeamterAufLebenszeit::ID, BeamterAufProbe::ID, Selbststaendiger::ID], true);
         });
 
         foreach (array_merge([null], $taetigkeiten) as $taetigkeit) {
-            $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit instanceof TaetigkeitsstatusInterface
+            $themen = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit instanceof TaetigkeitsstatusInterface
                 ? $taetigkeit::ID
                 : null);
-            $this->assertCount(count($should), $is);
-            foreach ($is as $thema) {
+            $this->assertCount(count($should), $themen);
+            foreach ($themen as $thema) {
                 $this->assertTrue(in_array($thema, $should, false));
             }
         }
