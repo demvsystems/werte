@@ -20,4 +20,9 @@ final class Fondsgebunden extends Value implements ProduktwissenInfoInterface
     {
         parent::__construct(self::ID, 'fondsgebunden');
     }
+
+    public function getDescription(): string
+    {
+        return 'ohne Garantie für maximale Flexibilität und Renditechance bei der Anlage.';
+    }
 }

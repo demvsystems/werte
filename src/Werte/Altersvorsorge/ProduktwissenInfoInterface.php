@@ -10,4 +10,8 @@ use Demv\Werte\ValueInterface;
  */
 interface ProduktwissenInfoInterface extends ValueInterface
 {
+    /**
+     * @return string
+     */
+    public function getDescription(): string;
 }

@@ -20,4 +20,9 @@ final class Klassisch extends Value implements ProduktwissenInfoInterface
     {
         parent::__construct(self::ID, 'klassisch');
     }
+
+    public function getDescription(): string
+    {
+        return 'mit garantierter Mindestverzinsung.';
+    }
 }

@@ -20,4 +20,9 @@ final class Hybrid extends Value implements ProduktwissenInfoInterface
     {
         parent::__construct(self::ID, 'Hybrid');
     }
+
+    public function getDescription(): string
+    {
+        return 'mit Garantie der eingezahlten Beiträge und erhöhter Renditechance.';
+    }
 }
