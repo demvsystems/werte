@@ -14,7 +14,7 @@ use ReflectionException;
  * Class Bedarfsthemen
  * @package Demv\Werte\Bedarf\Thema
  */
-final class Bedarfsthemen extends AbstractProvider
+class Bedarfsthemen extends AbstractProvider
 {
     /**
      * Bedarfsthemen constructor.
