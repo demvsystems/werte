@@ -7,6 +7,10 @@ namespace Demv\Werte\Bedarf\Thema\Themen;
 use Demv\Werte\Bedarf\Thema\Bedarfsthema;
 use Demv\Werte\Sparte\Sparten\Privathaftpflicht;
 
+/**
+ * Class Diensthaftpflicht
+ * @package Demv\Werte\Bedarf\Thema\Themen
+ */
 class Diensthaftpflicht extends Bedarfsthema
 {
     const ID = 38;

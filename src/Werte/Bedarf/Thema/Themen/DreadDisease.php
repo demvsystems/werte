@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class DreadDisease
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class DreadDisease extends Bedarfsthema
+class DreadDisease extends Bedarfsthema
 {
     const ID = 21;
 

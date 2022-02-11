@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Gewerbe;
  * Class Berufshaftpflicht
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Berufshaftpflicht extends Bedarfsthema
+class Berufshaftpflicht extends Bedarfsthema
 {
     const ID = 29;
 

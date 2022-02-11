@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateSachversicherung;
  * Class Hausrat
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Hausrat extends Bedarfsthema
+class Hausrat extends Bedarfsthema
 {
     const ID = 11;
 

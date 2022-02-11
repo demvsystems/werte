@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateKrankenzusatzversicherung;
  * Class AmbulanteKrankenzusatzversicherung
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class AmbulanteKrankenzusatzversicherung extends Bedarfsthema
+class AmbulanteKrankenzusatzversicherung extends Bedarfsthema
 {
     const ID = 15;
 

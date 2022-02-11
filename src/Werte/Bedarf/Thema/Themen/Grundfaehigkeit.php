@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class Grundfaehigkeit
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Grundfaehigkeit extends Bedarfsthema
+class Grundfaehigkeit extends Bedarfsthema
 {
     const ID = 22;
 

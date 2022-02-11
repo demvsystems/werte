@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\RechtsschutzPrivat;
  * Class Rechtsschutz
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Rechtsschutz extends Bedarfsthema
+class Rechtsschutz extends Bedarfsthema
 {
     const ID = 13;
 

@@ -9,7 +9,7 @@ use Demv\Werte\Value;
  * Class Klassisch
  * @package Demv\Werte\Altersvorsorge\Produktwissen\Info
  */
-final class Klassisch extends Value implements ProduktwissenInfoInterface
+class Klassisch extends Value implements ProduktwissenInfoInterface
 {
     const ID = 3;
 

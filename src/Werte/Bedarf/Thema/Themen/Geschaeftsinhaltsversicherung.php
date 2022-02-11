@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Gewerbe;
  * Class Geschaeftsinhaltsversicherung
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Geschaeftsinhaltsversicherung extends Bedarfsthema
+class Geschaeftsinhaltsversicherung extends Bedarfsthema
 {
     const ID = 30;
 

@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Gewerbe;
  * Class Firmenrechtsschutz
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Firmenrechtsschutz extends Bedarfsthema
+class Firmenrechtsschutz extends Bedarfsthema
 {
     const ID = 34;
 

@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Krankenversicherung;
  * Class PrivateKrankenversicherung
  * @package Demv\Werte\Bedarf\Thema\Berufsunfaehigkeit
  */
-final class PrivateKrankenversicherung extends Bedarfsthema
+class PrivateKrankenversicherung extends Bedarfsthema
 {
     const ID = 2;
 
