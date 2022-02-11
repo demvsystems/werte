@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateKrankenversicherung;
  * Class AuslandsKV
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class AuslandsKV extends Bedarfsthema
+class AuslandsKV extends Bedarfsthema
 {
     const ID = 18;
 

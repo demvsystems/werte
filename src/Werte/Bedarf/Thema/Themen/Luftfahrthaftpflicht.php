@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateSachversicherung;
  * Class Luftfahrthaftpflicht
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Luftfahrthaftpflicht extends Bedarfsthema
+class Luftfahrthaftpflicht extends Bedarfsthema
 {
     const ID = 24;
 

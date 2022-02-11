@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateKrankenzusatzversicherung;
  * Class Zahnzusatz
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Zahnzusatz extends Bedarfsthema
+class Zahnzusatz extends Bedarfsthema
 {
     const ID = 6;
 

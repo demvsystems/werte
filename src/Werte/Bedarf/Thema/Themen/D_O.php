@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Gewerbe;
  * Class D_O
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class D_O extends Bedarfsthema
+class D_O extends Bedarfsthema
 {
     const ID = 33;
 

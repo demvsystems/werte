@@ -9,7 +9,7 @@ use Demv\Werte\Value;
  * Class Hybrid
  * @package Demv\Werte\Altersvorsorge\Produktwissen\Info
  */
-final class Hybrid extends Value implements ProduktwissenInfoInterface
+class Hybrid extends Value implements ProduktwissenInfoInterface
 {
     const ID = 2;
 

@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateSachversicherung;
  * Class Wohngebaeude
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Wohngebaeude extends Bedarfsthema
+class Wohngebaeude extends Bedarfsthema
 {
     const ID = 12;
 

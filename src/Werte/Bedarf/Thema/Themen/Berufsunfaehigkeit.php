@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class Berufsunfaehigkeit
  * @package Demv\Werte\Bedarf\Thema\Themen\Berufsunfaehigkeit
  */
-final class Berufsunfaehigkeit extends Bedarfsthema
+class Berufsunfaehigkeit extends Bedarfsthema
 {
     const ID = 1;
 

@@ -7,6 +7,10 @@ namespace Demv\Werte\Bedarf\Thema\Themen;
 use Demv\Werte\Bedarf\Thema\Bedarfsthema;
 use Demv\Werte\Sparte\Sparten\Vorsorge;
 
+/**
+ * Class Dienstunfaehigkeitsversicherung
+ * @package Demv\Werte\Bedarf\Thema\Themen
+ */
 class Dienstunfaehigkeitsversicherung extends Bedarfsthema
 {
     const ID = 37;

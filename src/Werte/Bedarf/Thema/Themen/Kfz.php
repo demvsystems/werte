@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateSachversicherung;
  * Class Kfz
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Kfz extends Bedarfsthema
+class Kfz extends Bedarfsthema
 {
     const ID = 14;
 

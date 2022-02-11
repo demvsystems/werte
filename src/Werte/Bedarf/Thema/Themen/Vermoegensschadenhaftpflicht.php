@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Gewerbe;
  * Class Vermoegensschadenhaftpflicht
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Vermoegensschadenhaftpflicht extends Bedarfsthema
+class Vermoegensschadenhaftpflicht extends Bedarfsthema
 {
     const ID = 31;
 

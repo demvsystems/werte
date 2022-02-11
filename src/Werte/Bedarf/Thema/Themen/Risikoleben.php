@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class Risikoleben
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Risikoleben extends Bedarfsthema
+class Risikoleben extends Bedarfsthema
 {
     const ID = 3;
 

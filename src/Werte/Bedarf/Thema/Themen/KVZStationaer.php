@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateKrankenzusatzversicherung;
  * Class KVZStationaer
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class KVZStationaer extends Bedarfsthema
+class KVZStationaer extends Bedarfsthema
 {
     const ID = 7;
 
