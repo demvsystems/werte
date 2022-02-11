@@ -12,7 +12,7 @@ use Demv\Werte\Exception\EntryNotFoundException;
  * Class ProduktwissenInfo
  * @package Demv\Werte\Altersvorsorge
  */
-final class ProduktwissenInfo extends AbstractProvider
+class ProduktwissenInfo extends AbstractProvider
 {
     /**
      * Produktwissen constructor.
