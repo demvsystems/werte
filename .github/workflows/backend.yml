@@ -37,7 +37,7 @@ jobs:
           coverage: none
           extensions: ${{ env.PHP_EXTENSIONS }}
         env:
-          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPOSER_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
 
       - name: Display PHP information
         run: |
@@ -95,7 +95,7 @@ jobs:
           coverage: none
           extensions: ${{ env.PHP_EXTENSIONS }}
         env:
-          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPOSER_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
 
       - name: Display PHP information
         run: |

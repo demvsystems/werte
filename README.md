@@ -30,5 +30,5 @@ Beim ausführen des `run.sh` Scripts muss mit dem Argument `-v` die Php Version 
 
 Befehle im Docker Container führt ihr aus mit:
 
-Für Php Version 7: `sh run.sh -v7 composer test`<br/>
-Für Php Version 8: `sh run.sh -v8 composer test`
+Für Php Version 7: `run.sh -v7 composer test`<br/>
+Für Php Version 8: `run.sh -v8 composer test`
