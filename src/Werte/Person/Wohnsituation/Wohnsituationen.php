@@ -3,20 +3,18 @@
 namespace Demv\Werte\Person\Wohnsituation;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiAndererPerson;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\BeiEltern;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\InEigentum;
 use Demv\Werte\Person\Wohnsituation\Wohnsituationen\ZurMiete;
 
 /**
- * Class Wohnsituation
+ * Class Wohnsituationen
  * @package Demv\Werte\Person\Wohnsituation
  */
 final class Wohnsituationen extends AbstractProvider
 {
-    /**
-     * Wohnsituation constructor.
-     */
     public function __construct()
     {
         $this->appendMember(new ZurMiete());
@@ -37,8 +35,10 @@ final class Wohnsituationen extends AbstractProvider
      * @param int $id
      *
      * @return WohnsituationInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): WohnsituationInterface
     {
         return parent::getOne($id);
     }

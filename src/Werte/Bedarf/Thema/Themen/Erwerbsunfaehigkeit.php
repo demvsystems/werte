@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class Erwerbsunfaehigkeit
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Erwerbsunfaehigkeit extends Bedarfsthema
+class Erwerbsunfaehigkeit extends Bedarfsthema
 {
     const ID = 26;
 

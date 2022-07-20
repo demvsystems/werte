@@ -10,7 +10,7 @@ use Demv\Werte\Sparte\Sparten\Vorsorge;
  * Class Pflegevorsorge
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Pflegevorsorge extends Bedarfsthema
+class Pflegevorsorge extends Bedarfsthema
 {
     const ID = 9;
 

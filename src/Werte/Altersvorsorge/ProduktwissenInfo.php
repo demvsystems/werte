@@ -6,12 +6,13 @@ use Demv\Werte\AbstractProvider;
 use Demv\Werte\Altersvorsorge\Produktwissen\Info\Fondsgebunden;
 use Demv\Werte\Altersvorsorge\Produktwissen\Info\Hybrid;
 use Demv\Werte\Altersvorsorge\Produktwissen\Info\Klassisch;
+use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
  * Class ProduktwissenInfo
  * @package Demv\Werte\Altersvorsorge
  */
-final class ProduktwissenInfo extends AbstractProvider
+class ProduktwissenInfo extends AbstractProvider
 {
     /**
      * Produktwissen constructor.
@@ -27,7 +28,8 @@ final class ProduktwissenInfo extends AbstractProvider
      * @param int $id
      *
      * @return ProduktwissenInfoInterface
-     * @throws \Demv\Werte\Exception\EntryNotFoundException
+     *
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id): ProduktwissenInfoInterface
     {

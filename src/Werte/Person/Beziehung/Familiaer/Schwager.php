@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 09.01.17
- * Time: 16:46
- */
+
+declare(strict_types=1);
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 

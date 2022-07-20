@@ -1,15 +1,9 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 06.01.17
- * Time: 11:14
- */
-
 namespace Demv\Werte\Person\Anrede;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Anrede\Anreden\Firma;
 use Demv\Werte\Person\Anrede\Anreden\Frau;
 use Demv\Werte\Person\Anrede\Anreden\Herr;
@@ -41,8 +35,10 @@ final class Anreden extends AbstractProvider
      * @param int $id
      *
      * @return AnredeInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): AnredeInterface
     {
         return parent::getOne($id);
     }

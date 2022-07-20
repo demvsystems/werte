@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Demv\Werte\Person\Beziehung\Familiaer;
 
 /**
  * Class Stiefkind
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-class Stiefkind extends FamiliaereBeziehung
+final class Stiefkind extends FamiliaereBeziehung
 {
     const ID = 27;
 

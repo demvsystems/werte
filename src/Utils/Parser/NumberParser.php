@@ -34,12 +34,12 @@ final class NumberParser
     {
         $s = trim($string);
         $s = preg_replace('/(.+?)\s+.*?$/', '$1', $s);
-        $s = preg_replace('/[^\d\.,-]/', '', $s);
-        $s = preg_replace('/(\.|,|-){2,}/', '$1', $s);
-        $s = preg_replace('/(?<=\d)(-)/', '', $s);
-        $s = preg_replace('/(?:\.|,)(\d{1,2})$/', '_$1', $s);
-        $s = preg_replace('/(\d)(?:,|\.)(\d)/', '$1$2', $s);
-        $s = str_replace('_', '.', $s);
+        $s = preg_replace('/[^\d\.,-]/', '', $s ?? '');
+        $s = preg_replace('/(\.|,|-){2,}/', '$1', $s ?? '');
+        $s = preg_replace('/(?<=\d)(-)/', '', $s ?? '');
+        $s = preg_replace('/(?:\.|,)(\d{1,2})$/', '_$1', $s ?? '');
+        $s = preg_replace('/(\d)(?:,|\.)(\d)/', '$1$2', $s ?? '');
+        $s = str_replace('_', '.', $s ?? '');
 
         if (!empty($s) && !is_numeric($s)) {
             return 0.0;
@@ -71,6 +71,6 @@ final class NumberParser
      */
     public function isParseable(string $string): bool
     {
-        return preg_match('/\\d/', $string);
+        return (bool) preg_match('/\\d/', $string);
     }
 }

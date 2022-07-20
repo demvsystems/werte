@@ -17,12 +17,11 @@ env:
 
 jobs:
   test:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ubuntu-latest
     if: github.event.pull_request.draft == false
     strategy:
       matrix:
-        operating-system: [ 'ubuntu-latest' ]
-        php-versions: [ '7.1', '7.2', '7.3', '7.4']
+        php-version: ['7.2', '7.3', '7.4', '8.0', '8.1']
     env:
       APP_ENV: test
     steps:
@@ -32,13 +31,13 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: ${{ matrix.php-version }}
           tools: ${{ env.PHP_TOOLS }}
           ini-values: memory_limit=512M, short_open_tag=On
           coverage: none
           extensions: ${{ env.PHP_EXTENSIONS }}
         env:
-          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPOSER_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
 
       - name: Display PHP information
         run: |
@@ -54,14 +53,77 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}-composer
-          restore-keys: ${{ runner.os }}-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}-composer
+          key: ${{ runner.os }}-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}-composer
+          restore-keys: ${{ runner.os }}-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}-composer
 
       - name: Install dependencies
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
+
+      - name: Cache phpstan
+        uses: actions/cache@v2
+        with:
+          path: /tmp/phpstan/cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
+          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
+
+      - name: Run phpcstd
+        if: github.event_name == 'pull_request'
+        run: vendor/bin/phpcstd --ci --ansi --continue
 
       - name: Setup problem matchers for PHPUnit
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Run Unit tests
         run: composer test --ansi
+
+  lint:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    env:
+      APP_ENV: test
+      PHP_VERSION: '8.1'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          tools: ${{ env.PHP_TOOLS }}
+          ini-values: memory_limit=512M, short_open_tag=On
+          coverage: none
+          extensions: ${{ env.PHP_EXTENSIONS }}
+        env:
+          COMPOSER_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
+
+      - name: Display PHP information
+        run: |
+          php -v
+          php -m
+          composer --version
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
+
+      - name: Cache phpstan
+        uses: actions/cache@v2
+        with:
+          path: /tmp/phpstan/cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
+          restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
+
+      - name: Run phpcstd
+        if: github.event_name == 'pull_request'
+        run: vendor/bin/phpcstd --ci --ansi --continue

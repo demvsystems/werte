@@ -8,7 +8,7 @@ use Demv\Werte\Bedarf\Thema\Bedarfsthema;
  * Class Privathaftpflicht
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Privathaftpflicht extends Bedarfsthema
+class Privathaftpflicht extends Bedarfsthema
 {
     const ID = 10;
 

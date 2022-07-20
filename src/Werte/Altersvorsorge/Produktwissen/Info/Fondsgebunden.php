@@ -9,7 +9,7 @@ use Demv\Werte\Value;
  * Class Fondsgebunden
  * @package Demv\Werte\Altersvorsorge\Produktwissen\Info
  */
-final class Fondsgebunden extends Value implements ProduktwissenInfoInterface
+class Fondsgebunden extends Value implements ProduktwissenInfoInterface
 {
     const ID = 1;
 

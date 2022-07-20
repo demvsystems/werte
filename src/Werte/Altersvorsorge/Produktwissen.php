@@ -7,6 +7,7 @@ use Demv\Werte\Altersvorsorge\Produktwissen\Lebensversicherung;
 use Demv\Werte\Altersvorsorge\Produktwissen\RentenversicherungAnsparphase;
 use Demv\Werte\Altersvorsorge\Produktwissen\RentenversicherungAuszahlungsphase;
 use Demv\Werte\Altersvorsorge\Produktwissen\TermfixLebensversicherung;
+use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
  * Class Produktwissen
@@ -29,7 +30,8 @@ final class Produktwissen extends AbstractProvider
      * @param int $id
      *
      * @return ProduktwissenInterface
-     * @throws \Demv\Werte\Exception\EntryNotFoundException
+     *
+     * @throws EntryNotFoundException
      */
     public function getOne(int $id): ProduktwissenInterface
     {

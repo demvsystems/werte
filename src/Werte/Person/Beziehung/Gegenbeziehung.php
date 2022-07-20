@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 09.01.17
- * Time: 16:45
- */
 
 namespace Demv\Werte\Person\Beziehung;
 

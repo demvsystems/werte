@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateSachversicherung;
  * Class Unfallversicherung
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Unfallversicherung extends Bedarfsthema
+class Unfallversicherung extends Bedarfsthema
 {
     const ID = 8;
 

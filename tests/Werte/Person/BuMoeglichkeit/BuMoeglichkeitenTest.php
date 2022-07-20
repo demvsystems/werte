@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19.01.17
- * Time: 15:47
- */
-
 namespace Demv\Werte\Tests\Person\BuMoeglichkeit;
 
 use Demv\Werte\Person\BuMoeglichkeit\BuMoeglichkeiten;
@@ -16,6 +9,10 @@ use Demv\Werte\Person\BuMoeglichkeit\Moeglichkeiten\ZeitweiseNichtMoeglich;
 use Demv\Werte\Tests\ProviderTestTrait;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class BuMoeglichkeitenTest
+ * @package Demv\Werte\Tests\Person\BuMoeglichkeit
+ */
 class BuMoeglichkeitenTest extends TestCase
 {
     use ProviderTestTrait;

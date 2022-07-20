@@ -2,7 +2,6 @@
     "name": "demvsystems/werte",
     "description": "Abbildung von allgemeinen Werten",
     "type": "library",
-    "homepage": "https://github.com/demvsystems/werte",
     "authors": [
         {
             "name": "DEMV-Systems",
@@ -10,15 +9,22 @@
             "homepage": "https://github.com/demvsystems"
         }
     ],
+    "homepage": "https://github.com/demvsystems/werte",
     "require": {
-        "php": "^7.1",
-        "dgame/php-ensurance": "^1 || ^2",
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
         "guzzlehttp/psr7": "^1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.5",
         "codeception/specify": "^0.4.5",
-        "doctrine/instantiator": "^1.4"
+        "doctrine/instantiator": "^1.4",
+        "ergebnis/composer-normalize": "^2.8",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "phpstan/phpstan": "^0.12.81",
+        "phpstan/phpstan-deprecation-rules": "^0.12.6",
+        "phpstan/phpstan-phpunit": "^0.12.18",
+        "phpunit/phpunit": "^7.5 || ^9.5",
+        "spaceemotion/php-coding-standard": "dev-wip/v1"
     },
     "autoload": {
         "psr-4": {
@@ -36,10 +42,11 @@
         ]
     },
     "scripts": {
+        "analyze": "phpcstd",
+        "coverage": "./vendor/bin/phpunit --coverage-clover=coverage.xml",
+        "coverage-html": "./vendor/bin/phpunit --coverage-html=coverage",
         "test": [
             "./vendor/bin/phpunit"
-        ],
-        "coverage": "./vendor/bin/phpunit --coverage-clover=coverage.xml",
-        "coverage-html": "./vendor/bin/phpunit --coverage-html=coverage"
+        ]
     }
 }

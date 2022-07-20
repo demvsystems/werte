@@ -1,20 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 01.02.17
- * Time: 11:48
- */
+
+declare(strict_types=1);
 
 namespace Demv\Werte\Person\Beziehung\Familiaer;
-
-use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 
 /**
  * Class NeffeNichte
  * @package Demv\Werte\Person\Beziehung\Familiaer
  */
-final class NeffeNichte extends FamiliaereBeziehung implements BeziehungsTypInterface
+final class NeffeNichte extends FamiliaereBeziehung
 {
     const ID = 15;
 

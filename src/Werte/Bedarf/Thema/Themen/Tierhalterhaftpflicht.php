@@ -9,7 +9,7 @@ use Demv\Werte\Sparte\Sparten\PrivateSachversicherung;
  * Class Tierhalterhaftpflicht
  * @package Demv\Werte\Bedarf\Thema\Themen
  */
-final class Tierhalterhaftpflicht extends Bedarfsthema
+class Tierhalterhaftpflicht extends Bedarfsthema
 {
     const ID = 16;
 

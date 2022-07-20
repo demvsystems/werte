@@ -3,6 +3,7 @@
 namespace Demv\Werte\Sparte\Krankenversicherung;
 
 use Demv\Werte\AbstractProvider;
+use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\Beihilfe;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\FreieHeilfuersorge;
 use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\GKV;
@@ -14,9 +15,6 @@ use Demv\Werte\Sparte\Krankenversicherung\Krankenversicherungen\PKV;
  */
 final class Krankenversicherung extends AbstractProvider
 {
-    /**
-     * Krankenversicherung constructor.
-     */
     public function __construct()
     {
         $this->appendMember(new GKV());
@@ -37,8 +35,10 @@ final class Krankenversicherung extends AbstractProvider
      * @param int $id
      *
      * @return KrankenversicherungInterface
+     *
+     * @throws EntryNotFoundException
      */
-    public function getOne(int $id)
+    public function getOne(int $id): KrankenversicherungInterface
     {
         return parent::getOne($id);
     }

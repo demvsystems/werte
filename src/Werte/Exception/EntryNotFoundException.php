@@ -10,8 +10,16 @@ use Exception;
  */
 class EntryNotFoundException extends Exception
 {
-    public function __construct($classname, $id)
+    /**
+     * @param string $classname
+     * @param string|int $id
+     */
+    public function __construct(string $classname, $id)
     {
-        parent::__construct(sprintf('Der %s-Eintrag für die ID %s existiert nich', $classname, $id), 404, null);
+        parent::__construct(
+            sprintf('Der %s-Eintrag für die ID %s existiert nicht', $classname, $id),
+            404,
+            null
+        );
     }
 }
