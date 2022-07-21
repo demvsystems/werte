@@ -25,4 +25,6 @@ interface Vorsorge
     const RISIKOLEBEN = 136;
 
     const DIENSTUNFAEHIGKEITSVERSICHERUNG = 290;
+
+    const BETRIEBLICHE_ALTERSVORSORGE = 236;
 }
