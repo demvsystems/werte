@@ -1,6 +1,6 @@
 <?php
 
-namespace Demv\Werte\Tests\Person\BuMoeglichkeit;
+namespace Demv\Werte\Tests\Person\Pflegegrad;
 
 use Codeception\Specify;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade;
