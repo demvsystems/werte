@@ -41,6 +41,11 @@
             "tests/"
         ]
     },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
     "scripts": {
         "analyze": "phpcstd",
         "coverage": "./vendor/bin/phpunit --coverage-clover=coverage.xml",
