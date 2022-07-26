@@ -34,5 +34,5 @@ interface Vorsorge
 
     const HYBRID_BAV = 220;
 
-    CONST FONDSGEBUNDEN_BAV = 221;
+    const FONDSGEBUNDEN_BAV = 221;
 }
