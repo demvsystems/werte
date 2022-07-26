@@ -29,17 +29,16 @@
     "autoload": {
         "psr-4": {
             "Demv\\Werte\\": "src/Werte",
-            "Demv\\Werte\\Tests\\": "tests/Werte",
             "Demv\\Http\\": "src/Http",
-            "Demv\\Http\\Tests\\": "tests/Http",
-            "Demv\\Utils\\": "src/Utils",
-            "Demv\\Utils\\Tests\\": "tests/Utils"
+            "Demv\\Utils\\": "src/Utils"
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/"
-        ]
+        "psr-4": {
+            "Demv\\Werte\\Tests\\": "tests/Werte",
+            "Demv\\Http\\Tests\\": "tests/Http",
+            "Demv\\Utils\\Tests\\": "tests/Utils"
+        }
     },
     "config": {
         "allow-plugins": {
