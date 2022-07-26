@@ -27,4 +27,12 @@ interface Vorsorge
     const DIENSTUNFAEHIGKEITSVERSICHERUNG = 290;
 
     const BETRIEBLICHE_ALTERSVORSORGE = 236;
+
+    const DIREKTVERSICHERUNG_BAV = 213;
+
+    const KLASSISCH_BAV = 219;
+
+    const HYBRID_BAV = 220;
+
+    const FONDSGEBUNDEN_BAV = 221;
 }
