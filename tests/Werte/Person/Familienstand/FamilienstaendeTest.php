@@ -1,6 +1,6 @@
 <?php
 
-namespace Demv\Werte\Tests\Person\Familienstaende;
+namespace Demv\Werte\Tests\Person\Familienstand;
 
 use Codeception\Specify;
 use Demv\Werte\Exception\EntryNotFoundException;
