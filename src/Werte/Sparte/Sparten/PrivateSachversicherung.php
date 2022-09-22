@@ -18,6 +18,9 @@ interface PrivateSachversicherung
     const HAUSRAT                            = 166;
     const WOHNGEBAUEDEVERSICHERUNG           = 167;
     const KFZ                                = 171;
+    const KFZ_PKW                            = 394;
+    const KFZ_LKW                            = 395;
+    const KFZ_MOTORRAD                       = 392;
     const TIERHALTERHAFTPFLICHT              = 170;
     const HUNDEHALTERHAFTPFLICHT             = 461;
     const PFERDEHALTERHAFTPFLICHT            = 462;
