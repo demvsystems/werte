@@ -11,36 +11,47 @@ use PHPUnit\Framework\TestCase;
  */
 final class BruttoNettoRechnerTest extends TestCase
 {
-    const MAPPING = [
-        15000  => 11884.5,
-        20000  => 15846,
-        30000  => 22575,
-        40000  => 28160,
-        50000  => 33595,
-        60000  => 39384,
-        70000  => 45101,
-        80000  => 50920,
-        90000  => 57015,
-        100000 => 62860,
-    ];
-
-    public function testBruttoToNetto(): void
+    /**
+     * @param float $brutto
+     * @param float $netto
+     *
+     * @return void
+     * @dataProvider provideTestCases
+     */
+    public function testBruttoToNetto(float $brutto, float $netto): void
     {
         $rechner = new BruttoNettoRechner();
 
-        foreach (self::MAPPING as $brutto => $netto) {
-            $this->assertEquals($netto,
-                                $rechner->convertBruttoToNetto($brutto), 'Testfall Brutto:' . $brutto . ' Netto:' . $netto);
-        }
+        $this->assertEquals($netto, $rechner->convertBruttoToNetto($brutto), 'Testfall Brutto:' . $brutto . ' Netto:' . $netto);
     }
 
-    public function testNettoToBrutto(): void
+    /**
+     * @param float $netto
+     * @param float $brutto
+     *
+     * @return void
+     * @dataProvider provideTestCases
+     */
+    public function testNettoToBrutto(float $brutto, float $netto): void
     {
         $rechner = new BruttoNettoRechner();
 
-        foreach (self::MAPPING as $brutto => $netto) {
-            $this->assertEquals($brutto,
-                                $rechner->convertNettoToBrutto($netto), 'Testfall Netto:' . $netto . ' Brutto:' . $brutto);
-        }
+        $this->assertEquals($brutto, $rechner->convertNettoToBrutto($netto), 'Testfall Netto:' . $netto . ' Brutto:' . $brutto);
+    }
+
+    public function provideTestCases(): array
+    {
+        return [
+            [15000, 11884.5],
+            [20000, 15846],
+            [30000, 22575],
+            [40000, 28160],
+            [50000, 33595],
+            [60000, 39384],
+            [70000, 45101],
+            [80000, 50920],
+            [90000, 57015],
+            [100000, 62860],
+        ];
     }
 }

@@ -69,7 +69,7 @@ final class BruttoNettoRechner
      */
     private function calculateNettoByProzent(float $brutto, float $prozent): float
     {
-        return (float) $brutto / 100 * $prozent;
+        return round($brutto / 100 * $prozent, 2);
     }
 
     /**
@@ -82,6 +82,6 @@ final class BruttoNettoRechner
      */
     private function calculateBruttoByProzent(float $netto, float $prozent): float
     {
-        return (float) $netto * 100 / $prozent;
+        return round($netto * 100 / $prozent, 2);
     }
 }
