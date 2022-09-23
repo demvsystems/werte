@@ -22,7 +22,7 @@ final class BruttoNettoRechnerTest extends TestCase
     {
         $rechner = new BruttoNettoRechner();
 
-        $this->assertEquals($netto, $rechner->convertBruttoToNetto($brutto), 'Testfall Brutto:'.$brutto.' Netto:'.$netto);
+        $this->assertEquals($netto, $rechner->convertBruttoToNetto($brutto), 'Testfall Brutto:' . $brutto . ' Netto:' . $netto);
     }
 
     /**
@@ -36,7 +36,7 @@ final class BruttoNettoRechnerTest extends TestCase
     {
         $rechner = new BruttoNettoRechner();
 
-        $this->assertEquals($brutto, $rechner->convertNettoToBrutto($netto), 'Testfall Netto:'.$netto.' Brutto:'.$brutto);
+        $this->assertEquals($brutto, $rechner->convertNettoToBrutto($netto), 'Testfall Netto:' . $netto . ' Brutto:' . $brutto);
     }
 
     public function provideTestCases(): array
