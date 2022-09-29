@@ -38,9 +38,11 @@ use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\Generalbevollmaechtigter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\Vollmachtgeber;
 use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 use PHPUnit\Framework\TestCase;
 
@@ -214,5 +216,10 @@ class GegenbeziehungTest extends TestCase
     public function testAngehoeriger(): void
     {
         $this->checkExistence(new Angehoeriger(), new InhaberGeschaeftsfuehrer());
+    }
+
+    public function testGeneralbevollmaechtigter(): void
+    {
+        $this->checkExistence(new Generalbevollmaechtigter(), new Vollmachtgeber());
     }
 }
