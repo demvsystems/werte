@@ -50,11 +50,13 @@ use Demv\Werte\Person\Beziehung\Familiaer\Stiefelternteil;
 use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
+use Demv\Werte\Person\Beziehung\Privat\Generalbevollmaechtigter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\Pflegeeltern;
 use Demv\Werte\Person\Beziehung\Privat\Pflegekind;
 use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\Vollmachtgeber;
 use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 
 /**
@@ -107,7 +109,8 @@ final class GegenbeziehungFactory
             CousinCousine::ID                     => CousinCousine::ID,
             Komplementaer::ID                     => KommanditgesellschaftKomplementaer::ID,
             Kommanditist::ID                      => KommanditgesellschaftKommanditist::ID,
-            Angehoeriger::ID                      => InhaberGeschaeftsfuehrer::ID
+            Angehoeriger::ID                      => InhaberGeschaeftsfuehrer::ID,
+            Generalbevollmaechtigter::ID          => Vollmachtgeber::ID
         ];
     }
 }
