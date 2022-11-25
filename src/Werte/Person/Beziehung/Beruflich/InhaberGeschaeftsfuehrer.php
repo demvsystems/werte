@@ -17,6 +17,6 @@ final class InhaberGeschaeftsfuehrer extends BeruflicheBeziehung
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Inhabers/Geschäftsführer');
+        parent::__construct(self::ID, 'Inhaber/Geschäftsführer');
     }
 }
