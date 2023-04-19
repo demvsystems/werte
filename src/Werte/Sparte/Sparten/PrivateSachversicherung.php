@@ -28,10 +28,15 @@ interface PrivateSachversicherung
     const JAGDHAFTPFLICHT                    = 253;
     const JUWELEN_UND_SCHMUCKVERSICHERUNG    = 404;
     const KFZ                                = 171;
+    const KFZ_ANHAENGER                      = 310;
     const KFZ_LKW                            = 395;
     const KFZ_MOTORRAD                       = 392;
+    const KFZ_OLDTIMER                       = 391;
     const KFZ_PKW                            = 394;
+    const KFZ_QUAD                           = 434;
+    const KFZ_SCHLEPPER_ZUGMASCHINE          = 422;
     const KFZ_SCHUTZBRIEF                    = 282;
+    const KFZ_WOHNMOBIL                      = 393;
     const KINDERINVALIDITAET                 = 358;
     const LEISTUNGSWASSERVERSICHERUNG        = 427;
     const LUFTFAHRTHAFTPFLICHT               = 374;
