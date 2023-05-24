@@ -6,18 +6,26 @@ use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Angehoeriger;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Arzt;
 use Demv\Werte\Person\Beziehung\Beruflich\Aufsichtsrat;
+use Demv\Werte\Person\Beziehung\Beruflich\BautraegerKaeufer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaAufsichtsrat;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVorstand;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienMakler;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
+use Demv\Werte\Person\Beziehung\Beruflich\Notar;
+use Demv\Werte\Person\Beziehung\Beruflich\NotarMandant;
+use Demv\Werte\Person\Beziehung\Beruflich\Patient;
+use Demv\Werte\Person\Beziehung\Beruflich\Steuerberater;
+use Demv\Werte\Person\Beziehung\Beruflich\SteuerberaterMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 use Demv\Werte\Person\Beziehung\Familiaer\CousinCousine;
@@ -221,5 +229,25 @@ class GegenbeziehungTest extends TestCase
     public function testGeneralbevollmaechtigter(): void
     {
         $this->checkExistence(new Generalbevollmaechtigter(), new Vollmachtgeber());
+    }
+
+    public function testSteuerberater(): void
+    {
+        $this->checkExistence(new Steuerberater(), new SteuerberaterMandant());
+    }
+
+    public function testNotar(): void
+    {
+        $this->checkExistence(new Notar(), new NotarMandant());
+    }
+
+    public function testArzt(): void
+    {
+        $this->checkExistence(new Arzt(), new Patient());
+    }
+
+    public function testImmobilienmaker(): void
+    {
+        $this->checkExistence(new ImmobilienMakler(), new BautraegerKaeufer());
     }
 }
