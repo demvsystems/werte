@@ -5,7 +5,9 @@ namespace Demv\Werte\Person\Beziehung;
 use Demv\Werte\Person\Beziehung\Beruflich\Angehoeriger;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Arzt;
 use Demv\Werte\Person\Beziehung\Beruflich\Aufsichtsrat;
+use Demv\Werte\Person\Beziehung\Beruflich\BautraegerKaeufer;
 use Demv\Werte\Person\Beziehung\Beruflich\Berufsbetreuer;
 use Demv\Werte\Person\Beziehung\Beruflich\Betreuter;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
@@ -20,6 +22,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
 use Demv\Werte\Person\Beziehung\Beruflich\Gesellschafter;
 use Demv\Werte\Person\Beziehung\Beruflich\Hauptgeschaeftsstelle;
 use Demv\Werte\Person\Beziehung\Beruflich\Hausverwaltung;
+use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienMakler;
 use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienVerwaltetVon;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
@@ -28,6 +31,11 @@ use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Muttergesellschaft;
+use Demv\Werte\Person\Beziehung\Beruflich\Notar;
+use Demv\Werte\Person\Beziehung\Beruflich\NotarMandant;
+use Demv\Werte\Person\Beziehung\Beruflich\Patient;
+use Demv\Werte\Person\Beziehung\Beruflich\Steuerberater;
+use Demv\Werte\Person\Beziehung\Beruflich\SteuerberaterMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\Tochtergesellschaft;
 use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
 use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
@@ -110,7 +118,11 @@ final class GegenbeziehungFactory
             Komplementaer::ID                     => KommanditgesellschaftKomplementaer::ID,
             Kommanditist::ID                      => KommanditgesellschaftKommanditist::ID,
             Angehoeriger::ID                      => InhaberGeschaeftsfuehrer::ID,
-            Generalbevollmaechtigter::ID          => Vollmachtgeber::ID
+            Generalbevollmaechtigter::ID          => Vollmachtgeber::ID,
+            Steuerberater::ID                     => SteuerberaterMandant::ID,
+            Notar::ID                             => NotarMandant::ID,
+            Arzt::ID                              => Patient::ID,
+            ImmobilienMakler::ID                  => BautraegerKaeufer::ID,
         ];
     }
 }

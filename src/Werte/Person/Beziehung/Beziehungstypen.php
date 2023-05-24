@@ -7,7 +7,9 @@ use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Angehoeriger;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
+use Demv\Werte\Person\Beziehung\Beruflich\Arzt;
 use Demv\Werte\Person\Beziehung\Beruflich\Aufsichtsrat;
+use Demv\Werte\Person\Beziehung\Beruflich\BautraegerKaeufer;
 use Demv\Werte\Person\Beziehung\Beruflich\Berufsbetreuer;
 use Demv\Werte\Person\Beziehung\Beruflich\Betreuter;
 use Demv\Werte\Person\Beziehung\Beruflich\ExArbeitgeber;
@@ -22,6 +24,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
 use Demv\Werte\Person\Beziehung\Beruflich\Gesellschafter;
 use Demv\Werte\Person\Beziehung\Beruflich\Hauptgeschaeftsstelle;
 use Demv\Werte\Person\Beziehung\Beruflich\Hausverwaltung;
+use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienMakler;
 use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienVerwaltetVon;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
@@ -30,6 +33,11 @@ use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Muttergesellschaft;
+use Demv\Werte\Person\Beziehung\Beruflich\Notar;
+use Demv\Werte\Person\Beziehung\Beruflich\NotarMandant;
+use Demv\Werte\Person\Beziehung\Beruflich\Patient;
+use Demv\Werte\Person\Beziehung\Beruflich\Steuerberater;
+use Demv\Werte\Person\Beziehung\Beruflich\SteuerberaterMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\Tochtergesellschaft;
 use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
 use Demv\Werte\Person\Beziehung\Beruflich\Zweigstelle;
@@ -125,6 +133,14 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new VorstandVonFirma());
         $this->appendMember(new Generalbevollmaechtigter());
         $this->appendMember(new Vollmachtgeber());
+        $this->appendMember(new Steuerberater());
+        $this->appendMember(new SteuerberaterMandant());
+        $this->appendMember(new Notar());
+        $this->appendMember(new NotarMandant());
+        $this->appendMember(new Arzt());
+        $this->appendMember(new Patient());
+        $this->appendMember(new ImmobilienMakler());
+        $this->appendMember(new BautraegerKaeufer());
     }
 
     /**
