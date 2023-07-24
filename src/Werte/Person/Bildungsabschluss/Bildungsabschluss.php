@@ -8,6 +8,7 @@ use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AbschlussAlsMeister;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungHandwerk;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungKaufmaennisch;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungMitWeiterbildung;
+use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungSonstige;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\Auszubildender;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\BetriebswirtFachwirt;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Hochschule\BachelorFachhochschule;
@@ -95,6 +96,7 @@ class Bildungsabschluss extends AbstractProvider
     {
         $this->appendMember(new AusbildungKaufmaennisch());
         $this->appendMember(new AusbildungHandwerk());
+        $this->appendMember(new AusbildungSonstige());
         $this->appendMember(new AusbildungMitWeiterbildung());
         $this->appendMember(new Auszubildender());
         $this->appendMember(new AbschlussAlsMeister());
