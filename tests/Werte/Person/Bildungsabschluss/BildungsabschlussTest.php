@@ -84,7 +84,7 @@ class BildungsabschlussTest extends TestCase
 
     public function testGetAllRegistriert()
     {
-        $this->assertEquals(20, count($this->provider->getAll()));
+        $this->assertEquals(21, count($this->provider->getAll()));
     }
 
     public function testInterface()
