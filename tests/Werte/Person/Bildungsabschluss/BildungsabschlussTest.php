@@ -6,6 +6,7 @@ use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AbschlussAlsMeister;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungHandwerk;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungKaufmaennisch;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungMitWeiterbildung;
+use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\AusbildungSonstige;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\Auszubildender;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Beruflich\BetriebswirtFachwirt;
 use Demv\Werte\Person\Bildungsabschluss\Bildung\Hochschule\BachelorFachhochschule;
@@ -59,6 +60,7 @@ class BildungsabschlussTest extends TestCase
 
         $this->assertTrue(in_array(new AusbildungKaufmaennisch(), $abschluesse), AusbildungKaufmaennisch::class);
         $this->assertTrue(in_array(new AusbildungHandwerk(), $abschluesse), AusbildungHandwerk::class);
+        $this->assertTrue(in_array(new AusbildungSonstige(), $abschluesse), AusbildungSonstige::class);
         $this->assertTrue(in_array(new AusbildungMitWeiterbildung(), $abschluesse), AusbildungMitWeiterbildung::class);
         $this->assertTrue(in_array(new Auszubildender(), $abschluesse), Auszubildender::class);
         $this->assertTrue(in_array(new AbschlussAlsMeister(), $abschluesse), AbschlussAlsMeister::class);
