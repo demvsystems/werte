@@ -10,6 +10,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Bundeswehr;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsFrei;
@@ -49,6 +50,7 @@ final class Taetigkeitsstatus extends AbstractProvider
         $this->appendMember(new Sonstige());
         $this->appendMember(new GGFVersicherungsFrei());
         $this->appendMember(new GGFVersicherungsPflichtig());
+        $this->appendMember(new Bundeswehr());
     }
 
     /**
