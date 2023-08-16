@@ -11,7 +11,7 @@ use Demv\Werte\Value;
  */
 final class Bundeswehr extends Value implements TaetigkeitsstatusInterface
 {
-    const ID = 2;
+    const ID = 26;
 
     public function __construct()
     {
