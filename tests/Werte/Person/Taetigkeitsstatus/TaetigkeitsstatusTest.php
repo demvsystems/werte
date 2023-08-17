@@ -9,6 +9,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Bundeswehr;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\GGFVersicherungsFrei;
@@ -42,7 +43,7 @@ class TaetigkeitsstatusTest extends TestCase
         $provider = $this->getTaetigkeitsstatus();
 
         $this->specify('Alle Einträge wurden registriert', function () use ($provider): void {
-            $this->assertEquals(18, count($provider->getAll()));
+            $this->assertEquals(19, count($provider->getAll()));
         });
 
         $this->specify('Alle Instanzen implementieren das gleiche Interface.', function () use ($provider): void {
@@ -81,6 +82,7 @@ class TaetigkeitsstatusTest extends TestCase
         $this->checkGetOne($provider, Vorstand::class, true, false);
         $this->checkGetOne($provider, GGFVersicherungsFrei::class, true, false);
         $this->checkGetOne($provider, GGFVersicherungsPflichtig::class, false, false);
+        $this->checkGetOne($provider, Bundeswehr::class, true, true);
     }
 
     /**
