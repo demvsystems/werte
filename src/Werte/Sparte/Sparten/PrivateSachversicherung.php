@@ -34,9 +34,11 @@ interface PrivateSachversicherung
     const KFZ_OLDTIMER                       = 391;
     const KFZ_PKW                            = 394;
     const KFZ_QUAD                           = 434;
+    const KFZ_TRIKE                          = 435;
     const KFZ_SCHLEPPER_ZUGMASCHINE          = 422;
     const KFZ_SCHUTZBRIEF                    = 282;
     const KFZ_WOHNMOBIL                      = 393;
+    const KFZ_WOHNWAGEN                      = 441;
     const KINDERINVALIDITAET                 = 358;
     const LEISTUNGSWASSERVERSICHERUNG        = 427;
     const LUFTFAHRTHAFTPFLICHT               = 374;
