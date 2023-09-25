@@ -30,7 +30,7 @@ interface PrivateSachversicherung
     const KFZ                                = 171;
     const KFZ_ANHAENGER                      = 310;
     const KFZ_LKW                            = 395;
-    const KFZ_LKW_BIS_3_5T                   = 561;
+    const KFZ_LIEFERWAGEN                    = 561;
     const KFZ_SCHLEPPER_ZUGMASCHINE          = 422;
     const KFZ_MOTORRAD                       = 392;
     const KFZ_OLDTIMER                       = 391;
