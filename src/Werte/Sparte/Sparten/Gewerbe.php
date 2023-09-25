@@ -24,11 +24,13 @@ interface Gewerbe
     const FRACHTFUEHRER                       = 379;
     const GEBAEUDE                            = 177;
     const GESCHAEFTSINHALT                    = 176;
+    const KFZ                                 = 179;
     const KFZ_ANHAENGER                       = 559;
     const KFZ_SCHLEPPER_ZUGMASCHINE           = 423;
     const KFZ_LANDWIRTSCHAFTLICHE_ZUGMASCHINE = 593;
     const KFZ_LIEFERWAGEN                     = 531;
     const KFZ_LKW                             = 406;
+    const KFZ_MOTORRAD                        = 412;
     const KFZ_QUAD                            = 433;
     const KFZ_TRIKE                           = 436;
     const GLAS                                = 232;
