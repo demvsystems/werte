@@ -30,12 +30,13 @@ interface PrivateSachversicherung
     const KFZ                                = 171;
     const KFZ_ANHAENGER                      = 310;
     const KFZ_LKW                            = 395;
+    const KFZ_LKW_BIS_3_5T                   = 561;
+    const KFZ_SCHLEPPER_ZUGMASCHINE          = 422;
     const KFZ_MOTORRAD                       = 392;
     const KFZ_OLDTIMER                       = 391;
     const KFZ_PKW                            = 394;
     const KFZ_QUAD                           = 434;
     const KFZ_TRIKE                          = 435;
-    const KFZ_SCHLEPPER_ZUGMASCHINE          = 422;
     const KFZ_SCHUTZBRIEF                    = 282;
     const KFZ_WOHNMOBIL                      = 393;
     const KFZ_WOHNWAGEN                      = 441;
