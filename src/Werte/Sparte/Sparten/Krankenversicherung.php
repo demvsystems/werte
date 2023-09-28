@@ -17,4 +17,6 @@ interface Krankenversicherung
     const PRIVATE_KRANKENVOLLVERSICHERUNG = 156;
 
     const FREIE_HEILFUERSORGE = 368;
+    
+    const PRIVATE_KRANKENZUSATZVERSICHERUNG = 157;
 }
