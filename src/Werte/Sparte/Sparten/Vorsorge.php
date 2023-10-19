@@ -35,4 +35,6 @@ interface Vorsorge
     const HYBRID_BAV = 220;
 
     const FONDSGEBUNDEN_BAV = 221;
+
+    const BETRIEBLICHE_KRANKENVERSICHERUNG = 235;
 }
