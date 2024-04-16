@@ -25,7 +25,7 @@ interface Gewerbe
     const GEBAEUDE                            = 177;
     const GESCHAEFTSINHALT                    = 176;
     const KFZ                                 = 179;
-    const KFZ_ANHAENGER                       = 559;
+    const KFZ_ANHAENGER                       = 409;
     const KFZ_SCHLEPPER_ZUGMASCHINE           = 423;
     const KFZ_LANDWIRTSCHAFTLICHE_ZUGMASCHINE = 593;
     const KFZ_LIEFERWAGEN                     = 531;
