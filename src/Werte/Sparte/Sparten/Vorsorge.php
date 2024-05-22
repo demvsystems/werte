@@ -36,7 +36,7 @@ interface Vorsorge
 
     const PENSIONSFONDS_BAV = 216;
 
-    const PENSIONSZUSAGE = 217;
+    const PENSIONSZUSAGE_BAV = 217;
 
     const KLASSISCH_BAV = 219;
 
