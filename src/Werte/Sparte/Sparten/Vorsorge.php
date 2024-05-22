@@ -30,6 +30,14 @@ interface Vorsorge
 
     const DIREKTVERSICHERUNG_BAV = 213;
 
+    const PENSIONSKASSE_BAV = 214;
+
+    const UNTERSTUETZUNGSKASSE_BAV = 215;
+
+    const PENSIONSFONDS_BAV = 216;
+
+    const PENSIONSZUSAGE = 217;
+
     const KLASSISCH_BAV = 219;
 
     const HYBRID_BAV = 220;
