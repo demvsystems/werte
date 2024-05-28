@@ -10,6 +10,7 @@ use Demv\Werte\Dokumente\Dokumenttypen\Evb;
 use Demv\Werte\Dokumente\Dokumenttypen\Kuendigung;
 use Demv\Werte\Dokumente\Dokumenttypen\Leistungsuebersicht;
 use Demv\Werte\Dokumente\Dokumenttypen\Produktinformationsblatt;
+use Demv\Werte\Dokumente\Dokumenttypen\Schweigepflichtentbindung;
 use Demv\Werte\Dokumente\Dokumenttypen\Sepamandant;
 use Demv\Werte\Dokumente\Dokumenttypen\VVG;
 use Demv\Werte\Exception\EntryNotFoundException;
@@ -34,6 +35,7 @@ final class Dokumenttypen extends AbstractProvider
         $this->appendMember(new Sepamandant());
         $this->appendMember(new VVG());
         $this->appendMember(new Evb());
+        $this->appendMember(new Schweigepflichtentbindung());
     }
 
     /**
