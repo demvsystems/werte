@@ -47,12 +47,14 @@ jobs:
 
       - name: Get composer cache directory
         id: composer-cache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_ENV
+          echo "dir::save-state name=dir::$(composer config cache-files-dir)"
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
-          path: ${{ steps.composer-cache.outputs.dir }}
+          path: ${{ env.dir }}
           key: ${{ runner.os }}-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}-composer
           restore-keys: ${{ runner.os }}-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}-composer
 
@@ -60,7 +62,7 @@ jobs:
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
 
       - name: Cache phpstan
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: /tmp/phpstan/cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
@@ -105,12 +107,14 @@ jobs:
 
       - name: Get composer cache directory
         id: composer-cache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_ENV
+          echo "dir::save-state name=dir::$(composer config cache-files-dir)"
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
-          path: ${{ steps.composer-cache.outputs.dir }}
+          path: ${{ env.dir }}
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
           restore-keys: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
 
@@ -118,7 +122,7 @@ jobs:
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
 
       - name: Cache phpstan
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: /tmp/phpstan/cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
