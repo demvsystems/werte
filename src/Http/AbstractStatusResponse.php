@@ -10,36 +10,26 @@ use Psr\Http\Message\ResponseInterface;
  */
 abstract class AbstractStatusResponse implements StatusResponseInterface
 {
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $code = 0;
-    /**
-     * @var array
-     */
-    private $content = [];
+
+    /** @var array<string, mixed> */
+    private $content;
 
     /**
-     * AbstractStatusResponse constructor.
-     *
-     * @param array $body
+     * @param array<string, mixed> $body
      */
     public function __construct(array $body)
     {
         $this->content = $body;
     }
 
-    /**
-     * @return int
-     */
     final public function getCode(): int
     {
         return $this->code;
     }
 
-    /**
-     * @return array
-     */
+    /** @return array<string, mixed> */
     final public function getContent(): array
     {
         return $this->content;
@@ -54,6 +44,7 @@ abstract class AbstractStatusResponse implements StatusResponseInterface
     {
         $code   = $response->getStatusCode();
         $stream = $response->getBody()->getContents();
+        /** @var array{content: array, success: ?string} $body */
         $body   = json_decode($stream, true);
 
         if ($code >= 200 && $code < 300) {
@@ -65,25 +56,16 @@ abstract class AbstractStatusResponse implements StatusResponseInterface
         return new Error($code, $body);
     }
 
-    /**
-     * @return bool
-     */
     public function isSuccess(): bool
     {
         return false;
     }
 
-    /**
-     * @return bool
-     */
     public function isFail(): bool
     {
         return false;
     }
 
-    /**
-     * @return bool
-     */
     public function isError(): bool
     {
         return false;

@@ -2,10 +2,10 @@ includes:
   - vendor/phpstan/phpstan-deprecation-rules/rules.neon
   - vendor/phpstan/phpstan-phpunit/extension.neon
   - vendor/phpstan/phpstan-phpunit/rules.neon
+  - phpstan-baseline.neon
 
 parameters:
   level: max
-  checkMissingIterableValueType: false
   tipsOfTheDay: false
 
   paths:
@@ -16,3 +16,4 @@ parameters:
 
   ignoreErrors:
     - '#but returns array<Demv\\Werte\\ValueInterface>#'
+    - identifier: missingType.iterableValue
