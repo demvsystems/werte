@@ -1,8 +1,8 @@
-FROM php:7.2-cli
+FROM php:7.4-cli
 
 ARG GITHUB_TOKEN
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --2
 RUN composer config -g github-oauth.github.com $GITHUB_TOKEN
 
 RUN apt-get update && \
