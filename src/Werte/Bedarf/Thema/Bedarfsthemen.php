@@ -5,6 +5,9 @@ namespace Demv\Werte\Bedarf\Thema;
 use Demv\Werte\AbstractProvider;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufWiderruf;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufZeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAusschliesslichAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Sparte\Sparten;
 use ReflectionClass;
@@ -134,7 +137,17 @@ class Bedarfsthemen extends AbstractProvider
         $spartenIds = $this->getSpartenIds($sparten);
 
         // remove Beamten Sparten, if not verbeamtet
-        if (!in_array($taetigkeitsId, [BeamterAufProbe::ID, BeamterAufLebenszeit::ID], true)) {
+        if (!in_array(
+            $taetigkeitsId,
+            [
+                BeamterAufProbe::ID,
+                BeamterAufLebenszeit::ID,
+                BeamterAusschliesslichAufProbe::ID,
+                BeamterAufWiderruf::ID,
+                BeamterAufZeit::ID,
+            ],
+            true
+        )) {
             $spartenIds = array_filter($spartenIds, static function ($id) {
                 return !in_array($id, [
                     Sparten\Privathaftpflicht::DIENSTHAFTPFLICHT,

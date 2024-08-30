@@ -9,7 +9,11 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufWiderruf;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufZeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAusschliesslichAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufssoldat;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Bundeswehr;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
@@ -23,6 +27,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Sonstige;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Zeitsoldat;
 
 /**
  * Class Taetigkeitsstatus
@@ -36,6 +41,9 @@ final class Taetigkeitsstatus extends AbstractProvider
         $this->appendMember(new Selbststaendiger());
         $this->appendMember(new BeamterAufLebenszeit());
         $this->appendMember(new BeamterAufProbe());
+        $this->appendMember(new BeamterAufZeit());
+        $this->appendMember(new BeamterAusschliesslichAufProbe());
+        $this->appendMember(new BeamterAufWiderruf());
         $this->appendMember(new AngestellterOeffentlDienst());
         $this->appendMember(new Vorstand());
         $this->appendMember(new Schulausbildung());
@@ -51,6 +59,8 @@ final class Taetigkeitsstatus extends AbstractProvider
         $this->appendMember(new GGFVersicherungsFrei());
         $this->appendMember(new GGFVersicherungsPflichtig());
         $this->appendMember(new Bundeswehr());
+        $this->appendMember(new Berufssoldat());
+        $this->appendMember(new Zeitsoldat());
     }
 
     /**

@@ -8,7 +8,11 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufWiderruf;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufZeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAusschliesslichAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufsausbildung;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Berufssoldat;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Bundeswehr;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Elternzeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Erwerbsunfaehig;
@@ -22,6 +26,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Sonstige;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Studium;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\Zeitsoldat;
 use Demv\Werte\Person\Taetigkeitsstatus\Taetigkeitsstatus;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
 use PHPUnit\Framework\TestCase;
@@ -43,7 +48,7 @@ class TaetigkeitsstatusTest extends TestCase
         $provider = $this->getTaetigkeitsstatus();
 
         $this->specify('Alle Einträge wurden registriert', function () use ($provider): void {
-            $this->assertEquals(19, count($provider->getAll()));
+            $this->assertEquals(24, count($provider->getAll()));
         });
 
         $this->specify('Alle Instanzen implementieren das gleiche Interface.', function () use ($provider): void {
@@ -69,6 +74,9 @@ class TaetigkeitsstatusTest extends TestCase
         $this->checkGetOne($provider, Arbeitssuchend::class, false, false);
         $this->checkGetOne($provider, BeamterAufLebenszeit::class, true, false);
         $this->checkGetOne($provider, BeamterAufProbe::class, true, false);
+        $this->checkGetOne($provider, BeamterAufZeit::class, true, false);
+        $this->checkGetOne($provider, BeamterAufWiderruf::class, true, false);
+        $this->checkGetOne($provider, BeamterAusschliesslichAufProbe::class, true, false);
         $this->checkGetOne($provider, Berufsausbildung::class, false, true);
         $this->checkGetOne($provider, Elternzeit::class, false, false);
         $this->checkGetOne($provider, Erwerbsunfaehig::class, false, false);
@@ -83,6 +91,8 @@ class TaetigkeitsstatusTest extends TestCase
         $this->checkGetOne($provider, GGFVersicherungsFrei::class, true, false);
         $this->checkGetOne($provider, GGFVersicherungsPflichtig::class, false, false);
         $this->checkGetOne($provider, Bundeswehr::class, true, true);
+        $this->checkGetOne($provider, Zeitsoldat::class, true, true);
+        $this->checkGetOne($provider, Berufssoldat::class, true, true);
     }
 
     /**
