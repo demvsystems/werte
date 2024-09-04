@@ -6,6 +6,9 @@ use Demv\Werte\Bedarf\Thema\Bedarfsthemen;
 use Demv\Werte\Bedarf\Thema\Themen;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufLebenszeit;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufProbe;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufWiderruf;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAufZeit;
+use Demv\Werte\Person\Taetigkeitsstatus\Status\BeamterAusschliesslichAufProbe;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Selbststaendiger;
 use Demv\Werte\Person\Taetigkeitsstatus\Taetigkeitsstatus;
 use Demv\Werte\Person\Taetigkeitsstatus\TaetigkeitsstatusInterface;
@@ -285,7 +288,14 @@ final class BedarfsthemenTest extends TestCase
             new Themen\Diensthaftpflicht(),
         ];
 
-        foreach ([BeamterAufLebenszeit::ID, BeamterAufProbe::ID] as $taetigkeit) {
+        foreach (
+            [
+                BeamterAufLebenszeit::ID,
+                BeamterAufProbe::ID,
+                BeamterAufWiderruf::ID,
+                BeamterAusschliesslichAufProbe::ID,
+                BeamterAufZeit::ID
+            ] as $taetigkeit) {
             $is = $this->getBedarfsthemen()->forTaetigkeit($taetigkeit);
             $this->assertCount(count($should), $is);
             foreach ($is as $thema) {
@@ -330,7 +340,16 @@ final class BedarfsthemenTest extends TestCase
         ];
 
         $taetigkeiten = array_filter((new Taetigkeitsstatus())->getAll(), static function ($taetigkeit) {
-            return !in_array($taetigkeit::ID, [BeamterAufLebenszeit::ID, BeamterAufProbe::ID, Selbststaendiger::ID], true);
+            return !in_array(
+                $taetigkeit::ID,
+                [
+                    BeamterAufLebenszeit::ID,
+                    BeamterAufProbe::ID,
+                    BeamterAufWiderruf::ID,
+                    BeamterAusschliesslichAufProbe::ID,
+                    BeamterAufZeit::ID,
+                    Selbststaendiger::ID
+                ], true);
         });
 
         foreach (array_merge([null], $taetigkeiten) as $taetigkeit) {
