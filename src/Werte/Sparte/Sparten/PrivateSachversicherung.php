@@ -17,6 +17,7 @@ interface PrivateSachversicherung
     const ELEKTRONIKVERSICHERUNG             = 272;
     const ELEMENTARVERSICHERUNG              = 429;
     const ELEMENTARVERSICHERUNG_EL           = 251;
+    const FAHRRADVERSICHERUNG                = 297;
     const FEUERROHBAU_VERSICHERUNG           = 354;
     const FEUERVERSICHERUNG                  = 376;
     const FOTOAPPARATE_VERSICHERUNG          = 403;
@@ -57,6 +58,8 @@ interface PrivateSachversicherung
     const SONSTIGES                          = 196;
     const STURM_HAGELVERSICHERUNG            = 428;
     const TIERHALTERHAFTPFLICHT              = 170;
+    const TIERKRANKENVERSICHERUNG            = 265;
+    const TIERLEBENSVERSICHERUNG             = 274;
     const UNFALLVERSICHERUNG                 = 168;
     const WASSERSPORTKASKO                   = 357;
     const WASSERSPORTVERSICHERUNG            = 345;
