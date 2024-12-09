@@ -18,6 +18,14 @@ class Tierhalterhaftpflicht extends Bedarfsthema
      */
     public function __construct()
     {
-        parent::__construct(self::ID, 'Tierhalterhaftpflicht', [PrivateSachversicherung::TIERHALTERHAFTPFLICHT]);
+        parent::__construct(
+            self::ID,
+            'Tierhalterhaftpflicht',
+            [
+                PrivateSachversicherung::TIERHALTERHAFTPFLICHT,
+                PrivateSachversicherung::HUNDEHALTERHAFTPFLICHT,
+                PrivateSachversicherung::PFERDEHALTERHAFTPFLICHT,
+            ],
+        );
     }
 }
