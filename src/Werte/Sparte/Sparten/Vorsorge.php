@@ -45,4 +45,5 @@ interface Vorsorge
     const FONDSGEBUNDEN_BAV = 221;
 
     const BETRIEBLICHE_KRANKENVERSICHERUNG = 235;
+    const MULTIRISK_INVALIDITAET = 537;
 }
