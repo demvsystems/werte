@@ -3,7 +3,7 @@
 namespace Demv\Werte\Bedarf\Thema\Themen;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthema;
-use Demv\Werte\Sparte\Sparten\Vorsorge;
+use Demv\Werte\Sparte\Sparten\Risikolebensversicherung;
 
 /**
  * Class Risikoleben
@@ -21,7 +21,14 @@ class Risikoleben extends Bedarfsthema
         parent::__construct(
             self::ID,
             'Risikolebensversicherung',
-            [Vorsorge::RISIKOLEBEN],
+            [
+                Risikolebensversicherung::ID,
+                Risikolebensversicherung::TODESFALL_LEISTUNG_STEIGEND,
+                Risikolebensversicherung::TODESFALL_LEISTUNG_Fallend,
+                Risikolebensversicherung::VERBUNDENE_LEBEN,
+                Risikolebensversicherung::OHNE_GESUNDHEITSFRAGEN,
+                Risikolebensversicherung::TODESFALL_LEISTUNG_KONSTANT,
+            ],
             'Risikolebens&shy;versicherung'
         );
     }
