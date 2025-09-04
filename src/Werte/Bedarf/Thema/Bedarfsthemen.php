@@ -94,7 +94,7 @@ class Bedarfsthemen extends AbstractProvider
                 $refl = new ReflectionClass($sparteClass);
 
                 return array_merge(
-                    $carry,
+                    (array) $carry,
                     array_values($refl->getConstants())
                 );
             } catch (ReflectionException $ex) {

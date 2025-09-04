@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+phpversion=8
+
 build_image() {
   docker build "--tag=$TAG" \
   "$DIR" \
@@ -16,8 +18,7 @@ read_env_var() {
 }
 
 usage() {
-    echo "Usage: $0 [-v7|-v8] [-b] <cmd>"
-    echo "  -v    Set the major PHP version to use (7 or 8)"
+    echo "Usage: $0 [-b] <cmd>"
     echo "  -b    Build the Docker image"
     exit 1
 }
@@ -27,11 +28,9 @@ then
   usage
 fi
 
-while getopts v:b flag
+while getopts b flag
 do
     case "${flag}" in
-        v) printf "Executing command with php version: %s\n" "$OPTARG" >&2
-           phpversion=${OPTARG};;
         b) build=true;;
         *) usage ;;
     esac
