@@ -3,11 +3,9 @@
 namespace Demv\Werte\Fahrzeug;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * Class FahrzeugTypen
- * @package Demv\Werte\Fahrzeug
+ * @extends AbstractProvider<FahrzeugTypInterface>
  */
 final class FahrzeugTypen extends AbstractProvider
 {
@@ -26,25 +24,5 @@ final class FahrzeugTypen extends AbstractProvider
         $this->appendMember(new Drohne());
         $this->appendMember(new Boot());
         $this->appendMember(new Schlepper());
-    }
-
-    /**
-     * @return FahrzeugTypInterface[]
-     */
-    public function getAll(): array
-    {
-        return parent::getAll();
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return FahrzeugTypInterface
-     *
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): FahrzeugTypInterface
-    {
-        return parent::getOne($id);
     }
 }

@@ -13,11 +13,9 @@ use Demv\Werte\Dokumente\Dokumenttypen\Produktinformationsblatt;
 use Demv\Werte\Dokumente\Dokumenttypen\Schweigepflichtentbindung;
 use Demv\Werte\Dokumente\Dokumenttypen\Sepamandant;
 use Demv\Werte\Dokumente\Dokumenttypen\VVG;
-use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * Class DokumentTypen
- * @package Demv\Werte\Dokumente
+ * @extends AbstractProvider<DokumenttypInterface>
  */
 final class Dokumenttypen extends AbstractProvider
 {
@@ -36,16 +34,5 @@ final class Dokumenttypen extends AbstractProvider
         $this->appendMember(new VVG());
         $this->appendMember(new Evb());
         $this->appendMember(new Schweigepflichtentbindung());
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return DokumenttypInterface
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): DokumenttypInterface
-    {
-        return parent::getOne($id);
     }
 }

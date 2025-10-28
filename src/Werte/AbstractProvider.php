@@ -5,18 +5,18 @@ namespace Demv\Werte;
 use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * Class AbstractProvider
- * @package Demv\Werte
+ * @template T of ValueInterface
+ * @implements ProviderInterface<T>
  */
 abstract class AbstractProvider implements ProviderInterface
 {
     /**
-     * @var array
+     * @var array<T>
      */
     private $members = [];
 
     /**
-     * @param ValueInterface $member
+     * @param T $member
      */
     final protected function appendMember(ValueInterface $member): void
     {
@@ -25,7 +25,7 @@ abstract class AbstractProvider implements ProviderInterface
 
     /**
      * Gibt alle Einträge zurück
-     * @return ValueInterface[]
+     * @return T[]
      */
     public function getAll(): array
     {
@@ -38,7 +38,7 @@ abstract class AbstractProvider implements ProviderInterface
      * @param int $id
      *          Die ID, zu der der Eintrag zurückgegeben werden soll
      *
-     * @return mixed
+     * @return T
      *          Das Objekt
      * @throws EntryNotFoundException
      *
@@ -55,7 +55,7 @@ abstract class AbstractProvider implements ProviderInterface
     /**
      * @param int $id
      *
-     * @return mixed|null
+     * @return T|null
      */
     protected function fetchOne(int $id)
     {

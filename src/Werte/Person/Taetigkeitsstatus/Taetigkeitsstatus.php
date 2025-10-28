@@ -3,7 +3,6 @@
 namespace Demv\Werte\Person\Taetigkeitsstatus;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Angestellter;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\AngestellterOeffentlDienst;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Arbeitssuchend;
@@ -30,8 +29,7 @@ use Demv\Werte\Person\Taetigkeitsstatus\Status\Vorstand;
 use Demv\Werte\Person\Taetigkeitsstatus\Status\Zeitsoldat;
 
 /**
- * Class Taetigkeitsstatus
- * @package Demv\Werte\Person\Taetigkeitsstatus
+ * @extends AbstractProvider<TaetigkeitsstatusInterface>
  */
 final class Taetigkeitsstatus extends AbstractProvider
 {
@@ -61,25 +59,5 @@ final class Taetigkeitsstatus extends AbstractProvider
         $this->appendMember(new Bundeswehr());
         $this->appendMember(new Berufssoldat());
         $this->appendMember(new Zeitsoldat());
-    }
-
-    /**
-     * @return TaetigkeitsstatusInterface[]
-     */
-    public function getAll(): array
-    {
-        return parent::getAll();
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return TaetigkeitsstatusInterface
-     *
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): TaetigkeitsstatusInterface
-    {
-        return parent::getOne($id);
     }
 }

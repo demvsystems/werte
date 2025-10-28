@@ -11,11 +11,9 @@ use Demv\Werte\Altersvorsorge\Prioritaeten\LebenslangeGarantierteRente;
 use Demv\Werte\Altersvorsorge\Prioritaeten\NichtFamiliaereVererbung;
 use Demv\Werte\Altersvorsorge\Prioritaeten\StaatlichFoerderbar;
 use Demv\Werte\Altersvorsorge\Prioritaeten\VorRentenbeginnVerfuegbar;
-use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * Class Prioritaeten
- * @package Demv\Werte\Altersvorsorge
+ * @extends AbstractProvider<PrioritaetenInterface>
  */
 final class Prioritaeten extends AbstractProvider
 {
@@ -29,16 +27,5 @@ final class Prioritaeten extends AbstractProvider
         $this->appendMember(new NichtFamiliaereVererbung());
         $this->appendMember(new StaatlichFoerderbar());
         $this->appendMember(new ArbeitgeberUnabhaengig());
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return PrioritaetenInterface
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): PrioritaetenInterface
-    {
-        return parent::getOne($id);
     }
 }
