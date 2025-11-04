@@ -3,13 +3,11 @@
 namespace Demv\Werte\Tierart;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Tierart\Tierarten\Hund;
 use Demv\Werte\Tierart\Tierarten\Pferd;
 
 /**
- * Class Tierarten
- * @package Demv\Werte\Tierart
+ * @extends AbstractProvider<TierartInterface>
  */
 final class Tierarten extends AbstractProvider
 {
@@ -17,25 +15,5 @@ final class Tierarten extends AbstractProvider
     {
         $this->appendMember(new Hund());
         $this->appendMember(new Pferd());
-    }
-
-    /**
-     * @return TierartInterface[]
-     */
-    public function getAll(): array
-    {
-        return parent::getAll();
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return TierartInterface
-     *
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): TierartInterface
-    {
-        return parent::getOne($id);
     }
 }

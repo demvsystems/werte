@@ -11,8 +11,7 @@ use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad4;
 use Demv\Werte\Person\Pflegegrad\Pflegegrade\Pflegegrad5;
 
 /**
- * Class Pflegegrade
- * @package Demv\Werte\Person\Pflegegrad
+ * @extends AbstractProvider<PflegegradInterface>
  */
 final class Pflegegrade extends AbstractProvider
 {

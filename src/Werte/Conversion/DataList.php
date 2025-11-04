@@ -40,7 +40,7 @@ final class DataList
     /**
      * Konvertiert das Value-Array der getAll-Methode in ein Array der Form ['id' => 'name']
      *
-     * @param ProviderInterface $provider
+     * @param ProviderInterface<ValueInterface> $provider
      *
      * @return array
      *          ['id' => 'name']

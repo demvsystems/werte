@@ -14,8 +14,7 @@ use ReflectionClass;
 use ReflectionException;
 
 /**
- * Class Bedarfsthemen
- * @package Demv\Werte\Bedarf\Thema
+ * @extends AbstractProvider<BedarfthemaInterface>
  */
 class Bedarfsthemen extends AbstractProvider
 {
@@ -72,7 +71,7 @@ class Bedarfsthemen extends AbstractProvider
     {
         return array_filter(
             $this->getAll(),
-            static function (Bedarfsthema $thema) use ($ids) {
+            static function (BedarfthemaInterface $thema) use ($ids) {
                 $intersection = array_intersect(
                     $thema->getSpartenIds(),
                     $ids

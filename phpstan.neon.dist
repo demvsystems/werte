@@ -2,7 +2,6 @@ includes:
   - vendor/phpstan/phpstan-deprecation-rules/rules.neon
   - vendor/phpstan/phpstan-phpunit/extension.neon
   - vendor/phpstan/phpstan-phpunit/rules.neon
-  - phpstan-baseline.neon
 
 parameters:
   level: max
@@ -15,5 +14,4 @@ parameters:
     - src
 
   ignoreErrors:
-    - '#but returns array<Demv\\Werte\\ValueInterface>#'
     - identifier: missingType.iterableValue

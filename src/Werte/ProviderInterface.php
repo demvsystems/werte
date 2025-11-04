@@ -5,15 +5,14 @@ namespace Demv\Werte;
 use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * Interface ProviderInterface
- * @package Demv\Werte
+ * @template T of ValueInterface
  */
 interface ProviderInterface
 {
     /**
      * Gibt ein Array aller Werte zurück
      *
-     * @return Value[]
+     * @return T[]
      */
     public function getAll(): array;
 
@@ -23,7 +22,7 @@ interface ProviderInterface
      * @param int $id
      *          Die ID, zu der der Eintrag zurückgegeben werden soll
      *
-     * @return mixed
+     * @return T
      *          Das Objekt
      * @throws EntryNotFoundException
      *

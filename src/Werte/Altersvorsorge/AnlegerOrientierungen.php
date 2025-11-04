@@ -7,11 +7,9 @@ use Demv\Werte\Altersvorsorge\AnlegerOrientierungen\Konservativ;
 use Demv\Werte\Altersvorsorge\AnlegerOrientierungen\Risikoorientiert;
 use Demv\Werte\Altersvorsorge\AnlegerOrientierungen\Sicherheitsorientiert;
 use Demv\Werte\Altersvorsorge\AnlegerOrientierungen\Wachstumsorientiert;
-use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * Class AnlegerOrientierungen
- * @package Demv\Werte\Altersvorsorge
+ * @extends AbstractProvider<AnlegerOrientierungInterface>
  */
 final class AnlegerOrientierungen extends AbstractProvider
 {
@@ -21,16 +19,5 @@ final class AnlegerOrientierungen extends AbstractProvider
         $this->appendMember(new Konservativ());
         $this->appendMember(new Wachstumsorientiert());
         $this->appendMember(new Risikoorientiert());
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return AnlegerOrientierungInterface
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): AnlegerOrientierungInterface
-    {
-        return parent::getOne($id);
     }
 }

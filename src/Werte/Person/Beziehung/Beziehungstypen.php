@@ -3,7 +3,6 @@
 namespace Demv\Werte\Person\Beziehung;
 
 use Demv\Werte\AbstractProvider;
-use Demv\Werte\Exception\EntryNotFoundException;
 use Demv\Werte\Person\Beziehung\Beruflich\Angehoeriger;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitgeber;
 use Demv\Werte\Person\Beziehung\Beruflich\Arbeitnehmer;
@@ -70,8 +69,7 @@ use Demv\Werte\Person\Beziehung\Privat\Vollmachtgeber;
 use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 
 /**
- * Class Beziehungstypen
- * @package Demv\Werte\Person\Beziehung
+ * @extends AbstractProvider<BeziehungsTypInterface>
  */
 final class Beziehungstypen extends AbstractProvider
 {
@@ -141,25 +139,5 @@ final class Beziehungstypen extends AbstractProvider
         $this->appendMember(new Patient());
         $this->appendMember(new ImmobilienMakler());
         $this->appendMember(new BautraegerKaeufer());
-    }
-
-    /**
-     * @return BeziehungsTypInterface[]
-     */
-    public function getAll(): array
-    {
-        return parent::getAll();
-    }
-
-    /**
-     * @param int $id
-     *
-     * @return BeziehungsTypInterface
-     *
-     * @throws EntryNotFoundException
-     */
-    public function getOne(int $id): BeziehungsTypInterface
-    {
-        return parent::getOne($id);
     }
 }

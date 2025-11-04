@@ -25,6 +25,9 @@ use Demv\Werte\Person\Zielgruppe\Zielgruppen\SelbstaendigeHandwerker;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\SoldatenPolizistenFeuerwehrleute;
 use Demv\Werte\Person\Zielgruppe\Zielgruppen\Studenten;
 
+/**
+ * @extends AbstractProvider<ZielgruppeInterface>
+ */
 final class Zielgruppe extends AbstractProvider
 {
     public function __construct()
