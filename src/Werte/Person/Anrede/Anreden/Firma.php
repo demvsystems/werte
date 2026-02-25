@@ -17,4 +17,9 @@ final class Firma extends Value implements AnredeInterface
     {
         parent::__construct(self::ID, 'Firma');
     }
+
+    public function getSlug(): string
+    {
+        return 'firma';
+    }
 }

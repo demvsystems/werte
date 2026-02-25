@@ -10,4 +10,5 @@ use Demv\Werte\ValueInterface;
  */
 interface AnredeInterface extends ValueInterface
 {
+    public function getSlug(): string;
 }
