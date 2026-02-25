@@ -26,4 +26,18 @@ enum Rolle: int
             self::TESTNUTZER                   => 'Testnutzer',
         };
     }
+
+    public function getSlug(): string
+    {
+        return match ($this) {
+            self::VERMITTLER                   => 'vermittler',
+            self::GESELLSCHAFT                 => 'gesellschaft',
+            self::WHITE_LABEL                  => 'white-label',
+            self::ADMIN                        => 'admin',
+            self::HAUPTVERMITTLER              => 'hauptvermittler',
+            self::INNENDIENST                  => 'innendienst',
+            self::GESELLSCHAFT_ANSPRECHPARTNER => 'gesellschaft-ansprechpartner',
+            self::TESTNUTZER                   => 'testnutzer',
+        };
+    }
 }
