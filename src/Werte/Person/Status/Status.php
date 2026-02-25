@@ -20,4 +20,15 @@ enum Status: int
             self::NEUER_PARTNER => 'Neuer Partner',
         };
     }
+
+    public function getSlug(): string
+    {
+        return match ($this) {
+            self::AKTIV         => 'aktiv',
+            self::PASSIV        => 'passiv',
+            self::STORNIERT     => 'storniert',
+            self::INTERESSIERT  => 'interessiert',
+            self::NEUER_PARTNER => 'neuer-partner',
+        };
+    }
 }
