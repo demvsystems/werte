@@ -12,7 +12,6 @@ enum Rolle: int
     case INNENDIENST                  = 6;
     case GESELLSCHAFT_ANSPRECHPARTNER = 8;
     case TESTNUTZER                   = 9;
-    case UNBEKANNT                    = 0;
 
     public function getLabel(): string
     {
@@ -25,7 +24,6 @@ enum Rolle: int
             self::INNENDIENST                  => 'Innendienst',
             self::GESELLSCHAFT_ANSPRECHPARTNER => 'Gesellschaft Ansprechpartner',
             self::TESTNUTZER                   => 'Testnutzer',
-            self::UNBEKANNT                    => 'Unbekannt',
         };
     }
 }
