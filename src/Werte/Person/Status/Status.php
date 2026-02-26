@@ -31,4 +31,16 @@ enum Status: int
             self::NEUER_PARTNER => 'neuer-partner',
         };
     }
+
+    public static function tryFromSlug(string $slug): ?self
+    {
+        return match ($slug) {
+            self::AKTIV->getSlug()         => self::AKTIV,
+            self::PASSIV->getSlug()        => self::PASSIV,
+            self::STORNIERT->getSlug()     => self::STORNIERT,
+            self::INTERESSIERT->getSlug()  => self::INTERESSIERT,
+            self::NEUER_PARTNER->getSlug() => self::NEUER_PARTNER,
+            default                        => null,
+        };
+    }
 }
