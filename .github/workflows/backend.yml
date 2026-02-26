@@ -52,7 +52,7 @@ jobs:
           echo "dir::save-state name=dir::$(composer config cache-files-dir)"
 
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: ${{ env.dir }}
           key: ${{ runner.os }}-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}-composer
@@ -62,7 +62,7 @@ jobs:
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
 
       - name: Cache phpstan
-        uses: actions/cache@v4
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: /tmp/phpstan/cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
@@ -112,7 +112,7 @@ jobs:
           echo "dir::save-state name=dir::$(composer config cache-files-dir)"
 
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: ${{ env.dir }}
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-composer
@@ -122,7 +122,7 @@ jobs:
         run: composer install --no-interaction --no-suggest --no-scripts --prefer-dist --ansi
 
       - name: Cache phpstan
-        uses: actions/cache@v4
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: /tmp/phpstan/cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}-phpstan
