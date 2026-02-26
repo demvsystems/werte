@@ -17,4 +17,9 @@ final class LeereAnrede extends Value implements AnredeInterface
     {
         parent::__construct(self::ID, '');
     }
+
+    public function getSlug(): string
+    {
+        return 'leere-anrede';
+    }
 }

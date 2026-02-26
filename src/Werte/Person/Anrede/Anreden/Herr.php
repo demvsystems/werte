@@ -17,4 +17,9 @@ final class Herr extends Value implements AnredeInterface
     {
         parent::__construct(self::ID, 'Herr');
     }
+
+    public function getSlug(): string
+    {
+        return 'herr';
+    }
 }
