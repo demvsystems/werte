@@ -9,7 +9,6 @@ enum Status: int
     case STORNIERT     = 3;
     case INTERESSIERT  = 4;
     case NEUER_PARTNER = 5;
-    case UNBEKANNT     = 0;
 
     public function getLabel(): string
     {
@@ -19,7 +18,6 @@ enum Status: int
             self::STORNIERT     => 'Storniert',
             self::INTERESSIERT  => 'Interessiert',
             self::NEUER_PARTNER => 'Neuer Partner',
-            self::UNBEKANNT     => 'Unbekannt',
         };
     }
 }
