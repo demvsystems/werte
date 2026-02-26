@@ -29,4 +29,15 @@ final class Anreden extends AbstractProvider
     {
         return $this->getOne($id)->getSlug();
     }
+
+    public static function tryFromSlug(string $slug): ?AnredeInterface
+    {
+        foreach ((new self())->getAll() as $anrede) {
+            if ($anrede->getSlug() === $slug) {
+                return $anrede;
+            }
+        }
+
+        return null;
+    }
 }
