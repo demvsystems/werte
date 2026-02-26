@@ -40,4 +40,19 @@ enum Rolle: int
             self::TESTNUTZER                   => 'testnutzer',
         };
     }
+
+    public static function tryFromSlug(string $slug): ?self
+    {
+        return match ($slug) {
+            self::VERMITTLER->getSlug()                   => self::VERMITTLER,
+            self::GESELLSCHAFT->getSlug()                 => self::GESELLSCHAFT,
+            self::WHITE_LABEL->getSlug()                  => self::WHITE_LABEL,
+            self::ADMIN->getSlug()                        => self::ADMIN,
+            self::HAUPTVERMITTLER->getSlug()              => self::HAUPTVERMITTLER,
+            self::INNENDIENST->getSlug()                  => self::INNENDIENST,
+            self::GESELLSCHAFT_ANSPRECHPARTNER->getSlug() => self::GESELLSCHAFT_ANSPRECHPARTNER,
+            self::TESTNUTZER->getSlug()                   => self::TESTNUTZER,
+            default                                       => null,
+        };
+    }
 }
