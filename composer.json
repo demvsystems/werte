@@ -23,7 +23,7 @@
         "phpstan/phpstan": "^1",
         "phpstan/phpstan-deprecation-rules": "^1",
         "phpstan/phpstan-phpunit": "^1",
-        "phpunit/phpunit": "^7.5 || ^9.5",
+        "phpunit/phpunit": "^7.5 || ^9.5 || ^12.0",
         "spaceemotion/php-coding-standard": "dev-wip/v1"
     },
     "autoload": {
