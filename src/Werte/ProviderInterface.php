@@ -5,7 +5,7 @@ namespace Demv\Werte;
 use Demv\Werte\Exception\EntryNotFoundException;
 
 /**
- * @template T of ValueInterface
+ * @template-covariant T of ValueInterface
  */
 interface ProviderInterface
 {
