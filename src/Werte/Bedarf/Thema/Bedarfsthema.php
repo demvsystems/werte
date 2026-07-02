@@ -28,7 +28,7 @@ class Bedarfsthema extends Value implements BedarfthemaInterface
      * @param array       $spartenids
      * @param string|null $displayname
      */
-    public function __construct(int $identifier, string $name, array $spartenids, string $displayname = null)
+    public function __construct(int $identifier, string $name, array $spartenids, ?string $displayname = null)
     {
         parent::__construct($identifier, $name);
         $this->spartenIds  = $spartenids;
