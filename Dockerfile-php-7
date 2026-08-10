@@ -1,4 +1,4 @@
-FROM php:7.4-cli
+FROM php:8.5-cli@sha256:54d82ff9be6bd198145e90c917fc9b2e24230b42e52def8deb3554baf61c451a
 
 ARG GITHUB_TOKEN
 
