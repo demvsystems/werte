@@ -3,7 +3,7 @@
 namespace Demv\Werte\Bedarf\Thema\Themen;
 
 use Demv\Werte\Bedarf\Thema\Bedarfsthema;
-use Demv\Werte\Sparte\Sparten\Gewerbe;
+use Demv\Werte\Sparte\Sparten\RechtsschutzGewerbe;
 
 /**
  * Class Firmenrechtsschutz
@@ -15,6 +15,13 @@ class Firmenrechtsschutz extends Bedarfsthema
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Firmenrechtsschutz', [Gewerbe::RECHTSSCHUTZ]);
+        parent::__construct(self::ID, 'Firmenrechtsschutz', [
+            RechtsschutzGewerbe::ID,
+            RechtsschutzGewerbe::BERUF,
+            RechtsschutzGewerbe::VERKEHR,
+            RechtsschutzGewerbe::MIETER_EIGENTUEMER,
+            RechtsschutzGewerbe::VERMIETER,
+            RechtsschutzGewerbe::FIRMEN,
+        ]);
     }
 }

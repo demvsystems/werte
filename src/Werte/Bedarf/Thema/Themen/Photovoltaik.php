@@ -15,6 +15,9 @@ class Photovoltaik extends Bedarfsthema
 
     public function __construct()
     {
-        parent::__construct(self::ID, 'Photovoltaikversicherung', [PrivateSachversicherung::BETREIBERHAFTPFLICHT]);
+        parent::__construct(self::ID, 'Photovoltaikversicherung', [
+            PrivateSachversicherung::BETREIBERHAFTPFLICHT,
+            PrivateSachversicherung::PHOTOVOLTAIKVERSICHERUNG,
+        ]);
     }
 }
