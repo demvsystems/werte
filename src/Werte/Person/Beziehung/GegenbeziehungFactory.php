@@ -16,6 +16,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\FirmaAufsichtsrat;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonGesellschafter;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonProkurist;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVorstand;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftspartner;
@@ -26,6 +27,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienMakler;
 use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienVerwaltetVon;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\Kollege;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
@@ -34,6 +36,7 @@ use Demv\Werte\Person\Beziehung\Beruflich\Muttergesellschaft;
 use Demv\Werte\Person\Beziehung\Beruflich\Notar;
 use Demv\Werte\Person\Beziehung\Beruflich\NotarMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\Patient;
+use Demv\Werte\Person\Beziehung\Beruflich\Prokurist;
 use Demv\Werte\Person\Beziehung\Beruflich\Steuerberater;
 use Demv\Werte\Person\Beziehung\Beruflich\SteuerberaterMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\Tochtergesellschaft;
@@ -57,13 +60,19 @@ use Demv\Werte\Person\Beziehung\Familiaer\Schwiegerkind;
 use Demv\Werte\Person\Beziehung\Familiaer\Stiefelternteil;
 use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
+use Demv\Werte\Person\Beziehung\Privat\ExMieter;
+use Demv\Werte\Person\Beziehung\Privat\ExVermieter;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\Generalbevollmaechtigter;
+use Demv\Werte\Person\Beziehung\Privat\HatMitglied;
+use Demv\Werte\Person\Beziehung\Privat\Mieter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
+use Demv\Werte\Person\Beziehung\Privat\Mitglied;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\Pflegeeltern;
 use Demv\Werte\Person\Beziehung\Privat\Pflegekind;
 use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\Vermieter;
 use Demv\Werte\Person\Beziehung\Privat\Vollmachtgeber;
 use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 
@@ -123,6 +132,11 @@ final class GegenbeziehungFactory
             Notar::ID                             => NotarMandant::ID,
             Arzt::ID                              => Patient::ID,
             ImmobilienMakler::ID                  => BautraegerKaeufer::ID,
+            Kollege::ID                           => Kollege::ID,
+            Vermieter::ID                         => Mieter::ID,
+            ExVermieter::ID                       => ExMieter::ID,
+            Prokurist::ID                         => FirmaVonProkurist::ID,
+            Mitglied::ID                          => HatMitglied::ID,
         ];
     }
 }

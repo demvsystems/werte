@@ -12,11 +12,13 @@ use Demv\Werte\Person\Beziehung\Beruflich\BautraegerKaeufer;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaAufsichtsrat;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVon;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonInhaber;
+use Demv\Werte\Person\Beziehung\Beruflich\FirmaVonProkurist;
 use Demv\Werte\Person\Beziehung\Beruflich\FirmaVorstand;
 use Demv\Werte\Person\Beziehung\Beruflich\Geschaeftsfuehrer;
 use Demv\Werte\Person\Beziehung\Beruflich\ImmobilienMakler;
 use Demv\Werte\Person\Beziehung\Beruflich\Inhaber;
 use Demv\Werte\Person\Beziehung\Beruflich\InhaberGeschaeftsfuehrer;
+use Demv\Werte\Person\Beziehung\Beruflich\Kollege;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKommanditist;
 use Demv\Werte\Person\Beziehung\Beruflich\KommanditgesellschaftKomplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Kommanditist;
@@ -24,9 +26,11 @@ use Demv\Werte\Person\Beziehung\Beruflich\Komplementaer;
 use Demv\Werte\Person\Beziehung\Beruflich\Notar;
 use Demv\Werte\Person\Beziehung\Beruflich\NotarMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\Patient;
+use Demv\Werte\Person\Beziehung\Beruflich\Prokurist;
 use Demv\Werte\Person\Beziehung\Beruflich\Steuerberater;
 use Demv\Werte\Person\Beziehung\Beruflich\SteuerberaterMandant;
 use Demv\Werte\Person\Beziehung\Beruflich\VorstandVonFirma;
+use Demv\Werte\Person\Beziehung\Beziehungstypen;
 use Demv\Werte\Person\Beziehung\BeziehungsTypInterface;
 use Demv\Werte\Person\Beziehung\Familiaer\CousinCousine;
 use Demv\Werte\Person\Beziehung\Familiaer\Eltern;
@@ -45,11 +49,17 @@ use Demv\Werte\Person\Beziehung\Familiaer\Stiefkind;
 use Demv\Werte\Person\Beziehung\Gegenbeziehung;
 use Demv\Werte\Person\Beziehung\GegenbeziehungFactory;
 use Demv\Werte\Person\Beziehung\Privat\Eigentuemergemeinschaft;
+use Demv\Werte\Person\Beziehung\Privat\ExMieter;
+use Demv\Werte\Person\Beziehung\Privat\ExVermieter;
 use Demv\Werte\Person\Beziehung\Privat\FreundBekannter;
 use Demv\Werte\Person\Beziehung\Privat\Generalbevollmaechtigter;
+use Demv\Werte\Person\Beziehung\Privat\HatMitglied;
+use Demv\Werte\Person\Beziehung\Privat\Mieter;
 use Demv\Werte\Person\Beziehung\Privat\Mitbewohner;
+use Demv\Werte\Person\Beziehung\Privat\Mitglied;
 use Demv\Werte\Person\Beziehung\Privat\MitgliedInEigentuemergemeinschaft;
 use Demv\Werte\Person\Beziehung\Privat\Verein;
+use Demv\Werte\Person\Beziehung\Privat\Vermieter;
 use Demv\Werte\Person\Beziehung\Privat\Vollmachtgeber;
 use Demv\Werte\Person\Beziehung\Privat\VorstandVonVerein;
 use PHPUnit\Framework\TestCase;
@@ -249,5 +259,61 @@ class GegenbeziehungTest extends TestCase
     public function testImmobilienmaker(): void
     {
         $this->checkExistence(new ImmobilienMakler(), new BautraegerKaeufer());
+    }
+
+    public function testEveryRegisteredTypeHasACounterpart(): void
+    {
+        foreach ((new Beziehungstypen())->getAll() as $type) {
+            $this->assertTrue(
+                $this->getGegenbziehung()->existsFor($type),
+                sprintf('Beziehungstyp %d (%s) hat keine Gegenbeziehung', $type->getId(), $type->getName())
+            );
+        }
+    }
+
+    public function testCounterpartOfTheCounterpartIsTheTypeItself(): void
+    {
+        foreach ((new Beziehungstypen())->getAll() as $type) {
+            $counterpart = $this->getGegenbziehung()->getFor($type);
+
+            $this->assertSame(
+                $type->getId(),
+                $this->getGegenbziehung()->getFor($counterpart)->getId(),
+                sprintf('Gegenbeziehung von %d (%s) zeigt nicht zurück', $type->getId(), $type->getName())
+            );
+        }
+    }
+
+    /**
+     * @dataProvider newCounterparts
+     *
+     * @param string $typeClass
+     * @param string $expectedCounterpartClass
+     */
+    public function testNewTypesResolveTheirCounterpart(string $typeClass, string $expectedCounterpartClass): void
+    {
+        $this->checkExistence(new $typeClass(), new $expectedCounterpartClass());
+    }
+
+    public static function newCounterparts(): array
+    {
+        return [
+            'Kollege zu Kollege'             => [Kollege::class, Kollege::class],
+            'Vermieter zu Mieter'            => [Vermieter::class, Mieter::class],
+            'Mieter zu Vermieter'            => [Mieter::class, Vermieter::class],
+            'ExVermieter zu ExMieter'        => [ExVermieter::class, ExMieter::class],
+            'ExMieter zu ExVermieter'        => [ExMieter::class, ExVermieter::class],
+            'Prokurist zu FirmaVonProkurist' => [Prokurist::class, FirmaVonProkurist::class],
+            'FirmaVonProkurist zu Prokurist' => [FirmaVonProkurist::class, Prokurist::class],
+            'Mitglied zu HatMitglied'        => [Mitglied::class, HatMitglied::class],
+            'HatMitglied zu Mitglied'        => [HatMitglied::class, Mitglied::class],
+        ];
+    }
+
+    public function testFirmaVonStillResolvesToGeschaeftsfuehrer(): void
+    {
+        $counterpart = $this->getGegenbziehung()->getFor(new FirmaVon());
+
+        $this->assertSame(Geschaeftsfuehrer::ID, $counterpart->getId());
     }
 }

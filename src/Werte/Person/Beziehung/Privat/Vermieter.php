@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Demv\Werte\Person\Beziehung\Privat;
+
+final class Vermieter extends PrivateBeziehung
+{
+    public const ID = 66;
+
+    public function __construct()
+    {
+        parent::__construct(self::ID, 'Vermieter');
+    }
+}
